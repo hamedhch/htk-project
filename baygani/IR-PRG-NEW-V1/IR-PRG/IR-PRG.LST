@@ -1,0 +1,1503 @@
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 1
+
+
+
+;   7: {
+   7  0000              __stm0ah EQU [02dH]
+   7  0000              __stm0al EQU [02cH]
+   7  0000              __stm0dh EQU [02bH]
+   7  0000              __stm0dl EQU [02aH]
+   7  0000              __stm0c1 EQU [029H]
+   7  0000              __stm0c0 EQU [028H]
+   7  0000              __pasr EQU [026H]
+   7  0000              __rstc EQU [025H]
+   7  0000              __sadc2 EQU [024H]
+   7  0000              __sadc1 EQU [023H]
+   7  0000              __sadc0 EQU [022H]
+   7  0000              __sadoh EQU [021H]
+   7  0000              __sadol EQU [020H]
+   7  0000              __eed EQU [01fH]
+   7  0000              __eea EQU [01eH]
+   7  0000              __smod1 EQU [01cH]
+   7  0000              __tbc EQU [01bH]
+   7  0000              __wdtc EQU [019H]
+   7  0000              __ifs0 EQU [018H]
+   7  0000              __pawu EQU [017H]
+   7  0000              __papu EQU [016H]
+   7  0000              __pac EQU [015H]
+   7  0000              __pa EQU [014H]
+   7  0000              __mfi0 EQU [011H]
+   7  0000              __intc1 EQU [0fH]
+   7  0000              __intc0 EQU [0eH]
+   7  0000              __integ EQU [0dH]
+   7  0000              __smod EQU [0bH]
+   7  0000              __status EQU [0aH]
+   7  0000              __tblh EQU [08H]
+   7  0000              __tblp EQU [07H]
+   7  0000              __pcl EQU [06H]
+   7  0000              __acc EQU [05H]
+   7  0000              __bp EQU [04H]
+   7  0000              __mp1 EQU [03H]
+   7  0000              __iar1 EQU [02H]
+   7  0000              __mp0 EQU [01H]
+   7  0000              __iar0 EQU [00H]
+   7  0000              @Delay_10us .SECTION 'CODE'
+   7  0000              PUBLIC _Delay_10us
+   7  0000              _Delay_10us PROC
+
+;  11:     for(i_u=0;i_u<1;i_u++)
+  11  0000  3400     R  CLR CR1
+  11  0001              L2:
+
+;  13:     	_nop();
+  13  0001  0000        NOP
+
+;  14:     	_nop();
+  14  0002  0000        NOP
+
+;  15:     	_nop();
+  15  0003  0000        NOP
+
+;  16:     	_nop();
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 2 
+
+  16  0004  0000        NOP
+
+;  17:     	_clrwdt();
+  17  0005  0001        CLR WDT
+  17  0006              L3:
+
+;  11:     for(i_u=0;i_u<1;i_u++)
+  11  0006  1F00     R  CLR b0_1
+  11  0007  3C00     R  SZ CR1
+  11  0008  3000     R  SET b0_1.0
+  11  0009  1480     R  INC b0_1
+  11  000A  3400     R  CLR CR1
+  11  000B  3C00     R  SZ b0_1.0
+  11  000C  3000     R  SET CR1
+  11  000D  1F00     R  CLR b0_1
+  11  000E  3C00     R  SZ CR1
+  11  000F  3000     R  SET b0_1.0
+  11  0010  0700     R  MOV A,b0_1
+  11  0011  0A01        SUB A,01h
+  11  0012  380A        SNZ [0Ah].0
+  11  0013  2800     R  JMP L2
+  11  0014              L1:
+  11  0014  0003        RET
+  11  0000  00          LOCAL b0_1 DB ?
+
+;   9:  bit i_u;
+   9  0001  00          LOCAL CR1 DBIT ; i_u
+   9  0015              _Delay_10us ENDP
+
+;  24: {
+  24  0000              @Delay_Chek .SECTION 'CODE'
+  24  0000              PUBLIC _Delay_Chek
+  24  0000              _Delay_Chek PROC
+
+;  26:     for(i=0;i<10;i++)
+  26  0000  1F00     R  CLR CR2
+  26  0001  2800     R  JMP L10
+  26  0002              L7:
+
+;  28: 		Delay_10us();
+  28  0002  2000     R  CALL _Delay_10us
+  28  0003              L8:
+
+;  26:     for(i=0;i<10;i++)
+  26  0003  1480     R  INC CR2
+  26  0004              L10:
+  26  0004  0700     R  MOV A,CR2
+  26  0005  0A0A        SUB A,0ah
+  26  0006  380A        SNZ [0ah].0
+  26  0007  2800     R  JMP L7
+  26  0008              L6:
+  26  0008  0003        RET
+
+;  25:   unsigned char i;
+  25  0000  00          LOCAL CR2 DB ? ; i
+  25  0009              _Delay_Chek ENDP
+
+;  34: {
+  34  0000              @Delay_1ms .SECTION 'CODE'
+  34  0000              PUBLIC _Delay_1ms
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 3 
+
+  34  0000              _Delay_1ms PROC
+
+;  36:     for(i_m=0;i_m<100;i_m++)
+  36  0000  1F00     R  CLR CR3
+  36  0001  2800     R  JMP L15
+  36  0002              L12:
+
+;  38:     	_nop();
+  38  0002  0000        NOP
+
+;  39:     	_nop();
+  39  0003  0000        NOP
+
+;  40:     	_nop();
+  40  0004  0000        NOP
+
+;  41:     	_nop();
+  41  0005  0000        NOP
+
+;  42:     	_clrwdt();
+  42  0006  0001        CLR WDT
+  42  0007              L13:
+
+;  36:     for(i_m=0;i_m<100;i_m++)
+  36  0007  1480     R  INC CR3
+  36  0008              L15:
+  36  0008  0700     R  MOV A,CR3
+  36  0009  0A64        SUB A,064h
+  36  000A  380A        SNZ [0ah].0
+  36  000B  2800     R  JMP L12
+  36  000C              L11:
+  36  000C  0003        RET
+
+;  35:   unsigned char i_m;
+  35  0000  00          LOCAL CR3 DB ? ; i_m
+  35  000D              _Delay_1ms ENDP
+
+;  47: {
+  47  0000              @Delay_ms .SECTION 'CODE'
+  47  0000              PUBLIC _Delay_ms
+  47  0000              _Delay_ms PROC
+
+;  46: void Delay_ms(unsigned int ms)
+  46  0000              PUBLIC Delay_ms0
+  46  0000  0002[       LOCAL Delay_ms0 DB 2 DUP (?) ; ms
+            00
+            ]
+
+;  49:     for(i_m=0;i_m<ms;i_m++)
+  49  0000  1F00     R  CLR CR4
+  49  0001  1F00     R  CLR CR4[1]
+  49  0002  2800     R  JMP L20
+  49  0003              L17:
+
+;  51: 		Delay_1ms();
+  51  0003  2000     R  CALL _Delay_1ms
+  51  0004              L18:
+
+;  49:     for(i_m=0;i_m<ms;i_m++)
+  49  0004  1480     R  INC CR4
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 4 
+
+  49  0005  3D0A        SZ [0AH].2
+  49  0006  1480     R  INC CR4[1]
+  49  0007              L20:
+  49  0007  0700     R  MOV A,Delay_ms0[1]
+  49  0008  0200     R  SUB A,CR4[1]
+  49  0009  380A        SNZ [0AH].0
+  49  000A  2800     R  JMP L21
+  49  000B  390A        SNZ [0AH].2
+  49  000C  2800     R  JMP L17
+  49  000D  0700     R  MOV A,Delay_ms0
+  49  000E  0200     R  SUB A,CR4
+  49  000F  380A        SNZ [0AH].0
+  49  0010  2800     R  JMP L21
+  49  0011  390A        SNZ [0AH].2
+  49  0012  2800     R  JMP L17
+  49  0013              L21:
+  49  0013              L16:
+  49  0013  0003        RET
+
+;  48:   unsigned int i_m;
+  48  0002  0002[       LOCAL CR4 DB 2 DUP (?) ; i_m
+            00
+            ]
+  48  0014              _Delay_ms ENDP
+
+
+;  14: {
+  14  0000              @IO_INIT .SECTION 'CODE'
+  14  0000              PUBLIC _IO_INIT
+  14  0000              _IO_INIT PROC
+
+;  15:  IO();
+  15  0000  0FA0        MOV A,0a0h
+  15  0001  0095        MOV __pac,A
+  15  0002  3396        SET [016H].7
+
+;  17:  TRIAC=1;
+  17  0003  3314        SET [014H].6
+
+;  18:  LED_1=0;
+  18  0004  3414        CLR [014H].0
+
+;  19:  LED_2=1;
+  19  0005  3094        SET [014H].1
+  19  0006              L22:
+  19  0006  0003        RET
+  19  0007              _IO_INIT ENDP
+
+
+; 220: {
+ 220  0000              @STM_Init .SECTION 'CODE'
+ 220  0000              PUBLIC _STM_Init
+ 220  0000              _STM_Init PROC
+
+; 226: 		_st0m1 = 1; _st0m0 = 0;	
+ 226  0000  33A9        SET [029H].7
+ 226  0001  3729        CLR [029H].6
+
+; 227: 		_st0io1 = 1; _st0io0 = 0;	 //Select STM PWM Output Mode
+ 227  0002  32A9        SET [029H].5
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 5 
+
+ 227  0003  3629        CLR [029H].4
+
+; 230: 			_pas5 = 0; _pas4 = 1;
+ 230  0004  36A6        CLR [026H].5
+ 230  0005  3226        SET [026H].4
+
+; 236: 			_pas7 = 0; _pas6 = 1;
+ 236  0006  37A6        CLR [026H].7
+ 236  0007  3326        SET [026H].6
+
+; 293: 		_st0ck2 = 0; _st0ck1 = 0; _st0ck0 = 1;	//Select STM Counter clock Fsys
+ 293  0008  3728        CLR [028H].6
+ 293  0009  36A8        CLR [028H].5
+ 293  000A  3228        SET [028H].4
+
+; 331: 		_st0cclr = 1;	//STM Counter Clear condition selection STM Comparator A match		
+ 331  000B  3029        SET [029H].0
+ 331  000C              L23:
+ 331  000C  0003        RET
+ 331  000D              _STM_Init ENDP
+
+; 348: {
+ 348  0000              @STM_PwmOutputConfig .SECTION 'CODE'
+ 348  0000              PUBLIC _STM_PwmOutputConfig
+ 348  0000              _STM_PwmOutputConfig PROC
+
+; 353: 		_st0oc = 1;					//active high
+ 353  0000  31A9        SET [029H].3
+
+; 359: 		_st0pol = 0;					//no inverted
+ 359  0001  3529        CLR [029H].2
+
+; 367: 		_st0dpx = 0;
+ 367  0002  34A9        CLR [029H].1
+ 367  0003              L24:
+ 367  0003  0003        RET
+ 367  0004              _STM_PwmOutputConfig ENDP
+
+; 382: {
+ 382  0000              @STM_PwmUpdate .SECTION 'CODE'
+ 382  0000              PUBLIC _STM_PwmUpdate
+ 382  0000              _STM_PwmUpdate PROC
+
+; 381: void STM_PwmUpdate(unsigned int TempCCRA,unsigned char TempCCRP)
+ 381  0000              PUBLIC STM_PwmUpdate0
+ 381  0000  0002[       LOCAL STM_PwmUpdate0 DB 2 DUP (?) ; TempCCRA
+            00
+            ]
+ 381  0000              PUBLIC STM_PwmUpdate1
+ 381  0002  00          LOCAL STM_PwmUpdate1 DB ? ; TempCCRP
+
+; 383: 	_stm0al = TempCCRA & 0x00ff;	//
+ 383  0000  0700     R  MOV A,STM_PwmUpdate0
+ 383  0001  0EFF        AND A,0ffh
+ 383  0002  0080     R  MOV b0_8,A
+ 383  0003  0700     R  MOV A,STM_PwmUpdate0[1]
+ 383  0004  0E00        AND A,00h
+ 383  0005  0080     R  MOV b0_8[1],A
+ 383  0006  0700     R  MOV A,b0_8
+ 383  0007  00AC        MOV __stm0al,A
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 6 
+
+
+; 384: 	_stm0ah = TempCCRA >> 8;		//
+ 384  0008  0700     R  MOV A,STM_PwmUpdate0[1]
+ 384  0009  0080     R  MOV b0_8,A
+ 384  000A  1F00     R  CLR b0_8[1]
+ 384  000B  0700     R  MOV A,b0_8
+ 384  000C  00AD        MOV __stm0ah,A
+
+; 386: 	_st0rp2 = (TempCCRP>>2) & 0x01;			
+ 386  000D  340A        CLR [0AH].0
+ 386  000E  1B00     R  RRCA STM_PwmUpdate1
+ 386  000F  0080     R  MOV b0_8,A
+ 386  0010  340A        CLR [0AH].0
+ 386  0011  1B80     R  RRC b0_8
+ 386  0012  0F01        MOV A,01h
+ 386  0013  0680     R  ANDM A,b0_8
+ 386  0014  0728        MOV A,[028H]
+ 386  0015  3505        CLR [05H].2
+ 386  0016  1080     R  SZ b0_8
+ 386  0017  3105        SET [05H].2
+ 386  0018  00A8        MOV [028H],A
+
+; 387: 	_st0rp1 = (TempCCRP>>1) & 0x01;	
+ 387  0019  340A        CLR [0AH].0
+ 387  001A  1B00     R  RRCA STM_PwmUpdate1
+ 387  001B  0080     R  MOV b0_8,A
+ 387  001C  0F01        MOV A,01h
+ 387  001D  0680     R  ANDM A,b0_8
+ 387  001E  0728        MOV A,[028H]
+ 387  001F  3485        CLR [05H].1
+ 387  0020  1080     R  SZ b0_8
+ 387  0021  3085        SET [05H].1
+ 387  0022  00A8        MOV [028H],A
+
+; 388: 	_st0rp0 = TempCCRP & 0x01;	
+ 388  0023  0700     R  MOV A,STM_PwmUpdate1
+ 388  0024  0E01        AND A,01h
+ 388  0025  0080     R  MOV b0_8,A
+ 388  0026  0728        MOV A,[028H]
+ 388  0027  3405        CLR [05H].0
+ 388  0028  1080     R  SZ b0_8
+ 388  0029  3005        SET [05H].0
+ 388  002A  00A8        MOV [028H],A
+ 388  002B              L25:
+ 388  002B  0003        RET
+ 388  0003  0002[       LOCAL b0_8 DB 2 DUP(?)
+            00
+            ]
+ 388  002C              _STM_PwmUpdate ENDP
+
+; 402: {
+ 402  0000              @STM_SinglePulseOutputConfig .SECTION 'CODE'
+ 402  0000              PUBLIC _STM_SinglePulseOutputConfig
+ 402  0000              _STM_SinglePulseOutputConfig PROC
+
+; 407: 		_st0oc = 1;					//active high
+ 407  0000  31A9        SET [029H].3
+
+; 413: 		_st0pol = 0;					//no inverted
+ 413  0001  3529        CLR [029H].2
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 7 
+
+ 413  0002              L26:
+ 413  0002  0003        RET
+ 413  0003              _STM_SinglePulseOutputConfig ENDP
+
+; 441: {
+ 441  0000              @STM_SinglePulseUpdate .SECTION 'CODE'
+ 441  0000              PUBLIC _STM_SinglePulseUpdate
+ 441  0000              _STM_SinglePulseUpdate PROC
+
+; 440: void STM_SinglePulseUpdate(unsigned int TempCCRA)
+ 440  0000              PUBLIC STM_SinglePulseUpdate0
+ 440  0000  0002[       LOCAL STM_SinglePulseUpdate0 DB 2 DUP (?) ; TempCCRA
+            00
+            ]
+
+; 442: 	_stm0al = TempCCRA & 0x00ff;	//
+ 442  0000  0700     R  MOV A,STM_SinglePulseUpdate0
+ 442  0001  0EFF        AND A,0ffh
+ 442  0002  0080     R  MOV b0_10,A
+ 442  0003  0700     R  MOV A,STM_SinglePulseUpdate0[1]
+ 442  0004  0E00        AND A,00h
+ 442  0005  0080     R  MOV b0_10[1],A
+ 442  0006  0700     R  MOV A,b0_10
+ 442  0007  00AC        MOV __stm0al,A
+
+; 443: 	_stm0ah = TempCCRA >> 8;		//
+ 443  0008  0700     R  MOV A,STM_SinglePulseUpdate0[1]
+ 443  0009  0080     R  MOV b0_10,A
+ 443  000A  1F00     R  CLR b0_10[1]
+ 443  000B  0700     R  MOV A,b0_10
+ 443  000C  00AD        MOV __stm0ah,A
+ 443  000D              L27:
+ 443  000D  0003        RET
+ 443  0002  0002[       LOCAL b0_10 DB 2 DUP(?)
+            00
+            ]
+ 443  000E              _STM_SinglePulseUpdate ENDP
+
+; 453: {
+ 453  0000              @STM_CounterModeConfig .SECTION 'CODE'
+ 453  0000              PUBLIC _STM_CounterModeConfig
+ 453  0000              _STM_CounterModeConfig PROC
+
+; 452: void STM_CounterModeConfig(unsigned int TempPeriod)
+ 452  0000              PUBLIC STM_CounterModeConfig0
+ 452  0000  0002[       LOCAL STM_CounterModeConfig0 DB 2 DUP (?) ; TempPeriod
+            00
+            ]
+
+; 455: 	_stm0al = TempPeriod & 0x00ff;	//
+ 455  0000  0700     R  MOV A,STM_CounterModeConfig0
+ 455  0001  0EFF        AND A,0ffh
+ 455  0002  0080     R  MOV b0_11,A
+ 455  0003  0700     R  MOV A,STM_CounterModeConfig0[1]
+ 455  0004  0E00        AND A,00h
+ 455  0005  0080     R  MOV b0_11[1],A
+ 455  0006  0700     R  MOV A,b0_11
+ 455  0007  00AC        MOV __stm0al,A
+
+; 456: 	_stm0ah = TempPeriod >> 8;		//
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 8 
+
+ 456  0008  0700     R  MOV A,STM_CounterModeConfig0[1]
+ 456  0009  0080     R  MOV b0_11,A
+ 456  000A  1F00     R  CLR b0_11[1]
+ 456  000B  0700     R  MOV A,b0_11
+ 456  000C  00AD        MOV __stm0ah,A
+ 456  000D              L28:
+ 456  000D  0003        RET
+ 456  0002  0002[       LOCAL b0_11 DB 2 DUP(?)
+            00
+            ]
+ 456  000E              _STM_CounterModeConfig ENDP
+
+; 475: {
+ 475  0000              @STM_CompareMatchOutputConfig .SECTION 'CODE'
+ 475  0000              PUBLIC _STM_CompareMatchOutputConfig
+ 475  0000              _STM_CompareMatchOutputConfig PROC
+
+; 495: 		_st0oc = 1;	
+ 495  0000  31A9        SET [029H].3
+
+; 501: 		_st0pol = 0;				//
+ 501  0001  3529        CLR [029H].2
+ 501  0002              L29:
+ 501  0002  0003        RET
+ 501  0003              _STM_CompareMatchOutputConfig ENDP
+
+; 515: {
+ 515  0000              @STM_CompareMatchOutputUpdate .SECTION 'CODE'
+ 515  0000              PUBLIC _STM_CompareMatchOutputUpdate
+ 515  0000              _STM_CompareMatchOutputUpdate PROC
+
+; 514: void STM_CompareMatchOutputUpdate(unsigned int TempMatchTime)
+ 514  0000              PUBLIC STM_CompareMatchOutputUpdate0
+ 514  0000  0002[       LOCAL STM_CompareMatchOutputUpdate0 DB 2 DUP (?) ; TempMatchTime
+            00
+            ]
+
+; 517: 	_stm0al = TempMatchTime & 0x00ff;	//
+ 517  0000  0700     R  MOV A,STM_CompareMatchOutputUpdate0
+ 517  0001  0EFF        AND A,0ffh
+ 517  0002  0080     R  MOV b0_13,A
+ 517  0003  0700     R  MOV A,STM_CompareMatchOutputUpdate0[1]
+ 517  0004  0E00        AND A,00h
+ 517  0005  0080     R  MOV b0_13[1],A
+ 517  0006  0700     R  MOV A,b0_13
+ 517  0007  00AC        MOV __stm0al,A
+
+; 518: 	_stm0ah = TempMatchTime >> 8;		//
+ 518  0008  0700     R  MOV A,STM_CompareMatchOutputUpdate0[1]
+ 518  0009  0080     R  MOV b0_13,A
+ 518  000A  1F00     R  CLR b0_13[1]
+ 518  000B  0700     R  MOV A,b0_13
+ 518  000C  00AD        MOV __stm0ah,A
+ 518  000D              L30:
+ 518  000D  0003        RET
+ 518  0002  0002[       LOCAL b0_13 DB 2 DUP(?)
+            00
+            ]
+ 518  000E              _STM_CompareMatchOutputUpdate ENDP
+
+; 529: {
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 9 
+
+ 529  0000              @STM_INIT .SECTION 'CODE'
+ 529  0000              PUBLIC _STM_INIT
+ 529  0000              _STM_INIT PROC
+
+; 530:  STM_Init();
+ 530  0000  2000     R  CALL _STM_Init
+
+; 531: 	STM_PwmOutputConfig();
+ 531  0001  2000     R  CALL _STM_PwmOutputConfig
+
+; 532: 	STM_PwmUpdate(128,2);	
+ 532  0002  0F80        MOV A,080h
+ 532  0003  0080     R  MOV STM_PwmUpdate0,A
+ 532  0004  0F00        MOV A,00h
+ 532  0005  0080     R  MOV STM_PwmUpdate0[1],A
+ 532  0006  0F02        MOV A,02h
+ 532  0007  0080     R  MOV STM_PwmUpdate1,A
+ 532  0008  2000     R  CALL _STM_PwmUpdate
+
+; 533: 	STM_ENABLE();		//enable STM
+ 533  0009  31A8        SET [028H].3
+
+; 535: 	_delay(2000);	//wait system stable
+ 535  000A  0F01        MOV A,01H
+ 535  000B  0080     E  MOV RH,A
+ 535  000C  0FF2        MOV A,0f2H
+ 535  000D  2000     E  CALL __DELAYY1
+ 535  000E              L31:
+ 535  000E  0003        RET
+ 535  000F              _STM_INIT ENDP
+
+
+;  35: {
+  35  0000              @TB0_INIT .SECTION 'CODE'
+  35  0000              PUBLIC _TB0_INIT
+  35  0000              _TB0_INIT PROC
+
+;  36:  TB_FRQ(1);
+  36  0000  331B        SET [01BH].6
+
+;  37:  TB_ONF(1);
+  37  0001  339B        SET [01BH].7
+
+;  38:  TB0();
+  38  0002  351B        CLR [01BH].2
+  38  0003  349B        CLR [01BH].1
+  38  0004  341B        CLR [01BH].0
+
+;  39:  TB0_ENB(1);
+  39  0005  310E        SET [0EH].2
+
+;  40:  TB0_FLG(0);
+  40  0006  368E        CLR [0EH].5
+
+;  41:  TB_EMI(1); 
+  41  0007  300E        SET [0EH].0
+  41  0008              L32:
+  41  0008  0003        RET
+  41  0009              _TB0_INIT ENDP
+
+;  45: {
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 10 
+
+  45  0000              @TB1_INIT .SECTION 'CODE'
+  45  0000              PUBLIC _TB1_INIT
+  45  0000              _TB1_INIT PROC
+
+;  46:  TB_FRQ(1);
+  46  0000  331B        SET [01BH].6
+
+;  47:  TB_ONF(1);
+  47  0001  339B        SET [01BH].7
+
+;  48:  TB1();
+  48  0002  369B        CLR [01BH].5
+  48  0003  361B        CLR [01BH].4
+
+;  49:  TB1_ENB(1);
+  49  0004  318E        SET [0EH].3
+
+;  50:  TB1_FLG(0);
+  50  0005  370E        CLR [0EH].6
+
+;  51:  TB_EMI(1); 
+  51  0006  300E        SET [0EH].0
+  51  0007              L33:
+  51  0007  0003        RET
+  51  0008              _TB1_INIT ENDP
+
+;  55: {
+  55  0000              @TB_INIT .SECTION 'CODE'
+  55  0000              PUBLIC _TB_INIT
+  55  0000              _TB_INIT PROC
+
+;  56:  TB_FRQ(0);
+  56  0000  371B        CLR [01BH].6
+
+;  57:  TB_ONF(1);
+  57  0001  339B        SET [01BH].7
+
+;  58:  TB1();
+  58  0002  369B        CLR [01BH].5
+  58  0003  361B        CLR [01BH].4
+
+;  59:  TB1_ENB(1);
+  59  0004  318E        SET [0EH].3
+
+;  60:  TB1_FLG(0);
+  60  0005  370E        CLR [0EH].6
+
+;  61:  TB1();
+  61  0006  369B        CLR [01BH].5
+  61  0007  361B        CLR [01BH].4
+
+;  62:  TB1_ENB(1);
+  62  0008  318E        SET [0EH].3
+
+;  63:  TB1_FLG(0);
+  63  0009  370E        CLR [0EH].6
+
+;  64:  TB_EMI(1); 
+  64  000A  300E        SET [0EH].0
+  64  000B              L34:
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 11 
+
+  64  000B  0003        RET
+  64  000C              _TB_INIT ENDP
+
+;  68: {
+  68  0000              @@ISR_TB1 .SECTION AT 0cH 'CODE'
+  68  0000  2800     R  JMP _ISR_TB1
+  68  0000              @ISR_TB1 .SECTION 'CODE'
+  68  0000              _ISR_TB1 PROC
+  68  0000  0080     E  MOV V3A,A
+  68  0001  070A        MOV A,[0AH]
+  68  0002  0080     E  MOV V3S,A
+  68  0003  0703        MOV A,[03H]
+  68  0004  0080     E  MOV V3MP1,A
+  68  0005  0704        MOV A,[04H]
+  68  0006  0080     E  MOV V3BP,A
+
+;  69: 	CountSW++;
+  69  0007  0F00     R  MOV A,BANK _CountSW
+  69  0008  0084        MOV [04H],A
+  69  0009  0F00     R  MOV A,OFFSET _CountSW
+  69  000A  0083        MOV [03H],A
+  69  000B  1482        INC [02H]
+
+;  70: 	if(CountSW>=0 & CountSW<=25)
+  70  000C  0F00     R  MOV A,BANK _CountSW
+  70  000D  0084        MOV [04H],A
+  70  000E  0F00     R  MOV A,OFFSET _CountSW
+  70  000F  0083        MOV [03H],A
+  70  0010  0F19        MOV A,019h
+  70  0011  0202        SUB A,[02H]
+  70  0012  380A        SNZ [0AH].0
+  70  0013  2800     R  JMP L39
+  70  0014  0F01        MOV A,01h
+  70  0015  0080     R  MOV CR5,A
+  70  0016  2800     R  JMP L40
+  70  0017              L39:
+  70  0017  1F00     R  CLR CR5
+  70  0018              L40:
+  70  0018  0F01        MOV A,01h
+  70  0019  0600     R  AND A,CR5
+  70  001A  0080     R  MOV b0_18,A
+  70  001B  1080     R  SZ b0_18
+  70  001C  2800     R  JMP L51
+  70  001D  2800     R  JMP L36
+  70  001E              L51:
+
+;  72:  		STM_ENABLE();
+  72  001E  31A8        SET [028H].3
+  72  001F              L36:
+
+;  74:  	if(CountSW>=26 & CountSW<45)
+  74  001F  0F00     R  MOV A,BANK _CountSW
+  74  0020  0084        MOV [04H],A
+  74  0021  0F00     R  MOV A,OFFSET _CountSW
+  74  0022  0083        MOV [03H],A
+  74  0023  0702        MOV A,[02H]
+  74  0024  0A1A        SUB A,01ah
+  74  0025  380A        SNZ [0AH].0
+  74  0026  2800     R  JMP L45
+  74  0027  0F01        MOV A,01h
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 12 
+
+  74  0028  0080     R  MOV CR6,A
+  74  0029  2800     R  JMP L46
+  74  002A              L45:
+  74  002A  1F00     R  CLR CR6
+  74  002B              L46:
+  74  002B  0F00     R  MOV A,BANK _CountSW
+  74  002C  0084        MOV [04H],A
+  74  002D  0F00     R  MOV A,OFFSET _CountSW
+  74  002E  0083        MOV [03H],A
+  74  002F  0702        MOV A,[02H]
+  74  0030  0A2D        SUB A,02dh
+  74  0031  3C0A        SZ [0AH].0
+  74  0032  2800     R  JMP L47
+  74  0033  0F01        MOV A,01h
+  74  0034  0080     R  MOV CR7,A
+  74  0035  2800     R  JMP L48
+  74  0036              L47:
+  74  0036  1F00     R  CLR CR7
+  74  0037              L48:
+  74  0037  0700     R  MOV A,CR6
+  74  0038  0600     R  AND A,CR7
+  74  0039  0080     R  MOV b0_18,A
+  74  003A  1080     R  SZ b0_18
+  74  003B  2800     R  JMP L52
+  74  003C  2800     R  JMP L41
+  74  003D              L52:
+
+;  76:  		STM_DISABLE();
+  76  003D  35A8        CLR [028H].3
+  76  003E              L41:
+
+;  78:  	if(CountSW>=46)
+  78  003E  0F00     R  MOV A,BANK _CountSW
+  78  003F  0084        MOV [04H],A
+  78  0040  0F00     R  MOV A,OFFSET _CountSW
+  78  0041  0083        MOV [03H],A
+  78  0042  0702        MOV A,[02H]
+  78  0043  0A2E        SUB A,02eh
+  78  0044  380A        SNZ [0AH].0
+  78  0045  2800     R  JMP L49
+
+;  80:  		CountSW=0;
+  80  0046  0F00     R  MOV A,BANK _CountSW
+  80  0047  0084        MOV [04H],A
+  80  0048  0F00     R  MOV A,OFFSET _CountSW
+  80  0049  0083        MOV [03H],A
+  80  004A  1F02        CLR [02H]
+  80  004B              L49:
+  80  004B              L35:
+  80  004B  0700     E  MOV A,V3MP1
+  80  004C  0083        MOV [03H],A
+  80  004D  0700     E  MOV A,V3BP
+  80  004E  0084        MOV [04H],A
+  80  004F  0700     E  MOV A,V3S
+  80  0050  008A        MOV [0AH],A
+  80  0051  0700     E  MOV A,V3A
+  80  0052  0004        RETI
+  80  0053              _ISR_TB1 ENDP
+  80  0053              RAMBANK 0 @ISR_TB1
+  80  0000              @ISR_TB1 .SECTION 'DATA'
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 13 
+
+  80  0000  00          b0_18 DB ?
+  80  0001  00          CR5 DB ? ; 38
+  80  0002  00          CR6 DB ? ; 43
+  80  0003  00          CR7 DB ? ; 44
+
+;  85: {
+  85  0000              @@ISR_TB0 .SECTION AT 08H 'CODE'
+  85  0000  2800     R  JMP _ISR_TB0
+  85  0000              @ISR_TB0 .SECTION 'CODE'
+  85  0000              _ISR_TB0 PROC
+  85  0000  0080     E  MOV V2A,A
+  85  0001  070A        MOV A,[0AH]
+  85  0002  0080     E  MOV V2S,A
+  85  0003  0703        MOV A,[03H]
+  85  0004  0080     E  MOV V2MP1,A
+  85  0005  0704        MOV A,[04H]
+  85  0006  0080     E  MOV V2BP,A
+
+;  86: 	if(Shift==0){TRIAC=1;}
+  86  0007  0F00     R  MOV A,BANK _Shift
+  86  0008  0084        MOV [04H],A
+  86  0009  0F00     R  MOV A,OFFSET _Shift
+  86  000A  0083        MOV [03H],A
+  86  000B  1082        SZ [02H]
+  86  000C  2800     R  JMP L54
+  86  000D  3314        SET [014H].6
+  86  000E  2800     R  JMP L55
+  86  000F              L54:
+
+;  87: 	else if(Shift==1 | Shift==2)
+  87  000F  0F00     R  MOV A,BANK _Shift
+  87  0010  0084        MOV [04H],A
+  87  0011  0F00     R  MOV A,OFFSET _Shift
+  87  0012  0083        MOV [03H],A
+  87  0013  0702        MOV A,[02H]
+  87  0014  0C01        XOR A,01h
+  87  0015  390A        SNZ [0AH].2
+  87  0016  2800     R  JMP L60
+  87  0017  0F01        MOV A,01h
+  87  0018  0080     R  MOV CR8,A
+  87  0019  2800     R  JMP L61
+  87  001A              L60:
+  87  001A  1F00     R  CLR CR8
+  87  001B              L61:
+  87  001B  0F00     R  MOV A,BANK _Shift
+  87  001C  0084        MOV [04H],A
+  87  001D  0F00     R  MOV A,OFFSET _Shift
+  87  001E  0083        MOV [03H],A
+  87  001F  0702        MOV A,[02H]
+  87  0020  0C02        XOR A,02h
+  87  0021  390A        SNZ [0AH].2
+  87  0022  2800     R  JMP L62
+  87  0023  0F01        MOV A,01h
+  87  0024  0080     R  MOV CR9,A
+  87  0025  2800     R  JMP L63
+  87  0026              L62:
+  87  0026  1F00     R  CLR CR9
+  87  0027              L63:
+  87  0027  0700     R  MOV A,CR8
+  87  0028  0500     R  OR A,CR9
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 14 
+
+  87  0029  0080     R  MOV b0_19,A
+  87  002A  1080     R  SZ b0_19
+  87  002B  2800     R  JMP L80
+  87  002C  2800     R  JMP L56
+  87  002D              L80:
+
+;  89: 		Trig++;
+  89  002D  0F00     R  MOV A,BANK _Trig
+  89  002E  0084        MOV [04H],A
+  89  002F  0F00     R  MOV A,OFFSET _Trig
+  89  0030  0083        MOV [03H],A
+  89  0031  1482        INC [02H]
+
+;  90: 		 if(Trig>250)
+  90  0032  0F00     R  MOV A,BANK _Trig
+  90  0033  0084        MOV [04H],A
+  90  0034  0F00     R  MOV A,OFFSET _Trig
+  90  0035  0083        MOV [03H],A
+  90  0036  0FFA        MOV A,0fah
+  90  0037  0202        SUB A,[02H]
+  90  0038  3C0A        SZ [0AH].0
+  90  0039  2800     R  JMP L64
+
+;  92: 			Trig=0;
+  92  003A  0F00     R  MOV A,BANK _Trig
+  92  003B  0084        MOV [04H],A
+  92  003C  0F00     R  MOV A,OFFSET _Trig
+  92  003D  0083        MOV [03H],A
+  92  003E  1F02        CLR [02H]
+
+;  93: 			if(Shift==1)
+  93  003F  0F00     R  MOV A,BANK _Shift
+  93  0040  0084        MOV [04H],A
+  93  0041  0F00     R  MOV A,OFFSET _Shift
+  93  0042  0083        MOV [03H],A
+  93  0043  0702        MOV A,[02H]
+  93  0044  0C01        XOR A,01h
+  93  0045  390A        SNZ [0AH].2
+  93  0046  2800     R  JMP L66
+
+;  95: 				Triger++;
+  95  0047  0F00     R  MOV A,BANK _Triger
+  95  0048  0084        MOV [04H],A
+  95  0049  0F00     R  MOV A,OFFSET _Triger
+  95  004A  0083        MOV [03H],A
+  95  004B  1482        INC [02H]
+
+;  96: 				if(Triger>60){Shift=0;}
+  96  004C  0F00     R  MOV A,BANK _Triger
+  96  004D  0084        MOV [04H],A
+  96  004E  0F00     R  MOV A,OFFSET _Triger
+  96  004F  0083        MOV [03H],A
+  96  0050  0F3C        MOV A,03ch
+  96  0051  0202        SUB A,[02H]
+  96  0052  3C0A        SZ [0AH].0
+  96  0053  2800     R  JMP L68
+  96  0054  0F00     R  MOV A,BANK _Shift
+  96  0055  0084        MOV [04H],A
+  96  0056  0F00     R  MOV A,OFFSET _Shift
+  96  0057  0083        MOV [03H],A
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 15 
+
+  96  0058  1F02        CLR [02H]
+  96  0059              L68:
+  96  0059              L66:
+
+;  98: 			if(Shift==2)
+  98  0059  0F00     R  MOV A,BANK _Shift
+  98  005A  0084        MOV [04H],A
+  98  005B  0F00     R  MOV A,OFFSET _Shift
+  98  005C  0083        MOV [03H],A
+  98  005D  0702        MOV A,[02H]
+  98  005E  0C02        XOR A,02h
+  98  005F  390A        SNZ [0AH].2
+  98  0060  2800     R  JMP L70
+
+; 100: 				Triger--;
+ 100  0061  0F00     R  MOV A,BANK _Triger
+ 100  0062  0084        MOV [04H],A
+ 100  0063  0F00     R  MOV A,OFFSET _Triger
+ 100  0064  0083        MOV [03H],A
+ 100  0065  1582        DEC [02H]
+
+; 101: 				if(Triger<15){Shift=3;}
+ 101  0066  0F00     R  MOV A,BANK _Triger
+ 101  0067  0084        MOV [04H],A
+ 101  0068  0F00     R  MOV A,OFFSET _Triger
+ 101  0069  0083        MOV [03H],A
+ 101  006A  0702        MOV A,[02H]
+ 101  006B  0A0F        SUB A,0fh
+ 101  006C  3C0A        SZ [0AH].0
+ 101  006D  2800     R  JMP L72
+ 101  006E  0F00     R  MOV A,BANK _Shift
+ 101  006F  0084        MOV [04H],A
+ 101  0070  0F00     R  MOV A,OFFSET _Shift
+ 101  0071  0083        MOV [03H],A
+ 101  0072  0F03        MOV A,03h
+ 101  0073  0082        MOV [02H],A
+ 101  0074              L72:
+ 101  0074              L70:
+ 101  0074              L64:
+
+; 104: 		if(Zero_Flag==0)
+ 104  0074  0F00     R  MOV A,BANK _Zero_Flag
+ 104  0075  0084        MOV [04H],A
+ 104  0076  0F00     R  MOV A,OFFSET _Zero_Flag
+ 104  0077  0083        MOV [03H],A
+ 104  0078  1082        SZ [02H]
+ 104  0079  2800     R  JMP L74
+
+; 106: 			TRIAC=1;
+ 106  007A  3314        SET [014H].6
+
+; 107: 		}
+ 107  007B  2800     R  JMP L57
+ 107  007C              L74:
+
+; 110: 			if(Zero_Time>Triger)
+ 110  007C  0F00     R  MOV A,BANK _Triger
+ 110  007D  0084        MOV [04H],A
+ 110  007E  0F00     R  MOV A,OFFSET _Triger
+ 110  007F  0083        MOV [03H],A
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 16 
+
+ 110  0080  0702        MOV A,[02H]
+ 110  0081  0080     R  MOV b0_19,A
+ 110  0082  0F00     R  MOV A,BANK _Zero_Time
+ 110  0083  0084        MOV [04H],A
+ 110  0084  0F00     R  MOV A,OFFSET _Zero_Time
+ 110  0085  0083        MOV [03H],A
+ 110  0086  0700     R  MOV A,b0_19
+ 110  0087  0202        SUB A,[02H]
+ 110  0088  3C0A        SZ [0AH].0
+ 110  0089  2800     R  JMP L76
+
+; 112: 				TRIAC=0;
+ 112  008A  3714        CLR [014H].6
+
+; 113: 				Zero_Time=0;
+ 113  008B  0F00     R  MOV A,BANK _Zero_Time
+ 113  008C  0084        MOV [04H],A
+ 113  008D  0F00     R  MOV A,OFFSET _Zero_Time
+ 113  008E  0083        MOV [03H],A
+ 113  008F  1F02        CLR [02H]
+
+; 114: 				Zero_Flag=0;	
+ 114  0090  0F00     R  MOV A,BANK _Zero_Flag
+ 114  0091  0084        MOV [04H],A
+ 114  0092  0F00     R  MOV A,OFFSET _Zero_Flag
+ 114  0093  0083        MOV [03H],A
+ 114  0094  1F02        CLR [02H]
+ 114  0095              L76:
+
+; 116: 			Zero_Time++;
+ 116  0095  0F00     R  MOV A,BANK _Zero_Time
+ 116  0096  0084        MOV [04H],A
+ 116  0097  0F00     R  MOV A,OFFSET _Zero_Time
+ 116  0098  0083        MOV [03H],A
+ 116  0099  1482        INC [02H]
+
+; 118: 	}
+ 118  009A  2800     R  JMP L57
+ 118  009B              L56:
+
+; 119: 	else if(Shift==3){TRIAC=0;}
+ 119  009B  0F00     R  MOV A,BANK _Shift
+ 119  009C  0084        MOV [04H],A
+ 119  009D  0F00     R  MOV A,OFFSET _Shift
+ 119  009E  0083        MOV [03H],A
+ 119  009F  0702        MOV A,[02H]
+ 119  00A0  0C03        XOR A,03h
+ 119  00A1  390A        SNZ [0AH].2
+ 119  00A2  2800     R  JMP L78
+ 119  00A3  3714        CLR [014H].6
+ 119  00A4              L78:
+ 119  00A4              L57:
+ 119  00A4              L55:
+ 119  00A4              L53:
+ 119  00A4  0700     E  MOV A,V2MP1
+ 119  00A5  0083        MOV [03H],A
+ 119  00A6  0700     E  MOV A,V2BP
+ 119  00A7  0084        MOV [04H],A
+ 119  00A8  0700     E  MOV A,V2S
+ 119  00A9  008A        MOV [0AH],A
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 17 
+
+ 119  00AA  0700     E  MOV A,V2A
+ 119  00AB  0004        RETI
+ 119  00AC              _ISR_TB0 ENDP
+ 119  00AC              RAMBANK 0 @ISR_TB0
+ 119  0000              @ISR_TB0 .SECTION 'DATA'
+ 119  0000  00          b0_19 DB ?
+ 119  0001  00          CR8 DB ? ; 58
+ 119  0002  00          CR9 DB ? ; 59
+
+
+;  24: {
+  24  0000              @EX_INIT .SECTION 'CODE'
+  24  0000              PUBLIC _EX_INIT
+  24  0000              _EX_INIT PROC
+
+;  25: 	EXI_EDGE();
+  25  0000  308D        SET [0DH].1
+  25  0001  300D        SET [0DH].0
+
+;  26: 	EXI_PIN(0);
+  26  0002  3295        SET [015H].5
+  26  0003  3696        CLR [016H].5
+  26  0004  3498        CLR [018H].1
+  26  0005  3418        CLR [018H].0
+
+;  27: 	EXI_E(1);
+  27  0006  308E        SET [0EH].1
+
+;  28: 	EXI_F(0);
+  28  0007  360E        CLR [0EH].4
+
+;  29: 	EMI(1);
+  29  0008  300E        SET [0EH].0
+  29  0009              L81:
+  29  0009  0003        RET
+  29  000A              _EX_INIT ENDP
+
+;  34: {
+  34  0000              @@ISR_EXINT .SECTION AT 04H 'CODE'
+  34  0000  2800     R  JMP _ISR_EXINT
+  34  0000              @ISR_EXINT .SECTION 'CODE'
+  34  0000              _ISR_EXINT PROC
+  34  0000  0080     E  MOV V1A,A
+  34  0001  070A        MOV A,[0AH]
+  34  0002  0080     E  MOV V1S,A
+  34  0003  0703        MOV A,[03H]
+  34  0004  0080     E  MOV V1MP1,A
+  34  0005  0704        MOV A,[04H]
+  34  0006  0080     E  MOV V1BP,A
+
+;  35:  Zero_Flag=1;
+  35  0007  0F00     R  MOV A,BANK _Zero_Flag
+  35  0008  0084        MOV [04H],A
+  35  0009  0F00     R  MOV A,OFFSET _Zero_Flag
+  35  000A  0083        MOV [03H],A
+  35  000B  0F01        MOV A,1
+  35  000C  0082        MOV [02H],A
+
+;  36:  Zero_Time=0;
+  36  000D  0F00     R  MOV A,BANK _Zero_Time
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 18 
+
+  36  000E  0084        MOV [04H],A
+  36  000F  0F00     R  MOV A,OFFSET _Zero_Time
+  36  0010  0083        MOV [03H],A
+  36  0011  1F02        CLR [02H]
+  36  0012              L82:
+  36  0012  0700     E  MOV A,V1MP1
+  36  0013  0083        MOV [03H],A
+  36  0014  0700     E  MOV A,V1BP
+  36  0015  0084        MOV [04H],A
+  36  0016  0700     E  MOV A,V1S
+  36  0017  008A        MOV [0AH],A
+  36  0018  0700     E  MOV A,V1A
+  36  0019  0004        RETI
+  36  001A              _ISR_EXINT ENDP
+  36  001A              RAMBANK 0 @ISR_EXINT
+  36  0000              @ISR_EXINT .SECTION 'DATA'
+
+
+;   9: {
+   9  0000              @MAIN .SECTION 'CODE'
+   9  0000              _main PROC
+   9  0000              begin:
+
+;  10:  Frist=0;
+  10  0000  0F00     R  MOV A,BANK _Frist
+  10  0001  0084        MOV [04H],A
+  10  0002  0F00     R  MOV A,OFFSET _Frist
+  10  0003  0083        MOV [03H],A
+  10  0004  1F02        CLR [02H]
+
+;  11:  CountEdge=0; 
+  11  0005  0F00     R  MOV A,BANK _CountEdge
+  11  0006  0084        MOV [04H],A
+  11  0007  0F00     R  MOV A,OFFSET _CountEdge
+  11  0008  0083        MOV [03H],A
+  11  0009  1F02        CLR [02H]
+
+;  12:  Zero_Time=0;
+  12  000A  0F00     R  MOV A,BANK _Zero_Time
+  12  000B  0084        MOV [04H],A
+  12  000C  0F00     R  MOV A,OFFSET _Zero_Time
+  12  000D  0083        MOV [03H],A
+  12  000E  1F02        CLR [02H]
+
+;  13:  Zero_Flag=0;
+  13  000F  0F00     R  MOV A,BANK _Zero_Flag
+  13  0010  0084        MOV [04H],A
+  13  0011  0F00     R  MOV A,OFFSET _Zero_Flag
+  13  0012  0083        MOV [03H],A
+  13  0013  1F02        CLR [02H]
+
+;  14:  Trig=0;
+  14  0014  0F00     R  MOV A,BANK _Trig
+  14  0015  0084        MOV [04H],A
+  14  0016  0F00     R  MOV A,OFFSET _Trig
+  14  0017  0083        MOV [03H],A
+  14  0018  1F02        CLR [02H]
+
+;  15:  Triger=0;
+  15  0019  0F00     R  MOV A,BANK _Triger
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 19 
+
+  15  001A  0084        MOV [04H],A
+  15  001B  0F00     R  MOV A,OFFSET _Triger
+  15  001C  0083        MOV [03H],A
+  15  001D  1F02        CLR [02H]
+
+;  16:  Shift=0;
+  16  001E  0F00     R  MOV A,BANK _Shift
+  16  001F  0084        MOV [04H],A
+  16  0020  0F00     R  MOV A,OFFSET _Shift
+  16  0021  0083        MOV [03H],A
+  16  0022  1F02        CLR [02H]
+
+;  17:  Set=0;
+  17  0023  0F00     R  MOV A,BANK _Set
+  17  0024  0084        MOV [04H],A
+  17  0025  0F00     R  MOV A,OFFSET _Set
+  17  0026  0083        MOV [03H],A
+  17  0027  1F02        CLR [02H]
+
+;  18:  Count=0;
+  18  0028  0F00     R  MOV A,BANK _Count
+  18  0029  0084        MOV [04H],A
+  18  002A  0F00     R  MOV A,OFFSET _Count
+  18  002B  0083        MOV [03H],A
+  18  002C  1F02        CLR [02H]
+
+;  19:  CountSW=0;
+  19  002D  0F00     R  MOV A,BANK _CountSW
+  19  002E  0084        MOV [04H],A
+  19  002F  0F00     R  MOV A,OFFSET _CountSW
+  19  0030  0083        MOV [03H],A
+  19  0031  1F02        CLR [02H]
+
+;  20:  Backup=0;
+  20  0032  0F00     R  MOV A,BANK _Backup
+  20  0033  0084        MOV [04H],A
+  20  0034  0F00     R  MOV A,OFFSET _Backup
+  20  0035  0083        MOV [03H],A
+  20  0036  1F02        CLR [02H]
+
+;  21:  Detect=0;
+  21  0037  0F00     R  MOV A,BANK _Detect
+  21  0038  0084        MOV [04H],A
+  21  0039  0F00     R  MOV A,OFFSET _Detect
+  21  003A  0083        MOV [03H],A
+  21  003B  1F02        CLR [02H]
+
+;  22:  IO_INIT();
+  22  003C  2000     R  CALL _IO_INIT
+
+;  23:  STM_INIT();
+  23  003D  2000     R  CALL _STM_INIT
+
+;  24:  TB0_INIT();
+  24  003E  2000     R  CALL _TB0_INIT
+
+;  25:  TB1_INIT();
+  25  003F  2000     R  CALL _TB1_INIT
+
+;  26:  EX_INIT();
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 20 
+
+  26  0040  2000     R  CALL _EX_INIT
+  26  0041  2800     R  JMP L85
+  26  0042              L87:
+
+;  32: 	 	_clrwdt();
+  32  0042  0001        CLR WDT
+  32  0043  2800     R  JMP L91
+  32  0044              L90:
+
+;  33: 		while(IRREC==1){_clrwdt();}
+  33  0044  0001        CLR WDT
+  33  0045              L91:
+  33  0045  3F94        SZ [014H].7
+  33  0046  2800     R  JMP L90
+  33  0047  2800     R  JMP L94
+  33  0048              L93:
+
+;  34: 		while(IRREC==0){Count++;Delay_1ms();}
+  34  0048  0F00     R  MOV A,BANK _Count
+  34  0049  0084        MOV [04H],A
+  34  004A  0F00     R  MOV A,OFFSET _Count
+  34  004B  0083        MOV [03H],A
+  34  004C  1482        INC [02H]
+  34  004D  2000     R  CALL _Delay_1ms
+  34  004E              L94:
+  34  004E  3B94        SNZ [014H].7
+  34  004F  2800     R  JMP L93
+
+;  35: 		if(Count>30)
+  35  0050  0F00     R  MOV A,BANK _Count
+  35  0051  0084        MOV [04H],A
+  35  0052  0F00     R  MOV A,OFFSET _Count
+  35  0053  0083        MOV [03H],A
+  35  0054  0F1E        MOV A,01eh
+  35  0055  0202        SUB A,[02H]
+  35  0056  3C0A        SZ [0AH].0
+  35  0057  2800     R  JMP L96
+
+;  38: 	 		Set++;
+  38  0058  0F00     R  MOV A,BANK _Set
+  38  0059  0084        MOV [04H],A
+  38  005A  0F00     R  MOV A,OFFSET _Set
+  38  005B  0083        MOV [03H],A
+  38  005C  1482        INC [02H]
+
+;  39: 	 		if(Set==1)
+  39  005D  0F00     R  MOV A,BANK _Set
+  39  005E  0084        MOV [04H],A
+  39  005F  0F00     R  MOV A,OFFSET _Set
+  39  0060  0083        MOV [03H],A
+  39  0061  0702        MOV A,[02H]
+  39  0062  0C01        XOR A,01h
+  39  0063  390A        SNZ [0AH].2
+  39  0064  2800     R  JMP L98
+
+;  41: 				LED_1=1;
+  41  0065  3014        SET [014H].0
+
+;  42: 				LED_2=0;
+  42  0066  3494        CLR [014H].1
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 21 
+
+
+;  43: 				Shift=2;
+  43  0067  0F00     R  MOV A,BANK _Shift
+  43  0068  0084        MOV [04H],A
+  43  0069  0F00     R  MOV A,OFFSET _Shift
+  43  006A  0083        MOV [03H],A
+  43  006B  0F02        MOV A,02h
+  43  006C  0082        MOV [02H],A
+
+;  44: 				Triger=60;
+  44  006D  0F00     R  MOV A,BANK _Triger
+  44  006E  0084        MOV [04H],A
+  44  006F  0F00     R  MOV A,OFFSET _Triger
+  44  0070  0083        MOV [03H],A
+  44  0071  0F3C        MOV A,03ch
+  44  0072  0082        MOV [02H],A
+
+;  45: 	 		}
+  45  0073  2800     R  JMP L99
+  45  0074              L98:
+
+;  48: 				LED_1=0;
+  48  0074  3414        CLR [014H].0
+
+;  49: 				LED_2=1;
+  49  0075  3094        SET [014H].1
+
+;  50: 				Shift=1;
+  50  0076  0F00     R  MOV A,BANK _Shift
+  50  0077  0084        MOV [04H],A
+  50  0078  0F00     R  MOV A,OFFSET _Shift
+  50  0079  0083        MOV [03H],A
+  50  007A  0F01        MOV A,1
+  50  007B  0082        MOV [02H],A
+
+;  51: 				Triger=15;
+  51  007C  0F00     R  MOV A,BANK _Triger
+  51  007D  0084        MOV [04H],A
+  51  007E  0F00     R  MOV A,OFFSET _Triger
+  51  007F  0083        MOV [03H],A
+  51  0080  0F0F        MOV A,0fh
+  51  0081  0082        MOV [02H],A
+
+;  52: 				Count=0;
+  52  0082  0F00     R  MOV A,BANK _Count
+  52  0083  0084        MOV [04H],A
+  52  0084  0F00     R  MOV A,OFFSET _Count
+  52  0085  0083        MOV [03H],A
+  52  0086  1F02        CLR [02H]
+
+;  53: 				Set=0;
+  53  0087  0F00     R  MOV A,BANK _Set
+  53  0088  0084        MOV [04H],A
+  53  0089  0F00     R  MOV A,OFFSET _Set
+  53  008A  0083        MOV [03H],A
+  53  008B  1F02        CLR [02H]
+  53  008C              L99:
+
+;  55:  			Count=0;
+  55  008C  0F00     R  MOV A,BANK _Count
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 22 
+
+  55  008D  0084        MOV [04H],A
+  55  008E  0F00     R  MOV A,OFFSET _Count
+  55  008F  0083        MOV [03H],A
+  55  0090  1F02        CLR [02H]
+
+;  56:  			Delay_ms(200);
+  56  0091  0FC8        MOV A,0c8h
+  56  0092  0080     R  MOV Delay_ms0,A
+  56  0093  0F00        MOV A,00h
+  56  0094  0080     R  MOV Delay_ms0[1],A
+  56  0095  2000     R  CALL _Delay_ms
+
+;  57:  			Detect=1;
+  57  0096  0F00     R  MOV A,BANK _Detect
+  57  0097  0084        MOV [04H],A
+  57  0098  0F00     R  MOV A,OFFSET _Detect
+  57  0099  0083        MOV [03H],A
+  57  009A  0F01        MOV A,1
+  57  009B  0082        MOV [02H],A
+
+;  58:  			break;
+  58  009C  2800     R  JMP L101
+  58  009D              L96:
+
+;  62: 			Count=0;
+  62  009D  0F00     R  MOV A,BANK _Count
+  62  009E  0084        MOV [04H],A
+  62  009F  0F00     R  MOV A,OFFSET _Count
+  62  00A0  0083        MOV [03H],A
+  62  00A1  1F02        CLR [02H]
+
+;  63: 			Detect=0;
+  63  00A2  0F00     R  MOV A,BANK _Detect
+  63  00A3  0084        MOV [04H],A
+  63  00A4  0F00     R  MOV A,OFFSET _Detect
+  63  00A5  0083        MOV [03H],A
+  63  00A6  1F02        CLR [02H]
+  63  00A7              L88:
+
+;  30:  	while(1)
+  30  00A7  2800     R  JMP L87
+  30  00A8  2800     R  JMP L101
+  30  00A9              L100:
+
+;  69: 		if(IRREC==1)
+  69  00A9  3B94        SNZ [014H].7
+  69  00AA  2800     R  JMP L103
+
+;  71: 			Count++;
+  71  00AB  0F00     R  MOV A,BANK _Count
+  71  00AC  0084        MOV [04H],A
+  71  00AD  0F00     R  MOV A,OFFSET _Count
+  71  00AE  0083        MOV [03H],A
+  71  00AF  1482        INC [02H]
+
+;  72: 			if(Count>250)
+  72  00B0  0F00     R  MOV A,BANK _Count
+  72  00B1  0084        MOV [04H],A
+  72  00B2  0F00     R  MOV A,OFFSET _Count
+  72  00B3  0083        MOV [03H],A
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 23 
+
+  72  00B4  0FFA        MOV A,0fah
+  72  00B5  0202        SUB A,[02H]
+  72  00B6  3C0A        SZ [0AH].0
+  72  00B7  2800     R  JMP L105
+
+;  74: 				Detect=0;
+  74  00B8  0F00     R  MOV A,BANK _Detect
+  74  00B9  0084        MOV [04H],A
+  74  00BA  0F00     R  MOV A,OFFSET _Detect
+  74  00BB  0083        MOV [03H],A
+  74  00BC  1F02        CLR [02H]
+
+;  75: 				Count=0;
+  75  00BD  0F00     R  MOV A,BANK _Count
+  75  00BE  0084        MOV [04H],A
+  75  00BF  0F00     R  MOV A,OFFSET _Count
+  75  00C0  0083        MOV [03H],A
+  75  00C1  1F02        CLR [02H]
+  75  00C2              L105:
+
+;  77: 			Delay_ms(1);
+  77  00C2  0F01        MOV A,01h
+  77  00C3  0080     R  MOV Delay_ms0,A
+  77  00C4  0F00        MOV A,00h
+  77  00C5  0080     R  MOV Delay_ms0[1],A
+  77  00C6  2000     R  CALL _Delay_ms
+
+;  78: 		}
+  78  00C7  2800     R  JMP L104
+  78  00C8              L103:
+
+;  81: 			Count=0;
+  81  00C8  0F00     R  MOV A,BANK _Count
+  81  00C9  0084        MOV [04H],A
+  81  00CA  0F00     R  MOV A,OFFSET _Count
+  81  00CB  0083        MOV [03H],A
+  81  00CC  1F02        CLR [02H]
+  81  00CD              L104:
+  81  00CD              L101:
+
+;  67: 	while(Detect==1)
+  67  00CD  0F00     R  MOV A,BANK _Detect
+  67  00CE  0084        MOV [04H],A
+  67  00CF  0F00     R  MOV A,OFFSET _Detect
+  67  00D0  0083        MOV [03H],A
+  67  00D1  0702        MOV A,[02H]
+  67  00D2  0C01        XOR A,01h
+  67  00D3  3D0A        SZ [0AH].2
+  67  00D4  2800     R  JMP L100
+  67  00D5              L85:
+
+;  28:  while(1)
+  28  00D5  2800     R  JMP L88
+  28  00D6              L83:
+
+; 109: }
+ 109  00D6  2800     R  JMP $
+ 109  00D7              _main ENDP
+
+
+;  30: volatile unsigned char Frist,CountEdge, Zero_Time,Zero_Flag,Trig,Triger,Shift,Set,Count,CountSW,Backup,Detect;
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 24 
+
+  30  00D7              PUBLIC _Detect
+  30  0000              @Detect .SECTION 'DATA'
+  30  0000  00          _Detect DB ? ; Detect
+  30  0001              PUBLIC _Backup
+  30  0000              @Backup .SECTION 'DATA'
+  30  0000  00          _Backup DB ? ; Backup
+  30  0001              PUBLIC _CountSW
+  30  0000              @CountSW .SECTION 'DATA'
+  30  0000  00          _CountSW DB ? ; CountSW
+  30  0001              PUBLIC _Count
+  30  0000              @Count .SECTION 'DATA'
+  30  0000  00          _Count DB ? ; Count
+  30  0001              PUBLIC _Set
+  30  0000              @Set .SECTION 'DATA'
+  30  0000  00          _Set DB ? ; Set
+  30  0001              PUBLIC _Shift
+  30  0000              @Shift .SECTION 'DATA'
+  30  0000  00          _Shift DB ? ; Shift
+  30  0001              PUBLIC _Triger
+  30  0000              @Triger .SECTION 'DATA'
+  30  0000  00          _Triger DB ? ; Triger
+  30  0001              PUBLIC _Trig
+  30  0000              @Trig .SECTION 'DATA'
+  30  0000  00          _Trig DB ? ; Trig
+  30  0001              PUBLIC _Zero_Flag
+  30  0000              @Zero_Flag .SECTION 'DATA'
+  30  0000  00          _Zero_Flag DB ? ; Zero_Flag
+  30  0001              PUBLIC _Zero_Time
+  30  0000              @Zero_Time .SECTION 'DATA'
+  30  0000  00          _Zero_Time DB ? ; Zero_Time
+  30  0001              PUBLIC _CountEdge
+  30  0000              @CountEdge .SECTION 'DATA'
+  30  0000  00          _CountEdge DB ? ; CountEdge
+  30  0001              PUBLIC _Frist
+  30  0000              @Frist .SECTION 'DATA'
+  30  0000  00          _Frist DB ? ; Frist
+
+
+;   8: void main()
+   8  0000              STARTSEC .SECTION  COM_L 'CODE'
+   8  0000              STARTUP:
+   8  0000              STARTSEC .SECTION  COM_E 'CODE'
+   8  0000  0003        RET
+   8  0001              EXTERN RH:BYTE
+   8  0001              EXTERN V1A:BYTE
+   8  0001              EXTERN V1S:BYTE
+   8  0001              EXTERN V1MP1:BYTE
+   8  0001              EXTERN V1BP:BYTE
+   8  0001              EXTERN V2A:BYTE
+   8  0001              EXTERN V2S:BYTE
+   8  0001              EXTERN V2MP1:BYTE
+   8  0001              EXTERN V2BP:BYTE
+   8  0001              EXTERN V3A:BYTE
+   8  0001              EXTERN V3S:BYTE
+   8  0001              EXTERN V3MP1:BYTE
+   8  0001              EXTERN V3BP:BYTE
+   8  0001              EXTERN __DELAYY0:NEAR
+   8  0001              EXTERN __DELAYY1:NEAR
+   8  0001              EXTERN __DELAYY2:NEAR
+   8  0001              EXTERN __DELAYY3:NEAR
+"File: IR-PRG.c      Holtek Cross-Assembler  Version 3.00      Page 25 
+
+   8  0001              EXTERN __DELAYY4:NEAR
+   8  0001              EXTERN __DELAYY5:NEAR
+   8  0000              @CODE .SECTION AT 0 'CODE'
+   8  0000  2000     R  CALL STARTUP
+   8  0001  2800     R  JMP begin
+   8  0002              @DUMMY PROC
+   8  0002  2000     R  CALL _main
+   8  0003              @DUMMY ENDP
+
+
+        0 Errors

@@ -1,0 +1,205 @@
+
+Linker Version 8.7.7.220718
+Input Object File: E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ
+Input Object File: E:\hamed\touch2\touch-2ch-1key\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0004h     0007h    0004h      CODE               @int0_code (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     000ch     000fh    0004h      CODE               @timer_code (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0010h     0027h    0018h      CODE               _TuochKeyInit (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0028h     0028h    0001h      CODE               @TOUCH_ISR_code (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0029h     0049h    0021h      CODE               @start (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     004ah     0067h    001eh      CODE               _delay_10us (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0068h     009eh    0037h      CODE               _delay_ms (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     009fh     0147h    00a9h      CODE               _Key_Touch (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0148h     0191h    004ah      CODE               _CalibrTuoch (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0192h     01d8h    0047h      CODE               _Key_Select (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     01d9h     0269h    0091h      CODE               _int0 (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     026ah     02cch    0063h      CODE               _timer (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     02cdh     02f4h    0028h      CODE               _main (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     02f5h     030dh    0019h      CODE               @ROMDATA_BASE (E:\hamed\touch2\touch-2ch-1key\STARTUP1_L.OBJ)
+     00h     030eh     032ch    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     032dh     036fh    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     008ah    002bh      DATA     4.3488    @HCCINIT (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     008bh     008bh    0001h      DATA     0         @BITDATASEC (E:\hamed\touch2\touch-2ch-1key\STARTUP1_L.OBJ)
+     00h     008ch     008ch    0001h      DATA     1         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     008dh     008dh    0001h      DATA     2         @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     008eh     008eh    0001h      DATA     2         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     008fh     008fh    0001h      DATA     13        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0090h     0090h    0001h      DATA     13        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0091h     0091h    0001h      DATA     13        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0092h     0092h    0001h      DATA     13        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0093h     0093h    0001h      DATA     2         @data_r104 (isr:ra~rh)
+     00h     0094h     0094h    0001h      DATA     2         @data_r204 (isr:ra~rh)
+     00h     0095h     0095h    0001h      DATA     2         @data_r10c (isr:ra~rh)
+     00h     0096h     0096h    0001h      DATA     2         @data_r20c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0097h     0097h    0000h      LOCAL    0         @dummy4 (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         _int0 (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         @dummy12 (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         _timer (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     00adh     00adh    0000h      LOCAL    0         @dummy (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     00adh     00adh    0000h      LOCAL    0         _main (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     00a3h     00aah    0008h      LOCAL    3         _delay_ms (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0097h     00a2h    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0000h      LOCAL    0         _TuochKeyInit (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     00abh     00ach    0002h      LOCAL    2         _CalibrTuoch (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0097h     009ah    0004h      LOCAL    2         _delay_10us (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0097h     00a4h    000eh      LOCAL    5.6429    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a5h     00a5h    0000h      LOCAL    0         _Key_Select (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+     00h     0097h     0097h    0000h      LOCAL    0         _Key_Touch (E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     007ch              _CalibrCount
+     007bh              _CalibrSample
+     0148h              _CalibrTuoch
+     0087h              _Count_C1
+     0083h              _Count_C1_Backup
+     0081h              _Count_S1
+     007fh              _Count_T1
+     0192h              _Key_Select
+     009fh              _Key_Touch
+     0060h              _Setinoff
+     0028h              _TOUCH_ISR
+     0010h              _TuochKeyInit
+     030eh              _builtin_holtek_mulsi3_isr00
+     009bh              _builtin_holtek_mulsi3_isr00_2
+     032dh              _builtin_holtek_udivmodsi4_isr00
+     0077h              _ch2change
+     0075h              _changeconter
+     007dh              _counter
+     0069h              _counter1
+     0067h              _counter2
+     0063h              _counter22
+     0065h              _counter3
+     0061h              _counter32
+     006dh              _counterrgb
+     004ah              _delay_10us
+     0097h              _delay_10us_2
+     0068h              _delay_ms
+     00a3h              _delay_ms_2
+     008bh[0]           _function
+     007eh              _i
+     01d9h              _int0
+     02cdh              _main
+     006bh              _ncount
+     0079h              _nsicl
+     008bh[2]           _out1
+     008bh[1]           _out2
+     0073h              _rgb1
+     0071h              _rgb2
+     006fh              _rgbpals
+     026ah              _timer
+     0093h              r104
+     0095h              r10c
+     0094h              r204
+     0096h              r20c
+     008ch              ra
+     008dh              rb
+     008eh              rc
+     008fh              rd
+     0090h              re
+     0091h              rf
+     0092h              rg
+     02f4h              startup_value_1
+
+     Address            Public by Value
+     0010h              _TuochKeyInit
+     0028h              _TOUCH_ISR
+     004ah              _delay_10us
+     0060h              _Setinoff
+     0061h              _counter32
+     0063h              _counter22
+     0065h              _counter3
+     0067h              _counter2
+     0068h              _delay_ms
+     0069h              _counter1
+     006bh              _ncount
+     006dh              _counterrgb
+     006fh              _rgbpals
+     0071h              _rgb2
+     0073h              _rgb1
+     0075h              _changeconter
+     0077h              _ch2change
+     0079h              _nsicl
+     007bh              _CalibrSample
+     007ch              _CalibrCount
+     007dh              _counter
+     007eh              _i
+     007fh              _Count_T1
+     0081h              _Count_S1
+     0083h              _Count_C1_Backup
+     0087h              _Count_C1
+     008ch              ra
+     008dh              rb
+     008eh              rc
+     008fh              rd
+     0090h              re
+     0091h              rf
+     0092h              rg
+     0093h              r104
+     0094h              r204
+     0095h              r10c
+     0096h              r20c
+     0097h              _delay_10us_2
+     009bh              _builtin_holtek_mulsi3_isr00_2
+     009fh              _Key_Touch
+     00a3h              _delay_ms_2
+     0148h              _CalibrTuoch
+     0192h              _Key_Select
+     01d9h              _int0
+     026ah              _timer
+     02cdh              _main
+     02f4h              startup_value_1
+     030eh              _builtin_holtek_mulsi3_isr00
+     032dh              _builtin_holtek_udivmodsi4_isr00
+     008bh[0]           _function
+     008bh[1]           _out2
+     008bh[2]           _out1
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     0369h    42%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     004dh    60%
+     Total     0080h     004dh    60%
+
+Use Stack Count
+_int0: 0
+_timer: 0
+_main: 3
+
+Call Tree
+    @dummy4
+        _int0 (0)
+    @dummy12
+        _timer (0)
+    @dummy
+        _main (0)
+            _delay_ms (1)
+                _builtin_holtek_mulsi3_isr00 (2)
+            _TuochKeyInit (1)
+            _CalibrTuoch (1)
+                _delay_10us (2)
+                _delay_ms (2)
+                    _builtin_holtek_mulsi3_isr00 (3)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Select (1)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Touch (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'E:\hamed\touch2\touch-2ch-1key\TOUCH-2CH-1KEY.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

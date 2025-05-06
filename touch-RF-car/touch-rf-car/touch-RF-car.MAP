@@ -1,0 +1,192 @@
+
+Linker Version 8.7.7.220718
+Input Object File: E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ
+Input Object File: E:\hamed\touch2\touch-RF-car\touch-rf-car\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     000ch     000ch    0001h      CODE               @timer_code (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     000dh     0024h    0018h      CODE               _TuochKeyInit (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     0028h     0028h    0001h      CODE               @TOUCH_ISR_code (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     0029h     0049h    0021h      CODE               @start (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     004ah     0067h    001eh      CODE               _delay_10us (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     0068h     009eh    0037h      CODE               _delay_ms (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     009fh     0437h    0399h      CODE               _Key_Touch (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     0438h     0559h    0122h      CODE               _CalibrTuoch (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     055ah     0675h    011ch      CODE               _Key_Select (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     0676h     069fh    002ah      CODE               _main (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     06a0h     06bfh    0020h      CODE               @ROMDATA_BASE (E:\hamed\touch2\touch-RF-car\touch-rf-car\STARTUP1_L.OBJ)
+     00h     06c0h     06deh    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     06dfh     0721h    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     0099h    003ah      DATA     6.8966    @HCCINIT (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     009ah     009ah    0001h      DATA     0         @BITDATASEC (E:\hamed\touch2\touch-RF-car\touch-rf-car\STARTUP1_L.OBJ)
+     00h     009bh     009bh    0001h      DATA     4         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009ch     009ch    0001h      DATA     8         @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009dh     009dh    0001h      DATA     8         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009eh     009eh    0001h      DATA     49        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009fh     009fh    0001h      DATA     49        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a0h     00a0h    0001h      DATA     49        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a1h     00a1h    0001h      DATA     49        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00beh     00beh    0000h      LOCAL    0         @dummy (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     00beh     00beh    0000h      LOCAL    0         _main (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     00aeh     00b5h    0008h      LOCAL    24.5      _delay_ms (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     00a2h     00adh    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a2h     00a2h    0000h      LOCAL    0         _TuochKeyInit (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     00b6h     00bdh    0008h      LOCAL    2         _CalibrTuoch (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     00a2h     00a5h    0004h      LOCAL    5         _delay_10us (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     00a2h     00afh    000eh      LOCAL    11.214    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00b0h     00b0h    0001h      LOCAL    4         _Key_Select (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+     00h     00b6h     00b6h    0000h      LOCAL    0         _Key_Touch (E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     008bh              _CalibrCount1
+     007dh              _CalibrCount2
+     006fh              _CalibrCount3
+     0061h              _CalibrCount4
+     008ah              _CalibrSample1
+     007ch              _CalibrSample2
+     006eh              _CalibrSample3
+     0060h              _CalibrSample4
+     0438h              _CalibrTuoch
+     0096h              _Count_C1
+     0092h              _Count_C1_Backup
+     0086h              _Count_C2
+     0082h              _Count_C2_Backup
+     0078h              _Count_C3
+     0074h              _Count_C3_Backup
+     006ah              _Count_C4
+     0066h              _Count_C4_Backup
+     0090h              _Count_S1
+     0080h              _Count_S2
+     0072h              _Count_S3
+     0064h              _Count_S4
+     008eh              _Count_T1
+     007eh              _Count_T2
+     0070h              _Count_T3
+     0062h              _Count_T4
+     055ah              _Key_Select
+     009fh              _Key_Touch
+     0028h              _TOUCH_ISR
+     000dh              _TuochKeyInit
+     06c0h              _builtin_holtek_mulsi3_isr00
+     00a6h              _builtin_holtek_mulsi3_isr00_2
+     06dfh              _builtin_holtek_udivmodsi4_isr00
+     008ch              _counter
+     004ah              _delay_10us
+     00a2h              _delay_10us_2
+     0068h              _delay_ms
+     00aeh              _delay_ms_2
+     008dh              _i
+     009ah[0]           _lock
+     0676h              _main
+     009ah[4]           _q1
+     009ah[3]           _q2
+     009ah[2]           _q3
+     009ah[1]           _q4
+     000ch              _timer
+     009bh              ra
+     009ch              rb
+     009dh              rc
+     009eh              rd
+     009fh              re
+     00a0h              rf
+     00a1h              rg
+     069fh              startup_value_1
+
+     Address            Public by Value
+     000ch              _timer
+     000dh              _TuochKeyInit
+     0028h              _TOUCH_ISR
+     004ah              _delay_10us
+     0060h              _CalibrSample4
+     0061h              _CalibrCount4
+     0062h              _Count_T4
+     0064h              _Count_S4
+     0066h              _Count_C4_Backup
+     0068h              _delay_ms
+     006ah              _Count_C4
+     006eh              _CalibrSample3
+     006fh              _CalibrCount3
+     0070h              _Count_T3
+     0072h              _Count_S3
+     0074h              _Count_C3_Backup
+     0078h              _Count_C3
+     007ch              _CalibrSample2
+     007dh              _CalibrCount2
+     007eh              _Count_T2
+     0080h              _Count_S2
+     0082h              _Count_C2_Backup
+     0086h              _Count_C2
+     008ah              _CalibrSample1
+     008bh              _CalibrCount1
+     008ch              _counter
+     008dh              _i
+     008eh              _Count_T1
+     0090h              _Count_S1
+     0092h              _Count_C1_Backup
+     0096h              _Count_C1
+     009bh              ra
+     009ch              rb
+     009dh              rc
+     009eh              rd
+     009fh              _Key_Touch
+     009fh              re
+     00a0h              rf
+     00a1h              rg
+     00a2h              _delay_10us_2
+     00a6h              _builtin_holtek_mulsi3_isr00_2
+     00aeh              _delay_ms_2
+     0438h              _CalibrTuoch
+     009ah[0]           _lock
+     009ah[1]           _q4
+     009ah[2]           _q3
+     009ah[3]           _q2
+     009ah[4]           _q1
+     055ah              _Key_Select
+     0676h              _main
+     069fh              startup_value_1
+     06c0h              _builtin_holtek_mulsi3_isr00
+     06dfh              _builtin_holtek_udivmodsi4_isr00
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     0714h    88%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     005eh    73%
+     Total     0080h     005eh    73%
+
+Use Stack Count
+_main: 3
+
+Call Tree
+    @dummy
+        _main (0)
+            _delay_ms (1)
+                _builtin_holtek_mulsi3_isr00 (2)
+            _TuochKeyInit (1)
+            _CalibrTuoch (1)
+                _delay_10us (2)
+                _delay_ms (2)
+                    _builtin_holtek_mulsi3_isr00 (3)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Select (1)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Touch (1)
+                _delay_ms (2)
+                    _builtin_holtek_mulsi3_isr00 (3)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'E:\hamed\touch2\touch-RF-car\touch-rf-car\TOUCH-RF-CAR.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

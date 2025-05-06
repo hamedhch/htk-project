@@ -1,0 +1,569 @@
+
+Linker Version 8.7.7.220718
+Input Object File: E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ
+Input Object File: E:\hamed\touch2\clock-temp-touch\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0001h     001bh    001bh      CODE               _delay_10us (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0020h     0023h    0004h      CODE               @PTMR_code (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0024h     0027h    0004h      CODE               @TB0_ISR_code (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0028h     002bh    0004h      CODE               @TB1_ISR_code (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     002ch     004ch    0021h      CODE               @start (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     004dh     00d0h    0084h      CODE               @crom (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d1h     0104h    0034h      CODE               _delay_ms (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0105h     011ch    0018h      CODE               _IO_INIT (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     011dh     0192h    0076h      CODE               _Displayer (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0193h     01b3h    0021h      CODE               _Math (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     01b4h     022ch    0079h      CODE               _DispTimer (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     022dh     025fh    0033h      CODE               _DispTemp (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0260h     026bh    000ch      CODE               _ADC_INIT (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     026ch     02a6h    003bh      CODE               _ADC_GetChannelValue (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     02a7h     02f5h    004fh      CODE               _NTC_MAP (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     02f6h     02ffh    000ah      CODE               _TB0_INIT (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0300h     0309h    000ah      CODE               _TB1_INIT (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     030ah     030eh    0005h      CODE               _TB0_ISR (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     030fh     042fh    0121h      CODE               _TB1_ISR (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0430h     0460h    0031h      CODE               _Date (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0461h     046eh    000eh      CODE               _PTMR_PERIOD (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     046fh     0481h    0013h      CODE               _PTMRINIT (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0482h     04aah    0029h      CODE               _PTMR (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     04abh     04e2h    0038h      CODE               _TuochKeyInit (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     04e3h     0616h    0134h      CODE               _Key_Touch (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0617h     06c6h    00b0h      CODE               _CalibrTuoch (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     06c7h     076ah    00a4h      CODE               _Key_Select (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     076bh     07cah    0060h      CODE               _main (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     07cbh     07e9h    001fh      CODE               @ROMDATA_BASE (E:\hamed\touch2\clock-temp-touch\STARTUP1_L.OBJ)
+     00h     07eah     07f3h    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     07f4h     0812h    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0813h     082bh    0019h      CODE               _builtin_holtek_divmodqi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     082ch     086eh    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     086fh     087eh    0010h      CODE               _CROM2PROM (CROM2PROM)
+     00h     087fh     08a3h    0025h      CODE               _builtin_holtek_divmodhi4_isr28 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     08a4h     08bch    0019h      CODE               _builtin_holtek_divmodqi4_isr28 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0080h     0081h    0002h      DATA     0         @BITDATASEC (E:\hamed\touch2\clock-temp-touch\STARTUP1_L.OBJ)
+     00h     0082h     0082h    0001h      DATA     46        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     37        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0084h    0001h      DATA     29        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0085h     0085h    0001h      DATA     21        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0086h     0086h    0001h      DATA     21        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0087h     0087h    0001h      DATA     15        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0088h     0088h    0001h      DATA     15        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0089h     0089h    0001h      DATA     47        @data_ra28 (isr:ra~rh)
+     00h     008ah     008ah    0001h      DATA     16        @data_rb28 (isr:ra~rh)
+     00h     008bh     008bh    0001h      DATA     10        @data_rc28 (isr:ra~rh)
+     00h     008ch     008ch    0001h      DATA     6         @data_re28 (isr:ra~rh)
+     00h     008dh     008dh    0001h      DATA     6         @data_rd28 (isr:ra~rh)
+     00h     008eh     008eh    0001h      DATA     2         @data_rg28 (isr:ra~rh)
+     00h     008fh     008fh    0001h      DATA     4         @data_rf28 (isr:ra~rh)
+     00h     0090h     0090h    0001h      DATA     2         @data_r124 (isr:ra~rh)
+     00h     0091h     0091h    0001h      DATA     2         @data_r224 (isr:ra~rh)
+     00h     0092h     0092h    0001h      DATA     2         @data_r128 (isr:ra~rh)
+     00h     0093h     0093h    0001h      DATA     2         @data_r228 (isr:ra~rh)
+     00h     0094h     0094h    0001h      DATA     2         @data_r120 (isr:ra~rh)
+     00h     0095h     0095h    0001h      DATA     2         @data_r220 (isr:ra~rh)
+     00h     00bfh     00bfh    0001h      DATA     22        @HCCINIT_State (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c0h     00c1h    0002h      DATA     15        @HCCINIT_Biper (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c2h     00c2h    0001h      DATA     12        @HCCINIT_Hrs (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c3h     00c3h    0001h      DATA     10        @HCCINIT_Min (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c4h     00c4h    0001h      DATA     10        @HCCINIT_Bip (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c5h     00c5h    0001h      DATA     9         @HCCINIT_j (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c6h     00c7h    0002h      DATA     9         @HCCINIT_Count_C2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c8h     00c9h    0002h      DATA     9         @HCCINIT_Count_C1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00cah     00cbh    0002h      DATA     9         @HCCINIT_Belink (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00cch     00cdh    0002h      DATA     7         @HCCINIT_Count_B2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00ceh     00cfh    0002h      DATA     7         @HCCINIT_Count_B1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d0h     00d3h    0004h      DATA     6         @HCCINIT_Count_P2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d4h     00d7h    0004h      DATA     6         @HCCINIT_Count_P1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d8h     00d8h    0001h      DATA     6         @HCCINIT_Disp (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d9h     00dah    0002h      DATA     5         @HCCINIT_Count_TQ (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00dbh     00dbh    0001h      DATA     5         @HCCINIT_Count_T2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00dch     00dch    0001h      DATA     5         @HCCINIT_Count_T1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00ddh     00ddh    0001h      DATA     4         @HCCINIT_iq (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00deh     00deh    0001h      DATA     4         @HCCINIT_H124 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00dfh     00dfh    0001h      DATA     3         @HCCINIT_i (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e0h     00e0h    0001h      DATA     3         @HCCINIT_CalibrCount2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e1h     00e1h    0001h      DATA     3         @HCCINIT_CalibrCount1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e2h     00e2h    0001h      DATA     3         @HCCINIT_Count_H2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e3h     00e3h    0001h      DATA     3         @HCCINIT_Count_H1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e4h     00e4h    0001h      DATA     3         @HCCINIT_Sec (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e5h     00e5h    0001h      DATA     3         @HCCINIT_S (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e6h     00e6h    0001h      DATA     0         @HCCINIT_KeySel (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e7h     00e7h    0001h      DATA     0         @HCCINIT_Min2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e8h     00e8h    0001h      DATA     0         @HCCINIT_Min1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e9h     00e9h    0001h      DATA     0         @HCCINIT_Hrs2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00eah     00eah    0001h      DATA     0         @HCCINIT_Hrs1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00ebh     00ebh    0001h      DATA     0         @HCCINIT_CountTemp (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00ech     00ech    0001h      DATA     0         @HCCINIT_CountOn (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00edh     00edh    0001h      DATA     0         @HCCINIT_Ok (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00eeh     00eeh    0001h      DATA     0         @HCCINIT_Kab (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00efh     00f0h    0002h      DATA     0         @HCCINIT_Yer (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f1h     00f1h    0001h      DATA     0         @HCCINIT_Day (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f2h     00f2h    0001h      DATA     0         @HCCINIT_May (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f3h     00f3h    0001h      DATA     0         @HCCINIT_Temp (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f4h     00f4h    0001h      DATA     0         @HCCINIT_Display (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f5h     00f5h    0001h      DATA     0         @HCCINIT_Seletion (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f6h     00f6h    0001h      DATA     0         @HCCINIT_CNT_DISP (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f7h     00f7h    0001h      DATA     3         @HCCINIT0_N2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f8h     00f8h    0001h      DATA     2         @HCCINIT0_T2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f9h     00f9h    0001h      DATA     2         @HCCINIT0_T1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00fah     00fah    0001h      DATA     2         @HCCINIT0_N1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00fbh     00fbh    0001h      DATA     2         @HCCINIT0_H2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00fch     00fch    0001h      DATA     2         @HCCINIT0_H1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00fdh     00fdh    0001h      DATA     0         @HCCINIT0_N2T2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00feh     00feh    0001h      DATA     0         @HCCINIT0_N2T1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00ffh     00ffh    0001h      DATA     0         @HCCINIT0_N1T2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0080h     0080h    0001h      DATA     0         @HCCINIT0_N1T1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0081h     0081h    0001h      DATA     0         @HCCINIT0_H2T2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0082h     0082h    0001h      DATA     0         @HCCINIT0_H2T1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0083h     0083h    0001h      DATA     0         @HCCINIT0_H1T2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0084h     0084h    0001h      DATA     0         @HCCINIT0_H1T1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0085h     0085h    0001h      DATA     0         @HCCINIT0_TM2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0086h     0086h    0001h      DATA     0         @HCCINIT0_TM1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0087h     0087h    0001h      DATA     0         @HCCINIT0_S2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0088h     0088h    0001h      DATA     0         @HCCINIT0_S1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0089h     0089h    0001h      DATA     0         @HCCINIT0_D2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     008ah     008ah    0001h      DATA     0         @HCCINIT0_D1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     008bh     008bh    0001h      DATA     0         @HCCINIT0_M2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     008ch     008ch    0001h      DATA     0         @HCCINIT0_M1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     008dh     008dh    0001h      DATA     0         @HCCINIT0_Y4 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     008eh     008eh    0001h      DATA     0         @HCCINIT0_Y3 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     008fh     008fh    0001h      DATA     0         @HCCINIT0_Y2 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0090h     0090h    0001h      DATA     0         @HCCINIT0_Y1 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0091h     0091h    0001h      DATA     2         @data_r328 (isr:ra~rh)
+     01h     0092h     0092h    0001h      DATA     2         @data_r428 (isr:ra~rh)
+     01h     0093h     0093h    0001h      DATA     2         @data_r528 (isr:ra~rh)
+     01h     0094h     0094h    0001h      DATA     2         @data_r628 (isr:ra~rh)
+     01h     0095h     0095h    0001h      DATA     2         @data_r320 (isr:ra~rh)
+     01h     0096h     0096h    0001h      DATA     2         @data_r420 (isr:ra~rh)
+     01h     0097h     0097h    0001h      DATA     2         @data_r520 (isr:ra~rh)
+     01h     0098h     0098h    0001h      DATA     2         @data_r620 (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00a7h     00a7h    0000h      LOCAL    0         @dummy36 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a7h     00a7h    0000h      LOCAL    0         _TB0_ISR (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a7h     00a7h    0000h      LOCAL    0         @dummy40 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a6h     00a6h    0001h      LOCAL    15        _TB1_ISR (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     009ch     009eh    0003h      LOCAL    6.3333    _DispTimer (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     009bh     009bh    0001h      LOCAL    1         _Displayer (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a3h     00a5h    0003h      LOCAL    2.6667    _NTC_MAP (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     009bh     009bh    0001h      LOCAL    4         _ADC_GetChannelValue (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     009bh     009bh    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009bh     00a2h    0008h      LOCAL    4.25      _builtin_holtek_divmodhi4_isr28 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009bh     009bh    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     009bh     009fh    0005h      LOCAL    5.4       _builtin_holtek_divmodqi4_isr28 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009ch     009ch    0001h      LOCAL    3         _DispTemp (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     009bh     009bh    0000h      LOCAL    0         @dummy32 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     009bh     009bh    0000h      LOCAL    0         _PTMR (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     009bh     009bh    0000h      LOCAL    0         _Date (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     009bh     009bh    0000h      LOCAL    0         _Math (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0096h     009ah    0005h      LOCAL    7         _builtin_holtek_divmodqi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00bfh     00bfh    0000h      LOCAL    0         @dummy (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00bfh     00bfh    0000h      LOCAL    0         _main (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00b3h     00bah    0008h      LOCAL    5         _delay_ms (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a7h     00b2h    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a7h     00a7h    0000h      LOCAL    0         _ADC_INIT (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a7h     00a7h    0000h      LOCAL    0         _IO_INIT (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a7h     00a7h    0000h      LOCAL    0         _TB0_INIT (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a7h     00a7h    0000h      LOCAL    0         _TB1_INIT (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a9h     00a9h    0000h      LOCAL    0         _PTMRINIT (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a7h     00a8h    0002h      LOCAL    2.5       _PTMR_PERIOD (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a7h     00a7h    0000h      LOCAL    0         _TuochKeyInit (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00bbh     00beh    0004h      LOCAL    2         _CalibrTuoch (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a7h     00aah    0004h      LOCAL    3         _delay_10us (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a7h     00b4h    000eh      LOCAL    7.5       _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00b5h     00b5h    0001h      LOCAL    2         _Key_Select (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a7h     00a7h    0000h      LOCAL    0         _Key_Touch (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     026ch              _ADC_GetChannelValue
+     0260h              _ADC_INIT
+     00cah              _Belink
+     0081h[0]           _Belinker
+     0080h[7]           _Belinking
+     00c4h              _Bip
+     00c0h              _Biper
+     00f6h              _CNT_DISP
+     00e1h              _CalibrCount1
+     00e0h              _CalibrCount2
+     0617h              _CalibrTuoch
+     00ech              _CountOn
+     00ebh              _CountTemp
+     00ceh              _Count_B1
+     00cch              _Count_B2
+     00c8h              _Count_C1
+     00c6h              _Count_C2
+     00e3h              _Count_H1
+     00e2h              _Count_H2
+     00d4h              _Count_P1
+     00d0h              _Count_P2
+     00dch              _Count_T1
+     00dbh              _Count_T2
+     00d9h              _Count_TQ
+     0870h              _Crom2Prom
+     086fh              _Crom2PromNext
+     018ah              _D1
+     0189h              _D2
+     0430h              _Date
+     00f1h              _Day
+     00d8h              _Disp
+     022dh              _DispTemp
+     01b4h              _DispTimer
+     009ch              _DispTimer_2
+     00f4h              _Display
+     011dh              _Displayer
+     0081h[4]           _Dot
+     00fch              _H1
+     00deh              _H124
+     0184h              _H1T1
+     0183h              _H1T2
+     00fbh              _H2
+     0182h              _H2T1
+     0181h              _H2T2
+     00c2h              _Hrs
+     00eah              _Hrs1
+     00e9h              _Hrs2
+     0105h              _IO_INIT
+     00eeh              _Kab
+     00e6h              _KeySel
+     06c7h              _Key_Select
+     04e3h              _Key_Touch
+     0080h[2]           _Litgh
+     0081h[5]           _Lock
+     00b1h              _LookTime
+     00c9h              _Lookup
+     018ch              _M1
+     018bh              _M2
+     0193h              _Math
+     00f2h              _May
+     00c3h              _Min
+     00e8h              _Min1
+     00e7h              _Min2
+     00fah              _N1
+     0180h              _N1T1
+     00ffh              _N1T2
+     00f7h              _N2
+     00feh              _N2T1
+     00fdh              _N2T2
+     02a7h              _NTC_MAP
+     004dh              _NTC_Table
+     00edh              _Ok
+     0080h[6]           _PM1
+     0080h[5]           _PM2
+     0482h              _PTMR
+     046fh              _PTMRINIT
+     0461h              _PTMR_PERIOD
+     00e5h              _S
+     0188h              _S1
+     0187h              _S2
+     00e4h              _Sec
+     0081h[3]           _Seg1
+     0081h[2]           _Seg2
+     0081h[1]           _Seg3
+     00f5h              _Seletion
+     0080h[3]           _SetAlarm
+     0080h[4]           _SetTime
+     00bfh              _State
+     00f9h              _T1
+     00f8h              _T2
+     02f6h              _TB0_INIT
+     030ah              _TB0_ISR
+     0300h              _TB1_INIT
+     030fh              _TB1_ISR
+     0186h              _TM1
+     0185h              _TM2
+     00f3h              _Temp
+     04abh              _TuochKeyInit
+     0190h              _Y1
+     018fh              _Y2
+     018eh              _Y3
+     018dh              _Y4
+     00efh              _Yer
+     07edh              __DELAYX0
+     07ech              __DELAYX1
+     07ech              __DELAYX2
+     07ebh              __DELAYX3
+     07ebh              __DELAYX4
+     07eah              __DELAYX5
+     07eah              __DELAYX6
+     07f4h              _builtin_holtek_mulsi3_isr00
+     00abh              _builtin_holtek_mulsi3_isr00_2
+     087fh              _builtin_holtek_udivmodhi4_isr28
+     009fh              _builtin_holtek_udivmodhi4_isr28_2
+     0813h              _builtin_holtek_udivmodqi4_isr00
+     0096h              _builtin_holtek_udivmodqi4_isr00_2
+     08a4h              _builtin_holtek_udivmodqi4_isr28
+     082ch              _builtin_holtek_udivmodsi4_isr00
+     0001h              _delay_10us
+     00a7h              _delay_10us_2
+     00d1h              _delay_ms
+     00b3h              _delay_ms_2
+     00dfh              _i
+     00ddh              _iq
+     00c5h              _j
+     076bh              _main
+     0080h[1]           _q1
+     0080h[0]           _q2
+     0094h              r120
+     0090h              r124
+     0092h              r128
+     0095h              r220
+     0091h              r224
+     0093h              r228
+     0195h              r320
+     0191h              r328
+     0196h              r420
+     0192h              r428
+     0197h              r520
+     0193h              r528
+     0198h              r620
+     0194h              r628
+     0082h              ra
+     0089h              ra28
+     0083h              rb
+     008ah              rb28
+     0084h              rc
+     008bh              rc28
+     0085h              rd
+     008dh              rd28
+     0086h              re
+     008ch              re28
+     0087h              rf
+     008fh              rf28
+     0088h              rg
+     008eh              rg28
+     07cbh              startup_value_1
+
+     Address            Public by Value
+     0001h              _delay_10us
+     004dh              _NTC_Table
+     0082h              ra
+     0083h              rb
+     0084h              rc
+     0085h              rd
+     0086h              re
+     0087h              rf
+     0088h              rg
+     0089h              ra28
+     008ah              rb28
+     008bh              rc28
+     008ch              re28
+     008dh              rd28
+     008eh              rg28
+     008fh              rf28
+     0090h              r124
+     0091h              r224
+     0092h              r128
+     0093h              r228
+     0094h              r120
+     0095h              r220
+     0096h              _builtin_holtek_udivmodqi4_isr00_2
+     009ch              _DispTimer_2
+     009fh              _builtin_holtek_udivmodhi4_isr28_2
+     00a7h              _delay_10us_2
+     00abh              _builtin_holtek_mulsi3_isr00_2
+     00b1h              _LookTime
+     00b3h              _delay_ms_2
+     00bfh              _State
+     00c0h              _Biper
+     00c2h              _Hrs
+     00c3h              _Min
+     00c4h              _Bip
+     00c5h              _j
+     00c6h              _Count_C2
+     00c8h              _Count_C1
+     00c9h              _Lookup
+     00cah              _Belink
+     00cch              _Count_B2
+     00ceh              _Count_B1
+     00d0h              _Count_P2
+     00d1h              _delay_ms
+     00d4h              _Count_P1
+     00d8h              _Disp
+     00d9h              _Count_TQ
+     00dbh              _Count_T2
+     00dch              _Count_T1
+     00ddh              _iq
+     00deh              _H124
+     00dfh              _i
+     00e0h              _CalibrCount2
+     00e1h              _CalibrCount1
+     00e2h              _Count_H2
+     00e3h              _Count_H1
+     00e4h              _Sec
+     00e5h              _S
+     00e6h              _KeySel
+     00e7h              _Min2
+     00e8h              _Min1
+     00e9h              _Hrs2
+     00eah              _Hrs1
+     00ebh              _CountTemp
+     00ech              _CountOn
+     00edh              _Ok
+     00eeh              _Kab
+     00efh              _Yer
+     00f1h              _Day
+     00f2h              _May
+     00f3h              _Temp
+     00f4h              _Display
+     00f5h              _Seletion
+     00f6h              _CNT_DISP
+     00f7h              _N2
+     00f8h              _T2
+     00f9h              _T1
+     00fah              _N1
+     00fbh              _H2
+     00fch              _H1
+     00fdh              _N2T2
+     00feh              _N2T1
+     00ffh              _N1T2
+     0105h              _IO_INIT
+     011dh              _Displayer
+     0180h              _N1T1
+     0181h              _H2T2
+     0182h              _H2T1
+     0183h              _H1T2
+     0184h              _H1T1
+     0185h              _TM2
+     0186h              _TM1
+     0187h              _S2
+     0188h              _S1
+     0189h              _D2
+     018ah              _D1
+     018bh              _M2
+     018ch              _M1
+     018dh              _Y4
+     018eh              _Y3
+     018fh              _Y2
+     0190h              _Y1
+     0191h              r328
+     0192h              r428
+     0193h              _Math
+     0193h              r528
+     0194h              r628
+     0195h              r320
+     0196h              r420
+     0197h              r520
+     0198h              r620
+     01b4h              _DispTimer
+     022dh              _DispTemp
+     0260h              _ADC_INIT
+     026ch              _ADC_GetChannelValue
+     02a7h              _NTC_MAP
+     02f6h              _TB0_INIT
+     0300h              _TB1_INIT
+     030ah              _TB0_ISR
+     030fh              _TB1_ISR
+     0080h[0]           _q2
+     0080h[1]           _q1
+     0080h[2]           _Litgh
+     0080h[3]           _SetAlarm
+     0080h[4]           _SetTime
+     0080h[5]           _PM2
+     0080h[6]           _PM1
+     0080h[7]           _Belinking
+     0081h[0]           _Belinker
+     0081h[1]           _Seg3
+     0081h[2]           _Seg2
+     0081h[3]           _Seg1
+     0081h[4]           _Dot
+     0081h[5]           _Lock
+     0430h              _Date
+     0461h              _PTMR_PERIOD
+     046fh              _PTMRINIT
+     0482h              _PTMR
+     04abh              _TuochKeyInit
+     04e3h              _Key_Touch
+     0617h              _CalibrTuoch
+     06c7h              _Key_Select
+     076bh              _main
+     07cbh              startup_value_1
+     07eah              __DELAYX5
+     07eah              __DELAYX6
+     07ebh              __DELAYX3
+     07ebh              __DELAYX4
+     07ech              __DELAYX1
+     07ech              __DELAYX2
+     07edh              __DELAYX0
+     07f4h              _builtin_holtek_mulsi3_isr00
+     0813h              _builtin_holtek_udivmodqi4_isr00
+     082ch              _builtin_holtek_udivmodsi4_isr00
+     086fh              _Crom2PromNext
+     0870h              _Crom2Prom
+     087fh              _builtin_holtek_udivmodhi4_isr28
+     08a4h              _builtin_holtek_udivmodqi4_isr28
+
+Warning(L3009) : Same sub function exists between ISR(20H) CMG and MAIN CMG: _Math
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     1000h     08b9h    54%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0080h    100%
+     01h       0080h     0019h    19%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     Total     0200h     0099h    29%
+
+Use Stack Count
+_TB0_ISR: 0
+_TB1_ISR: 2
+_PTMR: 3
+_main: 3
+
+Call Tree
+    @dummy36
+        _TB0_ISR (0)
+    @dummy40
+        _TB1_ISR (0)
+            _DispTimer (1)
+                _Displayer (2)
+            _NTC_MAP (1)
+                _ADC_GetChannelValue (2)
+                __DELAYX (2)
+                _builtin_holtek_divmodhi4_isr28 (2)
+                _Crom2Prom (2)
+                _Crom2Prom (2)
+                _builtin_holtek_divmodqi4_isr28 (2)
+            _DispTemp (1)
+                _Displayer (2)
+    @dummy32
+        _PTMR (0)
+            _Date (1)
+                _Math (2)
+                    _builtin_holtek_divmodqi4_isr00 (3)
+    @dummy
+        _main (0)
+            _delay_ms (1)
+                _builtin_holtek_mulsi3_isr00 (2)
+            _ADC_INIT (1)
+            _IO_INIT (1)
+                __DELAYX (2)
+            _TB0_INIT (1)
+            _TB1_INIT (1)
+            _PTMRINIT (1)
+                _PTMR_PERIOD (2)
+            _TuochKeyInit (1)
+            _CalibrTuoch (1)
+                _delay_10us (2)
+                _delay_ms (2)
+                    _builtin_holtek_mulsi3_isr00 (3)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Select (1)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Touch (1)
+                _Math (2)
+                    _builtin_holtek_divmodqi4_isr00 (3)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ'
+
+Total 0 error(s), Total 1 Warning(s)

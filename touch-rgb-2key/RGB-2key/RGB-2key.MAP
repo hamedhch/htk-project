@@ -1,0 +1,236 @@
+
+Linker Version 8.7.7.220718
+Input Object File: E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ
+Input Object File: E:\hamed\touch2\touch-rgb-2key\RGB-2key\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0004h     0007h    0004h      CODE               @int0_code (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     000ch     000fh    0004h      CODE               @timer_code (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0010h     0027h    0018h      CODE               _TuochKeyInit (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0028h     0028h    0001h      CODE               @TOUCH_ISR_code (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0029h     0049h    0021h      CODE               @start (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     004ah     0067h    001eh      CODE               _delay_10us (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0068h     009eh    0037h      CODE               _delay_ms (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     009fh     0188h    00eah      CODE               _Key_Touch (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0189h     021ah    0092h      CODE               _CalibrTuoch (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     021bh     02ach    0092h      CODE               _Key_Select (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     02adh     050fh    0263h      CODE               _int0 (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0510h     05a0h    0091h      CODE               _timer (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     05a1h     05cbh    002bh      CODE               _main (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     05cch     05efh    0024h      CODE               @ROMDATA_BASE (E:\hamed\touch2\touch-rgb-2key\RGB-2key\STARTUP1_L.OBJ)
+     00h     05f0h     060eh    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     060fh     0651h    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0652h     0688h    0037h      CODE               _builtin_holtek_divmodhi4_isr04 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     00a1h    0042h      DATA     7.6212    @HCCINIT (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00a2h     00a2h    0001h      DATA     0         @BITDATASEC (E:\hamed\touch2\touch-rgb-2key\RGB-2key\STARTUP1_L.OBJ)
+     00h     00a3h     00a3h    0001h      DATA     4         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a4h     00a4h    0001h      DATA     4         @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a5h     00a5h    0001h      DATA     4         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a6h     00a6h    0001h      DATA     17        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a7h     00a7h    0001h      DATA     17        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a8h     00a8h    0001h      DATA     17        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a9h     00a9h    0001h      DATA     17        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00aah     00aah    0001h      DATA     2         @data_r104 (isr:ra~rh)
+     00h     00abh     00abh    0001h      DATA     2         @data_r204 (isr:ra~rh)
+     00h     00ach     00ach    0001h      DATA     12        @data_rb04 (isr:ra~rh)
+     00h     00adh     00adh    0001h      DATA     12        @data_rc04 (isr:ra~rh)
+     00h     00aeh     00aeh    0001h      DATA     2         @data_r10c (isr:ra~rh)
+     00h     00afh     00afh    0001h      DATA     2         @data_r20c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00b8h     00b8h    0000h      LOCAL    0         @dummy4 (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b8h     00b8h    0000h      LOCAL    0         _int0 (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b0h     00b7h    0008h      LOCAL    9.625     _builtin_holtek_divmodhi4_isr04 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00b0h     00b0h    0000h      LOCAL    0         @dummy12 (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b0h     00b0h    0000h      LOCAL    0         _timer (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00d0h     00d0h    0000h      LOCAL    0         @dummy (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00d0h     00d0h    0000h      LOCAL    0         _main (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00c4h     00cbh    0008h      LOCAL    3.5       _delay_ms (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b8h     00c3h    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00b8h     00b8h    0000h      LOCAL    0         _TuochKeyInit (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00cch     00cfh    0004h      LOCAL    2         _CalibrTuoch (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b8h     00bbh    0004h      LOCAL    3         _delay_10us (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b8h     00c5h    000eh      LOCAL    7.5       _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00c6h     00c6h    0001h      LOCAL    2         _Key_Select (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b8h     00b8h    0000h      LOCAL    0         _Key_Touch (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     007ch              _B
+     0093h              _CalibrCount1
+     0085h              _CalibrCount2
+     0092h              _CalibrSample1
+     0084h              _CalibrSample2
+     0189h              _CalibrTuoch
+     009eh              _Count_C1
+     009ah              _Count_C1_Backup
+     008eh              _Count_C2
+     008ah              _Count_C2_Backup
+     0098h              _Count_S1
+     0088h              _Count_S2
+     0096h              _Count_T1
+     0086h              _Count_T2
+     007eh              _G
+     021bh              _Key_Select
+     009fh              _Key_Touch
+     0080h              _R
+     007ah              _RGB
+     0028h              _TOUCH_ISR
+     0010h              _TuochKeyInit
+     0652h              _builtin_holtek_divmodhi4_isr04
+     05f0h              _builtin_holtek_mulsi3_isr00
+     00bch              _builtin_holtek_mulsi3_isr00_2
+     0664h              _builtin_holtek_udivmodhi4_isr04
+     00b0h              _builtin_holtek_udivmodhi4_isr04_2
+     060fh              _builtin_holtek_udivmodsi4_isr00
+     0094h              _counter
+     006ah              _counter1
+     0068h              _counter12
+     0066h              _counter2
+     0064h              _counter22
+     0062h              _counter3
+     0060h              _counter32
+     006eh              _counterrgb
+     004ah              _delay_10us
+     00b8h              _delay_10us_2
+     0068h              _delay_ms
+     00c4h              _delay_ms_2
+     0095h              _i
+     02adh              _int0
+     05a1h              _main
+     006ch              _ncount
+     0082h              _nsicl
+     00a2h[0]           _q
+     0074h              _rgb1
+     0072h              _rgb2
+     0076h              _rgbauto
+     0078h              _rgbchange
+     0070h              _rgbpals
+     0510h              _timer
+     00aah              r104
+     00aeh              r10c
+     00abh              r204
+     00afh              r20c
+     00a3h              ra
+     00a4h              rb
+     00ach              rb04
+     00a5h              rc
+     00adh              rc04
+     00a6h              rd
+     00a7h              re
+     00a8h              rf
+     00a9h              rg
+     05cbh              startup_value_1
+
+     Address            Public by Value
+     0010h              _TuochKeyInit
+     0028h              _TOUCH_ISR
+     004ah              _delay_10us
+     0060h              _counter32
+     0062h              _counter3
+     0064h              _counter22
+     0066h              _counter2
+     0068h              _counter12
+     0068h              _delay_ms
+     006ah              _counter1
+     006ch              _ncount
+     006eh              _counterrgb
+     0070h              _rgbpals
+     0072h              _rgb2
+     0074h              _rgb1
+     0076h              _rgbauto
+     0078h              _rgbchange
+     007ah              _RGB
+     007ch              _B
+     007eh              _G
+     0080h              _R
+     0082h              _nsicl
+     0084h              _CalibrSample2
+     0085h              _CalibrCount2
+     0086h              _Count_T2
+     0088h              _Count_S2
+     008ah              _Count_C2_Backup
+     008eh              _Count_C2
+     0092h              _CalibrSample1
+     0093h              _CalibrCount1
+     0094h              _counter
+     0095h              _i
+     0096h              _Count_T1
+     0098h              _Count_S1
+     009ah              _Count_C1_Backup
+     009eh              _Count_C1
+     009fh              _Key_Touch
+     00a3h              ra
+     00a4h              rb
+     00a5h              rc
+     00a6h              rd
+     00a7h              re
+     00a8h              rf
+     00a9h              rg
+     00aah              r104
+     00abh              r204
+     00ach              rb04
+     00adh              rc04
+     00aeh              r10c
+     00afh              r20c
+     00b0h              _builtin_holtek_udivmodhi4_isr04_2
+     00b8h              _delay_10us_2
+     00bch              _builtin_holtek_mulsi3_isr00_2
+     00c4h              _delay_ms_2
+     0189h              _CalibrTuoch
+     021bh              _Key_Select
+     02adh              _int0
+     0510h              _timer
+     00a2h[0]           _q
+     05a1h              _main
+     05cbh              startup_value_1
+     05f0h              _builtin_holtek_mulsi3_isr00
+     060fh              _builtin_holtek_udivmodsi4_isr00
+     0652h              _builtin_holtek_divmodhi4_isr04
+     0664h              _builtin_holtek_udivmodhi4_isr04
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     0682h    81%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0070h    87%
+     Total     0080h     0070h    87%
+
+Use Stack Count
+_int0: 1
+_timer: 0
+_main: 3
+
+Call Tree
+    @dummy4
+        _int0 (0)
+            _builtin_holtek_divmodhi4_isr04 (1)
+    @dummy12
+        _timer (0)
+    @dummy
+        _main (0)
+            _delay_ms (1)
+                _builtin_holtek_mulsi3_isr00 (2)
+            _TuochKeyInit (1)
+            _CalibrTuoch (1)
+                _delay_10us (2)
+                _delay_ms (2)
+                    _builtin_holtek_mulsi3_isr00 (3)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Select (1)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Touch (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)
