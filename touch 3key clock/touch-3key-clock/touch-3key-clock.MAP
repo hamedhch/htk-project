@@ -1,0 +1,176 @@
+
+Linker Version 8.7.7.220718
+Input Object File: C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ
+Input Object File: C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     000ch     000ch    0001h      CODE               @timer_code (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     000dh     0024h    0018h      CODE               _TuochKeyInit (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     0028h     0028h    0001h      CODE               @TOUCH_ISR_code (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     0029h     0049h    0021h      CODE               @start (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     004ah     0067h    001eh      CODE               _delay_10us (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     0068h     009eh    0037h      CODE               _delay_ms (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     009fh     0189h    00ebh      CODE               _Key_Touch (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     018ah     0263h    00dah      CODE               _CalibrTuoch (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     0264h     0336h    00d3h      CODE               _Key_Select (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     0337h     0361h    002bh      CODE               _main (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     0362h     037bh    001ah      CODE               @ROMDATA_BASE (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\STARTUP1_L.OBJ)
+     00h     037ch     039ah    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     039bh     03ddh    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     008dh    002eh      DATA     5.0652    @HCCINIT (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     008eh     008eh    0001h      DATA     0         @BITDATASEC (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\STARTUP1_L.OBJ)
+     00h     008fh     008fh    0001h      DATA     4         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0090h     0090h    0001h      DATA     6         @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0091h     0091h    0001h      DATA     6         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0092h     0092h    0001h      DATA     21        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0093h     0093h    0001h      DATA     21        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0094h     0094h    0001h      DATA     21        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0095h     0095h    0001h      DATA     21        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00b0h     00b0h    0000h      LOCAL    0         @dummy (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     00b0h     00b0h    0000h      LOCAL    0         _main (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     00a2h     00a9h    0008h      LOCAL    4         _delay_ms (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     0096h     00a1h    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0096h     0096h    0000h      LOCAL    0         _TuochKeyInit (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     00aah     00afh    0006h      LOCAL    2         _CalibrTuoch (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     0096h     0099h    0004h      LOCAL    4         _delay_10us (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     0096h     00a3h    000eh      LOCAL    9.3571    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a4h     00a4h    0001h      LOCAL    3         _Key_Select (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+     00h     0096h     0096h    0000h      LOCAL    0         _Key_Touch (C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     007fh              _CalibrCount1
+     0071h              _CalibrCount2
+     0063h              _CalibrCount3
+     007eh              _CalibrSample1
+     0070h              _CalibrSample2
+     0062h              _CalibrSample3
+     018ah              _CalibrTuoch
+     008ah              _Count_C1
+     0086h              _Count_C1_Backup
+     007ah              _Count_C2
+     0076h              _Count_C2_Backup
+     006ch              _Count_C3
+     0068h              _Count_C3_Backup
+     0084h              _Count_S1
+     0074h              _Count_S2
+     0066h              _Count_S3
+     0082h              _Count_T1
+     0072h              _Count_T2
+     0064h              _Count_T3
+     0264h              _Key_Select
+     009fh              _Key_Touch
+     0028h              _TOUCH_ISR
+     000dh              _TuochKeyInit
+     037ch              _builtin_holtek_mulsi3_isr00
+     009ah              _builtin_holtek_mulsi3_isr00_2
+     039bh              _builtin_holtek_udivmodsi4_isr00
+     0080h              _counter
+     004ah              _delay_10us
+     0096h              _delay_10us_2
+     0068h              _delay_ms
+     00a2h              _delay_ms_2
+     0081h              _i
+     0337h              _main
+     008eh[2]           _q1
+     008eh[1]           _q2
+     008eh[0]           _q3
+     0060h              _rgbchange
+     000ch              _timer
+     008fh              ra
+     0090h              rb
+     0091h              rc
+     0092h              rd
+     0093h              re
+     0094h              rf
+     0095h              rg
+     0361h              startup_value_1
+
+     Address            Public by Value
+     000ch              _timer
+     000dh              _TuochKeyInit
+     0028h              _TOUCH_ISR
+     004ah              _delay_10us
+     0060h              _rgbchange
+     0062h              _CalibrSample3
+     0063h              _CalibrCount3
+     0064h              _Count_T3
+     0066h              _Count_S3
+     0068h              _Count_C3_Backup
+     0068h              _delay_ms
+     006ch              _Count_C3
+     0070h              _CalibrSample2
+     0071h              _CalibrCount2
+     0072h              _Count_T2
+     0074h              _Count_S2
+     0076h              _Count_C2_Backup
+     007ah              _Count_C2
+     007eh              _CalibrSample1
+     007fh              _CalibrCount1
+     0080h              _counter
+     0081h              _i
+     0082h              _Count_T1
+     0084h              _Count_S1
+     0086h              _Count_C1_Backup
+     008ah              _Count_C1
+     008fh              ra
+     0090h              rb
+     0091h              rc
+     0092h              rd
+     0093h              re
+     0094h              rf
+     0095h              rg
+     0096h              _delay_10us_2
+     009ah              _builtin_holtek_mulsi3_isr00_2
+     009fh              _Key_Touch
+     00a2h              _delay_ms_2
+     018ah              _CalibrTuoch
+     0264h              _Key_Select
+     0337h              _main
+     0361h              startup_value_1
+     037ch              _builtin_holtek_mulsi3_isr00
+     039bh              _builtin_holtek_udivmodsi4_isr00
+     008eh[0]           _q3
+     008eh[1]           _q2
+     008eh[2]           _q1
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     03d0h    47%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0050h    62%
+     Total     0080h     0050h    62%
+
+Use Stack Count
+_main: 3
+
+Call Tree
+    @dummy
+        _main (0)
+            _delay_ms (1)
+                _builtin_holtek_mulsi3_isr00 (2)
+            _TuochKeyInit (1)
+            _CalibrTuoch (1)
+                _delay_10us (2)
+                _delay_ms (2)
+                    _builtin_holtek_mulsi3_isr00 (3)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Select (1)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Touch (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\Documents\project\touch 3key clock\touch-3key-clock\TOUCH-3KEY-CLOCK.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)
