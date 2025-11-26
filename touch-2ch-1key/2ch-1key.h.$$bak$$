@@ -113,8 +113,8 @@ void TuochKeyInit()
 
 void Key_Touch()
 {
-	if(pin==0)function=1;
-	else function=0;
+	if(pin==0)function=0;
+	else function=1;
 	
 	
 	if(Count_S1 < Count_C1 - 50)
