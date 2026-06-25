@@ -4,9 +4,13 @@
 #define LED1 _pa4
 #define LED2 _pa3
 #define LED3 _pa2
+<<<<<<< HEAD
 #define OUTPUT() _pac4=0;_pac3=0;_pac2=0;_pac1=0;
 
 #define BUZ _pa1
+=======
+#define OUTPUT() _pac4=0;_pac3=0;_pac2=0;
+>>>>>>> 63842fd (car-light)
 
 #include "TOUCH.h"
 

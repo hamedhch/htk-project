@@ -1,0 +1,117 @@
+
+Linker Version 8.7.7.220718
+Input Object File: C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ
+Input Object File: C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0004h     0007h    0004h      CODE               @int0_code (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0008h     000bh    0004h      CODE               _main (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     000ch     000fh    0004h      CODE               @timer_code (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0010h     0030h    0021h      CODE               @start (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0031h     005ah    002ah      CODE               _int0 (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     005bh     0096h    003ch      CODE               _timer (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0097h     00a6h    0010h      CODE               _init (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     00a7h     00b9h    0013h      CODE               @ROMDATA_BASE (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\STARTUP1_L.OBJ)
+     00h     0060h     007fh    0020h      DATA     1.1875    @HCCINIT (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0080h     0093h    0014h      DATA     0         @HCCINIT0 (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0094h     0094h    0001h      DATA     0         @BITDATASEC (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\STARTUP1_L.OBJ)
+     00h     0095h     0095h    0001h      DATA     2         @data_r104 (isr:ra~rh)
+     00h     0096h     0096h    0001h      DATA     2         @data_r204 (isr:ra~rh)
+     00h     0097h     0097h    0001h      DATA     2         @data_rd04 (isr:ra~rh)
+     00h     0098h     0098h    0001h      DATA     2         @data_re04 (isr:ra~rh)
+     00h     0099h     0099h    0001h      DATA     1         @data_rf04 (isr:ra~rh)
+     00h     009ah     009ah    0001h      DATA     1         @data_rg04 (isr:ra~rh)
+     00h     009bh     009bh    0001h      DATA     3         @data_ra04 (isr:ra~rh)
+     00h     009ch     009ch    0001h      DATA     2         @data_r10c (isr:ra~rh)
+     00h     009dh     009dh    0001h      DATA     2         @data_r20c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     009eh     009eh    0000h      LOCAL    0         @dummy4 (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     009eh     009eh    0000h      LOCAL    0         _int0 (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     009eh     009eh    0000h      LOCAL    0         @dummy12 (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     009eh     009eh    0000h      LOCAL    0         _timer (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     009eh     009eh    0000h      LOCAL    0         @dummy (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     009eh     009eh    0000h      LOCAL    0         _main (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+     00h     009eh     009eh    0000h      LOCAL    0         _init (C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     006ch              _cod
+     0080h              _codread
+     0066h              _counter
+     0062h              _counter2
+     0097h              _init
+     0031h              _int0
+     0060h              _m
+     0008h              _main
+     006ah              _ncount
+     0094h[0]           _q
+     005bh              _timer
+     0095h              r104
+     009ch              r10c
+     0096h              r204
+     009dh              r20c
+     009bh              ra04
+     0097h              rd04
+     0098h              re04
+     0099h              rf04
+     009ah              rg04
+     00a6h              startup_value_1
+
+     Address            Public by Value
+     0008h              _main
+     0031h              _int0
+     005bh              _timer
+     0060h              _m
+     0062h              _counter2
+     0066h              _counter
+     006ah              _ncount
+     006ch              _cod
+     0080h              _codread
+     0095h              r104
+     0096h              r204
+     0097h              _init
+     0097h              rd04
+     0098h              re04
+     0099h              rf04
+     009ah              rg04
+     009bh              ra04
+     009ch              r10c
+     009dh              r20c
+     00a6h              startup_value_1
+     0094h[0]           _q
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     00b7h    8%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     003eh    48%
+     Total     0080h     003eh    48%
+
+Use Stack Count
+_int0: 0
+_timer: 0
+_main: 1
+
+Call Tree
+    @dummy4
+        _int0 (0)
+    @dummy12
+        _timer (0)
+    @dummy
+        _main (0)
+            _init (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\FadakSystem\Downloads\touch2\touch2 -ir\PRID2.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

@@ -88,8 +88,19 @@ volatile unsigned char UART_RX_FLAG;			//uart receive success flag
 #define PIN_RX() _pac1=1; _papu1=1;_ifs11=1;_ifs10=1;_pas03=1;_pas02=0;//PA1
 
 //#define PIN_TX() _pbs05=0;_pbs04=1; //PB2
-#define PIN_TX() _pas13=1; _pas12=0; //PA5
+#define PIN_TX() _pas13=1; _pas12=0; //PA5 _pas13=1; _pas12=0; tx on
 
+
+
+#define START_BYTE 0x0A
+
+volatile unsigned char UART_Frame[4];
+volatile unsigned char UART_Index = 0;
+volatile unsigned char UART_FrameReady = 0;
+volatile unsigned char UART_StartDetected = 0;
+
+
+volatile unsigned char ones_digit=0;
 
 
 
@@ -135,174 +146,149 @@ void UART_INIT(unsigned char BaudRate)
  UART_EMI(1);
 }
 
-void UART_TRANS(unsigned int data)
-{
-	UART_TX9(0);		
-
-	while(!UART_TXFLAG){GCC_NOP();}					
-	
-	if(UART_BITN == 1)
-	{	
-		if(UART_PARITY == 1)
-		{
-			UART_DATA = data;
-		}
-		else
-		{	 
-			if( data > 255)
-			{
-				UART_TX9(1);
-			}
-			UART_DATA = data;
-		}
-	}	 
-	else
-	{
-		UART_DATA = data;
-	}
-	
-	while(!UART_TXIDLE){GCC_NOP();}
-}
+//void UART_TRANS(unsigned int data)
+//{
+//	UART_TX9(0);		
+//
+//	while(!UART_TXFLAG){GCC_NOP();}					
+//	
+//	if(UART_BITN == 1)
+//	{	
+//		if(UART_PARITY == 1)
+//		{
+//			UART_DATA = data;
+//		}
+//		else
+//		{	 
+//			if( data > 255)
+//			{
+//				UART_TX9(1);
+//			}
+//			UART_DATA = data;
+//		}
+//	}	 
+//	else
+//	{
+//		UART_DATA = data;
+//	}
+//	
+//	while(!UART_TXIDLE){GCC_NOP();}
+//}
  
 
 volatile unsigned char BufRx[10]={0},BackupBuf[10]={0},UartTime=0,BufInd=0,RxDone=0;
 
 void __attribute((interrupt(0x10))) UART(void)
 {
-	unsigned char UartData=0;
-	UART_RX_FLAG =0;
-	UART_FLAG=0;
-	UartData= UART_DATA;	//first Byte
-	UartTime=0;
-	BufRx[BufInd]=UartData;BufInd++;
-	//if(RxDone==0){if(BufInd>=12){RxDone=1;}}
-	
-	//if(BufRx[BufInd-1]==13){RxDone=1;BufInd=0;}
-	uart_s=1;
+	unsigned char data;
+
+	UART_FLAG = 0;
+	data = UART_DATA;
+
+	// „—Õ·Â 1 : ÅÌœ« ò—œ‰ start byte
+	if(UART_StartDetected == 0)
+	{
+		if(data == START_BYTE)
+		{
+			UART_StartDetected = 1;
+			UART_Index = 0;
+			UART_Frame[UART_Index++] = data;
+		}
+	}
+	else
+	{
+		UART_Frame[UART_Index++] = data;
+
+		if(UART_Index >= 4)
+		{
+			UART_Index = 0;
+			UART_StartDetected = 0;
+			UART_FrameReady = 1;
+		}
+	}
+
+	uart_s = data;   // »—«Ì œÌ»«ê ›⁄·Ì Å—ÊéÂ
 }
 
 
 void UART_FUNCTION()
 {
- if(UART_FLAG==1)
- {
- 	UART_FLAG=0;
-	g_nUART_ISR_Value[0] = 0;	//clear first receive data buff
-	g_nUART_ISR_Value[1] = 0;	//clear second receive data buff
-	g_nUART_err_Flag = 0;		//clear error flag	
-	UART_RX_FLAG =0;			//clear receive finished flag
-		
-	/* parity error flag*/
-	if (UART_PARFLAG)
-	{
-		/* Odd parity error,user can set error flag in here */
-		g_nUART_err_Flag |= 0x80;
-	}
-	if (UART_NOISFLAG)
-	{
-		/* Noise error,user can set error flag in here */
-		g_nUART_err_Flag |= 0x40;
-	}		
-	if (UART_FRAMFLAG)
-	{
-		/* Framing error,user can set error flag in here */
-		g_nUART_err_Flag |= 0x20;
-	}		
-	if (UART_OVERFLAG)
-	{
-		/* Overrun error,user can set error flag in here */
-		g_nUART_err_Flag |= 0x10;
-	}
+    if(!UART_FrameReady) return;
 
+    UART_FrameReady=0;
 
-	if(UART_PARITY==1 || UART_NOISFLAG==1 || UART_FRAMFLAG==1 || UART_OVERFLAG)
-	{	
-		if (g_nUART_err_Flag & 0xf0)
-		{
-			ACC = UART_FLAGS;
-			ACC = UART_DATA;	//read USR and TXR_RXT register to clear error flag
-			g_nUART_ISR_Value[0] = 0;//clear first receive data buff
-			g_nUART_ISR_Value[1] = 0;//clear second receive data buff
-			return;		
-		}
-	}
-/**************************************/
-	
-	/* receive data success */
-	if(UART_RXFLAG==1)
-	{
-		if(UART_BITN==1)
-		{
-			if (UART_PARITY==1)
-			{
-				g_nUART_ISR_Value[0] = UART_DATA;	//first Byte,MSB is parity bit
-			}	
-			else
-			{
-				if(UART_RX9==1)
-				{
-					ACC = UART_FLAGS;
-					g_nUART_ISR_Value[0] = UART_DATA + 256;	//first Byte,MSB=1 is data bit
-				}
-				else
-				{
-					ACC = UART_FLAGS;
-					g_nUART_ISR_Value[0] = UART_DATA;	//first Byte,MSB=0 is data bit
-				}
-			}
-			if(UART_RXFLAG==1)
-			{
-				if(UART_PARITY==1)
-				{
-					g_nUART_ISR_Value[1] = UART_DATA;	//second Byte,MSB is parity bit
-				}	
-				else
-				{
-					if(UART_RX9==1)
-					{
-						ACC = UART_FLAGS;
-						g_nUART_ISR_Value[1] = UART_DATA + 256;	//second Byte,MSB=1 is data bit				
-					}
-					else
-					{
-						ACC = UART_FLAGS;
-						g_nUART_ISR_Value[1] = UART_DATA;//second Byte,MSB=0 is data bit
-					}
-				}
-			}
-		}	
-		else
-		{
-			ACC = UART_FLAGS;
-			g_nUART_ISR_Value[0] = UART_DATA;	//first Byte
-			if (UART_RXFLAG==1)
-			{
-				ACC = UART_FLAGS;
-				g_nUART_ISR_Value[1] = UART_DATA;//second Byte
-			}
-			UART_RX_FLAG = 1;	//receive success and complete
-		}	
-	}	
- }
-}
+    unsigned char b1 = UART_Frame[0];
+    unsigned char b2 = UART_Frame[1];
+    unsigned char b3 = UART_Frame[2];
 
+    if(b1 != START_BYTE) return;
+    /* OV MODE */
 
-
-void Uart_Print (char *string)
-{
-  while (*string)  
-  {
-	UART_TRANS(*string++);
-  }
-}
-
-
-
-void UART_String(char *str)
-{
-	int i;
-    for (i = 0; str[i] != '\0'; ++i)
+    if(b2==0xC7 && b3==0xA3)
     {
-        UART_TRANS(str[i]);
+        MODE = MODE_OV;
+        return;
+    }
+
+    /* DOOR MODE */
+
+    if(b2==0xA3 && b3==0xA1)
+    {
+        MODE = MODE_DOOR;
+        return;
+    }
+
+    MODE = MODE_NORMAL;
+
+    unsigned char seg = b2 & 0x7F;
+
+    switch(seg)
+    {
+        case 0x40: ones_digit=0; break;
+        case 0x79: ones_digit=1; break;
+        case 0x24: ones_digit=2; break;
+        case 0x30: ones_digit=3; break;
+        case 0x19: ones_digit=4; break;
+        case 0x12: ones_digit=5; break;
+        case 0x02: ones_digit=6; break;
+        case 0x78: ones_digit=7; break;
+        case 0x00: ones_digit=8; break;
+        case 0x10: ones_digit=9; break;
+        case 0x03: ones_digit=11; break;
+        case 0x0C: ones_digit=12; break;
+    }
+
+    newnaumber = ones_digit;
+
+    tens_digit = b3 & 0x7F;
+    
+    switch(tens_digit)
+	{
+	    case 0x3F: tens_digit = 0; break; // -
+	    case 0x03: tens_digit = 1; break; // B
+	    case 0x0C: tens_digit = 2; break; // P
+	    case 0x79: tens_digit = 3; break; // 1
+	    case 0x24: tens_digit = 4; break; // 2
+	
+	    default: tens_digit = 0x7F; break; // Ì⁄‰Ì œÂê«‰ ‰œ«—Ì„
+	}
+    
+
+    /* direction */
+
+    if((b2 & 0x80)==0)
+    {
+        UP=1;
+        DN=0;
+    }
+    else if((b3 & 0x80)==0)
+    {
+        UP=0;
+        DN=1;
+    }
+    else
+    {
+        UP=0;
+        DN=0;
     }
 }

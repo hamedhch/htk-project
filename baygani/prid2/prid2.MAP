@@ -1,0 +1,126 @@
+
+Linker Version 8.7.7.220718
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ)
+     00h     0001h     0021h    0021h      CODE               @start (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ)
+     00h     0022h     0039h    0018h      CODE               _Delay (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ)
+     00h     003ah     0055h    001ch      CODE               _init (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ)
+     00h     0056h     01b7h    0162h      CODE               _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ)
+     00h     01b8h     01c1h    000ah      CODE               @ROMDATA_BASE (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\STARTUP1_L.OBJ)
+     00h     01c2h     0204h    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0205h     0209h    0005h      CODE               _CROM2PROM (CROM2PROM)
+     00h     0060h     006ch    000dh      DATA     1.2308    @HCCINIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ)
+     00h     006dh     00a4h    0038h      DATA     0.2857    @HCCINIT0 (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ)
+     00h     00a5h     00a5h    0001h      DATA     3         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a6h     00a6h    0001h      DATA     18        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a7h     00a7h    0001h      DATA     18        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a8h     00a8h    0001h      DATA     11        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a9h     00a9h    0001h      DATA     11        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00aah     00aah    0001h      DATA     11        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00abh     00abh    0001h      DATA     11        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00d0h     00d0h    0000h      LOCAL    0         @dummy (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ)
+     00h     00bah     00cfh    0016h      LOCAL    4.3636    _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ)
+     00h     00ach     00ach    0000h      LOCAL    0         _init (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ)
+     00h     00ach     00b3h    0008h      LOCAL    3         _Delay (C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ)
+     00h     00ach     00b9h    000eh      LOCAL    5.6429    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00ach     00ach    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+
+     Public Symbols Information
+     Address            Public by Name
+     0206h              _Crom2Prom
+     0205h              _Crom2PromNext
+     0022h              _Delay
+     00ach              _Delay_2
+     0060h              _alltouch
+     006dh              _arraytouch
+     01c2h              _builtin_holtek_udivmodsi4_isr00
+     00b4h              _builtin_holtek_udivmodsi4_isr00_2
+     009bh              _f
+     0065h              _fingerCounter
+     00a3h              _i
+     003ah              _init
+     0064h              _isInDoor
+     00a1h              _j
+     0056h              _main
+     0095h              _max
+     0097h              _min
+     009fh              _n
+     009dh              _t
+     0099h              _touch
+     0069h              _touchThreshold
+     00a5h              ra
+     00a6h              rb
+     00a7h              rc
+     00a8h              rd
+     00a9h              re
+     00aah              rf
+     00abh              rg
+     01b7h              startup_value_1
+
+     Address            Public by Value
+     0022h              _Delay
+     003ah              _init
+     0056h              _main
+     0060h              _alltouch
+     0064h              _isInDoor
+     0065h              _fingerCounter
+     0069h              _touchThreshold
+     006dh              _arraytouch
+     0095h              _max
+     0097h              _min
+     0099h              _touch
+     009bh              _f
+     009dh              _t
+     009fh              _n
+     00a1h              _j
+     00a3h              _i
+     00a5h              ra
+     00a6h              rb
+     00a7h              rc
+     00a8h              rd
+     00a9h              re
+     00aah              rf
+     00abh              rg
+     00ach              _Delay_2
+     00b4h              _builtin_holtek_udivmodsi4_isr00_2
+     01b7h              startup_value_1
+     01c2h              _builtin_holtek_udivmodsi4_isr00
+     0205h              _Crom2PromNext
+     0206h              _Crom2Prom
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     020ah    25%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0070h    87%
+     Total     0080h     0070h    87%
+
+Use Stack Count
+_main: 1
+
+Call Tree
+    @dummy
+        _main (0)
+            _init (1)
+            _Delay (1)
+            _builtin_holtek_divmodsi4_isr00 (1)
+            _Crom2Prom (1)
+            _Crom2Prom (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\OneDrive\Documents\HTK_Project\prid2\PRID2.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

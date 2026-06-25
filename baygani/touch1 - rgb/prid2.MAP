@@ -1,0 +1,139 @@
+
+Linker Version 8.7.7.220718
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     000ch     000fh    0004h      CODE               @timer_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     0010h     0030h    0021h      CODE               @start (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     0031h     0040h    0010h      CODE               _timer (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     0041h     0058h    0018h      CODE               _Delay (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     0059h     007dh    0025h      CODE               _init (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     007eh     0237h    01bah      CODE               _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     0238h     0244h    000dh      CODE               @ROMDATA_BASE (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\STARTUP1_L.OBJ)
+     00h     0245h     0287h    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     0072h    0013h      DATA     2.4211    @HCCINIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     0073h     00aah    0038h      DATA     0.2142    @HCCINIT0 (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     00abh     00abh    0001h      DATA     3         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00ach     00ach    0001h      DATA     10        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00adh     00adh    0001h      DATA     10        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00aeh     00aeh    0001h      DATA     15        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00afh     00afh    0001h      DATA     15        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00b0h     00b0h    0001h      DATA     15        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00b1h     00b1h    0001h      DATA     15        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00b2h     00b2h    0001h      DATA     2         @data_r10c (isr:ra~rh)
+     00h     00b3h     00b3h    0001h      DATA     2         @data_r20c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00b4h     00b4h    0000h      LOCAL    0         @dummy12 (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     00b4h     00b4h    0000h      LOCAL    0         _timer (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     00d8h     00d8h    0000h      LOCAL    0         @dummy (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     00c2h     00d7h    0016h      LOCAL    4.9091    _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     00b4h     00b4h    0000h      LOCAL    0         _init (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     00b4h     00bbh    0008h      LOCAL    3         _Delay (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ)
+     00h     00b4h     00c1h    000eh      LOCAL    4.7143    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Public Symbols Information
+     Address            Public by Name
+     0041h              _Delay
+     00b4h              _Delay_2
+     0066h              _alltouch
+     0073h              _arraytouch
+     0245h              _builtin_holtek_udivmodsi4_isr00
+     00bch              _builtin_holtek_udivmodsi4_isr00_2
+     0064h              _counter
+     00a1h              _f
+     006bh              _fingerCounter
+     00a9h              _i
+     0059h              _init
+     006ah              _isInDoor
+     00a7h              _j
+     0062h              _level
+     007eh              _main
+     009bh              _max
+     009dh              _min
+     00a5h              _n
+     0060h              _q
+     00a3h              _t
+     0031h              _timer
+     009fh              _touch
+     006fh              _touchThreshold
+     00b2h              r10c
+     00b3h              r20c
+     00abh              ra
+     00ach              rb
+     00adh              rc
+     00aeh              rd
+     00afh              re
+     00b0h              rf
+     00b1h              rg
+     0237h              startup_value_1
+
+     Address            Public by Value
+     0031h              _timer
+     0041h              _Delay
+     0059h              _init
+     0060h              _q
+     0062h              _level
+     0064h              _counter
+     0066h              _alltouch
+     006ah              _isInDoor
+     006bh              _fingerCounter
+     006fh              _touchThreshold
+     0073h              _arraytouch
+     007eh              _main
+     009bh              _max
+     009dh              _min
+     009fh              _touch
+     00a1h              _f
+     00a3h              _t
+     00a5h              _n
+     00a7h              _j
+     00a9h              _i
+     00abh              ra
+     00ach              rb
+     00adh              rc
+     00aeh              rd
+     00afh              re
+     00b0h              rf
+     00b1h              rg
+     00b2h              r10c
+     00b3h              r20c
+     00b4h              _Delay_2
+     00bch              _builtin_holtek_udivmodsi4_isr00_2
+     0237h              startup_value_1
+     0245h              _builtin_holtek_udivmodsi4_isr00
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     027dh    31%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0078h    93%
+     Total     0080h     0078h    93%
+
+Use Stack Count
+_timer: 0
+_main: 1
+
+Call Tree
+    @dummy12
+        _timer (0)
+    @dummy
+        _main (0)
+            _init (1)
+            _Delay (1)
+            _builtin_holtek_divmodsi4_isr00 (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\OneDrive\Documents\HTK_Project\touch1 - rgb\PRID2.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

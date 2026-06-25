@@ -84,7 +84,11 @@ void __attribute((interrupt(0x28))) TB1_ISR(void)
 {
 	GCC_CLRWDT();
 	
+<<<<<<< HEAD
 	
+=======
+	Math();
+>>>>>>> 63842fd (car-light)
 	//DispTimer(1,1);
 	
 	if(Litgh){
@@ -176,7 +180,10 @@ void Date()
 {
 	
 	//NTC_MAP();
+<<<<<<< HEAD
 	Math();
+=======
+>>>>>>> 63842fd (car-light)
 	
 	Dot++;
 	State++;

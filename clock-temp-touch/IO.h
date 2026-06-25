@@ -1,6 +1,10 @@
 
 #define S_SEG(A,B,C,D,E,F,G)_pa0=A;_pa1=B;_pe2=C;_pe1=D;_pc3=E;_pa7=F;_pa6=G;
+<<<<<<< HEAD
 #define COM(F,R,T,O) _pa5=O;_pe3=T;_pe0=R;_pc2=F;
+=======
+#define COM(F,R,T,O,V) _pa5=O;_pe3=T;_pe0=R;_pc2=F;
+>>>>>>> 63842fd (car-light)
 #define OUT()_pbc3=0;_pbc2=0;_pbc1=0;_pec1=0;_pbc4=0;_pcc0=0;_pbc5=0;_pec4=1;_pec3=0;_pac0=0;_pac2=0;  _pac6=0;_pac7=0;_pcc2=0;_pec0=0;_pcc3=0;_pac1=0;_pec2=0;_pac5=0;_pcc1=0;_pec5=0;
 
 #define BUZ _pe5
@@ -26,7 +30,11 @@ void IO_INIT()
 }
 
 
+<<<<<<< HEAD
 volatile unsigned char Bip=0, CNT_DISP=0,Disp=0,Seletion=1,Display=2,Hrs=21,Min=50,S=0,Temp=0,Sec=0;
+=======
+volatile unsigned char Bip=0, CNT_DISP=0,Disp=0,Seletion=1,Display=2,Hrs=17,Min=2,S=0,Temp=0,Sec=0;
+>>>>>>> 63842fd (car-light)
 volatile unsigned char May=4,Day=16,H124=24;
 volatile unsigned int Yer=1403,Belink=0,Biper=0;
 const int Lookup[8]={1,5,9,13,17,22,26,30};
@@ -78,6 +86,7 @@ void DispTimer(char Blk1, char Blk2)
     Disp++;
     switch(Disp)
     {
+<<<<<<< HEAD
 		case 5:COM(0,0,0,0);if(Blk1==1){Displayer(H1);COM(1,0,0,0);}break;
 		case 7:if(Blk1==1){Displayer(H1);COM(1,0,0,0);}break;
 		case 8:if(Blk1==1){Displayer(H1);COM(1,0,0,0);}break;
@@ -87,6 +96,13 @@ void DispTimer(char Blk1, char Blk2)
 	    case 20:COM(0,0,0,0);if(Blk2==1){Displayer(N2);COM(0,0,0,1);}break;
 	    case 25:if(Blk2==1){Displayer(N2);COM(0,0,0,1);}Disp=0;break;
 	    //default: if(Litgh==1){COM(0,0,0,0,0);}break;
+=======
+		case 2:COM(0,0,0,0,0);if(Blk1==1){Displayer(H1);COM(1,0,0,0,0);}break;
+		case 4:COM(0,0,0,0,0);if(Blk1==1){Displayer(H2);COM(0,1,0,0,0);}break;
+	    case 6:COM(0,0,0,0,0);if(Blk2==1){Displayer(N1);DOT=Dot;COM(0,0,1,0,0);}break;
+	    case 8:COM(0,0,0,0,0);if(Blk2==1){Displayer(N2);COM(0,0,0,1,0);}Disp=0;break;
+	    default: if(Litgh==1){COM(0,0,0,0,0);}break;
+>>>>>>> 63842fd (car-light)
 	}
 }
 
@@ -95,15 +111,23 @@ void DispTemp()
     Disp++;
     switch(Disp)
     {
+<<<<<<< HEAD
 		case 5:COM(0,0,0,0);Displayer(T1);COM(0,1,0,0);break;
 		case 10:COM(0,0,0,0);Displayer(T2);COM(0,0,1,0);break;
 	    case 15:COM(0,0,0,0);Displayer(12);COM(0,0,0,1);Disp=0;break;
 	    //default: if(Litgh==1){COM(0,0,0,0,0);}break;
+=======
+		case 5:COM(0,0,0,0,0);Displayer(T1);COM(0,1,0,0,0);break;
+		case 10:COM(0,0,0,0,0);Displayer(T2);COM(0,0,1,0,0);break;
+	    case 15:COM(0,0,0,0,0);Displayer(12);COM(0,0,0,1,0);Disp=0;break;
+	    default: if(Litgh==1){COM(0,0,0,0,0);}break;
+>>>>>>> 63842fd (car-light)
 	}
 }
 
 
 
+<<<<<<< HEAD
 //void DispYear()
 //{
 //    if(Belinker==1){Disp++;}else{Disp=25;}
@@ -187,3 +211,88 @@ void DispTemp()
 //		default: if(Litgh==1){COM(0,0,0,0,0);}break;	
 //	}
 //}
+=======
+void DispYear()
+{
+    if(Belinker==1){Disp++;}else{Disp=25;}
+    switch(Disp)
+    {
+		case 5: COM(0,0,0,0,0);Displayer(Y1);COM(1,0,0,0,0);break;
+		case 10: COM(0,0,0,0,0);Displayer(Y2);COM(0,1,0,0,0);break;
+	   	case 15: COM(0,0,0,0,0);Displayer(Y3);COM(0,0,1,0,0);break;
+	    case 20: COM(0,0,0,0,0);Displayer(Y4);COM(0,0,0,1,0);break;
+	    case 25: COM(0,0,0,0,0);Disp=0;break;
+	    default: if(Litgh==1){COM(0,0,0,0,0);}break;
+    }
+}
+
+void DispDate(char Blk1, char Blk2)
+{
+    Disp++;
+    switch(Disp)
+    {
+		case 5:COM(0,0,0,0,0);if(Blk1==1){Displayer(M1);COM(1,0,0,0,0);}break;
+		case 10:COM(0,0,0,0,0);if(Blk1==1){Displayer(M2);COM(0,1,0,0,0);}break;
+	    case 15:COM(0,0,0,0,0);if(Blk2==1){Displayer(D1);COM(0,0,1,0,0);}break;
+	    case 20:COM(0,0,0,0,0);if(Blk2==1){Displayer(D2);COM(0,0,0,1,0);}break;
+	    case 25:COM(0,0,0,0,0);Disp=0;break;
+	    default: if(Litgh==1){COM(0,0,0,0,0);}break;
+	}
+}
+
+void DispSetTimer(char Blk1, char Blk2)
+{
+	Disp++;
+    switch(Disp)
+    {
+		case 5:COM(0,0,0,0,0);if(Blk1==1){S_SEG(1,1,1,0,0,0,0);COM(1,0,0,0,0);}break;
+		case 10:COM(0,0,0,0,0);if(Blk1==1){Displayer(TM1);COM(0,1,0,0,0);}break;
+	    case 15:COM(0,0,0,0,0);if(Blk2==1){Displayer(0);COM(0,0,1,0,0);}break;
+	    case 20:COM(0,0,0,0,0);if(Blk2==1){Displayer(TM2);COM(0,0,0,1,0);}break;
+	    case 25:COM(0,0,0,0,0);if(Blk2==1){S_SEG(1,Seg1,Seg2,Seg3,1,1,1);COM(0,0,0,0,1);}Disp=0;break;
+		default: if(Litgh==1){COM(0,0,0,0,0);}break;
+	}
+}
+
+void DispSetTime()
+{
+    if(Belinker==1){Disp++;}else{Disp=25;}
+    switch(Disp)
+    {
+		case 5:COM(0,0,0,0,0);Displayer(S1);COM(1,0,0,0,0);break;
+		case 10:COM(0,0,0,0,0);Displayer(S2);COM(0,1,0,0,0);break;
+	    case 15:COM(0,0,0,0,0);S_SEG(1,1,0,1,0,0,0);COM(0,0,1,0,0);break;
+	    case 20:COM(0,0,0,0,0);break;
+	    case 25:COM(0,0,0,0,0);Disp=0;break;
+	    default: if(Litgh==1){COM(0,0,0,0,0);}break;
+	}
+}
+
+void DispSetTiming1(char Blk1, char Blk2)
+{
+    Disp++;
+    switch(Disp)
+    {
+		case 5:COM(0,0,0,0,0);if(Blk1==1){Displayer(H1T1);COM(1,0,0,0,0);}break;
+		case 10:COM(0,0,0,0,0);if(Blk1==1){Displayer(H1T2);COM(0,1,0,0,0);}break;
+	    case 15:COM(0,0,0,0,0);if(Blk2==1){Displayer(N1T1);COM(0,0,1,0,0);}break;
+	    case 20:COM(0,0,0,0,0);if(Blk2==1){Displayer(N1T2);COM(0,0,0,1,0);}break;
+	    case 25:COM(0,0,0,0,0);S_SEG(1,1,1,1,0,0,1);COM(0,0,0,0,1);if(Blk2==1){S_SEG(1,PM1,Seg2,Seg3,0,0,1);}Disp=0;break;
+		default: if(Litgh==1){COM(0,0,0,0,0);}break;
+	}
+}
+
+void DispSetTiming2(char Blk1, char Blk2)
+{
+    Disp++;
+    switch(Disp)
+    {
+		case 5:COM(0,0,0,0,0);if(Blk1==1){Displayer(H2T1);COM(1,0,0,0,0);}break;
+		case 10:COM(0,0,0,0,0);if(Blk1==1){Displayer(H2T2);COM(0,1,0,0,0);}break;
+	    case 15:COM(0,0,0,0,0);if(Blk2==1){Displayer(N2T1);COM(0,0,1,0,0);}break;
+	    case 20:COM(0,0,0,0,0);if(Blk2==1){Displayer(N2T2);COM(0,0,0,1,0);}break;
+	    case 25:COM(0,0,0,0,0);S_SEG(1,1,1,1,0,0,1);COM(0,0,0,0,1);if(Blk2==1){S_SEG(1,PM2,Seg2,Seg3,0,0,1);}Disp=0;break;
+		default: if(Litgh==1){COM(0,0,0,0,0);}break;	
+	}
+}
+>>>>>>> 63842fd (car-light)

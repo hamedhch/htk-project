@@ -138,10 +138,13 @@ void Key_Touch()
 				CalibrCount=0;
 				CalibrSample=0;
 				Count_C1_Backup=0;
+<<<<<<< HEAD
 				
 				/*BUZ=1;
 				delay_ms(10);
 				BUZ=0;*/
+=======
+>>>>>>> 63842fd (car-light)
 			}
 		}
 		
@@ -160,11 +163,14 @@ void Key_Touch()
 			Count_C1_Backup=0;
 			
 			Count_T1=0;
+<<<<<<< HEAD
 			
 			/*BUZ=1;
 			delay_ms(10);
 			BUZ=0;*/
 				
+=======
+>>>>>>> 63842fd (car-light)
  		}
 	 	else Count_T1=0, Setinoff=0;
 	 	

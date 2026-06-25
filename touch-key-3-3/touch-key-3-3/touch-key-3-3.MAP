@@ -1,29 +1,29 @@
 
 Linker Version 8.7.7.220718
-Input Object File: E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ
-Input Object File: E:\hamed\touch2\touch-key-3-3\touch-key-3-3\STARTUP1_L.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\STARTUP1_L.OBJ
 
 Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
 Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
 
 
      Bank    Start     End      Length     Class    AvgIns    Name
-     00h     0000h     0000h    0001h      CODE               @code (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     000ch     000ch    0001h      CODE               @timer_code (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     000dh     0024h    0018h      CODE               _TuochKeyInit (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     0028h     0028h    0001h      CODE               @TOUCH_ISR_code (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     0029h     0049h    0021h      CODE               @start (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     004ah     0067h    001eh      CODE               _delay_10us (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     0068h     009eh    0037h      CODE               _delay_ms (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     009fh     019bh    00fdh      CODE               _Key_Touch (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     019ch     0275h    00dah      CODE               _CalibrTuoch (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     0276h     0344h    00cfh      CODE               _Key_Select (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     0345h     036ch    0028h      CODE               _main (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     036dh     0385h    0019h      CODE               @ROMDATA_BASE (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\STARTUP1_L.OBJ)
-     00h     0386h     03a4h    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     03a5h     03e7h    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0060h     008bh    002ch      DATA     5.0682    @HCCINIT (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     008ch     008ch    0001h      DATA     0         @BITDATASEC (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\STARTUP1_L.OBJ)
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     000ch     000ch    0001h      CODE               @timer_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     000dh     0024h    0018h      CODE               _TuochKeyInit (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     0028h     0028h    0001h      CODE               @TOUCH_ISR_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     0029h     0049h    0021h      CODE               @start (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     004ah     0067h    001eh      CODE               _delay_10us (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     0068h     009eh    0037h      CODE               _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     009fh     019bh    00fdh      CODE               _Key_Touch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     019ch     0275h    00dah      CODE               _CalibrTuoch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     0276h     0344h    00cfh      CODE               _Key_Select (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     0345h     0372h    002eh      CODE               _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     0373h     038bh    0019h      CODE               @ROMDATA_BASE (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\STARTUP1_L.OBJ)
+     00h     038ch     03aah    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     03abh     03edh    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     008bh    002ch      DATA     5.0682    @HCCINIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     008ch     008ch    0001h      DATA     0         @BITDATASEC (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\STARTUP1_L.OBJ)
      00h     008dh     008dh    0001h      DATA     15        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     008eh     008eh    0001h      DATA     9         @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     008fh     008fh    0001h      DATA     6         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
@@ -35,16 +35,16 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      Local Sections
 
      Bank    Start     End      Length     Class    AvgIns    Name
-     00h     00aeh     00aeh    0000h      LOCAL    0         @dummy (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     00aeh     00aeh    0000h      LOCAL    0         _main (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     00a0h     00a7h    0008h      LOCAL    4         _delay_ms (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     00aeh     00aeh    0000h      LOCAL    0         @dummy (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     00aeh     00aeh    0000h      LOCAL    0         _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     00a0h     00a7h    0008h      LOCAL    4         _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
      00h     0094h     009fh    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0094h     0094h    0000h      LOCAL    0         _TuochKeyInit (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     00a8h     00adh    0006h      LOCAL    2         _CalibrTuoch (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     0094h     0097h    0004h      LOCAL    4         _delay_10us (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     0094h     0094h    0000h      LOCAL    0         _TuochKeyInit (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     00a8h     00adh    0006h      LOCAL    2         _CalibrTuoch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     0094h     0097h    0004h      LOCAL    4         _delay_10us (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
      00h     0094h     00a1h    000eh      LOCAL    9.3571    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     00a2h     00a2h    0001h      LOCAL    3         _Key_Select (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
-     00h     0094h     0094h    0000h      LOCAL    0         _Key_Touch (E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     00a2h     00a2h    0001h      LOCAL    3         _Key_Select (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
+     00h     0094h     0094h    0000h      LOCAL    0         _Key_Touch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ)
 
      Public Symbols Information
      Address            Public by Name
@@ -71,9 +71,9 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      009fh              _Key_Touch
      0028h              _TOUCH_ISR
      000dh              _TuochKeyInit
-     0386h              _builtin_holtek_mulsi3_isr00
+     038ch              _builtin_holtek_mulsi3_isr00
      0098h              _builtin_holtek_mulsi3_isr00_2
-     03a5h              _builtin_holtek_udivmodsi4_isr00
+     03abh              _builtin_holtek_udivmodsi4_isr00
      007eh              _counter
      004ah              _delay_10us
      0094h              _delay_10us_2
@@ -92,7 +92,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0091h              re
      0092h              rf
      0093h              rg
-     036ch              startup_value_1
+     0372h              startup_value_1
 
      Address            Public by Value
      000ch              _timer
@@ -134,9 +134,9 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      019ch              _CalibrTuoch
      0276h              _Key_Select
      0345h              _main
-     036ch              startup_value_1
-     0386h              _builtin_holtek_mulsi3_isr00
-     03a5h              _builtin_holtek_udivmodsi4_isr00
+     0372h              startup_value_1
+     038ch              _builtin_holtek_mulsi3_isr00
+     03abh              _builtin_holtek_udivmodsi4_isr00
      008ch[0]           _q3
      008ch[1]           _q2
      008ch[2]           _q1
@@ -144,7 +144,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
 
 ROM Usage Statistics
      Size      Used     Percentage
-     0800h     03dah    48%
+     0800h     03e0h    48%
 
 RAM Usage Statistics
     Bank      Size      Used     Percentage
@@ -169,6 +169,6 @@ Call Tree
                 _builtin_holtek_divmodsi4_isr00 (2)
             _Key_Touch (1)
 
-HLINK: Program entry point at section '@code' (address 0) of file 'E:\hamed\touch2\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ'
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-key-3-3\touch-key-3-3\TOUCH-KEY-3-3.OBJ'
 
 Total 0 error(s), Total 0 Warning(s)

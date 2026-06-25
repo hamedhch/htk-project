@@ -1,0 +1,120 @@
+
+Linker Version 8.7.7.220718
+Input Object File: E:\hamed\touch2\touch2 -ir\PRID2.OBJ
+Input Object File: E:\hamed\touch2\touch2 -ir\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0004h     0007h    0004h      CODE               @int0_code (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0008h     000bh    0004h      CODE               _main (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     000ch     000fh    0004h      CODE               @timer_code (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0010h     0030h    0021h      CODE               @start (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0031h     0056h    0026h      CODE               _int0 (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0057h     00fch    00a6h      CODE               _timer (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     00fdh     010eh    0012h      CODE               _init (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     010fh     011ah    000ch      CODE               @ROMDATA_BASE (E:\hamed\touch2\touch2 -ir\STARTUP1_L.OBJ)
+     00h     0060h     0071h    0012h      DATA     4.2778    @HCCINIT (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     0072h     0072h    0001h      DATA     0         @BITDATASEC (E:\hamed\touch2\touch2 -ir\STARTUP1_L.OBJ)
+     00h     0073h     0073h    0001h      DATA     2         @data_r104 (isr:ra~rh)
+     00h     0074h     0074h    0001h      DATA     2         @data_r204 (isr:ra~rh)
+     00h     0075h     0075h    0001h      DATA     2         @data_r10c (isr:ra~rh)
+     00h     0076h     0076h    0001h      DATA     2         @data_r20c (isr:ra~rh)
+     00h     0077h     0077h    0001h      DATA     3         @data_rd0c (isr:ra~rh)
+     00h     0078h     0078h    0001h      DATA     3         @data_re0c (isr:ra~rh)
+     00h     0079h     0079h    0001h      DATA     3         @data_rf0c (isr:ra~rh)
+     00h     007ah     007ah    0001h      DATA     3         @data_rg0c (isr:ra~rh)
+     00h     007bh     007bh    0001h      DATA     3         @data_ra0c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     007ch     007ch    0000h      LOCAL    0         @dummy4 (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     007ch     007ch    0000h      LOCAL    0         _int0 (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     007ch     007ch    0000h      LOCAL    0         @dummy12 (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     007ch     007ch    0000h      LOCAL    0         _timer (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     007ch     007ch    0000h      LOCAL    0         @dummy (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     007ch     007ch    0000h      LOCAL    0         _main (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+     00h     007ch     007ch    0000h      LOCAL    0         _init (E:\hamed\touch2\touch2 -ir\PRID2.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     006eh              _counter
+     006ch              _counter2
+     006ah              _counter3
+     0062h              _counterir
+     0066h              _counterir2
+     00fdh              _init
+     0031h              _int0
+     0060h              _m
+     0008h              _main
+     0070h              _ncount
+     0072h[0]           _o
+     0072h[1]           _q
+     0057h              _timer
+     0073h              r104
+     0075h              r10c
+     0074h              r204
+     0076h              r20c
+     007bh              ra0c
+     0077h              rd0c
+     0078h              re0c
+     0079h              rf0c
+     007ah              rg0c
+     010eh              startup_value_1
+
+     Address            Public by Value
+     0008h              _main
+     0031h              _int0
+     0057h              _timer
+     0060h              _m
+     0062h              _counterir
+     0066h              _counterir2
+     006ah              _counter3
+     006ch              _counter2
+     006eh              _counter
+     0070h              _ncount
+     0073h              r104
+     0074h              r204
+     0075h              r10c
+     0076h              r20c
+     0077h              rd0c
+     0078h              re0c
+     0079h              rf0c
+     007ah              rg0c
+     007bh              ra0c
+     00fdh              _init
+     010eh              startup_value_1
+     0072h[0]           _o
+     0072h[1]           _q
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     0118h    13%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     001ch    21%
+     Total     0080h     001ch    21%
+
+Use Stack Count
+_int0: 0
+_timer: 0
+_main: 1
+
+Call Tree
+    @dummy4
+        _int0 (0)
+    @dummy12
+        _timer (0)
+    @dummy
+        _main (0)
+            _init (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'E:\hamed\touch2\touch2 -ir\PRID2.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

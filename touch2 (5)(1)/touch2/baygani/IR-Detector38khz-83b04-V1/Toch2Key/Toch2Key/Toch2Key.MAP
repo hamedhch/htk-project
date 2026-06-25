@@ -1,0 +1,165 @@
+
+Linker Version 8.7.7.220718
+Input Object File: E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ
+Input Object File: E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     0004h     0007h    0004h      CODE               @int0_code (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     000ch     000fh    0004h      CODE               @timer_code (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     0010h     001fh    0010h      CODE               @ROMDATA_BASE (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\STARTUP1_L.OBJ)
+     00h     0028h     0028h    0001h      CODE               @TOUCH_ISR_code (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     0029h     0049h    0021h      CODE               @start (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     004ah     0080h    0037h      CODE               _delay_ms (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     0081h     00abh    002bh      CODE               _int0 (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     00ach     00f4h    0049h      CODE               _timer (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     00f5h     010dh    0019h      CODE               _main (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     010eh     012ch    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     0079h    001ah      DATA     1.1538    @HCCINIT (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     007ah     007ah    0001h      DATA     0         @HCCINIT0 (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     007bh     007bh    0001h      DATA     0         @BITDATASEC (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\STARTUP1_L.OBJ)
+     00h     007ch     007ch    0001h      DATA     9         @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     007dh     007dh    0001h      DATA     9         @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     007eh     007eh    0001h      DATA     9         @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     007fh     007fh    0001h      DATA     9         @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0080h     0080h    0001h      DATA     2         @data_r104 (isr:ra~rh)
+     00h     0081h     0081h    0001h      DATA     2         @data_r204 (isr:ra~rh)
+     00h     0082h     0082h    0001h      DATA     4         @data_rb04 (isr:ra~rh)
+     00h     0083h     0083h    0001h      DATA     4         @data_rc04 (isr:ra~rh)
+     00h     0084h     0084h    0001h      DATA     7         @data_rd04 (isr:ra~rh)
+     00h     0085h     0085h    0001h      DATA     8         @data_re04 (isr:ra~rh)
+     00h     0086h     0086h    0001h      DATA     2         @data_r10c (isr:ra~rh)
+     00h     0087h     0087h    0001h      DATA     2         @data_r20c (isr:ra~rh)
+     00h     0088h     0088h    0001h      DATA     4         @data_rb0c (isr:ra~rh)
+     00h     0089h     0089h    0001h      DATA     4         @data_rc0c (isr:ra~rh)
+     00h     008ah     008ah    0001h      DATA     6         @data_ra0c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     008bh     008bh    0000h      LOCAL    0         @dummy4 (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _int0 (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         @dummy12 (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     008bh     008bh    0000h      LOCAL    0         _timer (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     009fh     009fh    0000h      LOCAL    0         @dummy (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     009fh     009fh    0000h      LOCAL    0         _main (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     0097h     009eh    0008h      LOCAL    2         _delay_ms (E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ)
+     00h     008bh     0096h    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Public Symbols Information
+     Address            Public by Name
+     006bh              _CalibrCount
+     006ah              _CalibrSample
+     0076h              _Count_C1
+     0072h              _Count_C1_Backup
+     0070h              _Count_S1
+     006eh              _Count_T1
+     0028h              _TOUCH_ISR
+     007bh[0]           _ab
+     010eh              _builtin_holtek_mulsi3_isr00
+     008bh              _builtin_holtek_mulsi3_isr00_2
+     006ch              _counter
+     0064h              _counter1
+     0062h              _counter2
+     0060h              _counter3
+     0066h              _counterall
+     004ah              _delay_ms
+     0097h              _delay_ms_2
+     006dh              _i
+     007ah              _in
+     0081h              _int0
+     00f5h              _main
+     0068h              _ncount
+     007bh[1]           _q
+     00ach              _timer
+     0080h              r104
+     0086h              r10c
+     0081h              r204
+     0087h              r20c
+     008ah              ra0c
+     0082h              rb04
+     0088h              rb0c
+     0083h              rc04
+     0089h              rc0c
+     007ch              rd
+     0084h              rd04
+     007dh              re
+     0085h              re04
+     007eh              rf
+     007fh              rg
+     000fh              startup_value_1
+
+     Address            Public by Value
+     000fh              startup_value_1
+     0028h              _TOUCH_ISR
+     004ah              _delay_ms
+     0060h              _counter3
+     0062h              _counter2
+     0064h              _counter1
+     0066h              _counterall
+     0068h              _ncount
+     006ah              _CalibrSample
+     006bh              _CalibrCount
+     006ch              _counter
+     006dh              _i
+     006eh              _Count_T1
+     0070h              _Count_S1
+     0072h              _Count_C1_Backup
+     0076h              _Count_C1
+     007ah              _in
+     007ch              rd
+     007dh              re
+     007eh              rf
+     007fh              rg
+     0080h              r104
+     0081h              r204
+     0081h              _int0
+     0082h              rb04
+     0083h              rc04
+     0084h              rd04
+     0085h              re04
+     0086h              r10c
+     0087h              r20c
+     0088h              rb0c
+     0089h              rc0c
+     008ah              ra0c
+     008bh              _builtin_holtek_mulsi3_isr00_2
+     0097h              _delay_ms_2
+     00ach              _timer
+     00f5h              _main
+     010eh              _builtin_holtek_mulsi3_isr00
+     007bh[0]           _ab
+     007bh[1]           _q
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     011eh    13%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     003fh    49%
+     Total     0080h     003fh    49%
+
+Use Stack Count
+_int0: 0
+_timer: 0
+_main: 2
+
+Call Tree
+    @dummy4
+        _int0 (0)
+    @dummy12
+        _timer (0)
+    @dummy
+        _main (0)
+            _delay_ms (1)
+                _builtin_holtek_mulsi3_isr00 (2)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'E:\hamed\touch2\IR-Detector38khz-83b04-V1\Toch2Key\Toch2Key\TOCH2KEY.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

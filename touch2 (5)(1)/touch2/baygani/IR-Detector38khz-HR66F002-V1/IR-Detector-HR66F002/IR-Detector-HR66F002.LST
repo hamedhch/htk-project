@@ -1,0 +1,595 @@
+"File: IR-Detector-HR66F002.c  Holtek Cross-Assembler  Version 3.00      Page 1
+
+
+
+;   7: {
+   7  0000              __stm0ah EQU [02dH]
+   7  0000              __stm0al EQU [02cH]
+   7  0000              __stm0dh EQU [02bH]
+   7  0000              __stm0dl EQU [02aH]
+   7  0000              __stm0c1 EQU [029H]
+   7  0000              __stm0c0 EQU [028H]
+   7  0000              __pasr EQU [026H]
+   7  0000              __rstc EQU [025H]
+   7  0000              __sadc2 EQU [024H]
+   7  0000              __sadc1 EQU [023H]
+   7  0000              __sadc0 EQU [022H]
+   7  0000              __sadoh EQU [021H]
+   7  0000              __sadol EQU [020H]
+   7  0000              __eed EQU [01fH]
+   7  0000              __eea EQU [01eH]
+   7  0000              __smod1 EQU [01cH]
+   7  0000              __tbc EQU [01bH]
+   7  0000              __wdtc EQU [019H]
+   7  0000              __ifs0 EQU [018H]
+   7  0000              __pawu EQU [017H]
+   7  0000              __papu EQU [016H]
+   7  0000              __pac EQU [015H]
+   7  0000              __pa EQU [014H]
+   7  0000              __mfi0 EQU [011H]
+   7  0000              __intc1 EQU [0fH]
+   7  0000              __intc0 EQU [0eH]
+   7  0000              __integ EQU [0dH]
+   7  0000              __smod EQU [0bH]
+   7  0000              __status EQU [0aH]
+   7  0000              __tblh EQU [08H]
+   7  0000              __tblp EQU [07H]
+   7  0000              __pcl EQU [06H]
+   7  0000              __acc EQU [05H]
+   7  0000              __bp EQU [04H]
+   7  0000              __mp1 EQU [03H]
+   7  0000              __iar1 EQU [02H]
+   7  0000              __mp0 EQU [01H]
+   7  0000              __iar0 EQU [00H]
+   7  0000              @Delay_10us .SECTION 'CODE'
+   7  0000              PUBLIC _Delay_10us
+   7  0000              _Delay_10us PROC
+
+;  11:     for(i_u=0;i_u<1;i_u++)
+  11  0000  3400     R  CLR CR1
+  11  0001              L2:
+
+;  13:     	_nop();
+  13  0001  0000        NOP
+
+;  14:     	_nop();
+  14  0002  0000        NOP
+
+;  15:     	_nop();
+  15  0003  0000        NOP
+
+;  16:     	_nop();
+"File: IR-Detector-HR66F002.c  Holtek Cross-Assembler  Version 3.00      Page 2 
+
+  16  0004  0000        NOP
+
+;  17:     	_clrwdt();
+  17  0005  0001        CLR WDT
+  17  0006              L3:
+
+;  11:     for(i_u=0;i_u<1;i_u++)
+  11  0006  1F00     R  CLR b0_1
+  11  0007  3C00     R  SZ CR1
+  11  0008  3000     R  SET b0_1.0
+  11  0009  1480     R  INC b0_1
+  11  000A  3400     R  CLR CR1
+  11  000B  3C00     R  SZ b0_1.0
+  11  000C  3000     R  SET CR1
+  11  000D  1F00     R  CLR b0_1
+  11  000E  3C00     R  SZ CR1
+  11  000F  3000     R  SET b0_1.0
+  11  0010  0700     R  MOV A,b0_1
+  11  0011  0A01        SUB A,01h
+  11  0012  380A        SNZ [0Ah].0
+  11  0013  2800     R  JMP L2
+  11  0014              L1:
+  11  0014  0003        RET
+  11  0000  00          LOCAL b0_1 DB ?
+
+;   9:  bit i_u;
+   9  0001  00          LOCAL CR1 DBIT ; i_u
+   9  0015              _Delay_10us ENDP
+
+;  24: {
+  24  0000              @Delay_Chek .SECTION 'CODE'
+  24  0000              PUBLIC _Delay_Chek
+  24  0000              _Delay_Chek PROC
+
+;  26:     for(i=0;i<3;i++)
+  26  0000  1F00     R  CLR CR2
+  26  0001  2800     R  JMP L10
+  26  0002              L7:
+
+;  28: 		Delay_10us();
+  28  0002  2000     R  CALL _Delay_10us
+  28  0003              L8:
+
+;  26:     for(i=0;i<3;i++)
+  26  0003  1480     R  INC CR2
+  26  0004              L10:
+  26  0004  0700     R  MOV A,CR2
+  26  0005  0A03        SUB A,03h
+  26  0006  380A        SNZ [0ah].0
+  26  0007  2800     R  JMP L7
+  26  0008              L6:
+  26  0008  0003        RET
+
+;  25:   unsigned char i;
+  25  0000  00          LOCAL CR2 DB ? ; i
+  25  0009              _Delay_Chek ENDP
+
+;  34: {
+  34  0000              @Delay_1ms .SECTION 'CODE'
+  34  0000              PUBLIC _Delay_1ms
+"File: IR-Detector-HR66F002.c  Holtek Cross-Assembler  Version 3.00      Page 3 
+
+  34  0000              _Delay_1ms PROC
+
+;  36:     for(i_m=0;i_m<100;i_m++)
+  36  0000  1F00     R  CLR CR3
+  36  0001  2800     R  JMP L15
+  36  0002              L12:
+
+;  38:     	_nop();
+  38  0002  0000        NOP
+
+;  39:     	_nop();
+  39  0003  0000        NOP
+
+;  40:     	_nop();
+  40  0004  0000        NOP
+
+;  41:     	_nop();
+  41  0005  0000        NOP
+
+;  42:     	_clrwdt();
+  42  0006  0001        CLR WDT
+  42  0007              L13:
+
+;  36:     for(i_m=0;i_m<100;i_m++)
+  36  0007  1480     R  INC CR3
+  36  0008              L15:
+  36  0008  0700     R  MOV A,CR3
+  36  0009  0A64        SUB A,064h
+  36  000A  380A        SNZ [0ah].0
+  36  000B  2800     R  JMP L12
+  36  000C              L11:
+  36  000C  0003        RET
+
+;  35:   unsigned char i_m;
+  35  0000  00          LOCAL CR3 DB ? ; i_m
+  35  000D              _Delay_1ms ENDP
+
+;  47: {
+  47  0000              @Delay_ms .SECTION 'CODE'
+  47  0000              PUBLIC _Delay_ms
+  47  0000              _Delay_ms PROC
+
+;  46: void Delay_ms(unsigned int ms)
+  46  0000              PUBLIC Delay_ms0
+  46  0000  0002[       LOCAL Delay_ms0 DB 2 DUP (?) ; ms
+            00
+            ]
+
+;  49:     for(i_m=0;i_m<ms;i_m++)
+  49  0000  1F00     R  CLR CR4
+  49  0001  1F00     R  CLR CR4[1]
+  49  0002  2800     R  JMP L20
+  49  0003              L17:
+
+;  51: 		Delay_1ms();
+  51  0003  2000     R  CALL _Delay_1ms
+  51  0004              L18:
+
+;  49:     for(i_m=0;i_m<ms;i_m++)
+  49  0004  1480     R  INC CR4
+"File: IR-Detector-HR66F002.c  Holtek Cross-Assembler  Version 3.00      Page 4 
+
+  49  0005  3D0A        SZ [0AH].2
+  49  0006  1480     R  INC CR4[1]
+  49  0007              L20:
+  49  0007  0700     R  MOV A,Delay_ms0[1]
+  49  0008  0200     R  SUB A,CR4[1]
+  49  0009  380A        SNZ [0AH].0
+  49  000A  2800     R  JMP L21
+  49  000B  390A        SNZ [0AH].2
+  49  000C  2800     R  JMP L17
+  49  000D  0700     R  MOV A,Delay_ms0
+  49  000E  0200     R  SUB A,CR4
+  49  000F  380A        SNZ [0AH].0
+  49  0010  2800     R  JMP L21
+  49  0011  390A        SNZ [0AH].2
+  49  0012  2800     R  JMP L17
+  49  0013              L21:
+  49  0013              L16:
+  49  0013  0003        RET
+
+;  48:   unsigned int i_m;
+  48  0002  0002[       LOCAL CR4 DB 2 DUP (?) ; i_m
+            00
+            ]
+  48  0014              _Delay_ms ENDP
+
+
+;  15: {
+  15  0000              @IO_INIT .SECTION 'CODE'
+  15  0000              PUBLIC _IO_INIT
+  15  0000              _IO_INIT PROC
+
+;  16:  IO();
+  16  0000  0F44        MOV A,044h
+  16  0001  0095        MOV __pac,A
+
+;  17:  IRTRN=0;
+  17  0002  3694        CLR [014H].5
+
+;  18:  TRIAC=1;
+  18  0003  3394        SET [014H].7
+
+;  19:  LED_1=0;
+  19  0004  3414        CLR [014H].0
+
+;  20:  LED_2=1;
+  20  0005  3094        SET [014H].1
+  20  0006              L22:
+  20  0006  0003        RET
+  20  0007              _IO_INIT ENDP
+
+
+;  37: {
+  37  0000              @TB0Init .SECTION 'CODE'
+  37  0000              PUBLIC _TB0Init
+  37  0000              _TB0Init PROC
+
+;  38:  TB_FRQ(1);
+  38  0000  331B        SET [01BH].6
+
+;  39:  TB_ONF(1);
+"File: IR-Detector-HR66F002.c  Holtek Cross-Assembler  Version 3.00      Page 5 
+
+  39  0001  339B        SET [01BH].7
+
+;  40:  TB0();
+  40  0002  351B        CLR [01BH].2
+  40  0003  349B        CLR [01BH].1
+  40  0004  341B        CLR [01BH].0
+
+;  41:  TB0_ENB(1);
+  41  0005  310E        SET [0EH].2
+
+;  42:  TB0_FLG(0);
+  42  0006  368E        CLR [0EH].5
+
+;  43:  TB_EMI(1); 
+  43  0007  300E        SET [0EH].0
+  43  0008              L23:
+  43  0008  0003        RET
+  43  0009              _TB0Init ENDP
+
+;  47: {
+  47  0000              @TB1Init .SECTION 'CODE'
+  47  0000              PUBLIC _TB1Init
+  47  0000              _TB1Init PROC
+
+;  48:  TB_FRQ(1);
+  48  0000  331B        SET [01BH].6
+
+;  49:  TB_ONF(1);
+  49  0001  339B        SET [01BH].7
+
+;  50:  TB1();
+  50  0002  329B        SET [01BH].5
+  50  0003  361B        CLR [01BH].4
+
+;  51:  TB1_ENB(1);
+  51  0004  318E        SET [0EH].3
+
+;  52:  TB1_FLG(0);
+  52  0005  370E        CLR [0EH].6
+
+;  53:  TB_EMI(1); 
+  53  0006  300E        SET [0EH].0
+  53  0007              L24:
+  53  0007  0003        RET
+  53  0008              _TB1Init ENDP
+
+;  57: {
+  57  0000              @TBINIT .SECTION 'CODE'
+  57  0000              PUBLIC _TBINIT
+  57  0000              _TBINIT PROC
+
+;  58:  TB_FRQ(0);
+  58  0000  371B        CLR [01BH].6
+
+;  59:  TB_ONF(1);
+  59  0001  339B        SET [01BH].7
+
+;  60:  TB1();
+  60  0002  329B        SET [01BH].5
+  60  0003  361B        CLR [01BH].4
+"File: IR-Detector-HR66F002.c  Holtek Cross-Assembler  Version 3.00      Page 6 
+
+
+;  61:  TB1_ENB(1);
+  61  0004  318E        SET [0EH].3
+
+;  62:  TB1_FLG(0);
+  62  0005  370E        CLR [0EH].6
+
+;  63:  TB1();
+  63  0006  329B        SET [01BH].5
+  63  0007  361B        CLR [01BH].4
+
+;  64:  TB1_ENB(1);
+  64  0008  318E        SET [0EH].3
+
+;  65:  TB1_FLG(0);
+  65  0009  370E        CLR [0EH].6
+
+;  66:  TB_EMI(1); 
+  66  000A  300E        SET [0EH].0
+  66  000B              L25:
+  66  000B  0003        RET
+  66  000C              _TBINIT ENDP
+
+;  70: {
+  70  0000              @@ISR_TB0 .SECTION AT 08H 'CODE'
+  70  0000  0004        RETI
+
+;  94: {	
+  94  0000              @@ISR_TB1 .SECTION AT 0cH 'CODE'
+  94  0000  0004        RETI
+
+
+;  24: {
+  24  0000              @EXININIT .SECTION 'CODE'
+  24  0000              PUBLIC _EXININIT
+  24  0000              _EXININIT PROC
+
+;  25: 	EXI_EDGE();
+  25  0000  308D        SET [0DH].1
+  25  0001  300D        SET [0DH].0
+
+;  26: 	EXI_PIN(0);
+  26  0002  3115        SET [015H].2
+  26  0003  3516        CLR [016H].2
+  26  0004  3498        CLR [018H].1
+  26  0005  3018        SET [018H].0
+
+;  27: 	EXI_E(1);
+  27  0006  308E        SET [0EH].1
+
+;  28: 	EXI_F(0);
+  28  0007  360E        CLR [0EH].4
+
+;  29: 	EMI(1);
+  29  0008  300E        SET [0EH].0
+  29  0009              L28:
+  29  0009  0003        RET
+  29  000A              _EXININIT ENDP
+
+;  34: {
+"File: IR-Detector-HR66F002.c  Holtek Cross-Assembler  Version 3.00      Page 7 
+
+  34  0000              @@ISR_EXINT .SECTION AT 04H 'CODE'
+  34  0000  0004        RETI
+
+
+;  14: {
+  14  0000              @MAIN .SECTION 'CODE'
+  14  0000              _main PROC
+  14  0000              begin:
+
+;  15:  IO_INIT();
+  15  0000  2000     R  CALL _IO_INIT
+
+;  16:  Delay_ms(100);
+  16  0001  0F64        MOV A,064h
+  16  0002  0080     R  MOV Delay_ms0,A
+  16  0003  0F00        MOV A,00h
+  16  0004  0080     R  MOV Delay_ms0[1],A
+  16  0005  2000     R  CALL _Delay_ms
+
+;  17:  TB0Init();
+  17  0006  2000     R  CALL _TB0Init
+
+;  18:  EXININIT();
+  18  0007  2000     R  CALL _EXININIT
+
+;  19:  Detect=0;
+  19  0008  0F00     R  MOV A,BANK _Detect
+  19  0009  0084        MOV [04H],A
+  19  000A  0F00     R  MOV A,OFFSET _Detect
+  19  000B  0083        MOV [03H],A
+  19  000C  1F02        CLR [02H]
+
+;  20:  Timer=0;
+  20  000D  0F00     R  MOV A,BANK _Timer
+  20  000E  0084        MOV [04H],A
+  20  000F  0F00     R  MOV A,OFFSET _Timer
+  20  0010  0083        MOV [03H],A
+  20  0011  1F02        CLR [02H]
+  20  0012  1483        INC [03H]
+  20  0013  1F02        CLR [02H]
+  20  0014  1483        INC [03H]
+  20  0015  1F02        CLR [02H]
+  20  0016  1483        INC [03H]
+  20  0017  1F02        CLR [02H]
+
+;  21:  Puls_Count=0;
+  21  0018  0F00     R  MOV A,BANK _Puls_Count
+  21  0019  0084        MOV [04H],A
+  21  001A  0F00     R  MOV A,OFFSET _Puls_Count
+  21  001B  0083        MOV [03H],A
+  21  001C  1F02        CLR [02H]
+
+;  22:  Set=0;
+  22  001D  0F00     R  MOV A,BANK _Set
+  22  001E  0084        MOV [04H],A
+  22  001F  0F00     R  MOV A,OFFSET _Set
+  22  0020  0083        MOV [03H],A
+  22  0021  1F02        CLR [02H]
+  22  0022  2800     R  JMP L32
+  22  0023              L31:
+"File: IR-Detector-HR66F002.c  Holtek Cross-Assembler  Version 3.00      Page 8 
+
+
+;  25: 	_clrwdt();
+  25  0023  0001        CLR WDT
+
+;  29:     for(in=0;in<20;in++)
+  29  0024  0F00     R  MOV A,BANK _in
+  29  0025  0084        MOV [04H],A
+  29  0026  0F00     R  MOV A,OFFSET _in
+  29  0027  0083        MOV [03H],A
+  29  0028  1F02        CLR [02H]
+  29  0029  2800     R  JMP L37
+  29  002A              L34:
+
+;  31: 		Delay_10us();
+  31  002A  2000     R  CALL _Delay_10us
+
+;  32: 		IRTRN=1;
+  32  002B  3294        SET [014H].5
+
+;  33: 		Delay_10us();
+  33  002C  2000     R  CALL _Delay_10us
+
+;  34: 		IRTRN=0;
+  34  002D  3694        CLR [014H].5
+  34  002E              L35:
+
+;  29:     for(in=0;in<20;in++)
+  29  002E  0F00     R  MOV A,BANK _in
+  29  002F  0084        MOV [04H],A
+  29  0030  0F00     R  MOV A,OFFSET _in
+  29  0031  0083        MOV [03H],A
+  29  0032  1482        INC [02H]
+  29  0033              L37:
+  29  0033  0F00     R  MOV A,BANK _in
+  29  0034  0084        MOV [04H],A
+  29  0035  0F00     R  MOV A,OFFSET _in
+  29  0036  0083        MOV [03H],A
+  29  0037  0702        MOV A,[02H]
+  29  0038  0A14        SUB A,014h
+  29  0039  380A        SNZ [0AH].0
+  29  003A  2800     R  JMP L34
+
+;  36:     for(in=0;in<20;in++)
+  36  003B  0F00     R  MOV A,BANK _in
+  36  003C  0084        MOV [04H],A
+  36  003D  0F00     R  MOV A,OFFSET _in
+  36  003E  0083        MOV [03H],A
+  36  003F  1F02        CLR [02H]
+  36  0040  2800     R  JMP L41
+  36  0041              L38:
+
+;  38: 		Delay_10us();
+  38  0041  2000     R  CALL _Delay_10us
+  38  0042              L39:
+
+;  36:     for(in=0;in<20;in++)
+  36  0042  0F00     R  MOV A,BANK _in
+  36  0043  0084        MOV [04H],A
+  36  0044  0F00     R  MOV A,OFFSET _in
+  36  0045  0083        MOV [03H],A
+"File: IR-Detector-HR66F002.c  Holtek Cross-Assembler  Version 3.00      Page 9 
+
+  36  0046  1482        INC [02H]
+  36  0047              L41:
+  36  0047  0F00     R  MOV A,BANK _in
+  36  0048  0084        MOV [04H],A
+  36  0049  0F00     R  MOV A,OFFSET _in
+  36  004A  0083        MOV [03H],A
+  36  004B  0702        MOV A,[02H]
+  36  004C  0A14        SUB A,014h
+  36  004D  380A        SNZ [0AH].0
+  36  004E  2800     R  JMP L38
+  36  004F              L32:
+
+;  23:  while(1)
+  23  004F  2800     R  JMP L31
+  23  0050              L30:
+
+; 167: }
+ 167  0050  2800     R  JMP $
+ 167  0051              _main ENDP
+
+;  10: unsigned char in;
+  10  0051              PUBLIC _in
+  10  0000              @in .SECTION 'DATA'
+  10  0000  00          _in DB ? ; in
+
+;   8: volatile unsigned char Detect,Puls_Count,Lock,Pq;
+   8  0001              PUBLIC _Pq
+   8  0000              @Pq .SECTION 'DATA'
+   8  0000  00          _Pq DB ? ; Pq
+   8  0001              PUBLIC _Lock
+   8  0000              @Lock .SECTION 'DATA'
+   8  0000  00          _Lock DB ? ; Lock
+   8  0001              PUBLIC _Puls_Count
+   8  0000              @Puls_Count .SECTION 'DATA'
+   8  0000  00          _Puls_Count DB ? ; Puls_Count
+   8  0001              PUBLIC _Detect
+   8  0000              @Detect .SECTION 'DATA'
+   8  0000  00          _Detect DB ? ; Detect
+
+;   7: volatile unsigned long Timer ,Puls_on,Puls_off;
+   7  0001              PUBLIC _Puls_off
+   7  0000              @Puls_off .SECTION 'DATA'
+   7  0000  0004[       _Puls_off DB 4 DUP (?) ;Puls_off
+            00
+            ]
+   7  0004              PUBLIC _Puls_on
+   7  0000              @Puls_on .SECTION 'DATA'
+   7  0000  0004[       _Puls_on DB 4 DUP (?) ;Puls_on
+            00
+            ]
+   7  0004              PUBLIC _Timer
+   7  0000              @Timer .SECTION 'DATA'
+   7  0000  0004[       _Timer DB 4 DUP (?) ;Timer
+            00
+            ]
+
+
+;  31: volatile unsigned long m;
+  31  0004              PUBLIC _m
+  31  0000              @m .SECTION 'DATA'
+"File: IR-Detector-HR66F002.c  Holtek Cross-Assembler  Version 3.00      Page 10 
+
+  31  0000  0004[       _m DB 4 DUP (?) ;m
+            00
+            ]
+
+;  30: volatile unsigned char Backup,Counter,Counter_On,Counter_Off,Set ;
+  30  0004              PUBLIC _Set
+  30  0000              @Set .SECTION 'DATA'
+  30  0000  00          _Set DB ? ; Set
+  30  0001              PUBLIC _Counter_Off
+  30  0000              @Counter_Off .SECTION 'DATA'
+  30  0000  00          _Counter_Off DB ? ; Counter_Off
+  30  0001              PUBLIC _Counter_On
+  30  0000              @Counter_On .SECTION 'DATA'
+  30  0000  00          _Counter_On DB ? ; Counter_On
+  30  0001              PUBLIC _Counter
+  30  0000              @Counter .SECTION 'DATA'
+  30  0000  00          _Counter DB ? ; Counter
+  30  0001              PUBLIC _Backup
+  30  0000              @Backup .SECTION 'DATA'
+  30  0000  00          _Backup DB ? ; Backup
+
+
+;  13: void main()
+  13  0000              STARTSEC .SECTION  COM_L 'CODE'
+  13  0000              STARTUP:
+  13  0000              STARTSEC .SECTION  COM_E 'CODE'
+  13  0000  0003        RET
+  13  0000              @CODE .SECTION AT 0 'CODE'
+  13  0000  2000     R  CALL STARTUP
+  13  0001  2800     R  JMP begin
+  13  0002              @DUMMY PROC
+  13  0002  2000     R  CALL _main
+  13  0003              @DUMMY ENDP
+
+
+        0 Errors

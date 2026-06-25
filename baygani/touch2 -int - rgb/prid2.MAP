@@ -1,0 +1,193 @@
+
+Linker Version 8.7.7.220718
+Input Object File: E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ
+Input Object File: E:\hamed\touch2\touch2 -int - rgb\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0004h     0007h    0004h      CODE               @int0_code (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     000ch     000fh    0004h      CODE               @timer_code (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0010h     0030h    0021h      CODE               @start (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0031h     004bh    001bh      CODE               _Delay (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     004ch     012fh    00e4h      CODE               _int0 (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0130h     0192h    0063h      CODE               _timer (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0193h     01b9h    0027h      CODE               _init (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     01bah     0331h    0178h      CODE               _main (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0332h     0348h    0017h      CODE               @ROMDATA_BASE (E:\hamed\touch2\touch2 -int - rgb\STARTUP1_L.OBJ)
+     00h     0349h     038bh    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     0086h    0027h      DATA     5.2821    @HCCINIT (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0087h     0092h    000ch      DATA     1.5       @HCCINIT0 (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0093h     0093h    0001h      DATA     0         @BITDATASEC (E:\hamed\touch2\touch2 -int - rgb\STARTUP1_L.OBJ)
+     00h     0094h     0094h    0001h      DATA     7         @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0095h     0095h    0001h      DATA     7         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0096h     0096h    0001h      DATA     11        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0097h    0001h      DATA     11        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0098h     0098h    0001h      DATA     11        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0099h     0099h    0001h      DATA     11        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009ah     009ah    0001h      DATA     2         @data_r104 (isr:ra~rh)
+     00h     009bh     009bh    0001h      DATA     2         @data_r204 (isr:ra~rh)
+     00h     009ch     009ch    0001h      DATA     2         @data_r304 (isr:ra~rh)
+     00h     009dh     009dh    0001h      DATA     2         @data_r404 (isr:ra~rh)
+     00h     009eh     009eh    0001h      DATA     2         @data_r504 (isr:ra~rh)
+     00h     009fh     009fh    0001h      DATA     2         @data_r604 (isr:ra~rh)
+     00h     00a0h     00a0h    0001h      DATA     2         @data_r704 (isr:ra~rh)
+     00h     00a1h     00a1h    0001h      DATA     6         @data_ra04 (isr:ra~rh)
+     00h     00a2h     00a2h    0001h      DATA     6         @data_rb04 (isr:ra~rh)
+     00h     00a3h     00a3h    0001h      DATA     2         @data_r10c (isr:ra~rh)
+     00h     00a4h     00a4h    0001h      DATA     2         @data_r20c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00adh     00adh    0000h      LOCAL    0         @dummy4 (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     00adh     00adh    0000h      LOCAL    0         _int0 (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     00a5h     00ach    0008h      LOCAL    4         _Delay (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     00a5h     00a5h    0000h      LOCAL    0         @dummy12 (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     00a5h     00a5h    0000h      LOCAL    0         _timer (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     00c5h     00c5h    0000h      LOCAL    0         @dummy (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     00bbh     00c4h    000ah      LOCAL    6.4       _main (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     00adh     00adh    0000h      LOCAL    0         _init (E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     00adh     00bah    000eh      LOCAL    4.7143    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Public Symbols Information
+     Address            Public by Name
+     0072h              _B
+     0031h              _Delay
+     00a5h              _Delay_2
+     0074h              _G
+     0076h              _R
+     007ah              _alltouch
+     0349h              _builtin_holtek_udivmodsi4_isr00
+     00adh              _builtin_holtek_udivmodsi4_isr00_2
+     0064h              _counter
+     0062h              _counter2
+     0060h              _counter3
+     0068h              _counterrgb
+     0089h              _f
+     007fh              _fingerCounter
+     0091h              _i
+     0193h              _init
+     004ch              _int0
+     007eh              _isInDoor
+     008fh              _j
+     0070h              _m
+     006eh              _m2
+     01bah              _main
+     008dh              _n
+     0066h              _ncount
+     0078h              _nsicl
+     0093h[1]           _q
+     0093h[0]           _rgb
+     006ch              _rgb2
+     006ah              _rgbpals
+     008bh              _t
+     0130h              _timer
+     0087h              _touch
+     0083h              _touchThreshold
+     009ah              r104
+     00a3h              r10c
+     009bh              r204
+     00a4h              r20c
+     009ch              r304
+     009dh              r404
+     009eh              r504
+     009fh              r604
+     00a0h              r704
+     00a1h              ra04
+     0094h              rb
+     00a2h              rb04
+     0095h              rc
+     0096h              rd
+     0097h              re
+     0098h              rf
+     0099h              rg
+     0331h              startup_value_1
+
+     Address            Public by Value
+     0031h              _Delay
+     004ch              _int0
+     0060h              _counter3
+     0062h              _counter2
+     0064h              _counter
+     0066h              _ncount
+     0068h              _counterrgb
+     006ah              _rgbpals
+     006ch              _rgb2
+     006eh              _m2
+     0070h              _m
+     0072h              _B
+     0074h              _G
+     0076h              _R
+     0078h              _nsicl
+     007ah              _alltouch
+     007eh              _isInDoor
+     007fh              _fingerCounter
+     0083h              _touchThreshold
+     0087h              _touch
+     0089h              _f
+     008bh              _t
+     008dh              _n
+     008fh              _j
+     0091h              _i
+     0094h              rb
+     0095h              rc
+     0096h              rd
+     0097h              re
+     0098h              rf
+     0099h              rg
+     009ah              r104
+     009bh              r204
+     009ch              r304
+     009dh              r404
+     009eh              r504
+     009fh              r604
+     00a0h              r704
+     00a1h              ra04
+     00a2h              rb04
+     00a3h              r10c
+     00a4h              r20c
+     00a5h              _Delay_2
+     00adh              _builtin_holtek_udivmodsi4_isr00_2
+     0130h              _timer
+     0193h              _init
+     01bah              _main
+     0331h              startup_value_1
+     0349h              _builtin_holtek_udivmodsi4_isr00
+     0093h[0]           _rgb
+     0093h[1]           _q
+
+Warning(L3009) : Same sub function exists between ISR(04H) CMG and MAIN CMG: _Delay
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     0385h    43%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0065h    78%
+     Total     0080h     0065h    78%
+
+Use Stack Count
+_int0: 1
+_timer: 0
+_main: 1
+
+Call Tree
+    @dummy4
+        _int0 (0)
+            _Delay (1)
+    @dummy12
+        _timer (0)
+    @dummy
+        _main (0)
+            _init (1)
+            _Delay (1)
+            _builtin_holtek_divmodsi4_isr00 (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'E:\hamed\touch2\touch2 -int - rgb\PRID2.OBJ'
+
+Total 0 error(s), Total 1 Warning(s)

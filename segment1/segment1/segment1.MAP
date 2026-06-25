@@ -1,187 +1,202 @@
 
 Linker Version 8.7.7.220718
-Input Object File: E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ
-Input Object File: E:\hamed\touch2\segment1\segment1\STARTUP1_L.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\STARTUP1_L.OBJ
 
 Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
 Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrsc.lib
 
 
      Bank    Start     End      Length     Class    AvgIns    Name
-     00h     0000h     0000h    0001h      CODE               @code (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0001h     000ah    000ah      CODE               _TB0_INIT (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0010h     0013h    0004h      CODE               @UART_code (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0014h     001dh    000ah      CODE               _TB1_INIT (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0024h     0027h    0004h      CODE               @TB0_ISR_code (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0028h     002bh    0004h      CODE               @TB1_ISR_code (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     002ch     004ch    0021h      CODE               @start (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     004dh     00e4h    0098h      CODE               @crom (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00e5h     0118h    0034h      CODE               _delay_ms (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0119h     0133h    001bh      CODE               _initMatrix (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0134h     014ch    0019h      CODE               _cleardisplay (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     014dh     01b8h    006ch      CODE               _TB0_ISR (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     01b9h     03d2h    021ah      CODE               _TB1_ISR (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     03d3h     03f5h    0023h      CODE               _UART_INIT (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     03f6h     0412h    001dh      CODE               _UART (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0413h     0477h    0065h      CODE               _UART_FUNCTION (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0478h     049eh    0027h      CODE               _main (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     049fh     04bah    001ch      CODE               @ROMDATA_BASE (E:\hamed\touch2\segment1\segment1\STARTUP1_L.OBJ)
-     00h     04bbh     04c4h    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     04c5h     04e3h    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     04e4h     04f3h    0010h      CODE               _CROM2PROM (CROM2PROM)
-     00h     0080h     0080h    0001h      DATA     10        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0001h     000ah    000ah      CODE               _TB0_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0010h     0013h    0004h      CODE               @UART_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0014h     001dh    000ah      CODE               _TB1_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0024h     0027h    0004h      CODE               @TB0_ISR_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0028h     002bh    0004h      CODE               @TB1_ISR_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     002ch     004ch    0021h      CODE               @start (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     004dh     0128h    00dch      CODE               @crom (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0129h     015ch    0034h      CODE               _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     015dh     0177h    001bh      CODE               _initMatrix (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0178h     0190h    0019h      CODE               _cleardisplay (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0191h     01f2h    0062h      CODE               _TB0_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     01f3h     056ah    0378h      CODE               _TB1_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     056bh     058dh    0023h      CODE               _UART_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     058eh     05c9h    003ch      CODE               _UART (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     05cah     067ch    00b3h      CODE               _UART_FUNCTION (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     067dh     06a3h    0027h      CODE               _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     06a4h     06c2h    001fh      CODE               @ROMDATA_BASE (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\STARTUP1_L.OBJ)
+     00h     06c3h     06cch    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     06cdh     06ebh    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     06ech     06fbh    0010h      CODE               _CROM2PROM (CROM2PROM)
+     00h     0080h     0080h    0001h      DATA     13        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0081h     0081h    0001h      DATA     9         @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0082h     0082h    0001h      DATA     9         @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0083h     0083h    0001h      DATA     9         @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0084h     0084h    0001h      DATA     9         @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0085h     0085h    0001h      DATA     2         @data_r124 (isr:ra~rh)
      00h     0086h     0086h    0001h      DATA     2         @data_r224 (isr:ra~rh)
-     00h     0087h     0087h    0001h      DATA     3         @data_rb24 (isr:ra~rh)
-     00h     0088h     0088h    0001h      DATA     3         @data_rc24 (isr:ra~rh)
-     00h     0089h     0089h    0001h      DATA     2         @data_r128 (isr:ra~rh)
-     00h     008ah     008ah    0001h      DATA     2         @data_r228 (isr:ra~rh)
-     00h     008bh     008bh    0001h      DATA     95        @data_rb28 (isr:ra~rh)
-     00h     008ch     008ch    0001h      DATA     77        @data_rc28 (isr:ra~rh)
-     00h     008dh     008dh    0001h      DATA     14        @data_ra28 (isr:ra~rh)
-     00h     008eh     008eh    0001h      DATA     6         @data_rd28 (isr:ra~rh)
-     00h     008fh     008fh    0001h      DATA     2         @data_re28 (isr:ra~rh)
-     00h     0090h     0090h    0001h      DATA     4         @data_rf28 (isr:ra~rh)
-     00h     0091h     0091h    0001h      DATA     2         @data_rg28 (isr:ra~rh)
-     00h     0092h     0092h    0001h      DATA     2         @data_r110 (isr:ra~rh)
-     00h     0093h     0093h    0001h      DATA     2         @data_r210 (isr:ra~rh)
-     00h     0094h     0094h    0001h      DATA     2         @data_ra10 (isr:ra~rh)
-     00h     00a9h     00aah    0002h      DATA     15        @HCCINIT_R (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00abh     00ach    0002h      DATA     11        @HCCINIT_row (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00adh     00aeh    0002h      DATA     9         @HCCINIT_newnaumber (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00afh     00b0h    0002h      DATA     7         @HCCINIT_UP (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00b1h     00b2h    0002h      DATA     7         @HCCINIT_oldnaumber (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00b3h     00b4h    0002h      DATA     5         @HCCINIT_conter8 (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00b5h     00b6h    0002h      DATA     4         @HCCINIT_DN (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00b7h     00bah    0004h      DATA     3         @HCCINIT_ni (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00bbh     00bch    0002h      DATA     3         @HCCINIT_uart_s (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00bdh     00beh    0002h      DATA     3         @HCCINIT_nj (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00bfh     00c0h    0002h      DATA     3         @HCCINIT_n (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00c1h     00c1h    0001h      DATA     2         @HCCINIT_BufInd (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00c2h     00c2h    0001h      DATA     1         @HCCINIT_UartTime (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00c3h     00c3h    0001h      DATA     0         @HCCINIT_RxDone (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00c4h     00cdh    000ah      DATA     0         @HCCINIT_BackupBuf (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00ceh     00d7h    000ah      DATA     0         @HCCINIT_BufRx (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00d8h     00d9h    0002h      DATA     0         @HCCINIT_rizesh (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00dah     00dah    0001h      DATA     6         @HCCINIT0_g_nUART_err_Flag (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00dbh     00deh    0004h      DATA     5.5       @HCCINIT0_g_nUART_ISR_Value (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00dfh     00dfh    0001h      DATA     3         @HCCINIT0_UART_RX_FLAG (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00e0h     00e0h    0001h      DATA     2         @data_r328 (isr:ra~rh)
-     00h     00e1h     00e1h    0001h      DATA     2         @data_r428 (isr:ra~rh)
-     00h     00e2h     00e2h    0001h      DATA     2         @data_r528 (isr:ra~rh)
-     00h     00e3h     00e3h    0001h      DATA     2         @data_r628 (isr:ra~rh)
-     00h     00e4h     00e4h    0001h      DATA     2         @data_r310 (isr:ra~rh)
-     00h     00e5h     00e5h    0001h      DATA     2         @data_r410 (isr:ra~rh)
+     00h     0087h     0087h    0001h      DATA     2         @data_r128 (isr:ra~rh)
+     00h     0088h     0088h    0001h      DATA     2         @data_r228 (isr:ra~rh)
+     00h     0089h     0089h    0001h      DATA     135       @data_rb28 (isr:ra~rh)
+     00h     008ah     008ah    0001h      DATA     119       @data_rc28 (isr:ra~rh)
+     00h     008bh     008bh    0001h      DATA     34        @data_rd28 (isr:ra~rh)
+     00h     008ch     008ch    0001h      DATA     28        @data_re28 (isr:ra~rh)
+     00h     008dh     008dh    0001h      DATA     15        @data_ra28 (isr:ra~rh)
+     00h     008eh     008eh    0001h      DATA     8         @data_rf28 (isr:ra~rh)
+     00h     008fh     008fh    0001h      DATA     4         @data_rg28 (isr:ra~rh)
+     00h     0090h     0090h    0001h      DATA     2         @data_r110 (isr:ra~rh)
+     00h     0091h     0091h    0001h      DATA     2         @data_r210 (isr:ra~rh)
+     00h     0092h     0092h    0001h      DATA     4         @data_ra10 (isr:ra~rh)
+     00h     0093h     0093h    0001h      DATA     6         @data_rb10 (isr:ra~rh)
+     00h     00a8h     00a9h    0002h      DATA     24        @HCCINIT_row (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00aah     00aah    0001h      DATA     17        @HCCINIT_tens_digit (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00abh     00ach    0002h      DATA     17        @HCCINIT_R (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00adh     00aeh    0002h      DATA     15        @HCCINIT_newnaumber (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00afh     00afh    0001h      DATA     13        @HCCINIT_ones_digit (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00b0h     00b1h    0002h      DATA     11        @HCCINIT_conter8 (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00b2h     00b2h    0001h      DATA     7         @HCCINIT_UART_Index (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00b3h     00b3h    0001h      DATA     7         @HCCINIT_MODE (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00b4h     00b5h    0002h      DATA     7         @HCCINIT_nj (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00b6h     00b7h    0002h      DATA     5         @HCCINIT_UP (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00b8h     00b9h    0002h      DATA     5         @HCCINIT_oldnaumber (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00bah     00bbh    0002h      DATA     4         @HCCINIT_DN (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00bch     00bch    0001h      DATA     3         @HCCINIT_UART_StartDetected (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00bdh     00bdh    0001h      DATA     3         @HCCINIT_UART_FrameReady (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00beh     00c1h    0004h      DATA     3         @HCCINIT_ni (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00c2h     00c3h    0002h      DATA     1         @HCCINIT_uart_s (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00c4h     00c4h    0001h      DATA     0         @HCCINIT_RxDone (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00c5h     00c5h    0001h      DATA     0         @HCCINIT_BufInd (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00c6h     00c6h    0001h      DATA     0         @HCCINIT_UartTime (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00c7h     00d0h    000ah      DATA     0         @HCCINIT_BackupBuf (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00d1h     00dah    000ah      DATA     0         @HCCINIT_BufRx (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00dbh     00dch    0002h      DATA     0         @HCCINIT_rizesh (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00ddh     00deh    0002h      DATA     0         @HCCINIT_n (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00dfh     00e2h    0004h      DATA     0.75      @HCCINIT0_UART_Frame (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00e3h     00e3h    0001h      DATA     0         @HCCINIT0_UART_RX_FLAG (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00e4h     00e4h    0001h      DATA     0         @HCCINIT0_g_nUART_err_Flag (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00e5h     00e8h    0004h      DATA     0         @HCCINIT0_g_nUART_ISR_Value (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00e9h     00e9h    0001h      DATA     2         @data_r328 (isr:ra~rh)
+     00h     00eah     00eah    0001h      DATA     2         @data_r428 (isr:ra~rh)
+     00h     00ebh     00ebh    0001h      DATA     2         @data_r528 (isr:ra~rh)
+     00h     00ech     00ech    0001h      DATA     2         @data_r628 (isr:ra~rh)
+     00h     00edh     00edh    0001h      DATA     2         @data_r310 (isr:ra~rh)
+     00h     00eeh     00eeh    0001h      DATA     2         @data_r410 (isr:ra~rh)
 
      Local Sections
 
      Bank    Start     End      Length     Class    AvgIns    Name
-     00h     0095h     0095h    0000h      LOCAL    0         @dummy36 (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0095h     0095h    0000h      LOCAL    0         _TB0_ISR (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0095h     0095h    0000h      LOCAL    0         @dummy40 (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0095h     0095h    0000h      LOCAL    0         _TB1_ISR (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0095h     0095h    0000h      LOCAL    0         _cleardisplay (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0095h     0095h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
-     00h     0095h     0095h    0000h      LOCAL    0         @dummy16 (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0095h     0095h    0000h      LOCAL    0         _UART (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00a9h     00a9h    0000h      LOCAL    0         @dummy (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00a9h     00a9h    0000h      LOCAL    0         _main (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     00a1h     00a8h    0008h      LOCAL    4         _delay_ms (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0095h     00a0h    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0095h     0095h    0000h      LOCAL    0         _initMatrix (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0095h     0095h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0095h     0095h    0000h      LOCAL    0         _TB0_INIT (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0095h     0095h    0000h      LOCAL    0         _TB1_INIT (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0095h     0095h    0001h      LOCAL    2         _UART_INIT (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
-     00h     0095h     0095h    0000h      LOCAL    0         _UART_FUNCTION (E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     0094h    0000h      LOCAL    0         @dummy36 (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     0094h    0000h      LOCAL    0         _TB0_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     0094h    0000h      LOCAL    0         @dummy40 (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     0094h    0000h      LOCAL    0         _TB1_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     0094h    0000h      LOCAL    0         _cleardisplay (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     0094h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     0094h     0094h    0000h      LOCAL    0         @dummy16 (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     0094h    0000h      LOCAL    0         _UART (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00a8h     00a8h    0000h      LOCAL    0         @dummy (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00a8h     00a8h    0000h      LOCAL    0         _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     00a0h     00a7h    0008h      LOCAL    4         _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     009fh    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0094h     0094h    0000h      LOCAL    0         _initMatrix (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     0094h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0094h     0094h    0000h      LOCAL    0         _TB0_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     0094h    0000h      LOCAL    0         _TB1_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     0094h    0001h      LOCAL    2         _UART_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
+     00h     0094h     0096h    0003h      LOCAL    5         _UART_FUNCTION (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ)
 
      Public Symbols Information
      Address            Public by Name
-     00c4h              _BackupBuf
-     00c1h              _BufInd
-     00ceh              _BufRx
-     04e5h              _Crom2Prom
-     04e4h              _Crom2PromNext
-     00b5h              _DN
-     00a9h              _R
-     00c3h              _RxDone
+     00c7h              _BackupBuf
+     00c5h              _BufInd
+     00d1h              _BufRx
+     06edh              _Crom2Prom
+     06ech              _Crom2PromNext
+     00bah              _DN
+     00b3h              _MODE
+     0095h              _OVL
+     00abh              _R
+     00c4h              _RxDone
      0001h              _TB0_INIT
-     014dh              _TB0_ISR
+     0191h              _TB0_ISR
      0014h              _TB1_INIT
-     01b9h              _TB1_ISR
-     03f6h              _UART
-     0413h              _UART_FUNCTION
-     03d3h              _UART_INIT
-     00dfh              _UART_RX_FLAG
-     00afh              _UP
-     00c2h              _UartTime
-     04beh              __DELAYX0
-     04bdh              __DELAYX1
-     04bdh              __DELAYX2
-     04bch              __DELAYX3
-     04bch              __DELAYX4
-     04bbh              __DELAYX5
-     04bbh              __DELAYX6
-     04c5h              _builtin_holtek_mulsi3_isr00
-     0096h              _builtin_holtek_mulsi3_isr00_2
-     0134h              _cleardisplay
-     00b3h              _conter8
-     00e5h              _delay_ms
-     00a1h              _delay_ms_2
-     00dbh              _g_nUART_ISR_Value
-     00dah              _g_nUART_err_Flag
-     0119h              _initMatrix
-     006dh              _jahatDN
-     004dh              _jahatDOOR
-     008dh              _jahatUP
-     0478h              _main
-     00bfh              _n
+     01f3h              _TB1_ISR
+     058eh              _UART
+     05cah              _UART_FUNCTION
+     00dfh              _UART_Frame
+     00bdh              _UART_FrameReady
+     056bh              _UART_INIT
+     00b2h              _UART_Index
+     00e3h              _UART_RX_FLAG
+     00bch              _UART_StartDetected
+     00b6h              _UP
+     00c6h              _UartTime
+     06c6h              __DELAYX0
+     06c5h              __DELAYX1
+     06c5h              __DELAYX2
+     06c4h              __DELAYX3
+     06c4h              __DELAYX4
+     06c3h              __DELAYX5
+     06c3h              __DELAYX6
+     0075h              _alamat
+     06cdh              _builtin_holtek_mulsi3_isr00
+     0097h              _builtin_holtek_mulsi3_isr00_2
+     0178h              _cleardisplay
+     00b0h              _conter8
+     0129h              _delay_ms
+     00a0h              _delay_ms_2
+     00e5h              _g_nUART_ISR_Value
+     00e4h              _g_nUART_err_Flag
+     015dh              _initMatrix
+     00b1h              _jahatDN
+     009dh              _jahatDOOR
+     00d1h              _jahatUP
+     067dh              _main
+     00ddh              _n
      00adh              _newnaumber
-     00b7h              _ni
-     00bdh              _nj
-     00adh              _numbers
-     00b1h              _oldnaumber
-     00d8h              _rizesh
-     00abh              _row
-     00bbh              _uart_s
-     0092h              r110
+     00beh              _ni
+     00b4h              _nj
+     00f1h              _numbers
+     004dh              _numbers_yekan
+     00b8h              _oldnaumber
+     00afh              _ones_digit
+     00dbh              _rizesh
+     00a8h              _row
+     00aah              _tens_digit
+     00c2h              _uart_s
+     0090h              r110
      0085h              r124
-     0089h              r128
-     0093h              r210
+     0087h              r128
+     0091h              r210
      0086h              r224
-     008ah              r228
-     00e4h              r310
-     00e0h              r328
-     00e5h              r410
-     00e1h              r428
-     00e2h              r528
-     00e3h              r628
+     0088h              r228
+     00edh              r310
+     00e9h              r328
+     00eeh              r410
+     00eah              r428
+     00ebh              r528
+     00ech              r628
      0080h              ra
-     0094h              ra10
+     0092h              ra10
      008dh              ra28
-     0087h              rb24
-     008bh              rb28
-     0088h              rc24
-     008ch              rc28
+     0093h              rb10
+     0089h              rb28
+     008ah              rc28
      0081h              rd
-     008eh              rd28
+     008bh              rd28
      0082h              re
-     008fh              re28
+     008ch              re28
      0083h              rf
-     0090h              rf28
+     008eh              rf28
      0084h              rg
-     0091h              rg28
-     049fh              startup_value_1
+     008fh              rg28
+     06a4h              startup_value_1
 
      Address            Public by Value
      0001h              _TB0_INIT
      0014h              _TB1_INIT
-     004dh              _jahatDOOR
-     006dh              _jahatDN
+     004dh              _numbers_yekan
+     0075h              _alamat
      0080h              ra
      0081h              rd
      0082h              re
@@ -189,90 +204,97 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0084h              rg
      0085h              r124
      0086h              r224
-     0087h              rb24
-     0088h              rc24
-     0089h              r128
-     008ah              r228
-     008bh              rb28
-     008ch              rc28
-     008dh              _jahatUP
+     0087h              r128
+     0088h              r228
+     0089h              rb28
+     008ah              rc28
+     008bh              rd28
+     008ch              re28
      008dh              ra28
-     008eh              rd28
-     008fh              re28
-     0090h              rf28
-     0091h              rg28
-     0092h              r110
-     0093h              r210
-     0094h              ra10
-     0096h              _builtin_holtek_mulsi3_isr00_2
-     00a1h              _delay_ms_2
-     00a9h              _R
-     00abh              _row
+     008eh              rf28
+     008fh              rg28
+     0090h              r110
+     0091h              r210
+     0092h              ra10
+     0093h              rb10
+     0095h              _OVL
+     0097h              _builtin_holtek_mulsi3_isr00_2
+     009dh              _jahatDOOR
+     00a0h              _delay_ms_2
+     00a8h              _row
+     00aah              _tens_digit
+     00abh              _R
      00adh              _newnaumber
-     00adh              _numbers
-     00afh              _UP
-     00b1h              _oldnaumber
-     00b3h              _conter8
-     00b5h              _DN
-     00b7h              _ni
-     00bbh              _uart_s
-     00bdh              _nj
-     00bfh              _n
-     00c1h              _BufInd
-     00c2h              _UartTime
-     00c3h              _RxDone
-     00c4h              _BackupBuf
-     00ceh              _BufRx
-     00d8h              _rizesh
-     00dah              _g_nUART_err_Flag
-     00dbh              _g_nUART_ISR_Value
-     00dfh              _UART_RX_FLAG
-     00e0h              r328
-     00e1h              r428
-     00e2h              r528
-     00e3h              r628
-     00e4h              r310
-     00e5h              _delay_ms
-     00e5h              r410
-     0119h              _initMatrix
-     0134h              _cleardisplay
-     014dh              _TB0_ISR
-     01b9h              _TB1_ISR
-     03d3h              _UART_INIT
-     03f6h              _UART
-     0413h              _UART_FUNCTION
-     0478h              _main
-     049fh              startup_value_1
-     04bbh              __DELAYX6
-     04bbh              __DELAYX5
-     04bch              __DELAYX4
-     04bch              __DELAYX3
-     04bdh              __DELAYX2
-     04bdh              __DELAYX1
-     04beh              __DELAYX0
-     04c5h              _builtin_holtek_mulsi3_isr00
-     04e4h              _Crom2PromNext
-     04e5h              _Crom2Prom
+     00afh              _ones_digit
+     00b0h              _conter8
+     00b1h              _jahatDN
+     00b2h              _UART_Index
+     00b3h              _MODE
+     00b4h              _nj
+     00b6h              _UP
+     00b8h              _oldnaumber
+     00bah              _DN
+     00bch              _UART_StartDetected
+     00bdh              _UART_FrameReady
+     00beh              _ni
+     00c2h              _uart_s
+     00c4h              _RxDone
+     00c5h              _BufInd
+     00c6h              _UartTime
+     00c7h              _BackupBuf
+     00d1h              _jahatUP
+     00d1h              _BufRx
+     00dbh              _rizesh
+     00ddh              _n
+     00dfh              _UART_Frame
+     00e3h              _UART_RX_FLAG
+     00e4h              _g_nUART_err_Flag
+     00e5h              _g_nUART_ISR_Value
+     00e9h              r328
+     00eah              r428
+     00ebh              r528
+     00ech              r628
+     00edh              r310
+     00eeh              r410
+     00f1h              _numbers
+     0129h              _delay_ms
+     015dh              _initMatrix
+     0178h              _cleardisplay
+     0191h              _TB0_ISR
+     01f3h              _TB1_ISR
+     056bh              _UART_INIT
+     058eh              _UART
+     05cah              _UART_FUNCTION
+     067dh              _main
+     06a4h              startup_value_1
+     06c3h              __DELAYX5
+     06c3h              __DELAYX6
+     06c4h              __DELAYX3
+     06c4h              __DELAYX4
+     06c5h              __DELAYX1
+     06c5h              __DELAYX2
+     06c6h              __DELAYX0
+     06cdh              _builtin_holtek_mulsi3_isr00
+     06ech              _Crom2PromNext
+     06edh              _Crom2Prom
 
 
 ROM Usage Statistics
      Size      Used     Percentage
-     1000h     04e9h    30%
+     1000h     06f1h    43%
 
 RAM Usage Statistics
     Bank      Size      Used     Percentage
-     00h       0080h     0066h    79%
+     00h       0080h     006fh    86%
      01h       0080h     0000h    0%
      02h       0080h     0000h    0%
      03h       0080h     0000h    0%
-     Total     0200h     0066h    19%
+     Total     0200h     006fh    21%
 
 Use Stack Count
 _TB0_ISR: 0
 _TB1_ISR: 1
 _UART: 0
-_Uart_Print: 1
-_UART_String: 1
 _main: 2
 
 Call Tree
@@ -284,12 +306,6 @@ Call Tree
             _Crom2Prom (1)
     @dummy16
         _UART (0)
-    _Uart_Print
-        _UART_TRANS (0)
-        _Crom2Prom (0)
-    _UART_String
-        _UART_TRANS (0)
-        _Crom2Prom (0)
     @dummy
         _main (0)
             _delay_ms (1)
@@ -301,6 +317,6 @@ Call Tree
             _UART_INIT (1)
             _UART_FUNCTION (1)
 
-HLINK: Program entry point at section '@code' (address 0) of file 'E:\hamed\touch2\segment1\segment1\SEGMENT1.OBJ'
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\SEGMENT1.OBJ'
 
 Total 0 error(s), Total 0 Warning(s)

@@ -1,0 +1,711 @@
+				;file D:\Projects\Holtek\Teaching\firmware\iled3_981205_pride_CT007+...]\iled3\iled2.c
+				;1	#include "BS83A04A-3.h"
+				;2	#include "defines.h"
+				;3	
+				;4	///////////////////////////////////////////////////////
+				;5	ulong touchThreshold=0;
+				;6	int i;
+				;7	ulong fingerCounter = 0;
+				;8	bool isInDoor=0;
+				;9	uint touch;
+				;10	///////////////////////////////////////////////////////
+				;11	
+				;12	
+				;13	void Delay(unsigned long count)
+				;14	{
+				;15	    volatile unsigned long i;
+				;16	    for(i=0;i<count;i++)
+				_Delay:
+				_Delay:
+0022	1F79	clr     i[0]
+0023	1F7A	clr     i[1]
+0024	1F7B	clr     i[2]
+0025	1F7C	clr     i[3]
+0026	282F	jmp     _L2
+0029	0F01	mov     a, 1H
+002A	03F9	addm    a, i[0]
+002B	0F00	mov     a, 0H
+002C	13FA	adcm    a, i[1]
+002D	13FB	adcm    a, i[2]
+002E	13FC	adcm    a, i[3]
+				_L2:
+002F	0779	mov     a, i[0]
+0030	0275	sub     a, count[0]
+0031	077A	mov     a, i[1]
+0032	1276	sbc     a, count[1]
+0033	077B	mov     a, i[2]
+0034	1277	sbc     a, count[2]
+0035	077C	mov     a, i[3]
+0036	1278	sbc     a, count[3]
+0037	380A	snz     C
+0038	2827	jmp     _L3
+0039	0003	ret
+				;17	    {
+				;18	        asm("nop");
+				_L3:
+0027	0000	nop
+				;19	        GCC_CLRWDT();
+0028	0001	clr     wdt
+				;20	    }
+				;21	}
+				;22	
+				;23	
+				;24	void init()
+				;25	{
+				;26		/*INIT SYS CLOCK*/
+				;27		_smod = 1; //8MHZ
+				_init:
+				_init:
+003A	0F01	mov     a, 1H
+003B	008B	mov     SMOD, a
+				;28		
+				;29		/*INIT I/O PORTS*/
+				;30		_pac3 = 0; //PA.7 is output
+003C	3595	clr     PAC3
+				;31		_pac2 = 0; //PA.6 is output
+003D	3515	clr     PAC2
+				;32		_pac5 =1; //PA.5 is input
+003E	3295	set     PAC5
+				;33		
+				;34		_papu5=1; //PA.5 is Pulled High
+003F	3296	set     PAPU5
+				;35	
+				;36		/*INIT TOUCH KEY*/
+				;37		//The Time slot counter overflow time setup is (256-TKTMR[7:0]) × 32
+				;38		_tktmr = 100;
+0040	0F64	mov     a, 64H
+0041	00C3	mov     TKTMR, a
+				;39		
+				;40		/*touch key module 16-bit counter clock source selection	
+				;41			00: fSYS /1
+				;42		  	01: fSYS /2
+				;43		  	10: fSYS /4
+				;44		  	11: fSYS /8*/
+				;45		_tk16s0 =1;
+0042	3044	set     TK16S0
+				;46		_tk16s1 =1;
+0043	30C4	set     TK16S1
+				;47		 
+				;48		 /*touch key OSC frequency selection
+				;49			00: 500kHz
+				;50			01: 1000kHz
+				;51			10: 1500kHz
+				;52			11: 2000kHz*/
+				;53		_tkfs0 = 1;
+0044	3047	set     TKFS0
+				;54		_tkfs1 = 1;
+0045	30C7	set     TKFS1
+				;55		
+				;56		/*Reference Oscillator internal capacitor selection
+				;57			TKM0RO[9:0] × 50pF / 1024.*/
+				;58		_tkm0rol = 200;
+0046	0FC8	mov     a, C8H
+0047	00CA	mov     TKM0ROL, a
+				;59		_tkm0roh = 0;
+0048	1F4B	clr     TKM0ROH
+				;60		
+				;61		/*Multiplexer Key Select*/
+				;62		_m0mxs0 =1;
+0049	334C	set     M0MXS0
+				;63		_m0mxs1 =0;	//key2
+004A	37CC	clr     M0MXS1
+				;64		
+				;65		
+				;66		/*Multi-frequency function control*/
+				;67		//_m0dfen = 1; //enabled
+				;68		_m0dfen = 0; //disabled
+004B	36CC	clr     M0DFEN
+				;69		/*Filter function control*/
+				;70		_m0filen = 1; //enabled
+004C	324C	set     M0FILEN
+				;71		//_m0filen = 0; //disabled
+				;72		
+				;73		/*C to F oscillator frequency-hopping function control*/
+				;74		_m0sofc = 1;//Controlled by hardware
+004D	31CC	set     M0SOFC
+				;75		//_m0sofc = 0;//Controlled by software
+				;76		/*Selecting key oscillator or reference oscillator frequency as the
+				;77			C to F oscillator is controlled by software*/
+				;78		//M0SOF2~M0SOF0
+				;79	 	_m0sof2=1;
+004E	314C	set     M0SOF2
+				;80	 	_m0sof1=0;
+004F	34CC	clr     M0SOF1
+				;81	 	_m0sof0=0;
+0050	344C	clr     M0SOF0
+				;82		/*Time Slot counter Select*/
+				;83		//_m0tss = 1;//fsys/4
+				;84		_m0tss = 0;//Reference Oscillator
+0051	37CD	clr     M0TSS
+				;85		/* Reference Oscillator control*/
+				;86		_m0roen = 1; //enabled
+0052	32CD	set     M0ROEN
+				;87		
+				;88		/*key oscillator control*/
+				;89		_m0koen = 1; //enabled
+0053	324D	set     M0KOEN
+				;90		
+				;91		/*I/O Pin or Touch Key 1..4 Function Select*/
+				;92		//_m0k1io =1;
+				;93		_m0k2io =1;
+0054	30CD	set     M0K2IO
+0055	0003	ret
+				;94		
+				;95	
+				;96		
+				;97		/*INIT TOUCH KEY INTERRUPT */
+				;98		//_emi = 1; //global interrupt enable
+				;99		//_tkme = 1; //touch interrupt enable
+				;100	}
+				;101	
+				;102	void main()
+				;103	{
+				@code .SECTION 'CODE'
+				include BS83A04A-3.inc
+0000	2801	jmp     begin_startup_value
+				end_startup_value:
+				@start .SECTION 'CODE'
+0021	2856	jmp     _main
+				;104		init();
+				_main:
+				_main:
+0056	203A	call    _init
+				;105		Delay(10000);
+0057	0F10	mov     a, 10H
+0058	00F5	mov     count, a
+0059	0F27	mov     a, 27H
+005A	00F6	mov     count[1], a
+005B	1F77	clr     count[2]
+005C	1F78	clr     count[3]
+005D	2022	call    _Delay
+				;106		LIGHT=1;
+005E	3114	set     PA2
+				;107		
+				;108		_tkst=0;
+005F	36C4	clr     TKST
+				;109		for(i=0; i <20 ; i++)
+				L0060:
+0060	1F6B	clr     i[0]
+0061	1F6C	clr     i[1]
+				_L7:
+0062	0F13	mov     a, 13H
+0063	026B	sub     a, i[0]
+0064	0F00	mov     a, 0H
+0065	126C	sbc     a, i[1]
+0066	1185	swap    ACC
+0067	040A	xor     a, STATUS
+0068	3D85	sz      ACC.3
+0069	288F	jmp     _L30
+008B	14EB	inc     i[0]
+008C	3D0A	sz      Z
+008D	14EC	inc     i[1]
+008E	2862	jmp     _L7
+				;110		{
+				;111			_m0roen = 1; //Reference Oscillator enable
+006A	32CD	set     M0ROEN
+				;112		 	_m0koen = 1; //key oscillator enable
+006B	324D	set     M0KOEN
+				;113			_tkst =1;   
+006C	32C4	set     TKST
+				;114				
+				;115			while( !_tkrcov ){};//wait for tkrcov flag
+				_L9:
+006D	3B44	snz     TKRCOV
+006E	286D	jmp     _L9
+				;116			
+				;117			touch= (unsigned int )((_tkm016dh <<8) | _tkm016dl) ;
+006F	0749	mov     a, TKM016DH
+0070	4084	mov     _main_2[1], a
+0071	5F03	clr     _main_2
+0072	4704	mov     a, _main_2[1]
+0073	00EF	mov     rc, a
+0074	0748	mov     a, TKM016DL
+0075	4503	or      a, _main_2
+0076	00EE	mov     rb, a
+0077	076E	mov     a, rb
+0078	00E9	mov     touch[0], a
+0079	076F	mov     a, rc
+007A	00EA	mov     touch[1], a
+				;118			touchThreshold += touch;
+007B	076E	mov     a, rb
+007C	03E5	addm    a, touchThreshold[0]
+007D	076F	mov     a, rc
+007E	13E6	adcm    a, touchThreshold[1]
+007F	1F05	clr     ACC
+0080	13E7	adcm    a, touchThreshold[2]
+0081	13E8	adcm    a, touchThreshold[3]
+				;119			
+				;120			_tkrcov = 0;
+0082	3744	clr     TKRCOV
+				;121			_tkst=0;
+0083	36C4	clr     TKST
+				;122			
+				;123			
+				;124			Delay(2000);
+0084	0FD0	mov     a, D0H
+0085	00F5	mov     count, a
+0086	0F07	mov     a, 7H
+0087	00F6	mov     count[1], a
+0088	1F77	clr     count[2]
+0089	1F78	clr     count[3]
+008A	2022	call    _Delay
+				;125		}
+				;126		touchThreshold = touchThreshold /20;
+				_L30:
+008F	5F01	clr     i[8]
+0090	0765	mov     a, touchThreshold[0]
+0091	00F5	mov     count, a
+0092	0766	mov     a, touchThreshold[1]
+0093	00F6	mov     count[1], a
+0094	0767	mov     a, touchThreshold[2]
+0095	00F7	mov     count[2], a
+0096	0768	mov     a, touchThreshold[3]
+0097	00F8	mov     count[3], a
+0098	0F14	mov     a, 14H
+0099	00F9	mov     i, a
+009A	0F00	mov     a, 0H
+009B	00FA	mov     i[1], a
+009C	0F00	mov     a, 0H
+009D	00FB	mov     i[2], a
+009E	0F00	mov     a, 0H
+009F	00FC	mov     i[3], a
+00A0	213B	call    L013B
+00A1	0775	mov     a, count
+00A2	4083	mov     _main_2, a
+00A3	0776	mov     a, count[1]
+00A4	4084	mov     _main_2[1], a
+00A5	0777	mov     a, count[2]
+00A6	4085	mov     _main_2[2], a
+00A7	0778	mov     a, count[3]
+00A8	4086	mov     _main_2[3], a
+00A9	4703	mov     a, _main_2
+00AA	00E5	mov     touchThreshold[0], a
+00AB	4704	mov     a, _main_2[1]
+00AC	00E6	mov     touchThreshold[1], a
+00AD	4705	mov     a, _main_2[2]
+00AE	00E7	mov     touchThreshold[2], a
+00AF	4706	mov     a, _main_2[3]
+00B0	00E8	mov     touchThreshold[3], a
+				;127		
+				;128		LIGHT =0;
+00B1	3514	clr     PA2
+				;129		
+				;130		_m0roen = 1;//Reference Oscillator enable
+00B2	32CD	set     M0ROEN
+				;131	 	_m0koen = 1;//key oscillator enable
+00B3	324D	set     M0KOEN
+				;132		_tkst =1; 
+00B4	32C4	set     TKST
+00B5	0769	mov     a, touch[0]
+00B6	00EE	mov     rb, a
+00B7	076A	mov     a, touch[1]
+00B8	00EF	mov     rc, a
+00B9	0760	mov     a, isInDoor[0]
+00BA	00F4	mov     rh, a
+00BB	0761	mov     a, fingerCounter[0]
+00BC	00F0	mov     rd, a
+00BD	0762	mov     a, fingerCounter[1]
+00BE	00F1	mov     re, a
+00BF	0763	mov     a, fingerCounter[2]
+00C0	00F2	mov     rf, a
+00C1	0764	mov     a, fingerCounter[3]
+00C2	00F3	mov     rg, a
+				;133		while(1)
+				;134		{ 	
+				;135			GCC_CLRWDT();// reset WDT
+				_L18:
+00DB	0001	clr     wdt
+				;136			
+				;137				
+				;138	 		if( _tkrcov )//touch update
+00DC	3B44	snz     TKRCOV
+00DD	28EB	jmp     _L11
+				;139	 		{
+				;140	 			touch= (unsigned int )((_tkm016dh <<8) | _tkm016dl) ;
+00DE	0749	mov     a, TKM016DH
+00DF	4088	mov     _main_2[5], a
+00E0	5F07	clr     _main_2[4]
+00E1	4708	mov     a, _main_2[5]
+00E2	00EF	mov     rc, a
+00E3	0748	mov     a, TKM016DL
+00E4	4507	or      a, _main_2[4]
+00E5	00EE	mov     rb, a
+				;141				_tkrcov = 0;
+00E6	3744	clr     TKRCOV
+				;142				_tkst=0;
+00E7	36C4	clr     TKST
+				;143				
+				;144				_m0roen = 1;//Reference Oscillator enable
+00E8	32CD	set     M0ROEN
+				;145			 	_m0koen = 1;//key oscillator enable
+00E9	324D	set     M0KOEN
+				;146				_tkst =1; 
+00EA	32C4	set     TKST
+				;147	 		}
+				;148	 		
+				;149	 		/////////////////////////DOOR CHECK /////////////////////////////
+				;150	 		if(SIG_DOOR )
+				_L11:
+00EB	3E94	sz      PA5
+00EC	28F1	jmp     _L12
+				;151	 		{
+				;152				isInDoor=1;
+00EE	0F01	mov     a, 1H
+00EF	00F4	mov     rh, a
+00F0	28F8	jmp     _L13
+				;153				LIGHT=1;
+00ED	3114	set     PA2
+				;154	 		}
+				;155	 		else if(!SIG_DOOR && isInDoor )
+				_L12:
+00F1	3A94	snz     PA5
+00F2	28F8	jmp     _L13
+00F3	10F4	sz      rh
+00F4	28F6	jmp     _LI1
+00F5	28F8	jmp     _L13
+				;156	 		{
+				;157	 			isInDoor=0;
+00F7	1F74	clr     rh
+				;158	 			LIGHT = 0;
+				_LI1:
+00F6	3514	clr     PA2
+				;159	 		}
+				;160	 						
+				;161		 	///////////////////////////touch process/////////////////////////
+				;162	 		if(touch < touchThreshold -20)
+00C3	0FEC	mov     a, ECH
+00C4	4303	add     a, _main_2
+00C5	4089	mov     _main_2[6], a
+00C6	0FFF	mov     a, FFH
+00C7	5304	adc     a, _main_2[1]
+00C8	408A	mov     _main_2[7], a
+00C9	0FFF	mov     a, FFH
+00CA	5305	adc     a, _main_2[2]
+00CB	408B	mov     _main_2[8], a
+00CC	0FFF	mov     a, FFH
+00CD	5306	adc     a, _main_2[3]
+00CE	408C	mov     _main_2[9], a
+				_L13:
+00F8	076E	mov     a, rb
+00F9	4083	mov     _main_2, a
+00FA	076F	mov     a, rc
+00FB	4084	mov     _main_2[1], a
+00FC	5F05	clr     _main_2[2]
+00FD	5F06	clr     _main_2[3]
+00FE	4703	mov     a, _main_2
+00FF	4209	sub     a, _main_2[6]
+0100	4704	mov     a, _main_2[1]
+0101	520A	sbc     a, _main_2[7]
+0102	4705	mov     a, _main_2[2]
+0103	520B	sbc     a, _main_2[8]
+0104	4706	mov     a, _main_2[3]
+0105	520C	sbc     a, _main_2[9]
+0106	3C0A	sz      C
+0107	290F	jmp     _L14
+				;163	 		{
+				;164	 			fingerCounter++;
+0108	0F01	mov     a, 1H
+0109	03F0	addm    a, rd
+010A	0F00	mov     a, 0H
+010B	13F1	adcm    a, re
+010C	13F2	adcm    a, rf
+010D	13F3	adcm    a, rg
+010E	2919	jmp     _L15
+				;165	 		}
+				;166	 		else if(touch > touchThreshold -10 )
+00CF	0FF6	mov     a, F6H
+00D0	4303	add     a, _main_2
+00D1	408D	mov     _main_2[10], a
+00D2	0FFF	mov     a, FFH
+00D3	5304	adc     a, _main_2[1]
+00D4	408E	mov     _main_2[11], a
+00D5	0FFF	mov     a, FFH
+00D6	5305	adc     a, _main_2[2]
+00D7	408F	mov     _main_2[12], a
+00D8	0FFF	mov     a, FFH
+00D9	5306	adc     a, _main_2[3]
+00DA	4090	mov     _main_2[13], a
+				_L14:
+010F	470D	mov     a, _main_2[10]
+0110	4203	sub     a, _main_2
+0111	470E	mov     a, _main_2[11]
+0112	5204	sbc     a, _main_2[1]
+0113	470F	mov     a, _main_2[12]
+0114	5205	sbc     a, _main_2[2]
+0115	4710	mov     a, _main_2[13]
+0116	5206	sbc     a, _main_2[3]
+0117	380A	snz     C
+0118	292D	jmp     _L20
+				;167	 		{
+				;168	 			fingerCounter=0;
+				_L20:
+012D	1F70	clr     rd
+012E	1F71	clr     re
+012F	1F72	clr     rf
+0130	1F73	clr     rg
+0131	28DB	jmp     _L18
+0132	2932	jmp     $
+				startup_value:
+				@ROMDATA_BASE .SECTION 'CODE'
+				@dummy .SECTION 'CODE'
+0133	0009	jmp     L0009
+0134	0060	jmp     L0060
+				@ROMDATA_BASE .SECTION 'CODE'
+				@ROMDATA_BASE .SECTION 'CODE'
+				@ROMDATA_BASE .SECTION 'CODE'
+				@ROMDATA_BASE .SECTION 'CODE'
+				@ROMDATA_BASE .SECTION 'CODE'
+				@ROMDATA_BASE .SECTION 'CODE'
+				@ROMDATA_BASE .SECTION 'CODE'
+				@ROMDATA_BASE .SECTION 'CODE'
+				@ROMDATA_BASE .SECTION 'CODE'
+0135	0000	nop
+0136	0000	nop
+0137	0000	nop
+0138	0000	nop
+0139	0000	nop
+013A	0000	nop
+				L013B:
+013B	1F7D	clr     i[4]
+013C	1F7E	clr     i[5]
+013D	1F7F	clr     i[6]
+013E	5F00	clr     i[7]
+013F	0F20	mov     a, 20H
+0140	4082	mov     i[9], a
+				L0141:
+0141	340A	clr     C
+0142	1AF5	rlc     count
+0143	1AF6	rlc     count[1]
+0144	1AF7	rlc     count[2]
+0145	1AF8	rlc     count[3]
+0146	1AFD	rlc     i[4]
+0147	1AFE	rlc     i[5]
+0148	1AFF	rlc     i[6]
+0149	5A80	rlc     i[7]
+014A	077D	mov     a, i[4]
+014B	0279	sub     a, i
+014C	077E	mov     a, i[5]
+014D	127A	sbc     a, i[1]
+014E	077F	mov     a, i[6]
+014F	127B	sbc     a, i[2]
+0150	4700	mov     a, i[7]
+0151	127C	sbc     a, i[3]
+0152	380A	snz     C
+0153	2961	jmp     L0161
+0154	077D	mov     a, i[4]
+0155	0279	sub     a, i
+0156	00FD	mov     i[4], a
+0157	077E	mov     a, i[5]
+0158	127A	sbc     a, i[1]
+0159	00FE	mov     i[5], a
+015A	077F	mov     a, i[6]
+015B	127B	sbc     a, i[2]
+015C	00FF	mov     i[6], a
+015D	4700	mov     a, i[7]
+015E	127C	sbc     a, i[3]
+015F	4080	mov     i[7], a
+0160	14F5	inc     count
+				L0161:
+0161	5782	sdz     i[9]
+0162	2941	jmp     L0141
+0163	7801	snz     i[8].0
+0164	2970	jmp     L0170
+0165	01FD	cpl     i[4]
+0166	01FE	cpl     i[5]
+0167	01FF	cpl     i[6]
+0168	4180	cpl     i[7]
+0169	14FD	inc     i[4]
+016A	3D0A	sz      Z
+016B	14FE	inc     i[5]
+016C	3D0A	sz      Z
+016D	14FF	inc     i[6]
+016E	3D0A	sz      Z
+016F	5480	inc     i[7]
+				L0170:
+0170	7881	snz     i[8].1
+0171	297D	jmp     L017D
+0172	01F5	cpl     count
+0173	01F6	cpl     count[1]
+0174	01F7	cpl     count[2]
+0175	01F8	cpl     count[3]
+0176	14F5	inc     count
+0177	3D0A	sz      Z
+0178	14F6	inc     count[1]
+0179	3D0A	sz      Z
+017A	14F7	inc     count[2]
+017B	3D0A	sz      Z
+017C	14F8	inc     count[3]
+				L017D:
+017D	0003	ret
+				;169	 		}
+				;170	 		if(fingerCounter == FINGER_FOCUS_ON)
+				_L15:
+0119	0770	mov     a, rd
+011A	0C90	xor     a, 90H
+011B	0771	mov     a, re
+011C	3D0A	sz      Z
+011D	0C01	xor     a, 1H
+011E	0772	mov     a, rf
+011F	3D0A	sz      Z
+0120	0C00	xor     a, 0H
+0121	0773	mov     a, rg
+0122	3D0A	sz      Z
+0123	0C00	xor     a, 0H
+0124	390A	snz     Z
+0125	28DB	jmp     _L18
+				;171	 		{
+				;172	 			LIGHT = ~ LIGHT;
+0126	1F6D	clr     ra
+0127	3914	snz     PA2
+0128	316D	set     ra.2
+0129	3514	clr     PA2
+012A	076D	mov     a, ra
+012B	0594	orm     a, PA
+012C	28DB	jmp     _L18
+				;173	 			
+				;174	 		}
+				;175	 		/////////////////////////////////////////////////////////////////
+				;176	 	}
+				;177	} 
+				;file D:\Projects\Holtek\Teaching\firmware\iled3_981205_pride_CT007+...]\iled3\startup1_l.asm
+				;1	;;--------------------------------------------------------------;;
+				;2	;;    This file is part of the Holtek C Compiler V3 package     ;;
+				;3	;;    For the initialization of static linkage variables        ;;
+				;4	;;    Copyright (C) 2013 Holtek Semiconductor Inc.              ;;
+				;5	;;    Version: 1.04 (Above IDE3000 V7.72)                       ;;
+				;6	;;    Date:    2013/12/04                                        ;;
+				;7	;;--------------------------------------------------------------;;
+				;8	
+				;9	acc equ [05h]
+				;10	tblp equ [07h]
+				;11	tblh equ [08h]
+				;12	;;tbhp equ [09h] 
+				;13	mp0 equ [01h]
+				;14	r1 equ [02h]
+				;15	mp1l equ [03h]
+				;16	mp1h equ [04h]
+				;17	z equ [0ah].2
+				;18	c equ [0ah].0
+				;19	
+				;20	ifndef tbhp
+				;21	tbhp equ [09h]
+				;22	endif
+				;23	 
+				;24	extern startup_value_1:near
+				;25	
+				;26	@start .section 'code'
+				;27	begin_startup_value:
+				;28	  mov a,low (offset startup_value_1) 
+				begin_startup_value:
+				@start .SECTION 'CODE'
+				_main_startup1:
+				@start .SECTION 'CODE'
+0001	0F32	mov     a, 32H
+				;29	  mov tblp,a
+0002	0087	mov     TBLP, a
+				;30	  mov a,high (offset startup_value_1) 
+0003	0F01	mov     a, 1H
+				;31	  mov tbhp,a
+0004	0089	mov     TBHP, a
+				;32	next_table:
+				;33	  ;CLR WDT
+				;34	  inc tblp
+				next_table:
+0005	1487	inc     TBLP
+				;35	  sz z
+0006	3D0A	sz      Z
+				;36	  inc tbhp
+0007	1489	inc     TBHP
+				;37	  tabrdc mp0
+0008	1D01	tabrd   MP0
+				;38	  sz mp0
+				L0009:
+0009	1081	sz      MP0
+				;39	  jmp read_data
+000A	280C	jmp     read_data
+				;40	  jmp end_startup_value
+000B	2821	jmp     end_startup_value
+				;41	read_data:
+				;42	  inc tblp
+				read_data:
+000C	1487	inc     TBLP
+				;43	  sz z
+000D	3D0A	sz      Z
+				;44	  inc tbhp
+000E	1489	inc     TBHP
+				;45	  tabrdc mp1l
+000F	1D03	tabrd   MP1
+				;46	  mov a,tblh
+0010	0708	mov     a, TBLH
+				;47	  mov mp1h,a
+0011	0084	mov     [04H], a
+				;48	next_data:
+				;49	  inc tblp
+				next_data:
+0012	1487	inc     TBLP
+				;50	  sz z
+0013	3D0A	sz      Z
+				;51	  inc tbhp
+0014	1489	inc     TBHP
+				;52	  tabrdc acc
+0015	1D05	tabrd   ACC
+				;53	  mov r1,a
+0016	0082	mov     [02H], a
+				;54	  sdz mp0
+0017	1781	sdz     MP0
+				;55	  jmp $+2
+0018	281A	jmp     L001A
+				;56	  jmp next_table
+0019	2805	jmp     next_table
+				;57	  inc mp1l
+				L001A:
+001A	1483	inc     MP1
+				;58	  mov a,tblh
+001B	0708	mov     a, TBLH
+				;59	  mov r1,a
+001C	0082	mov     [02H], a
+				;60	  inc mp1l
+001D	1483	inc     MP1
+				;61	  sdz mp0
+001E	1781	sdz     MP0
+				;62	  jmp next_data
+001F	2812	jmp     next_data
+				;63	  jmp next_table
+0020	2805	jmp     next_table
+				;64	
+				;65	end_startup_value:
+				;66	
+				;67	   
+				;68	@ROMDATA_BASE .SECTION com_l 'CODE'  
+				;69	startup_value:
+				;70	;;linker range the initial value table here
+				data .SECTION 'DATA'
+				__smod DB DUP (?) ; __smod
+				__pa DB DUP (?) ; __pa
+				__pac DB DUP (?) ; __pac
+				__papu DB DUP (?) ; __papu
+				__tktmr DB DUP (?) ; __tktmr
+				__tkc0 DB DUP (?) ; __tkc0
+				__tkc1 DB DUP (?) ; __tkc1
+				__tkm016dl DB DUP (?) ; __tkm016dl
+				__tkm016dh DB DUP (?) ; __tkm016dh
+				__tkm0rol DB DUP (?) ; __tkm0rol
+				__tkm0roh DB DUP (?) ; __tkm0roh
+				__tkm0c0 DB DUP (?) ; __tkm0c0
+				__tkm0c1 DB DUP (?) ; __tkm0c1
+				isInDoor DB DUP (?) ; isInDoor
+				fingerCounter DB 4 DUP (?) ; fingerCounter
+				touchThreshold DB 4 DUP (?) ; touchThreshold
+				touch DB 2 DUP (?) ; touch
+				i DB 2 DUP (?) ; i
+				ra DB DUP (?)
+				rb DB DUP (?)
+				rc DB DUP (?)
+				rd DB DUP (?)
+				re DB DUP (?)
+				rf DB DUP (?)
+				rg DB DUP (?)
+				rh DB DUP (?)
+				count DB 4 DUP (?) ; count
+				i DB 4 DUP (?) ; i
+				_main_2 DB DUP (?)

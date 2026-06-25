@@ -1,0 +1,129 @@
+
+Linker Version 8.7.7.220718
+Input Object File: E:\hamed\touch2\ir-66\IR-66.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\time_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\ctype_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\math_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\stdlib_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\string_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0002h    0003h      CODE               @CODE (E:\hamed\touch2\ir-66\IR-66.OBJ)
+     00h     0003h     002bh    0029h      CODE               MATH (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB)
+     00h     002ch     0035h    000ah      CODE               __DELAY (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB)
+     00h     0036h     0043h    000eh      CODE               __DELAY (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB)
+     00h     0044h     018eh    014bh      CODE               @MAIN (E:\hamed\touch2\ir-66\IR-66.OBJ)
+     00h     018fh     018fh    0001h      CODE               STARTSEC (E:\hamed\touch2\ir-66\IR-66.OBJ)
+     00h     0040h     004ch    000dh      DATA     4.2308    CTMPDATA (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB)
+     00h     0055h     0056h    0002h      DATA     0         @i (E:\hamed\touch2\ir-66\IR-66.OBJ)
+     00h     0057h     0058h    0002h      DATA     0         @f (E:\hamed\touch2\ir-66\IR-66.OBJ)
+     00h     0059h     005ch    0004h      DATA     0         @fingerCounter (E:\hamed\touch2\ir-66\IR-66.OBJ)
+     00h     005dh     0060h    0004h      DATA     0         @ValueThreshold (E:\hamed\touch2\ir-66\IR-66.OBJ)
+     00h     0061h     0064h    0004h      DATA     0         @Value (E:\hamed\touch2\ir-66\IR-66.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0055h     0055h    0000h      LOCAL    0         @DUMMY (E:\hamed\touch2\ir-66\IR-66.OBJ)
+     00h     004dh     0054h    0008h      LOCAL    8         _main (E:\hamed\touch2\ir-66\IR-66.OBJ)
+     00h     004dh     004dh    0000h      LOCAL    0         DIVUL4 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB)
+
+     Indepentent Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     004dh     004dh    0000h      ILOCAL   0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB)
+     00h     004dh     004dh    0000h      ILOCAL   0         __DELAYY (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB)
+
+     Public Symbols Information
+     Address            Public by Name
+     0003h              DIVUL4
+     0040h              RH
+     0041h              RM
+     0042h              RU
+     004bh              T10
+     004ch              T11
+     0043h              T2
+     0044h              T3
+     0045h              T4
+     0046h              T5
+     0047h              T6
+     0048h              T7
+     0049h              T8
+     004ah              T9
+     0061h              _Value
+     005dh              _ValueThreshold
+     0032h              __DELAYX0
+     0031h              __DELAYX1
+     0030h              __DELAYX2
+     002fh              __DELAYX3
+     002eh              __DELAYX4
+     002dh              __DELAYX5
+     002ch              __DELAYX6
+     003bh              __DELAYY0
+     003ah              __DELAYY1
+     0039h              __DELAYY2
+     0038h              __DELAYY3
+     0037h              __DELAYY4
+     0036h              __DELAYY5
+     0057h              _f
+     0059h              _fingerCounter
+     0055h              _i
+
+     Address            Public by Value
+     0003h              DIVUL4
+     002ch              __DELAYX6
+     002dh              __DELAYX5
+     002eh              __DELAYX4
+     002fh              __DELAYX3
+     0030h              __DELAYX2
+     0031h              __DELAYX1
+     0032h              __DELAYX0
+     0036h              __DELAYY5
+     0037h              __DELAYY4
+     0038h              __DELAYY3
+     0039h              __DELAYY2
+     003ah              __DELAYY1
+     003bh              __DELAYY0
+     0040h              RH
+     0041h              RM
+     0042h              RU
+     0043h              T2
+     0044h              T3
+     0045h              T4
+     0046h              T5
+     0047h              T6
+     0048h              T7
+     0049h              T8
+     004ah              T9
+     004bh              T10
+     004ch              T11
+     0055h              _i
+     0057h              _f
+     0059h              _fingerCounter
+     005dh              _ValueThreshold
+     0061h              _Value
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0400h     0190h    39%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0040h     0025h    57%
+     Total     0040h     0025h    57%
+
+Use Stack Count
+_main: 1
+
+Call Tree
+    @DUMMY
+        _main (0)
+            DIVUL4 (1)
+
+HLINK: Program entry point at section '@CODE' (address 0) of file 'E:\hamed\touch2\ir-66\IR-66.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

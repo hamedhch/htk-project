@@ -1,0 +1,144 @@
+
+Linker Version 8.7.7.220718
+Input Object File: E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\time_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\ctype_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\math_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\stdlib_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\string_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0002h    0003h      CODE               @CODE (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0003h     0003h    0001h      CODE               STARTSEC (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0004h     0004h    0001h      CODE               @@ISR_EXINT (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0008h     0008h    0001h      CODE               @@ISR_TB0 (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     000ch     000ch    0001h      CODE               @@ISR_TB1 (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     000dh     0021h    0015h      CODE               @Delay_10us (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0022h     002ah    0009h      CODE               @Delay_Chek (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     002bh     0037h    000dh      CODE               @Delay_1ms (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0038h     004bh    0014h      CODE               @Delay_ms (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ch     0052h    0007h      CODE               @IO_INIT (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0053h     005bh    0009h      CODE               @TB0Init (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     005ch     0063h    0008h      CODE               @TB1Init (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0064h     006fh    000ch      CODE               @TBINIT (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0070h     0079h    000ah      CODE               @EXININIT (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     007ah     00cah    0051h      CODE               @MAIN (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0045h     0045h    0001h      DATA     0         @in (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0046h     0046h    0001h      DATA     0         @Pq (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0047h     0047h    0001h      DATA     0         @Lock (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0048h     0048h    0001h      DATA     0         @Puls_Count (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0049h     0049h    0001h      DATA     0         @Detect (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ah     004dh    0004h      DATA     0         @Puls_off (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004eh     0051h    0004h      DATA     0         @Puls_on (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0052h     0055h    0004h      DATA     0         @Timer (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0056h     0059h    0004h      DATA     0         @m (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     005ah     005ah    0001h      DATA     0         @Set (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     005bh     005bh    0001h      DATA     0         @Counter_Off (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     005ch     005ch    0001h      DATA     0         @Counter_On (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     005dh     005dh    0001h      DATA     0         @Counter (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     005eh     005eh    0001h      DATA     0         @Backup (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0042h     0042h    0001h      LOCAL    3         _Delay_Chek (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0040h     0041h    0002h      LOCAL    6         _Delay_10us (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0045h     0045h    0000h      LOCAL    0         @DUMMY (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0045h     0045h    0000h      LOCAL    0         _main (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0040h     0040h    0000h      LOCAL    0         _IO_INIT (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0041h     0044h    0004h      LOCAL    2.5       _Delay_ms (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0040h     0040h    0001h      LOCAL    3         _Delay_1ms (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0040h     0040h    0000h      LOCAL    0         _TB0Init (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0040h     0040h    0000h      LOCAL    0         _EXININIT (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+
+     Indepentent Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0040h     0040h    0000h      ILOCAL   0         _TB1Init (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0040h     0040h    0000h      ILOCAL   0         _TBINIT (E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0043h              Delay_ms0
+     005eh              _Backup
+     005dh              _Counter
+     005bh              _Counter_Off
+     005ch              _Counter_On
+     000dh              _Delay_10us
+     002bh              _Delay_1ms
+     0022h              _Delay_Chek
+     0038h              _Delay_ms
+     0049h              _Detect
+     0070h              _EXININIT
+     004ch              _IO_INIT
+     0047h              _Lock
+     0046h              _Pq
+     0048h              _Puls_Count
+     004ah              _Puls_off
+     004eh              _Puls_on
+     005ah              _Set
+     0053h              _TB0Init
+     005ch              _TB1Init
+     0064h              _TBINIT
+     0052h              _Timer
+     0045h              _in
+     0056h              _m
+
+     Address            Public by Value
+     000dh              _Delay_10us
+     0022h              _Delay_Chek
+     002bh              _Delay_1ms
+     0038h              _Delay_ms
+     0043h              Delay_ms0
+     0045h              _in
+     0046h              _Pq
+     0047h              _Lock
+     0048h              _Puls_Count
+     0049h              _Detect
+     004ah              _Puls_off
+     004ch              _IO_INIT
+     004eh              _Puls_on
+     0052h              _Timer
+     0053h              _TB0Init
+     0056h              _m
+     005ah              _Set
+     005bh              _Counter_Off
+     005ch              _TB1Init
+     005ch              _Counter_On
+     005dh              _Counter
+     005eh              _Backup
+     0064h              _TBINIT
+     0070h              _EXININIT
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0400h     00c5h    19%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0040h     001fh    48%
+     Total     0040h     001fh    48%
+
+Use Stack Count
+_Delay_Chek: 1
+_main: 2
+
+Call Tree
+    _Delay_Chek
+        _Delay_10us (0)
+    @DUMMY
+        _main (0)
+            _IO_INIT (1)
+            _Delay_ms (1)
+                _Delay_1ms (2)
+            _TB0Init (1)
+            _EXININIT (1)
+            _Delay_10us (1)
+
+HLINK: Program entry point at section '@CODE' (address 0) of file 'E:\hamed\touch2\IR-Detector38khz-HR66F002-V1\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

@@ -1,0 +1,47 @@
+
+Linker Version 8.7.7.220718
+Input Object File: C:\Users\hamed\Documents\HTK_Project\ir test\IR TEST.OBJ
+Input Object File: C:\Users\hamed\Documents\HTK_Project\ir test\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\Documents\HTK_Project\ir test\IR TEST.OBJ)
+     00h     0001h     0001h    0001h      CODE               @start (C:\Users\hamed\Documents\HTK_Project\ir test\IR TEST.OBJ)
+     00h     0002h     000ch    000bh      CODE               _main (C:\Users\hamed\Documents\HTK_Project\ir test\IR TEST.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0060h     0060h    0000h      LOCAL    0         @dummy (C:\Users\hamed\Documents\HTK_Project\ir test\IR TEST.OBJ)
+     00h     0060h     0060h    0000h      LOCAL    0         _main (C:\Users\hamed\Documents\HTK_Project\ir test\IR TEST.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0002h              _main
+
+     Address            Public by Value
+     0002h              _main
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     000dh    0%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0000h    0%
+     Total     0080h     0000h    0%
+
+Use Stack Count
+_main: 0
+
+Call Tree
+    @dummy
+        _main (0)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\Documents\HTK_Project\ir test\IR TEST.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

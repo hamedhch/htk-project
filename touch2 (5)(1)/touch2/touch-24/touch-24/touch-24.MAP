@@ -1,0 +1,241 @@
+
+Linker Version 8.7.7.220718
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     0004h     0004h    0001h      CODE               @int0_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     0005h     0009h    0005h      CODE               _CROM2PROM (CROM2PROM)
+     00h     000ch     000fh    0004h      CODE               @timer_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     0010h     0027h    0018h      CODE               _TuochKeyInit (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     0028h     0028h    0001h      CODE               @TOUCH_ISR_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     0029h     0049h    0021h      CODE               @start (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     004ah     0067h    001eh      CODE               _delay_10us (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     0068h     009eh    0037h      CODE               _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     009fh     00ffh    0061h      CODE               _Key_Touch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     0100h     0149h    004ah      CODE               _CalibrTuoch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     014ah     0198h    004fh      CODE               _Key_Select (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     0199h     021bh    0083h      CODE               _timer (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     021ch     023fh    0024h      CODE               _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     0240h     0257h    0018h      CODE               @ROMDATA_BASE (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\STARTUP1_L.OBJ)
+     00h     0258h     0276h    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0277h     02b9h    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     0088h    0029h      DATA     2.5366    @HCCINIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     0089h     009dh    0015h      DATA     0.5714    @HCCINIT0 (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     009eh     009eh    0001h      DATA     0         @BITDATASEC1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\STARTUP1_L.OBJ)
+     00h     009fh     009fh    0001h      DATA     0         @BITDATASEC (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\STARTUP1_L.OBJ)
+     00h     00a0h     00a0h    0001h      DATA     2         @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a1h     00a1h    0001h      DATA     2         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a2h     00a2h    0001h      DATA     13        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a3h     00a3h    0001h      DATA     13        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a4h     00a4h    0001h      DATA     13        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a5h     00a5h    0001h      DATA     13        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a6h     00a6h    0001h      DATA     2         @data_r10c (isr:ra~rh)
+     00h     00a7h     00a7h    0001h      DATA     2         @data_r20c (isr:ra~rh)
+     00h     00a8h     00a8h    0001h      DATA     2         @data_r30c (isr:ra~rh)
+     00h     00a9h     00a9h    0001h      DATA     2         @data_r40c (isr:ra~rh)
+     00h     00aah     00aah    0001h      DATA     2         @data_r50c (isr:ra~rh)
+     00h     00abh     00abh    0001h      DATA     2         @data_r60c (isr:ra~rh)
+     00h     00ach     00ach    0001h      DATA     2         @data_r70c (isr:ra~rh)
+     00h     00adh     00adh    0001h      DATA     4         @data_ra0c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00aeh     00aeh    0000h      LOCAL    0         @dummy12 (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     00aeh     00aeh    0000h      LOCAL    0         _timer (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     00aeh     00aeh    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     00c4h     00c4h    0000h      LOCAL    0         @dummy (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     00c4h     00c4h    0000h      LOCAL    0         _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     00bah     00c1h    0008h      LOCAL    4         _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     00aeh     00b9h    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00aeh     00aeh    0000h      LOCAL    0         _TuochKeyInit (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     00c2h     00c3h    0002h      LOCAL    2         _CalibrTuoch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     00aeh     00b1h    0004h      LOCAL    2         _delay_10us (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     00aeh     00bbh    000eh      LOCAL    5.6429    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00bch     00bch    0000h      LOCAL    0         _Key_Select (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+     00h     00c2h     00c2h    0000h      LOCAL    0         _Key_Touch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0060h              _Bit
+     0061h              _Buffer
+     007bh              _CalibrCount
+     007ah              _CalibrSample
+     0100h              _CalibrTuoch
+     0062h              _Count
+     0085h              _Count_C1
+     0081h              _Count_C1_Backup
+     007fh              _Count_S1
+     007dh              _Count_T1
+     0072h              _Counter
+     0070h              _Counter_On
+     006eh              _Counter_On_set
+     0006h              _Crom2Prom
+     0005h              _Crom2PromNext
+     009bh              _Data
+     0098h              _DataM
+     008ch              _DataS
+     009fh[0]           _Finish
+     009fh[1]           _Frist
+     014ah              _Key_Select
+     009fh              _Key_Touch
+     009fh[2]           _LernRF
+     0063h              _LernRFKey
+     009fh[3]           _LernRFblink
+     009fh[4]           _Lock
+     0089h              _RFData
+     009fh[6]           _Set
+     006dh              _Setinoff
+     009fh[5]           _Start
+     0028h              _TOUCH_ISR
+     0066h              _Timedown
+     0010h              _TuochKeyInit
+     009eh[0]           _bizer
+     0258h              _builtin_holtek_mulsi3_isr00
+     00b2h              _builtin_holtek_mulsi3_isr00_2
+     0277h              _builtin_holtek_udivmodsi4_isr00
+     006bh              _conternotRF
+     0069h              _conterout
+     0067h              _conteroutnot
+     0076h              _counterrgb
+     004ah              _delay_10us
+     00aeh              _delay_10us_2
+     0068h              _delay_ms
+     00bah              _delay_ms_2
+     0065h              _eerom
+     007ch              _i
+     0004h              _int0
+     0064h              _lastKey
+     0078h              _lightchange
+     021ch              _main
+     0074h              _ncount
+     0199h              _timer
+     00a6h              r10c
+     00a7h              r20c
+     00a8h              r30c
+     00a9h              r40c
+     00aah              r50c
+     00abh              r60c
+     00ach              r70c
+     00adh              ra0c
+     00a0h              rb
+     00a1h              rc
+     00a2h              rd
+     00a3h              re
+     00a4h              rf
+     00a5h              rg
+     023fh              startup_value_1
+
+     Address            Public by Value
+     0004h              _int0
+     0005h              _Crom2PromNext
+     0006h              _Crom2Prom
+     0010h              _TuochKeyInit
+     0028h              _TOUCH_ISR
+     004ah              _delay_10us
+     0060h              _Bit
+     0061h              _Buffer
+     0062h              _Count
+     0063h              _LernRFKey
+     0064h              _lastKey
+     0065h              _eerom
+     0066h              _Timedown
+     0067h              _conteroutnot
+     0068h              _delay_ms
+     0069h              _conterout
+     006bh              _conternotRF
+     006dh              _Setinoff
+     006eh              _Counter_On_set
+     0070h              _Counter_On
+     0072h              _Counter
+     0074h              _ncount
+     0076h              _counterrgb
+     0078h              _lightchange
+     007ah              _CalibrSample
+     007bh              _CalibrCount
+     007ch              _i
+     007dh              _Count_T1
+     007fh              _Count_S1
+     0081h              _Count_C1_Backup
+     0085h              _Count_C1
+     0089h              _RFData
+     008ch              _DataS
+     0098h              _DataM
+     009bh              _Data
+     009fh              _Key_Touch
+     00a0h              rb
+     00a1h              rc
+     00a2h              rd
+     00a3h              re
+     00a4h              rf
+     00a5h              rg
+     00a6h              r10c
+     00a7h              r20c
+     00a8h              r30c
+     00a9h              r40c
+     00aah              r50c
+     00abh              r60c
+     00ach              r70c
+     00adh              ra0c
+     00aeh              _delay_10us_2
+     00b2h              _builtin_holtek_mulsi3_isr00_2
+     00bah              _delay_ms_2
+     0100h              _CalibrTuoch
+     014ah              _Key_Select
+     0199h              _timer
+     021ch              _main
+     023fh              startup_value_1
+     0258h              _builtin_holtek_mulsi3_isr00
+     0277h              _builtin_holtek_udivmodsi4_isr00
+     009eh[0]           _bizer
+     009fh[0]           _Finish
+     009fh[1]           _Frist
+     009fh[2]           _LernRF
+     009fh[3]           _LernRFblink
+     009fh[4]           _Lock
+     009fh[5]           _Start
+     009fh[6]           _Set
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     02b5h    33%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0064h    78%
+     Total     0080h     0064h    78%
+
+Use Stack Count
+_timer: 1
+_main: 3
+
+Call Tree
+    @dummy12
+        _timer (0)
+            _Crom2Prom (1)
+    @dummy
+        _main (0)
+            _delay_ms (1)
+                _builtin_holtek_mulsi3_isr00 (2)
+            _TuochKeyInit (1)
+            _CalibrTuoch (1)
+                _delay_10us (2)
+                _delay_ms (2)
+                    _builtin_holtek_mulsi3_isr00 (3)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Select (1)
+                _builtin_holtek_divmodsi4_isr00 (2)
+            _Key_Touch (1)
+                _delay_ms (2)
+                    _builtin_holtek_mulsi3_isr00 (3)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\OneDrive\Documents\HTK_Project\touch2 (5)(1)\touch2\touch-24\touch-24\TOUCH-24.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

@@ -23,7 +23,7 @@ volatile unsigned char CalibrCount4=0,CalibrSample4=0;
 volatile bit q1=0,q2=0,q3=0,q4=0 ,lock=0;
 
 
-#define FINGER_FOCUS_ON	80
+#define FINGER_FOCUS_ON	50
 
 //I/O Pin or Touch Key 1..4 Function Select
 #define IO_Touch() _m0k4io = 1; _m0k3io = 1;_m0k2io = 1;_m0k1io = 1;
@@ -119,7 +119,8 @@ void TuochKeyInit()
 void Key_Touch()
 {
 	
-	if(Count_S1 < Count_C1 - 30  && Count_S2 > Count_C2 - 30 && Count_S3 > Count_C3 - 30 && Count_S4 > Count_C4 - 30)
+	//if(Count_S1 < Count_C1 - 40  && Count_S2 > Count_C2 - 30 && Count_S3 > Count_C3 - 30 && Count_S4 > Count_C4 - 30)
+	if(Count_S1 < Count_C1 - 35  )
 	{
 		Count_T1++;if(Count_T1> 5000){Count_T1 = 5000;}
 	}
@@ -149,12 +150,14 @@ void Key_Touch()
 		
 		delay_ms(200);
 		
+		Count_T1++;
+		
 		CalibrCount1=0;
 		CalibrSample1=0;
 		Count_C1_Backup=0;
 	}
 	
-	if(Count_T1 == 600)
+	if(Count_T1 == 800)
 	{
 		DATA=0;
 		BUZ=1;
@@ -184,12 +187,15 @@ void Key_Touch()
 		
 		lock=0;
 		
+		Count_T1++;
+		
 		CalibrCount1=0;
 		CalibrSample1=0;
 		Count_C1_Backup=0;
 	}
 	
-	if(Count_S1 > Count_C1 - 30  && Count_S2 < Count_C2 - 30 && Count_S3 > Count_C3 - 30 && Count_S4 > Count_C4 - 30)
+	//if(Count_S1 > Count_C1 - 30  && Count_S2 < Count_C2 - 40 && Count_S3 > Count_C3 - 30 && Count_S4 > Count_C4 - 30)
+	if( Count_S2 < Count_C2 - 35 )
 	{
 		Count_T2++;if(Count_T2> 5000){Count_T2 = 5000;}
 	}
@@ -218,11 +224,13 @@ void Key_Touch()
 		
 		delay_ms(200);
 		
+		Count_T2++;
+		
 		CalibrCount2=0;
 		CalibrSample2=0;
 		Count_C2_Backup=0;
 	}
-	if(Count_T2 == 600)
+	if(Count_T2 == 800)
 	{
 		
 		DATA=0;
@@ -253,13 +261,16 @@ void Key_Touch()
 		
 		lock=0;
 		
+		Count_T2++;
+		
 		CalibrCount2=0;
 		CalibrSample2=0;
 		Count_C2_Backup=0;
 	}
 	
 	
-	if(Count_S1 > Count_C1 - 30  && Count_S2 > Count_C2 - 30 && Count_S3 < Count_C3 - 30 && Count_S4 > Count_C4 - 30)
+	//if(Count_S1 > Count_C1 - 30  && Count_S2 > Count_C2 - 30 && Count_S3 < Count_C3 - 50 && Count_S4 > Count_C4 - 30)
+	if(Count_S3 < Count_C3 - 40 )
 	{
 		Count_T3++;if(Count_T3> 5000){Count_T3 = 5000;}
 	}
@@ -286,11 +297,13 @@ void Key_Touch()
 		
 		delay_ms(200);
 		
+		Count_T3++;
+		
 		CalibrCount3=0;
 		CalibrSample3=0;
 		Count_C3_Backup=0;
 	}
-	if(Count_T3 == 600)
+	/*if(Count_T3 == 600)
 	{
 		
 		DATA=0;
@@ -324,10 +337,11 @@ void Key_Touch()
 		CalibrCount3=0;
 		CalibrSample3=0;
 		Count_C3_Backup=0;
-	}
+	}*/
 	
 	
-	if(Count_S1 > Count_C1 - 30  && Count_S2 > Count_C2 - 30 && Count_S3 > Count_C3 - 30 && Count_S4 < Count_C4 - 30)
+	//if(Count_S1 > Count_C1 - 30  && Count_S2 > Count_C2 - 30 && Count_S3 > Count_C3 - 30 && Count_S4 < Count_C4 - 50)
+	if( Count_S4 < Count_C4 - 40)
 	{
 		Count_T4++;if(Count_T4> 5000){Count_T4 = 5000;}
 	}
@@ -354,11 +368,13 @@ void Key_Touch()
 		
 		delay_ms(200);
 		
+		Count_T4++;
+		
 		CalibrCount4=0;
 		CalibrSample4=0;
 		Count_C4_Backup=0;
 	}
-	if(Count_T4 == 600)
+	/*if(Count_T4 == 600)
 	{
 		DATA=0;
 		BUZ=1;
@@ -391,7 +407,7 @@ void Key_Touch()
 		CalibrCount4=0;
 		CalibrSample4=0;
 		Count_C4_Backup=0;
-	}
+	}*/
 	
 }
 

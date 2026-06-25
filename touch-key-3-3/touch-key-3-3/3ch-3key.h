@@ -16,7 +16,7 @@ volatile unsigned char CalibrCount3=0,CalibrSample3=0;
 volatile bit q1=0,q2=0,q3=0;
 
 
-#define FINGER_FOCUS_ON	80
+#define FINGER_FOCUS_ON	70
 
 //I/O Pin or Touch Key 1..4 Function Select
 #define IO_Touch() _m0k4io = 0; _m0k3io = 1;_m0k2io = 1;_m0k1io = 1;
@@ -112,11 +112,11 @@ void TuochKeyInit()
 void Key_Touch()
 {
 	
-	if(Count_S1 < Count_C1 - 70)
+	if(Count_S1 < Count_C1 - 25)
 	{
 		Count_T1++;if(Count_T1> 1000){Count_T1 = 1000;}
 	}
-	else if(Count_S1 > Count_C1 -10 )
+	else if(Count_S1 > Count_C1 -20 )
 	{
 		Count_T1=0;
 	}
@@ -136,11 +136,11 @@ void Key_Touch()
 	}
 	
 	
-	if(Count_S2 < Count_C2 - 70)
+	if(Count_S2 < Count_C2 - 25)
 	{
 		Count_T2++;if(Count_T2> 1000){Count_T2 = 1000;}
 	}
-	else if(Count_S2 > Count_C2 -10 )
+	else if(Count_S2 > Count_C2 -20 )
 	{
 		Count_T2=0;
 	}
@@ -158,11 +158,11 @@ void Key_Touch()
 	}
 	
 	
-	if(Count_S3 < Count_C3 - 70)
+	if(Count_S3 < Count_C3 - 25)
 	{
 		Count_T3++;if(Count_T3> 1000){Count_T3 = 1000;}
 	}
-	else if(Count_S3 > Count_C3 -10 )
+	else if(Count_S3 > Count_C3 -20 )
 	{
 		Count_T3=0;
 	}

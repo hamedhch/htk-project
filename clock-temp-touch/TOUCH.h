@@ -8,7 +8,11 @@ volatile unsigned char CalibrCount1=0,CalibrCount2=0;
 volatile unsigned int  Count_TQ=0;
 volatile unsigned char j=0,i=0,iq=0,KeySel=0;
 
+<<<<<<< HEAD
 #define FINGER_FOCUS_ON	50
+=======
+#define FINGER_FOCUS_ON	90
+>>>>>>> 63842fd (car-light)
 
 //• TKTMR Register
 //Touch key 8-bit time slot counter preload register 0 ~ 255
@@ -145,12 +149,21 @@ void TuochKeyInit()
 void Key_Touch()
 {
 	//KEY1
+<<<<<<< HEAD
 	if(Count_C1<Count_B1-40  && Count_C2>Count_B2-30){
 		Count_T1++;
 		if(Count_T1>150)Count_T1=150;
 	}else if(Count_C1>Count_B1-10){Count_T1=0;}
 	
 	if(Count_T1==(FINGER_FOCUS_ON-10))
+=======
+	if(Count_C1<Count_B1-130  && Count_C2>Count_B2-50){
+		Count_T1++;
+		if(Count_T1>100)Count_T1=100;
+	}else if(Count_C1>Count_B1-10){Count_T1=0;}
+	
+	if(Count_T1==FINGER_FOCUS_ON)
+>>>>>>> 63842fd (car-light)
 	{
 		if(State>=0 && State<=14){
 			if(q1==1)q1=0;
@@ -164,14 +177,20 @@ void Key_Touch()
 			State=20;
 			Min--;
 			if(Min<=0)Min=60;
+<<<<<<< HEAD
 			Math();
+=======
+>>>>>>> 63842fd (car-light)
 		}
 		if(State>=25 && State<=30){
 			Belink=0;Belinker=1;
 			State=25;
 			Hrs--;
 			if(Hrs<=0)Hrs=23;
+<<<<<<< HEAD
 			Math();
+=======
+>>>>>>> 63842fd (car-light)
 		}
 		
 		Bip=1;
@@ -179,7 +198,11 @@ void Key_Touch()
 	
 	
 	//KEY2
+<<<<<<< HEAD
 	if(Count_C2<Count_B2-40 && Count_C1>Count_B1-30){
+=======
+	if(Count_C2<Count_B2-90 && Count_C1>Count_B1-50){
+>>>>>>> 63842fd (car-light)
 		Count_T2++;
 		if(Count_T2>150)Count_T2=150;
 	}else if(Count_C2>Count_B2-10){Count_T2=0;}
@@ -198,14 +221,20 @@ void Key_Touch()
 			State=20;
 			Min++;
 			if(Min>=60)Min=0;
+<<<<<<< HEAD
 			Math();
+=======
+>>>>>>> 63842fd (car-light)
 		}
 		if(State>=25 && State<=30){
 			Belink=0;Belinker=1;
 			State=25;
 			Hrs++;
 			if(Hrs>=24)Hrs=0;
+<<<<<<< HEAD
 			Math();
+=======
+>>>>>>> 63842fd (car-light)
 		}
 		
 		Bip=1;
@@ -214,12 +243,20 @@ void Key_Touch()
 	
 	
 	// Setting	
+<<<<<<< HEAD
 	if(Count_C2<Count_B2-40 && Count_C1<Count_B1-40){
+=======
+	if(Count_C2<Count_B2-50 && Count_C1<Count_B1-50){
+>>>>>>> 63842fd (car-light)
 		Count_TQ++;
 		if(Count_TQ>1000)Count_TQ=1000;
 	}else if(Count_C2>Count_B2-10 && Count_C1>Count_B1-10){Count_TQ=0;
 }
+<<<<<<< HEAD
 	if(Count_TQ == 200)
+=======
+	if(Count_TQ == 990)
+>>>>>>> 63842fd (car-light)
 	{
 		Belinking=1,State=20;
 		Bip=2;
@@ -291,7 +328,11 @@ void Key_Select(char Sel)
 		while(!FlagTouch ){GCC_NOP();};
 		Count_C1 = DataTouch1;
 		CalibrCount1++;
+<<<<<<< HEAD
 		if(CalibrCount1>3)
+=======
+		if(CalibrCount1>100)
+>>>>>>> 63842fd (car-light)
 		{
 			CalibrCount1=0;	
 			Count_P1 += Count_C1;
@@ -307,7 +348,11 @@ void Key_Select(char Sel)
 		while(!FlagTouch ){GCC_NOP();};
 		Count_C2 = DataTouch1;
 		CalibrCount2++;
+<<<<<<< HEAD
 		if(CalibrCount2>3)
+=======
+		if(CalibrCount2>100)
+>>>>>>> 63842fd (car-light)
 		{
 			CalibrCount2=0;	
 			Count_P2 += Count_C2;

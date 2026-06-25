@@ -1,13 +1,19 @@
 
 Linker Version 8.7.7.220718
+<<<<<<< HEAD
 Input Object File: E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ
 Input Object File: E:\hamed\touch2\clock-temp-touch\STARTUP1_L.OBJ
+=======
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\STARTUP1_L.OBJ
+>>>>>>> 63842fd (car-light)
 
 Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
 Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrsc.lib
 
 
      Bank    Start     End      Length     Class    AvgIns    Name
+<<<<<<< HEAD
      00h     0000h     0000h    0001h      CODE               @code (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
      00h     0001h     001bh    001bh      CODE               _delay_10us (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
      00h     0020h     0023h    0004h      CODE               @PTMR_code (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
@@ -48,12 +54,57 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00h     0080h     0081h    0002h      DATA     0         @BITDATASEC (E:\hamed\touch2\clock-temp-touch\STARTUP1_L.OBJ)
      00h     0082h     0082h    0001h      DATA     46        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0083h     0083h    0001h      DATA     37        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+=======
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0001h     001bh    001bh      CODE               _delay_10us (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0020h     0023h    0004h      CODE               @PTMR_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0024h     0027h    0004h      CODE               @TB0_ISR_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0028h     002bh    0004h      CODE               @TB1_ISR_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     002ch     004ch    0021h      CODE               @start (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     004dh     00d0h    0084h      CODE               @crom (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d1h     0104h    0034h      CODE               _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0105h     011ch    0018h      CODE               _IO_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     011dh     0192h    0076h      CODE               _Displayer (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0193h     01b3h    0021h      CODE               _Math (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     01b4h     0211h    005eh      CODE               _DispTimer (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0212h     0249h    0038h      CODE               _DispTemp (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     024ah     0255h    000ch      CODE               _ADC_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0256h     0290h    003bh      CODE               _ADC_GetChannelValue (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0291h     02dfh    004fh      CODE               _NTC_MAP (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     02e0h     02e9h    000ah      CODE               _TB0_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     02eah     02f3h    000ah      CODE               _TB1_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     02f4h     02f8h    0005h      CODE               _TB0_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     02f9h     041ah    0122h      CODE               _TB1_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     041bh     044ah    0030h      CODE               _Date (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     044bh     0458h    000eh      CODE               _PTMR_PERIOD (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0459h     046bh    0013h      CODE               _PTMRINIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     046ch     0494h    0029h      CODE               _PTMR (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0495h     04cch    0038h      CODE               _TuochKeyInit (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     04cdh     05fdh    0131h      CODE               _Key_Touch (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     05feh     06adh    00b0h      CODE               _CalibrTuoch (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     06aeh     0751h    00a4h      CODE               _Key_Select (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0752h     07b1h    0060h      CODE               _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     07b2h     07d0h    001fh      CODE               @ROMDATA_BASE (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\STARTUP1_L.OBJ)
+     00h     07d1h     07dah    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     07dbh     07f9h    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     07fah     083ch    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     083dh     084ch    0010h      CODE               _CROM2PROM (CROM2PROM)
+     00h     084dh     0865h    0019h      CODE               _builtin_holtek_divmodqi4_isr28 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0866h     088ah    0025h      CODE               _builtin_holtek_divmodhi4_isr28 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0080h     0081h    0002h      DATA     0         @BITDATASEC (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\STARTUP1_L.OBJ)
+     00h     0082h     0082h    0001h      DATA     125       @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     46        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+>>>>>>> 63842fd (car-light)
      00h     0084h     0084h    0001h      DATA     29        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0085h     0085h    0001h      DATA     21        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0086h     0086h    0001h      DATA     21        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0087h     0087h    0001h      DATA     15        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0088h     0088h    0001h      DATA     15        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+<<<<<<< HEAD
      00h     0089h     0089h    0001h      DATA     47        @data_ra28 (isr:ra~rh)
+=======
+     00h     0089h     0089h    0001h      DATA     45        @data_ra28 (isr:ra~rh)
+>>>>>>> 63842fd (car-light)
      00h     008ah     008ah    0001h      DATA     16        @data_rb28 (isr:ra~rh)
      00h     008bh     008bh    0001h      DATA     10        @data_rc28 (isr:ra~rh)
      00h     008ch     008ch    0001h      DATA     6         @data_re28 (isr:ra~rh)
@@ -66,6 +117,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00h     0093h     0093h    0001h      DATA     2         @data_r228 (isr:ra~rh)
      00h     0094h     0094h    0001h      DATA     2         @data_r120 (isr:ra~rh)
      00h     0095h     0095h    0001h      DATA     2         @data_r220 (isr:ra~rh)
+<<<<<<< HEAD
      00h     00bfh     00bfh    0001h      DATA     22        @HCCINIT_State (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
      00h     00c0h     00c1h    0002h      DATA     15        @HCCINIT_Biper (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
      00h     00c2h     00c2h    0001h      DATA     12        @HCCINIT_Hrs (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
@@ -142,10 +194,89 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      01h     0096h     0096h    0001h      DATA     2         @data_r420 (isr:ra~rh)
      01h     0097h     0097h    0001h      DATA     2         @data_r520 (isr:ra~rh)
      01h     0098h     0098h    0001h      DATA     2         @data_r620 (isr:ra~rh)
+=======
+     00h     00bah     00bah    0001h      DATA     26        @HCCINIT_Disp (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00bbh     00bbh    0001h      DATA     22        @HCCINIT_State (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00bch     00bdh    0002h      DATA     15        @HCCINIT_Biper (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00beh     00beh    0001h      DATA     12        @HCCINIT_Hrs (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00bfh     00bfh    0001h      DATA     10        @HCCINIT_Min (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c0h     00c0h    0001h      DATA     10        @HCCINIT_Bip (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c1h     00c1h    0001h      DATA     9         @HCCINIT_j (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c2h     00c3h    0002h      DATA     9         @HCCINIT_Count_C2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c4h     00c5h    0002h      DATA     9         @HCCINIT_Count_C1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c6h     00c7h    0002h      DATA     9         @HCCINIT_Belink (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00c8h     00c9h    0002h      DATA     7         @HCCINIT_Count_B2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00cah     00cbh    0002h      DATA     7         @HCCINIT_Count_B1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00cch     00cfh    0004h      DATA     6         @HCCINIT_Count_P2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d0h     00d3h    0004h      DATA     6         @HCCINIT_Count_P1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d4h     00d5h    0002h      DATA     5         @HCCINIT_Count_TQ (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d6h     00d6h    0001h      DATA     5         @HCCINIT_Count_T2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d7h     00d7h    0001h      DATA     5         @HCCINIT_Count_T1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d8h     00d8h    0001h      DATA     4         @HCCINIT_iq (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00d9h     00d9h    0001h      DATA     4         @HCCINIT_H124 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00dah     00dah    0001h      DATA     3         @HCCINIT_i (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00dbh     00dbh    0001h      DATA     3         @HCCINIT_CalibrCount2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00dch     00dch    0001h      DATA     3         @HCCINIT_CalibrCount1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00ddh     00ddh    0001h      DATA     3         @HCCINIT_Count_H2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00deh     00deh    0001h      DATA     3         @HCCINIT_Count_H1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00dfh     00dfh    0001h      DATA     3         @HCCINIT_Sec (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e0h     00e0h    0001h      DATA     3         @HCCINIT_S (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e1h     00e1h    0001h      DATA     0         @HCCINIT_KeySel (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e2h     00e2h    0001h      DATA     0         @HCCINIT_Min2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e3h     00e3h    0001h      DATA     0         @HCCINIT_Min1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e4h     00e4h    0001h      DATA     0         @HCCINIT_Hrs2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e5h     00e5h    0001h      DATA     0         @HCCINIT_Hrs1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e6h     00e6h    0001h      DATA     0         @HCCINIT_CountTemp (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e7h     00e7h    0001h      DATA     0         @HCCINIT_CountOn (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e8h     00e8h    0001h      DATA     0         @HCCINIT_Ok (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00e9h     00e9h    0001h      DATA     0         @HCCINIT_Kab (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00eah     00ebh    0002h      DATA     0         @HCCINIT_Yer (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00ech     00ech    0001h      DATA     0         @HCCINIT_Day (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00edh     00edh    0001h      DATA     0         @HCCINIT_May (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00eeh     00eeh    0001h      DATA     0         @HCCINIT_Temp (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00efh     00efh    0001h      DATA     0         @HCCINIT_Display (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f0h     00f0h    0001h      DATA     0         @HCCINIT_Seletion (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f1h     00f1h    0001h      DATA     0         @HCCINIT_CNT_DISP (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f2h     00f2h    0001h      DATA     2         @HCCINIT0_T2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f3h     00f3h    0001h      DATA     2         @HCCINIT0_T1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f4h     00f4h    0001h      DATA     2         @HCCINIT0_N2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f5h     00f5h    0001h      DATA     2         @HCCINIT0_N1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f6h     00f6h    0001h      DATA     2         @HCCINIT0_H2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f7h     00f7h    0001h      DATA     2         @HCCINIT0_H1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f8h     00f8h    0001h      DATA     1         @HCCINIT0_N2T2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00f9h     00f9h    0001h      DATA     1         @HCCINIT0_N2T1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00fah     00fah    0001h      DATA     1         @HCCINIT0_N1T2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00fbh     00fbh    0001h      DATA     1         @HCCINIT0_N1T1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00fch     00fch    0001h      DATA     1         @HCCINIT0_H2T2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00fdh     00fdh    0001h      DATA     1         @HCCINIT0_H2T1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00feh     00feh    0001h      DATA     1         @HCCINIT0_H1T2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00ffh     00ffh    0001h      DATA     1         @HCCINIT0_H1T1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0080h     0080h    0001h      DATA     1         @HCCINIT0_TM2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0081h     0081h    0001h      DATA     1         @HCCINIT0_TM1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0082h     0082h    0001h      DATA     1         @HCCINIT0_S2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0083h     0083h    0001h      DATA     1         @HCCINIT0_S1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0084h     0084h    0001h      DATA     1         @HCCINIT0_D2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0085h     0085h    0001h      DATA     1         @HCCINIT0_D1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0086h     0086h    0001h      DATA     1         @HCCINIT0_M2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0087h     0087h    0001h      DATA     1         @HCCINIT0_M1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0088h     0088h    0001h      DATA     1         @HCCINIT0_Y4 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     0089h     0089h    0001h      DATA     1         @HCCINIT0_Y3 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     008ah     008ah    0001h      DATA     1         @HCCINIT0_Y2 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     008bh     008bh    0001h      DATA     1         @HCCINIT0_Y1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     01h     008ch     008ch    0001h      DATA     2         @data_r328 (isr:ra~rh)
+     01h     008dh     008dh    0001h      DATA     2         @data_r428 (isr:ra~rh)
+     01h     008eh     008eh    0001h      DATA     2         @data_r528 (isr:ra~rh)
+     01h     008fh     008fh    0001h      DATA     2         @data_r628 (isr:ra~rh)
+     01h     0090h     0090h    0001h      DATA     2         @data_r320 (isr:ra~rh)
+     01h     0091h     0091h    0001h      DATA     2         @data_r420 (isr:ra~rh)
+     01h     0092h     0092h    0001h      DATA     2         @data_r520 (isr:ra~rh)
+     01h     0093h     0093h    0001h      DATA     2         @data_r620 (isr:ra~rh)
+>>>>>>> 63842fd (car-light)
 
      Local Sections
 
      Bank    Start     End      Length     Class    AvgIns    Name
+<<<<<<< HEAD
      00h     00a7h     00a7h    0000h      LOCAL    0         @dummy36 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
      00h     00a7h     00a7h    0000h      LOCAL    0         _TB0_ISR (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
      00h     00a7h     00a7h    0000h      LOCAL    0         @dummy40 (E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
@@ -235,10 +366,100 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00e6h              _KeySel
      06c7h              _Key_Select
      04e3h              _Key_Touch
+=======
+     00h     00a2h     00a2h    0000h      LOCAL    0         @dummy36 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a2h     00a2h    0000h      LOCAL    0         _TB0_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a2h     00a2h    0000h      LOCAL    0         @dummy40 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a1h     00a1h    0001h      LOCAL    15        _TB1_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     009bh     009bh    0000h      LOCAL    0         _Math (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0096h     009ah    0005h      LOCAL    8.6       _builtin_holtek_divmodqi4_isr28 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0097h     0099h    0003h      LOCAL    4.3333    _DispTimer (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0096h     0096h    0001h      LOCAL    1         _Displayer (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     009eh     00a0h    0003h      LOCAL    2.6667    _NTC_MAP (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0096h     0096h    0001h      LOCAL    4         _ADC_GetChannelValue (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0096h     0096h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0096h     009dh    0008h      LOCAL    4.25      _builtin_holtek_divmodhi4_isr28 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0096h     0096h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     0097h     0097h    0001h      LOCAL    3         _DispTemp (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0096h     0096h    0000h      LOCAL    0         @dummy32 (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0096h     0096h    0000h      LOCAL    0         _PTMR (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     0096h     0096h    0000h      LOCAL    0         _Date (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00bah     00bah    0000h      LOCAL    0         @dummy (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00bah     00bah    0000h      LOCAL    0         _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00aeh     00b5h    0008h      LOCAL    5         _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a2h     00adh    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a2h     00a2h    0000h      LOCAL    0         _ADC_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a2h     00a2h    0000h      LOCAL    0         _IO_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a2h     00a2h    0000h      LOCAL    0         _TB0_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a2h     00a2h    0000h      LOCAL    0         _TB1_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a4h     00a4h    0000h      LOCAL    0         _PTMRINIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a2h     00a3h    0002h      LOCAL    2.5       _PTMR_PERIOD (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a2h     00a2h    0000h      LOCAL    0         _TuochKeyInit (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00b6h     00b9h    0004h      LOCAL    2         _CalibrTuoch (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a2h     00a5h    0004h      LOCAL    3         _delay_10us (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a2h     00afh    000eh      LOCAL    7.5       _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00b0h     00b0h    0001h      LOCAL    2         _Key_Select (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+     00h     00a2h     00a2h    0000h      LOCAL    0         _Key_Touch (C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0256h              _ADC_GetChannelValue
+     024ah              _ADC_INIT
+     00c6h              _Belink
+     0081h[0]           _Belinker
+     0080h[7]           _Belinking
+     00c0h              _Bip
+     00bch              _Biper
+     00f1h              _CNT_DISP
+     00dch              _CalibrCount1
+     00dbh              _CalibrCount2
+     05feh              _CalibrTuoch
+     00e7h              _CountOn
+     00e6h              _CountTemp
+     00cah              _Count_B1
+     00c8h              _Count_B2
+     00c4h              _Count_C1
+     00c2h              _Count_C2
+     00deh              _Count_H1
+     00ddh              _Count_H2
+     00d0h              _Count_P1
+     00cch              _Count_P2
+     00d7h              _Count_T1
+     00d6h              _Count_T2
+     00d4h              _Count_TQ
+     083eh              _Crom2Prom
+     083dh              _Crom2PromNext
+     0185h              _D1
+     0184h              _D2
+     041bh              _Date
+     00ech              _Day
+     00bah              _Disp
+     0212h              _DispTemp
+     01b4h              _DispTimer
+     00efh              _Display
+     011dh              _Displayer
+     0081h[4]           _Dot
+     00f7h              _H1
+     00d9h              _H124
+     00ffh              _H1T1
+     00feh              _H1T2
+     00f6h              _H2
+     00fdh              _H2T1
+     00fch              _H2T2
+     00beh              _Hrs
+     00e5h              _Hrs1
+     00e4h              _Hrs2
+     0105h              _IO_INIT
+     00e9h              _Kab
+     00e1h              _KeySel
+     06aeh              _Key_Select
+     04cdh              _Key_Touch
+>>>>>>> 63842fd (car-light)
      0080h[2]           _Litgh
      0081h[5]           _Lock
      00b1h              _LookTime
      00c9h              _Lookup
+<<<<<<< HEAD
      018ch              _M1
      018bh              _M2
      0193h              _Math
@@ -309,6 +530,77 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00ddh              _iq
      00c5h              _j
      076bh              _main
+=======
+     0187h              _M1
+     0186h              _M2
+     0193h              _Math
+     00edh              _May
+     00bfh              _Min
+     00e3h              _Min1
+     00e2h              _Min2
+     00f5h              _N1
+     00fbh              _N1T1
+     00fah              _N1T2
+     00f4h              _N2
+     00f9h              _N2T1
+     00f8h              _N2T2
+     0291h              _NTC_MAP
+     004dh              _NTC_Table
+     00e8h              _Ok
+     0080h[6]           _PM1
+     0080h[5]           _PM2
+     046ch              _PTMR
+     0459h              _PTMRINIT
+     044bh              _PTMR_PERIOD
+     00e0h              _S
+     0183h              _S1
+     0182h              _S2
+     00dfh              _Sec
+     0081h[3]           _Seg1
+     0081h[2]           _Seg2
+     0081h[1]           _Seg3
+     00f0h              _Seletion
+     0080h[3]           _SetAlarm
+     0080h[4]           _SetTime
+     00bbh              _State
+     00f3h              _T1
+     00f2h              _T2
+     02e0h              _TB0_INIT
+     02f4h              _TB0_ISR
+     02eah              _TB1_INIT
+     02f9h              _TB1_ISR
+     0181h              _TM1
+     0180h              _TM2
+     00eeh              _Temp
+     0495h              _TuochKeyInit
+     018bh              _Y1
+     018ah              _Y2
+     0189h              _Y3
+     0188h              _Y4
+     00eah              _Yer
+     07d4h              __DELAYX0
+     07d3h              __DELAYX1
+     07d3h              __DELAYX2
+     07d2h              __DELAYX3
+     07d2h              __DELAYX4
+     07d1h              __DELAYX5
+     07d1h              __DELAYX6
+     07dbh              _builtin_holtek_mulsi3_isr00
+     00a6h              _builtin_holtek_mulsi3_isr00_2
+     0866h              _builtin_holtek_udivmodhi4_isr28
+     009bh              _builtin_holtek_udivmodhi4_isr28_2
+     084dh              _builtin_holtek_udivmodqi4_isr28
+     0096h              _builtin_holtek_udivmodqi4_isr28_2
+     07fah              _builtin_holtek_udivmodsi4_isr00
+     0001h              _delay_10us
+     00a2h              _delay_10us_2
+     00d1h              _delay_ms
+     00aeh              _delay_ms_2
+     00dah              _i
+     00d8h              _iq
+     00c1h              _j
+     0752h              _main
+>>>>>>> 63842fd (car-light)
      0080h[1]           _q1
      0080h[0]           _q2
      0094h              r120
@@ -317,6 +609,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0095h              r220
      0091h              r224
      0093h              r228
+<<<<<<< HEAD
      0195h              r320
      0191h              r328
      0196h              r420
@@ -325,6 +618,16 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0193h              r528
      0198h              r620
      0194h              r628
+=======
+     0190h              r320
+     018ch              r328
+     0191h              r420
+     018dh              r428
+     0192h              r520
+     018eh              r528
+     0193h              r620
+     018fh              r628
+>>>>>>> 63842fd (car-light)
      0082h              ra
      0089h              ra28
      0083h              rb
@@ -339,7 +642,11 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      008fh              rf28
      0088h              rg
      008eh              rg28
+<<<<<<< HEAD
      07cbh              startup_value_1
+=======
+     07b2h              startup_value_1
+>>>>>>> 63842fd (car-light)
 
      Address            Public by Value
      0001h              _delay_10us
@@ -364,6 +671,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0093h              r228
      0094h              r120
      0095h              r220
+<<<<<<< HEAD
      0096h              _builtin_holtek_udivmodqi4_isr00_2
      009ch              _DispTimer_2
      009fh              _builtin_holtek_udivmodhi4_isr28_2
@@ -461,6 +769,104 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0300h              _TB1_INIT
      030ah              _TB0_ISR
      030fh              _TB1_ISR
+=======
+     0096h              _builtin_holtek_udivmodqi4_isr28_2
+     009bh              _builtin_holtek_udivmodhi4_isr28_2
+     00a2h              _delay_10us_2
+     00a6h              _builtin_holtek_mulsi3_isr00_2
+     00aeh              _delay_ms_2
+     00b1h              _LookTime
+     00bah              _Disp
+     00bbh              _State
+     00bch              _Biper
+     00beh              _Hrs
+     00bfh              _Min
+     00c0h              _Bip
+     00c1h              _j
+     00c2h              _Count_C2
+     00c4h              _Count_C1
+     00c6h              _Belink
+     00c8h              _Count_B2
+     00c9h              _Lookup
+     00cah              _Count_B1
+     00cch              _Count_P2
+     00d0h              _Count_P1
+     00d1h              _delay_ms
+     00d4h              _Count_TQ
+     00d6h              _Count_T2
+     00d7h              _Count_T1
+     00d8h              _iq
+     00d9h              _H124
+     00dah              _i
+     00dbh              _CalibrCount2
+     00dch              _CalibrCount1
+     00ddh              _Count_H2
+     00deh              _Count_H1
+     00dfh              _Sec
+     00e0h              _S
+     00e1h              _KeySel
+     00e2h              _Min2
+     00e3h              _Min1
+     00e4h              _Hrs2
+     00e5h              _Hrs1
+     00e6h              _CountTemp
+     00e7h              _CountOn
+     00e8h              _Ok
+     00e9h              _Kab
+     00eah              _Yer
+     00ech              _Day
+     00edh              _May
+     00eeh              _Temp
+     00efh              _Display
+     00f0h              _Seletion
+     00f1h              _CNT_DISP
+     00f2h              _T2
+     00f3h              _T1
+     00f4h              _N2
+     00f5h              _N1
+     00f6h              _H2
+     00f7h              _H1
+     00f8h              _N2T2
+     00f9h              _N2T1
+     00fah              _N1T2
+     00fbh              _N1T1
+     00fch              _H2T2
+     00fdh              _H2T1
+     00feh              _H1T2
+     00ffh              _H1T1
+     0105h              _IO_INIT
+     011dh              _Displayer
+     0180h              _TM2
+     0181h              _TM1
+     0182h              _S2
+     0183h              _S1
+     0184h              _D2
+     0185h              _D1
+     0186h              _M2
+     0187h              _M1
+     0188h              _Y4
+     0189h              _Y3
+     018ah              _Y2
+     018bh              _Y1
+     018ch              r328
+     018dh              r428
+     018eh              r528
+     018fh              r628
+     0190h              r320
+     0191h              r420
+     0192h              r520
+     0193h              r620
+     0193h              _Math
+     01b4h              _DispTimer
+     0212h              _DispTemp
+     024ah              _ADC_INIT
+     0256h              _ADC_GetChannelValue
+     0291h              _NTC_MAP
+     02e0h              _TB0_INIT
+     02eah              _TB1_INIT
+     02f4h              _TB0_ISR
+     02f9h              _TB1_ISR
+>>>>>>> 63842fd (car-light)
      0080h[0]           _q2
      0080h[1]           _q1
      0080h[2]           _Litgh
@@ -475,6 +881,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0081h[3]           _Seg1
      0081h[4]           _Dot
      0081h[5]           _Lock
+<<<<<<< HEAD
      0430h              _Date
      0461h              _PTMR_PERIOD
      046fh              _PTMRINIT
@@ -505,10 +912,41 @@ Warning(L3009) : Same sub function exists between ISR(20H) CMG and MAIN CMG: _Ma
 ROM Usage Statistics
      Size      Used     Percentage
      1000h     08b9h    54%
+=======
+     041bh              _Date
+     044bh              _PTMR_PERIOD
+     0459h              _PTMRINIT
+     046ch              _PTMR
+     0495h              _TuochKeyInit
+     04cdh              _Key_Touch
+     05feh              _CalibrTuoch
+     06aeh              _Key_Select
+     0752h              _main
+     07b2h              startup_value_1
+     07d1h              __DELAYX5
+     07d1h              __DELAYX6
+     07d2h              __DELAYX3
+     07d2h              __DELAYX4
+     07d3h              __DELAYX1
+     07d3h              __DELAYX2
+     07d4h              __DELAYX0
+     07dbh              _builtin_holtek_mulsi3_isr00
+     07fah              _builtin_holtek_udivmodsi4_isr00
+     083dh              _Crom2PromNext
+     083eh              _Crom2Prom
+     084dh              _builtin_holtek_udivmodqi4_isr28
+     0866h              _builtin_holtek_udivmodhi4_isr28
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     1000h     0887h    53%
+>>>>>>> 63842fd (car-light)
 
 RAM Usage Statistics
     Bank      Size      Used     Percentage
      00h       0080h     0080h    100%
+<<<<<<< HEAD
      01h       0080h     0019h    19%
      02h       0080h     0000h    0%
      03h       0080h     0000h    0%
@@ -521,10 +959,47 @@ _PTMR: 3
 _main: 3
 
 Call Tree
+=======
+     01h       0080h     0014h    15%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     Total     0200h     0094h    28%
+
+Use Stack Count
+_DispYear: 1
+_DispDate: 1
+_DispSetTimer: 1
+_DispSetTime: 1
+_DispSetTiming1: 1
+_DispSetTiming2: 1
+_TB0_ISR: 0
+_TB1_ISR: 2
+_PTMR: 1
+_main: 3
+
+Call Tree
+    _DispYear
+        _Displayer (0)
+    _DispDate
+        _Displayer (0)
+    _DispSetTimer
+        _Displayer (0)
+    _DispSetTime
+        _Displayer (0)
+    _DispSetTiming1
+        _Displayer (0)
+    _DispSetTiming2
+        _Displayer (0)
+>>>>>>> 63842fd (car-light)
     @dummy36
         _TB0_ISR (0)
     @dummy40
         _TB1_ISR (0)
+<<<<<<< HEAD
+=======
+            _Math (1)
+                _builtin_holtek_divmodqi4_isr28 (2)
+>>>>>>> 63842fd (car-light)
             _DispTimer (1)
                 _Displayer (2)
             _NTC_MAP (1)
@@ -539,8 +1014,11 @@ Call Tree
     @dummy32
         _PTMR (0)
             _Date (1)
+<<<<<<< HEAD
                 _Math (2)
                     _builtin_holtek_divmodqi4_isr00 (3)
+=======
+>>>>>>> 63842fd (car-light)
     @dummy
         _main (0)
             _delay_ms (1)
@@ -561,9 +1039,16 @@ Call Tree
             _Key_Select (1)
                 _builtin_holtek_divmodsi4_isr00 (2)
             _Key_Touch (1)
+<<<<<<< HEAD
                 _Math (2)
                     _builtin_holtek_divmodqi4_isr00 (3)
 
 HLINK: Program entry point at section '@code' (address 0) of file 'E:\hamed\touch2\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ'
 
 Total 0 error(s), Total 1 Warning(s)
+=======
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\OneDrive\Documents\HTK_Project\clock-temp-touch\CLOCK-TEMP-TOUCH.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)
+>>>>>>> 63842fd (car-light)

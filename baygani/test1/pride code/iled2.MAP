@@ -1,0 +1,105 @@
+
+Linker Version 8.7.7.220718
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ)
+     00h     0001h     0021h    0021h      CODE               @start (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ)
+     00h     0022h     0039h    0018h      CODE               _Delay (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ)
+     00h     003ah     0055h    001ch      CODE               _init (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ)
+     00h     0056h     0130h    00dbh      CODE               _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ)
+     00h     0131h     0138h    0008h      CODE               @ROMDATA_BASE (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\STARTUP1_L.OBJ)
+     00h     0139h     017bh    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     0068h    0009h      DATA     1.8889    @HCCINIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ)
+     00h     0069h     006ch    0004h      DATA     2.5       @HCCINIT0 (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ)
+     00h     006dh     006dh    0001h      DATA     3         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     006eh     006eh    0001h      DATA     6         @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     006fh     006fh    0001h      DATA     6         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0070h     0070h    0001h      DATA     4         @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0071h     0071h    0001h      DATA     4         @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0072h     0072h    0001h      DATA     4         @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0073h     0073h    0001h      DATA     4         @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0074h     0074h    0001h      DATA     4         @data_rh (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0091h     0091h    0000h      LOCAL    0         @dummy (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ)
+     00h     0083h     0090h    000eh      LOCAL    3.7143    _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ)
+     00h     0075h     0075h    0000h      LOCAL    0         _init (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ)
+     00h     0075h     007ch    0008h      LOCAL    3         _Delay (C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ)
+     00h     0075h     0082h    000eh      LOCAL    4.7143    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Public Symbols Information
+     Address            Public by Name
+     0022h              _Delay
+     0075h              _Delay_2
+     0139h              _builtin_holtek_udivmodsi4_isr00
+     007dh              _builtin_holtek_udivmodsi4_isr00_2
+     0061h              _fingerCounter
+     006bh              _i
+     003ah              _init
+     0060h              _isInDoor
+     0056h              _main
+     0069h              _touch
+     0065h              _touchThreshold
+     006dh              ra
+     006eh              rb
+     006fh              rc
+     0070h              rd
+     0071h              re
+     0072h              rf
+     0073h              rg
+     0074h              rh
+     0130h              startup_value_1
+
+     Address            Public by Value
+     0022h              _Delay
+     003ah              _init
+     0056h              _main
+     0060h              _isInDoor
+     0061h              _fingerCounter
+     0065h              _touchThreshold
+     0069h              _touch
+     006bh              _i
+     006dh              ra
+     006eh              rb
+     006fh              rc
+     0070h              rd
+     0071h              re
+     0072h              rf
+     0073h              rg
+     0074h              rh
+     0075h              _Delay_2
+     007dh              _builtin_holtek_udivmodsi4_isr00_2
+     0130h              startup_value_1
+     0139h              _builtin_holtek_udivmodsi4_isr00
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     017ch    18%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0031h    38%
+     Total     0080h     0031h    38%
+
+Use Stack Count
+_main: 1
+
+Call Tree
+    @dummy
+        _main (0)
+            _init (1)
+            _Delay (1)
+            _builtin_holtek_divmodsi4_isr00 (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\OneDrive\Documents\HTK_Project\test1\pride code\ILED2.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

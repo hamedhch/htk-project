@@ -1,0 +1,123 @@
+
+Linker Version 8.7.7.220718
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\TOUCH-MCU-HTID.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\STARTUP1_L.OBJ
+Input Object File: C:\Users\hamed\AppData\Local\Temp\BS83B04A_LIBV413.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\TOUCH-MCU-HTID.OBJ)
+     00h     0001h     0001h    0001h      CODE               @start (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\TOUCH-MCU-HTID.OBJ)
+     00h     0002h     0002h    0001h      CODE               _clock_init (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\TOUCH-MCU-HTID.OBJ)
+     00h     0008h     0008h    0001h      CODE               TOUCH_INT (C:\Users\hamed\AppData\Local\Temp\BS83B04A_LIBV413.OBJ)
+     00h     0009h     0009h    0001h      CODE               LIBRARY_VERSION (C:\Users\hamed\AppData\Local\Temp\BS83B04A_LIBV413.OBJ)
+     00h     0014h     0017h    0004h      CODE               TIME_BASE_INT (C:\Users\hamed\AppData\Local\Temp\BS83B04A_LIBV413.OBJ)
+     00h     0018h     0485h    046eh      CODE               TKS_LIBRARY_CODE (C:\Users\hamed\AppData\Local\Temp\BS83B04A_LIBV413.OBJ)
+     00h     0486h     0494h    000fh      CODE               _self_touch_init (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\TOUCH-MCU-HTID.OBJ)
+     00h     0495h     04b8h    0024h      CODE               _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\TOUCH-MCU-HTID.OBJ)
+     00h     0060h     00aah    004bh      DATA     0.1333    TKS_LIBRARY_DATA0 (C:\Users\hamed\AppData\Local\Temp\BS83B04A_LIBV413.OBJ)
+     00h     00abh     00abh    0001h      DATA     6         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00aeh     00aeh    0000h      LOCAL    0         @dummy (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\TOUCH-MCU-HTID.OBJ)
+     00h     00ach     00adh    0002h      LOCAL    3         _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\TOUCH-MCU-HTID.OBJ)
+     00h     00ach     00ach    0000h      LOCAL    0         _self_touch_init (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\TOUCH-MCU-HTID.OBJ)
+
+     Indepentent Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00ach     00ach    0000h      ILOCAL   0         _clock_init (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\TOUCH-MCU-HTID.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     007eh[3]           _ANY_KEY_PRESSF
+     0018h              _BS83B04A_LIBV413
+     0076h              _BS83B04A_LIBV413_INITIAL
+     00feh              _CHECK_KEY_WAKEUP
+     0067h              _DATA_BUF
+     007eh[0]           _FORCE_CALIBRATEF
+     046eh              _GET_ENV_VALUE
+     0466h              _GET_KEY_AMOUNT
+     0468h              _GET_KEY_BITMAP
+     0461h              _GET_LIB_VER
+     046bh              _GET_RCC_VALUE
+     0471h              _GET_REF_VALUE
+     0060h              _GLOBE_VARIES
+     0073h              _KEY_DATA
+     0072h              _KEY_IO_SEL
+     008bh              _KEY_REF
+     007fh              _KEY_STATUS
+     0076h              _LIBRARY_RESET
+     006fh              _SAMPLE_TIMES
+     007eh[2]           _SCAN_CYCLEF
+     0070h              _STANDBY_TIME
+     007eh[5]           _TKS_250MSF
+     007eh[6]           _TKS_500MSF
+     007eh[4]           _TKS_63MSF
+     007eh[1]           _TKS_ACTIVEF
+     007eh              _TKS_FLAGA
+     0071h              _TKS_TIME_BASE
+     0002h              _clock_init
+     0495h              _main
+     0486h              _self_touch_init
+     00abh              ra
+
+     Address            Public by Value
+     0002h              _clock_init
+     0018h              _BS83B04A_LIBV413
+     0060h              _GLOBE_VARIES
+     0067h              _DATA_BUF
+     006fh              _SAMPLE_TIMES
+     0070h              _STANDBY_TIME
+     0071h              _TKS_TIME_BASE
+     0072h              _KEY_IO_SEL
+     0073h              _KEY_DATA
+     0076h              _BS83B04A_LIBV413_INITIAL
+     0076h              _LIBRARY_RESET
+     007eh              _TKS_FLAGA
+     007fh              _KEY_STATUS
+     008bh              _KEY_REF
+     00abh              ra
+     00feh              _CHECK_KEY_WAKEUP
+     007eh[0]           _FORCE_CALIBRATEF
+     007eh[1]           _TKS_ACTIVEF
+     007eh[2]           _SCAN_CYCLEF
+     007eh[3]           _ANY_KEY_PRESSF
+     007eh[4]           _TKS_63MSF
+     007eh[5]           _TKS_250MSF
+     007eh[6]           _TKS_500MSF
+     0461h              _GET_LIB_VER
+     0466h              _GET_KEY_AMOUNT
+     0468h              _GET_KEY_BITMAP
+     046bh              _GET_RCC_VALUE
+     046eh              _GET_ENV_VALUE
+     0471h              _GET_REF_VALUE
+     0486h              _self_touch_init
+     0495h              _main
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     04aah    58%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     004eh    60%
+     Total     0080h     004eh    60%
+
+Use Stack Count
+_main: 1
+
+Call Tree
+    @dummy
+        _main (0)
+            _self_touch_init (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-mcu-htid\TOUCH-MCU-HTID.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

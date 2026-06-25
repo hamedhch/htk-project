@@ -34,6 +34,12 @@ void main()
     _te=1;
    
  OUTPUT();
+ 
+ q1=0,q2=0,q3=0;
+    
+ LED1=0,LED2=0,LED3=0;
+  
+  
  delay_ms(1);
  TuochKeyInit();
  delay_ms(1);
@@ -42,6 +48,7 @@ void main()
     /*LED1=q2;
 	LED3=!q2;*/
     
+  
  while(1)
  {
  	GCC_CLRWDT();

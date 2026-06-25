@@ -6,7 +6,11 @@ volatile unsigned char i=0, counter=0,CalibrCount=0,CalibrSample=0;
 
 volatile int nsicl=80;
 
+<<<<<<< HEAD
 volatile int ch2change=0 , changeconter=0 , rgb1=0  , rgb2=0 , rgbpals=0 , counterrgb=15000;
+=======
+volatile int rgbchange=0 , changeconter=0 , rgb1=0  , rgb2=0 , rgbpals=0 , counterrgb=15000;
+>>>>>>> 63842fd (car-light)
 
 volatile int ncount=0;
 volatile int counter1=0;
@@ -14,9 +18,15 @@ volatile int counter2=0;
 volatile int counter3=0;
 volatile int counter22=0;
 volatile int counter32=0;
+<<<<<<< HEAD
 volatile bit out1=0 , out2=0 ;
 volatile bit function=0;
 volatile unsigned char Setinoff=0;
+=======
+volatile unsigned char q=0 ;
+volatile bit function=0;
+
+>>>>>>> 63842fd (car-light)
 
 #define FINGER_FOCUS_ON	60
 
@@ -113,14 +123,15 @@ void TuochKeyInit()
 
 void Key_Touch()
 {
-	if(pin==0)function=0;
-	else function=1;
+	if(pin==0)function=1;
+	else function=0;
 	
 	
 	if(Count_S1 < Count_C1 - 50)
 	{
 		Count_T1++;
 		
+<<<<<<< HEAD
 		if(Count_T1 == FINGER_FOCUS_ON)
 		{
 			if(function==0 ){
@@ -138,6 +149,11 @@ void Key_Touch()
 		if(Count_T1>300 && out1==1 && out2==0 && ch2change==0 && function==0 && Setinoff==0){
 			
 			ch2change=1;
+=======
+		if(Count_T1>300 && q==1 && rgbchange==0 && function==0){
+			
+			rgbchange=1;
+>>>>>>> 63842fd (car-light)
 			
 			Count_T1=1000;
 			
@@ -145,6 +161,7 @@ void Key_Touch()
 			
 			counterrgb=0;
 			
+<<<<<<< HEAD
 			out2=1;
 		}
 	}
@@ -155,6 +172,30 @@ void Key_Touch()
 	 		{
 	 			out1=0;
 	 			
+=======
+			q=2;
+		}
+		
+	}
+	else if(Count_S1 > Count_C1 -10 )
+	{
+		
+		if(Count_T1 >= FINGER_FOCUS_ON  && Count_T1 <= FINGER_FOCUS_ON+300 && rgbchange==0 && counterrgb!=600)
+	 		{
+	 			
+	 			if(function==0){
+		 			if(q==0)q=1;
+					else q=0;
+	 			}
+	 			if(function==1){
+		 			if(q==0)q=1;
+					else if (q==1)q=2;
+					else if (q==2)q=3;
+					else q=0;
+	 			}
+				//if(q)rgbpals++;
+				
+>>>>>>> 63842fd (car-light)
 				CalibrCount=0;
 				CalibrSample=0;
 				Count_C1_Backup=0;
@@ -163,7 +204,11 @@ void Key_Touch()
 	 		}
 	 	else Count_T1=0;
 	 	
+<<<<<<< HEAD
 	 	ch2change=0, Setinoff=0;
+=======
+	 	rgbchange=0;
+>>>>>>> 63842fd (car-light)
 	}
 }
 
@@ -202,7 +247,11 @@ void Key_Select()
 	KeyTouch1();
 	while(!_tkrcov ){GCC_NOP();} ;
 	Count_S1 = (unsigned int)((_tkm016dh <<8) | _tkm016dl);
+<<<<<<< HEAD
 	if(ch2change==0)CalibrCount++;
+=======
+	if(rgbchange==0)CalibrCount++;
+>>>>>>> 63842fd (car-light)
 	if(CalibrCount>100)
 	{
 		CalibrCount=0;	
@@ -232,10 +281,17 @@ void __attribute((interrupt(0x04))) int0(void)
 {
 	
 	
+<<<<<<< HEAD
 	if(ch2change)counterrgb++;
 	if(counterrgb>=20000)counterrgb=20000;
 	
 	if(counterrgb>=600)ch2change=0;
+=======
+	if(rgbchange)counterrgb++;
+	if(counterrgb>=20000)counterrgb=20000;
+	
+	if(counterrgb>=600)rgbchange=0;
+>>>>>>> 63842fd (car-light)
 	
 	
 	if(counterrgb==15)LED1=1;
@@ -250,7 +306,11 @@ void __attribute((interrupt(0x04))) int0(void)
 	
 	
 	//  ???? ????
+<<<<<<< HEAD
 	if(out1==1  && counterrgb>=50 ){
+=======
+	if(q==1  && counterrgb>=50 ){
+>>>>>>> 63842fd (car-light)
 		
 		counter3=counter3-1;
 		
@@ -265,7 +325,11 @@ void __attribute((interrupt(0x04))) int0(void)
 		}
 		
 	}
+<<<<<<< HEAD
 	if(out2==1  && counterrgb>=50 ){
+=======
+	if(q==2  && counterrgb>=50 ){
+>>>>>>> 63842fd (car-light)
 		
 		counter32=counter32-1;
 		
@@ -283,7 +347,11 @@ void __attribute((interrupt(0x04))) int0(void)
 	
 	
 	//????? ????
+<<<<<<< HEAD
 	if(out1==0 && counterrgb>=50){
+=======
+	if(q==3 && counterrgb>=50){
+>>>>>>> 63842fd (car-light)
 		LED1= 0;
 		/*LED2= 0;
 		ch2=0;*/
@@ -293,8 +361,19 @@ void __attribute((interrupt(0x04))) int0(void)
 	
 	}
 	
+<<<<<<< HEAD
 	if(out2==0 && counterrgb>=50){
 		
+=======
+	if(q==0 && counterrgb>=50){
+		
+		LED1= 0;
+		/*LED2= 0;
+		ch2=0;*/
+		if(counter2<=80){
+			counter2=counter2+2;
+		}
+>>>>>>> 63842fd (car-light)
 		
 		LED2= 0;/*
 		LED2= 0;
@@ -322,7 +401,11 @@ void __attribute((interrupt(0x0C))) timer(void)
 	
 	
 	
+<<<<<<< HEAD
 	if(out1==1  && counterrgb>=50){
+=======
+	if(q==1  && counterrgb>=50){
+>>>>>>> 63842fd (car-light)
 		
 		if(counter1>=counter3){
 			LED1=1;
@@ -331,7 +414,11 @@ void __attribute((interrupt(0x0C))) timer(void)
 		counter2=counter3;
 		
 	}
+<<<<<<< HEAD
 	if(out2==1  && counterrgb>=50){
+=======
+	if(q==2  && counterrgb>=50){
+>>>>>>> 63842fd (car-light)
 		
 		if(counter1>=counter32){
 			LED2=1;
@@ -341,21 +428,44 @@ void __attribute((interrupt(0x0C))) timer(void)
 		
 	}
 	
+<<<<<<< HEAD
 	if(out1==0  && counterrgb>=50){
+=======
+	if(q==3  && counterrgb>=50){
+>>>>>>> 63842fd (car-light)
 		
 		if(counter1>=counter2){
 			LED1=1;
 		}
 		counter3=ncount;
+<<<<<<< HEAD
 	}
 	
 	if(out2==0 && counterrgb>=50){
 		
+=======
+	/*	LED2=0;
+		ch2=0*/;
+	}
+	
+	if(q==0  && counterrgb>=50){
+		
+		if(counter1>=counter2){
+			LED1=1;
+		}
+		counter3=ncount;
+>>>>>>> 63842fd (car-light)
 		
 		if(counter1>=counter22){
 			LED2=1;
 		}
 		counter32=ncount;
+<<<<<<< HEAD
+=======
+		counter3=ncount;
+	/*	LED2=0;
+		ch2=0*/;
+>>>>>>> 63842fd (car-light)
 	}
 	
 	

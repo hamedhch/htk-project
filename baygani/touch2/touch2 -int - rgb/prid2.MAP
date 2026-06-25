@@ -1,0 +1,168 @@
+
+Linker Version 8.7.7.220718
+Input Object File: C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ
+Input Object File: C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0004h     0007h    0004h      CODE               @int0_code (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     000ch     000fh    0004h      CODE               @timer_code (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0010h     0030h    0021h      CODE               @start (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0031h     00c3h    0093h      CODE               _int0 (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     00c4h     0126h    0063h      CODE               _timer (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0127h     013eh    0018h      CODE               _Delay (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     013fh     0165h    0027h      CODE               _init (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0166h     02deh    0179h      CODE               _main (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     02dfh     02f2h    0014h      CODE               @ROMDATA_BASE (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\STARTUP1_L.OBJ)
+     00h     02f3h     0335h    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     0080h    0021h      DATA     4.0606    @HCCINIT (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     0081h     008ch    000ch      DATA     1         @HCCINIT0 (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     008dh     008dh    0001h      DATA     0         @BITDATASEC (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\STARTUP1_L.OBJ)
+     00h     008eh     008eh    0001h      DATA     8         @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     008fh     008fh    0001h      DATA     8         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0090h     0090h    0001h      DATA     19        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0091h     0091h    0001h      DATA     19        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0092h     0092h    0001h      DATA     17        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0093h     0093h    0001h      DATA     17        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0094h     0094h    0001h      DATA     2         @data_r104 (isr:ra~rh)
+     00h     0095h     0095h    0001h      DATA     2         @data_r204 (isr:ra~rh)
+     00h     0096h     0096h    0001h      DATA     6         @data_ra04 (isr:ra~rh)
+     00h     0097h     0097h    0001h      DATA     6         @data_rb04 (isr:ra~rh)
+     00h     0098h     0098h    0001h      DATA     2         @data_r10c (isr:ra~rh)
+     00h     0099h     0099h    0001h      DATA     2         @data_r20c (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     009ah     009ah    0000h      LOCAL    0         @dummy4 (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     009ah     009ah    0000h      LOCAL    0         _int0 (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     009ah     009ah    0000h      LOCAL    0         @dummy12 (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     009ah     009ah    0000h      LOCAL    0         _timer (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     00bch     00bch    0000h      LOCAL    0         @dummy (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     00a8h     00bbh    0014h      LOCAL    5.3       _main (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     009ah     009ah    0000h      LOCAL    0         _init (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     009ah     00a1h    0008h      LOCAL    3         _Delay (C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ)
+     00h     009ah     00a7h    000eh      LOCAL    4.7143    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Public Symbols Information
+     Address            Public by Name
+     006ch              _B
+     0127h              _Delay
+     009ah              _Delay_2
+     006eh              _G
+     0070h              _R
+     0074h              _alltouch
+     02f3h              _builtin_holtek_udivmodsi4_isr00
+     00a2h              _builtin_holtek_udivmodsi4_isr00_2
+     0064h              _counter
+     0062h              _counter2
+     0060h              _counter3
+     0083h              _f
+     0079h              _fingerCounter
+     008bh              _i
+     013fh              _init
+     0031h              _int0
+     0078h              _isInDoor
+     0089h              _j
+     006ah              _m
+     0068h              _m2
+     0166h              _main
+     0087h              _n
+     0066h              _ncount
+     0072h              _nsicl
+     008dh[0]           _q
+     0085h              _t
+     00c4h              _timer
+     0081h              _touch
+     007dh              _touchThreshold
+     0094h              r104
+     0098h              r10c
+     0095h              r204
+     0099h              r20c
+     0096h              ra04
+     008eh              rb
+     0097h              rb04
+     008fh              rc
+     0090h              rd
+     0091h              re
+     0092h              rf
+     0093h              rg
+     02deh              startup_value_1
+
+     Address            Public by Value
+     0031h              _int0
+     0060h              _counter3
+     0062h              _counter2
+     0064h              _counter
+     0066h              _ncount
+     0068h              _m2
+     006ah              _m
+     006ch              _B
+     006eh              _G
+     0070h              _R
+     0072h              _nsicl
+     0074h              _alltouch
+     0078h              _isInDoor
+     0079h              _fingerCounter
+     007dh              _touchThreshold
+     0081h              _touch
+     0083h              _f
+     0085h              _t
+     0087h              _n
+     0089h              _j
+     008bh              _i
+     008eh              rb
+     008fh              rc
+     0090h              rd
+     0091h              re
+     0092h              rf
+     0093h              rg
+     0094h              r104
+     0095h              r204
+     0096h              ra04
+     0097h              rb04
+     0098h              r10c
+     0099h              r20c
+     009ah              _Delay_2
+     00a2h              _builtin_holtek_udivmodsi4_isr00_2
+     00c4h              _timer
+     0127h              _Delay
+     013fh              _init
+     0166h              _main
+     02deh              startup_value_1
+     02f3h              _builtin_holtek_udivmodsi4_isr00
+     008dh[0]           _q
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     032fh    39%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     005ch    71%
+     Total     0080h     005ch    71%
+
+Use Stack Count
+_int0: 0
+_timer: 0
+_main: 1
+
+Call Tree
+    @dummy4
+        _int0 (0)
+    @dummy12
+        _timer (0)
+    @dummy
+        _main (0)
+            _init (1)
+            _Delay (1)
+            _builtin_holtek_divmodsi4_isr00 (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\FadakSystem\Downloads\touch2\touch2 -int - rgb\PRID2.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

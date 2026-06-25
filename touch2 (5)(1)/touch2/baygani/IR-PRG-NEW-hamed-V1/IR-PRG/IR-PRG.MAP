@@ -1,0 +1,250 @@
+
+Linker Version 8.7.7.220718
+Input Object File: E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\time_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\ctype_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\math_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\stdlib_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\string_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0002h    0003h      CODE               @CODE (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0003h     0003h    0001h      CODE               STARTSEC (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0004h     0004h    0001h      CODE               @@ISR_EXINT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0005h     0007h    0003h      CODE               @STM_SinglePulseOutputConfig (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0008h     0008h    0001h      CODE               @@ISR_TB0 (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0009h     000bh    0003h      CODE               @STM_CompareMatchOutputConfig (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     000ch     000ch    0001h      CODE               @@ISR_TB1 (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     000dh     001ah    000eh      CODE               __DELAY (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB)
+     00h     001bh     002fh    0015h      CODE               @Delay_10us (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0030h     0038h    0009h      CODE               @Delay_Chek (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0039h     0045h    000dh      CODE               @Delay_1ms (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0046h     0059h    0014h      CODE               @Delay_ms (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     005ah     0060h    0007h      CODE               @IO_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0061h     006bh    000bh      CODE               @STM_Init (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     006ch     006fh    0004h      CODE               @STM_PwmOutputConfig (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0070h     009bh    002ch      CODE               @STM_PwmUpdate (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     009ch     00a9h    000eh      CODE               @STM_SinglePulseUpdate (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     00aah     00b7h    000eh      CODE               @STM_CounterModeConfig (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     00b8h     00c5h    000eh      CODE               @STM_CompareMatchOutputUpdate (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     00c6h     00d4h    000fh      CODE               @STM_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     00d5h     00ddh    0009h      CODE               @TB0_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     00deh     00e5h    0008h      CODE               @TB1_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     00e6h     00f1h    000ch      CODE               @TB_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     00f2h     019fh    00aeh      CODE               @ISR_TB1 (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     01a0h     0237h    0098h      CODE               @ISR_TB0 (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0238h     0241h    000ah      CODE               @EX_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0242h     02b6h    0075h      CODE               @ISR_EXINT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     02b7h     02ffh    0049h      CODE               @MAIN (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0040h     0043h    0004h      DATA     3         @ISR_TB1 (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0044h     0047h    0004h      DATA     8         @ISR_TB0 (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0048h     004bh    0004h      DATA     4         @ISR_EXINT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     004ch     0058h    000dh      DATA     2         CTMPDATA (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB)
+     00h     005eh     0061h    0004h      DATA     0         @m (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0062h     0063h    0002h      DATA     0         @Set (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0064h     0065h    0002h      DATA     0         @Counter_Off (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0066h     0067h    0002h      DATA     0         @Counter_On (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0068h     0069h    0002h      DATA     0         @Counter (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     006ah     006bh    0002h      DATA     0         @Backup (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     006ch     006ch    0001h      DATA     0         @Lock (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     006dh     006dh    0001h      DATA     0         @Puls_off (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     006eh     006eh    0001h      DATA     0         @Puls_Count (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     006fh     006fh    0001h      DATA     0         @Detect (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0070h     0070h    0001h      DATA     0         @CountSW (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0071h     0071h    0001h      DATA     0         @Count (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0072h     0072h    0001h      DATA     0         @Shift (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0073h     0073h    0001h      DATA     0         @Triger (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0074h     0074h    0001h      DATA     0         @Trig (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0075h     0075h    0001h      DATA     0         @Zero_Flag (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0076h     0076h    0001h      DATA     0         @Zero_Time (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0077h     0077h    0001h      DATA     0         @CountEdge (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0078h     0078h    0001h      DATA     0         @Frist (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     005bh     005bh    0001h      LOCAL    3         _Delay_Chek (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     005ah    0002h      LOCAL    6         _Delay_10us (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     005ah     005dh    0004h      LOCAL    2         _Delay_ms (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0001h      LOCAL    3         _Delay_1ms (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     005eh     005eh    0000h      LOCAL    0         @DUMMY (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     005eh     005eh    0000h      LOCAL    0         _main (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      LOCAL    0         _IO_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     005eh     005eh    0000h      LOCAL    0         _STM_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      LOCAL    0         _STM_Init (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      LOCAL    0         _STM_PwmOutputConfig (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     005dh    0005h      LOCAL    4.8       _STM_PwmUpdate (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      LOCAL    0         _TB0_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      LOCAL    0         _TB1_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      LOCAL    0         _EX_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+
+     Indepentent Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0059h     0059h    0000h      ILOCAL   0         _STM_SinglePulseOutputConfig (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     005ch    0004h      ILOCAL   2.25      _STM_SinglePulseUpdate (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     005ch    0004h      ILOCAL   2.25      _STM_CounterModeConfig (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      ILOCAL   0         _STM_CompareMatchOutputConfig (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     005ch    0004h      ILOCAL   2.25      _STM_CompareMatchOutputUpdate (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      ILOCAL   0         _TB_INIT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      ILOCAL   0         _ISR_TB1 (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      ILOCAL   0         _ISR_TB0 (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      ILOCAL   0         _ISR_EXINT (E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ)
+     00h     0059h     0059h    0000h      ILOCAL   0         __DELAYY (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB)
+
+     Public Symbols Information
+     Address            Public by Name
+     005ch              Delay_ms0
+     004ch              RH
+     004dh              V1A
+     0050h              V1BP
+     004fh              V1MP1
+     004eh              V1S
+     0051h              V2A
+     0054h              V2BP
+     0053h              V2MP1
+     0052h              V2S
+     0055h              V3A
+     0058h              V3BP
+     0057h              V3MP1
+     0056h              V3S
+     006ah              _Backup
+     0071h              _Count
+     0077h              _CountEdge
+     0070h              _CountSW
+     0068h              _Counter
+     0064h              _Counter_Off
+     0066h              _Counter_On
+     001bh              _Delay_10us
+     0039h              _Delay_1ms
+     0030h              _Delay_Chek
+     0046h              _Delay_ms
+     006fh              _Detect
+     0238h              _EX_INIT
+     0078h              _Frist
+     005ah              _IO_INIT
+     006ch              _Lock
+     006eh              _Puls_Count
+     006dh              _Puls_off
+     0009h              _STM_CompareMatchOutputConfig
+     00b8h              _STM_CompareMatchOutputUpdate
+     00aah              _STM_CounterModeConfig
+     00c6h              _STM_INIT
+     0061h              _STM_Init
+     006ch              _STM_PwmOutputConfig
+     0070h              _STM_PwmUpdate
+     0005h              _STM_SinglePulseOutputConfig
+     009ch              _STM_SinglePulseUpdate
+     0062h              _Set
+     0072h              _Shift
+     00d5h              _TB0_INIT
+     00deh              _TB1_INIT
+     00e6h              _TB_INIT
+     0074h              _Trig
+     0073h              _Triger
+     0075h              _Zero_Flag
+     0076h              _Zero_Time
+     0012h              __DELAYY0
+     0011h              __DELAYY1
+     0010h              __DELAYY2
+     000fh              __DELAYY3
+     000eh              __DELAYY4
+     000dh              __DELAYY5
+     005eh              _m
+
+     Address            Public by Value
+     0005h              _STM_SinglePulseOutputConfig
+     0009h              _STM_CompareMatchOutputConfig
+     000dh              __DELAYY5
+     000eh              __DELAYY4
+     000fh              __DELAYY3
+     0010h              __DELAYY2
+     0011h              __DELAYY1
+     0012h              __DELAYY0
+     001bh              _Delay_10us
+     0030h              _Delay_Chek
+     0039h              _Delay_1ms
+     0046h              _Delay_ms
+     004ch              RH
+     004dh              V1A
+     004eh              V1S
+     004fh              V1MP1
+     0050h              V1BP
+     0051h              V2A
+     0052h              V2S
+     0053h              V2MP1
+     0054h              V2BP
+     0055h              V3A
+     0056h              V3S
+     0057h              V3MP1
+     0058h              V3BP
+     005ah              _IO_INIT
+     005ch              Delay_ms0
+     005eh              _m
+     0061h              _STM_Init
+     0062h              _Set
+     0064h              _Counter_Off
+     0066h              _Counter_On
+     0068h              _Counter
+     006ah              _Backup
+     006ch              _STM_PwmOutputConfig
+     006ch              _Lock
+     006dh              _Puls_off
+     006eh              _Puls_Count
+     006fh              _Detect
+     0070h              _STM_PwmUpdate
+     0070h              _CountSW
+     0071h              _Count
+     0072h              _Shift
+     0073h              _Triger
+     0074h              _Trig
+     0075h              _Zero_Flag
+     0076h              _Zero_Time
+     0077h              _CountEdge
+     0078h              _Frist
+     009ch              _STM_SinglePulseUpdate
+     00aah              _STM_CounterModeConfig
+     00b8h              _STM_CompareMatchOutputUpdate
+     00c6h              _STM_INIT
+     00d5h              _TB0_INIT
+     00deh              _TB1_INIT
+     00e6h              _TB_INIT
+     0238h              _EX_INIT
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0400h     0300h    75%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0040h     0039h    89%
+     Total     0040h     0039h    89%
+
+Use Stack Count
+_Delay_Chek: 1
+_Delay_ms: 1
+_main: 2
+
+Call Tree
+    _Delay_Chek
+        _Delay_10us (0)
+    _Delay_ms
+        _Delay_1ms (0)
+    @DUMMY
+        _main (0)
+            _IO_INIT (1)
+            _STM_INIT (1)
+                _STM_Init (2)
+                _STM_PwmOutputConfig (2)
+                _STM_PwmUpdate (2)
+            _TB0_INIT (1)
+            _TB1_INIT (1)
+            _EX_INIT (1)
+
+HLINK: Program entry point at section '@CODE' (address 0) of file 'E:\hamed\touch2\IR-PRG-NEW-hamed-V1\IR-PRG\IR-PRG.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

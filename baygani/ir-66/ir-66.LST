@@ -1,0 +1,580 @@
+"File: ir-66.c       Holtek Cross-Assembler  Version 3.00      Page 1
+
+
+
+;  17: {
+  17  0000              __stm0ah EQU [02dH]
+  17  0000              __stm0al EQU [02cH]
+  17  0000              __stm0dh EQU [02bH]
+  17  0000              __stm0dl EQU [02aH]
+  17  0000              __stm0c1 EQU [029H]
+  17  0000              __stm0c0 EQU [028H]
+  17  0000              __pasr EQU [026H]
+  17  0000              __rstc EQU [025H]
+  17  0000              __sadc2 EQU [024H]
+  17  0000              __sadc1 EQU [023H]
+  17  0000              __sadc0 EQU [022H]
+  17  0000              __sadoh EQU [021H]
+  17  0000              __sadol EQU [020H]
+  17  0000              __eed EQU [01fH]
+  17  0000              __eea EQU [01eH]
+  17  0000              __smod1 EQU [01cH]
+  17  0000              __tbc EQU [01bH]
+  17  0000              __wdtc EQU [019H]
+  17  0000              __ifs0 EQU [018H]
+  17  0000              __pawu EQU [017H]
+  17  0000              __papu EQU [016H]
+  17  0000              __pac EQU [015H]
+  17  0000              __pa EQU [014H]
+  17  0000              __mfi0 EQU [011H]
+  17  0000              __intc1 EQU [0fH]
+  17  0000              __intc0 EQU [0eH]
+  17  0000              __integ EQU [0dH]
+  17  0000              __smod EQU [0bH]
+  17  0000              __status EQU [0aH]
+  17  0000              __tblh EQU [08H]
+  17  0000              __tblp EQU [07H]
+  17  0000              __pcl EQU [06H]
+  17  0000              __acc EQU [05H]
+  17  0000              __bp EQU [04H]
+  17  0000              __mp1 EQU [03H]
+  17  0000              __iar1 EQU [02H]
+  17  0000              __mp0 EQU [01H]
+  17  0000              __iar0 EQU [00H]
+  17  0000              @MAIN .SECTION 'CODE'
+  17  0000              _main PROC
+  17  0000              begin:
+
+;  21: 	_pac5 = 0;
+  21  0000  3695        CLR [015H].5
+
+;  22: 	_pac7 = 0;
+  22  0001  3795        CLR [015H].7
+
+;  23: 	_pac1 = 0;
+  23  0002  3495        CLR [015H].1
+
+;  25: 	_pac6 = 1;
+  25  0003  3315        SET [015H].6
+
+;  28: 	out1=0;
+  28  0004  3694        CLR [014H].5
+"File: ir-66.c       Holtek Cross-Assembler  Version 3.00      Page 2 
+
+
+;  32: 	_pas0 = 1;
+  32  0005  3026        SET [026H].0
+
+;  33: 	_pas1 = 1;
+  33  0006  30A6        SET [026H].1
+
+;  37: 	_adrfs = 1;
+  37  0007  3222        SET [022H].4
+
+;  40: 	_sacks2 = 0; _sacks1 = 1; _sacks0 = 1;
+  40  0008  3523        CLR [023H].2
+  40  0009  30A3        SET [023H].1
+  40  000A  3023        SET [023H].0
+
+;  43: 	_savrs3 = 0; _savrs2 = 0; _savrs1 = 0; _savrs0 = 0;
+  43  000B  35A4        CLR [024H].3
+  43  000C  3524        CLR [024H].2
+  43  000D  34A4        CLR [024H].1
+  43  000E  3424        CLR [024H].0
+
+;  46: 	_enadc=1;
+  46  000F  32A2        SET [022H].5
+
+;  49: 	_adf = 0;
+  49  0010  370F        CLR [0FH].6
+
+;  50: 	_ade = 1;
+  50  0011  310F        SET [0FH].2
+
+;  53: 	_emi = 1;
+  53  0012  300E        SET [0EH].0
+
+;  57: 	for(i=0; i <20 ; i++)
+  57  0013  0F00     R  MOV A,BANK _i
+  57  0014  0084        MOV [04H],A
+  57  0015  0F00     R  MOV A,OFFSET _i
+  57  0016  0083        MOV [03H],A
+  57  0017  1F02        CLR [02H]
+  57  0018  1483        INC [03H]
+  57  0019  1F02        CLR [02H]
+  57  001A              L2:
+
+;  60: 		_sacs0=0;
+  60  001A  3422        CLR [022H].0
+
+;  61: 		_sacs1=0;
+  61  001B  34A2        CLR [022H].1
+
+;  65: 		_start = 0; _start = 1; _start = 0;
+  65  001C  37A2        CLR [022H].7
+  65  001D  33A2        SET [022H].7
+  65  001E  37A2        CLR [022H].7
+  65  001F              L6:
+  65  001F              L7:
+
+;  68: 		while(1 == _adbz);	
+  68  001F  3F22        SZ [022H].6
+  68  0020  2800     R  JMP L6
+
+;  72: 		Value= (unsigned int )((_sadoh <<8) | _sadol) ;
+"File: ir-66.c       Holtek Cross-Assembler  Version 3.00      Page 3 
+
+  72  0021  0F08        MOV A,08h
+  72  0022  0080     R  MOV b0_1,A
+  72  0023  0700     R  MOV A,b0_1
+  72  0024  0080     E  MOV RH,A
+  72  0025  0721        MOV A,__sadoh
+  72  0026  0080     R  MOV b0_1,A
+  72  0027  1080     E  SZ RH
+  72  0028  2800     R  JMP sha23
+  72  0029  2800     R  JMP shb23
+  72  002A              sha23:
+  72  002A  340A        CLR [0AH].0
+  72  002B  1A80     R  RLC b0_1
+  72  002C  1780     E  SDZ RH
+  72  002D  2800     R  JMP sha23
+  72  002E              shb23:
+  72  002E  0720        MOV A,__sadol
+  72  002F  0580     R  ORM A,b0_1
+  72  0030  1F00     R  CLR b0_1[1]
+  72  0031  0F00     R  MOV A,BANK _Value
+  72  0032  0084        MOV [04H],A
+  72  0033  0F00     R  MOV A,OFFSET _Value
+  72  0034  0083        MOV [03H],A
+  72  0035  0700     R  MOV A,b0_1
+  72  0036  0082        MOV [02H],A
+  72  0037  1483        INC [03H]
+  72  0038  0700     R  MOV A,b0_1[1]
+  72  0039  0082        MOV [02h],A
+  72  003A  1483        INC [03h]
+  72  003B  1F02        CLR [02H]
+  72  003C  1483        INC [03h]
+  72  003D  1F02        CLR [02h]
+
+;  73: 		ValueThreshold+=Value;
+  73  003E  0F00     R  MOV A,BANK _Value
+  73  003F  0084        MOV [04H],A
+  73  0040  0F00     R  MOV A,OFFSET _Value
+  73  0041  0083        MOV [03H],A
+  73  0042  0702        MOV A,[02H]
+  73  0043  0080     R  MOV b0_1,A
+  73  0044  1483        INC [03h]
+  73  0045  0702        MOV A,[02h]
+  73  0046  0080     R  MOV b0_1[1],A
+  73  0047  1483        INC [03h]
+  73  0048  0702        MOV A,[02h]
+  73  0049  0080     R  MOV b0_1[2],A
+  73  004A  1483        INC [03h]
+  73  004B  0702        MOV A,[02h]
+  73  004C  0080     R  MOV b0_1[3],A
+  73  004D  0F00     R  MOV A,BANK _ValueThreshold
+  73  004E  0084        MOV [04H],A
+  73  004F  0F00     R  MOV A,OFFSET _ValueThreshold
+  73  0050  0083        MOV [03H],A
+  73  0051  0700     R  MOV A,b0_1
+  73  0052  0382        ADDM A,[02H]
+  73  0053  0700     R  MOV A,b0_1[1]
+  73  0054  1483        INC [03H]
+  73  0055  1382        ADCM A,[02H]
+  73  0056  0700     R  MOV A,b0_1[2]
+  73  0057  1483        INC [03H]
+  73  0058  1382        ADCM A,[02H]
+"File: ir-66.c       Holtek Cross-Assembler  Version 3.00      Page 4 
+
+  73  0059  0700     R  MOV A,b0_1[3]
+  73  005A  1483        INC [03H]
+  73  005B  1382        ADCM A,[02H]
+
+;  75: 		_delay(100);
+  75  005C  0F18        MOV A,018H
+  75  005D  2000     E  CALL __DELAYX0
+  75  005E              L3:
+
+;  57: 	for(i=0; i <20 ; i++)
+  57  005E  0F00     R  MOV A,BANK _i
+  57  005F  0084        MOV [04H],A
+  57  0060  0F00     R  MOV A,OFFSET _i
+  57  0061  0083        MOV [03H],A
+  57  0062  0F01        MOV A,01h
+  57  0063  0382        ADDM A,[02H]
+  57  0064  0F00        MOV A,00h
+  57  0065  1483        INC [03H]
+  57  0066  1382        ADCM A,[02H]
+  57  0067  0F00     R  MOV A,BANK _i
+  57  0068  0084        MOV [04H],A
+  57  0069  0F00     R  MOV A,OFFSET _i
+  57  006A  0083        MOV [03H],A
+  57  006B  0702        MOV A,[02H]
+  57  006C  0080     R  MOV b0_1,A
+  57  006D  1483        INC [03H]
+  57  006E  0702        MOV A,[02H]
+  57  006F  0080     R  MOV b0_1[1],A
+  57  0070  0F80        MOV A,80h
+  57  0071  0400     R  XOR A,b0_1[1]
+  57  0072  0A80        SUB A,080h
+  57  0073  380A        SNZ [0AH].0
+  57  0074  2800     R  JMP L2
+  57  0075  390A        SNZ [0AH].2
+  57  0076  2800     R  JMP L24
+  57  0077  0700     R  MOV A,b0_1
+  57  0078  0A14        SUB A,014h
+  57  0079  380A        SNZ [0AH].0
+  57  007A  2800     R  JMP L2
+  57  007B              L24:
+
+;  77: 	ValueThreshold = ValueThreshold /20;
+  77  007B  0F00     R  MOV A,BANK _ValueThreshold
+  77  007C  0084        MOV [04H],A
+  77  007D  0F00     R  MOV A,OFFSET _ValueThreshold
+  77  007E  0083        MOV [03H],A
+  77  007F  0702        MOV A,[02H]
+  77  0080  0080     R  MOV b0_1,A
+  77  0081  1483        INC [03h]
+  77  0082  0702        MOV A,[02h]
+  77  0083  0080     R  MOV b0_1[1],A
+  77  0084  1483        INC [03h]
+  77  0085  0702        MOV A,[02h]
+  77  0086  0080     R  MOV b0_1[2],A
+  77  0087  1483        INC [03h]
+  77  0088  0702        MOV A,[02h]
+  77  0089  0080     R  MOV b0_1[3],A
+  77  008A  0700     R  MOV A,b0_1
+  77  008B  0080     E  MOV T2,A
+  77  008C  0700     R  MOV A,b0_1[1]
+"File: ir-66.c       Holtek Cross-Assembler  Version 3.00      Page 5 
+
+  77  008D  0080     E  MOV RH,A
+  77  008E  0700     R  MOV A,b0_1[2]
+  77  008F  0080     E  MOV RM,A
+  77  0090  0700     R  MOV A,b0_1[3]
+  77  0091  0080     E  MOV RU,A
+  77  0092  0F00        MOV A,00h
+  77  0093  0080     E  MOV T6,A
+  77  0094  0F00        MOV A,00h
+  77  0095  0080     E  MOV T5,A
+  77  0096  0F00        MOV A,00h
+  77  0097  0080     E  MOV T4,A
+  77  0098  0F14        MOV A,014h
+  77  0099  0080     E  MOV T3,A
+  77  009A  2000     E  CALL DIVUL4
+  77  009B  0700     E  MOV A,RU
+  77  009C  0080     R  MOV b0_1[3],A
+  77  009D  0700     E  MOV A,RM
+  77  009E  0080     R  MOV b0_1[2],A
+  77  009F  0700     E  MOV A,RH
+  77  00A0  0080     R  MOV b0_1[1],A
+  77  00A1  0700     E  MOV A,T2
+  77  00A2  0080     R  MOV b0_1,A
+  77  00A3  0F00     R  MOV A,BANK _ValueThreshold
+  77  00A4  0084        MOV [04H],A
+  77  00A5  0F00     R  MOV A,OFFSET _ValueThreshold
+  77  00A6  0083        MOV [03H],A
+  77  00A7  0700     R  MOV A,b0_1
+  77  00A8  0082        MOV [02H],A
+  77  00A9  0700     R  MOV A,b0_1[1]
+  77  00AA  1483        INC [03H]
+  77  00AB  0082        MOV [02H],A
+  77  00AC  0700     R  MOV A,b0_1[2]
+  77  00AD  1483        INC [03H]
+  77  00AE  0082        MOV [02H],A
+  77  00AF  0700     R  MOV A,b0_1[3]
+  77  00B0  1483        INC [03H]
+  77  00B1  0082        MOV [02H],A
+  77  00B2  2800     R  JMP L10
+  77  00B3              L9:
+
+;  82: 		_clrwdt();
+  82  00B3  0001        CLR WDT
+
+;  87: 		_sacs0=0;
+  87  00B4  3422        CLR [022H].0
+
+;  88: 		_sacs1=0;
+  88  00B5  34A2        CLR [022H].1
+
+;  92: 		_start = 0; _start = 1; _start = 0;
+  92  00B6  37A2        CLR [022H].7
+  92  00B7  33A2        SET [022H].7
+  92  00B8  37A2        CLR [022H].7
+  92  00B9              L12:
+  92  00B9              L13:
+
+;  95: 		while(1 == _adbz);	
+  95  00B9  3F22        SZ [022H].6
+  95  00BA  2800     R  JMP L12
+
+;  99: 		Value= (unsigned long )((_sadoh <<8) | _sadol) ;
+"File: ir-66.c       Holtek Cross-Assembler  Version 3.00      Page 6 
+
+  99  00BB  0F08        MOV A,08h
+  99  00BC  0080     R  MOV b0_1,A
+  99  00BD  0700     R  MOV A,b0_1
+  99  00BE  0080     E  MOV RH,A
+  99  00BF  0721        MOV A,__sadoh
+  99  00C0  0080     R  MOV b0_1,A
+  99  00C1  1080     E  SZ RH
+  99  00C2  2800     R  JMP sha25
+  99  00C3  2800     R  JMP shb25
+  99  00C4              sha25:
+  99  00C4  340A        CLR [0AH].0
+  99  00C5  1A80     R  RLC b0_1
+  99  00C6  1780     E  SDZ RH
+  99  00C7  2800     R  JMP sha25
+  99  00C8              shb25:
+  99  00C8  0720        MOV A,__sadol
+  99  00C9  0580     R  ORM A,b0_1
+  99  00CA  0F00     R  MOV A,BANK _Value
+  99  00CB  0084        MOV [04H],A
+  99  00CC  0F00     R  MOV A,OFFSET _Value
+  99  00CD  0083        MOV [03H],A
+  99  00CE  0700     R  MOV A,b0_1
+  99  00CF  0082        MOV [02H],A
+  99  00D0  1483        INC [03H]
+  99  00D1  1F02        CLR [02H]
+  99  00D2  1483        INC [03h]
+  99  00D3  1F02        CLR [02h]
+  99  00D4  1483        INC [03h]
+  99  00D5  1F02        CLR [02h]
+
+; 102: 		for(i=0; i <Value ; i++)
+ 102  00D6  0F00     R  MOV A,BANK _i
+ 102  00D7  0084        MOV [04H],A
+ 102  00D8  0F00     R  MOV A,OFFSET _i
+ 102  00D9  0083        MOV [03H],A
+ 102  00DA  1F02        CLR [02H]
+ 102  00DB  1483        INC [03H]
+ 102  00DC  1F02        CLR [02H]
+ 102  00DD  2800     R  JMP L18
+ 102  00DE              L15:
+
+; 104: 			_clrwdt();
+ 104  00DE  0001        CLR WDT
+
+; 105: 			out2= ~out2;
+ 105  00DF  0F80        MOV A,1<<7
+ 105  00E0  0494        XORM A,[014H]
+
+; 106: 			_delay(10);
+ 106  00E1  0F01        MOV A,01H
+ 106  00E2  2000     E  CALL __DELAYX2
+ 106  00E3              L16:
+
+; 102: 		for(i=0; i <Value ; i++)
+ 102  00E3  0F00     R  MOV A,BANK _i
+ 102  00E4  0084        MOV [04H],A
+ 102  00E5  0F00     R  MOV A,OFFSET _i
+ 102  00E6  0083        MOV [03H],A
+ 102  00E7  0F01        MOV A,01h
+ 102  00E8  0382        ADDM A,[02H]
+"File: ir-66.c       Holtek Cross-Assembler  Version 3.00      Page 7 
+
+ 102  00E9  0F00        MOV A,00h
+ 102  00EA  1483        INC [03H]
+ 102  00EB  1382        ADCM A,[02H]
+ 102  00EC              L18:
+ 102  00EC  0F00     R  MOV A,BANK _i
+ 102  00ED  0084        MOV [04H],A
+ 102  00EE  0F00     R  MOV A,OFFSET _i
+ 102  00EF  0083        MOV [03H],A
+ 102  00F0  0702        MOV A,[02H]
+ 102  00F1  0080     R  MOV b0_1,A
+ 102  00F2  1483        INC [03H]
+ 102  00F3  0702        MOV A,[02H]
+ 102  00F4  0080     R  MOV b0_1[1],A
+ 102  00F5  1F00     R  CLR b0_1[2]
+ 102  00F6  3F85        SZ [05H].7
+ 102  00F7  1F80     R  SET b0_1[2]
+ 102  00F8  1F00     R  CLR b0_1[3]
+ 102  00F9  3F85        SZ [05H].7
+ 102  00FA  1F80     R  SET b0_1[3]
+ 102  00FB  0F00     R  MOV A,BANK _Value
+ 102  00FC  0084        MOV [04H],A
+ 102  00FD  0F00     R  MOV A,OFFSET _Value
+ 102  00FE  0083        MOV [03H],A
+ 102  00FF  0702        MOV A,[02H]
+ 102  0100  0080     R  MOV b1_1,A
+ 102  0101  1483        INC [03h]
+ 102  0102  0702        MOV A,[02h]
+ 102  0103  0080     R  MOV b1_1[1],A
+ 102  0104  1483        INC [03h]
+ 102  0105  0702        MOV A,[02h]
+ 102  0106  0080     R  MOV b1_1[2],A
+ 102  0107  1483        INC [03h]
+ 102  0108  0702        MOV A,[02h]
+ 102  0109  0080     R  MOV b1_1[3],A
+ 102  010A  0700     R  MOV A,b1_1[3]
+ 102  010B  0200     R  SUB A,b0_1[3]
+ 102  010C  380A        SNZ [0ah].0
+ 102  010D  2800     R  JMP L26
+ 102  010E  390A        SNZ [0ah].2
+ 102  010F  2800     R  JMP L15
+ 102  0110  0700     R  MOV A,b1_1[2]
+ 102  0111  0200     R  SUB A,b0_1[2]
+ 102  0112  380A        SNZ [0ah].0
+ 102  0113  2800     R  JMP L26
+ 102  0114  390A        SNZ [0ah].2
+ 102  0115  2800     R  JMP L15
+ 102  0116  0700     R  MOV A,b1_1[1]
+ 102  0117  0200     R  SUB A,b0_1[1]
+ 102  0118  380A        SNZ [0Ah].0
+ 102  0119  2800     R  JMP L26
+ 102  011A  390A        SNZ [0Ah].2
+ 102  011B  2800     R  JMP L15
+ 102  011C  0700     R  MOV A,b0_1
+ 102  011D  0200     R  SUB A,b1_1
+ 102  011E  380A        SNZ [0Ah].0
+ 102  011F  2800     R  JMP L15
+ 102  0120              L26:
+
+; 109: 		for(i=0; i <10 ; i++)
+ 109  0120  0F00     R  MOV A,BANK _i
+"File: ir-66.c       Holtek Cross-Assembler  Version 3.00      Page 8 
+
+ 109  0121  0084        MOV [04H],A
+ 109  0122  0F00     R  MOV A,OFFSET _i
+ 109  0123  0083        MOV [03H],A
+ 109  0124  1F02        CLR [02H]
+ 109  0125  1483        INC [03H]
+ 109  0126  1F02        CLR [02H]
+ 109  0127              L19:
+
+; 111: 			_clrwdt();
+ 111  0127  0001        CLR WDT
+
+; 112: 			_delay(100000);
+ 112  0128  0F61        MOV A,061H
+ 112  0129  0080     E  MOV RH,A
+ 112  012A  0F76        MOV A,076H
+ 112  012B  2000     E  CALL __DELAYY1
+ 112  012C              L20:
+
+; 109: 		for(i=0; i <10 ; i++)
+ 109  012C  0F00     R  MOV A,BANK _i
+ 109  012D  0084        MOV [04H],A
+ 109  012E  0F00     R  MOV A,OFFSET _i
+ 109  012F  0083        MOV [03H],A
+ 109  0130  0F01        MOV A,01h
+ 109  0131  0382        ADDM A,[02H]
+ 109  0132  0F00        MOV A,00h
+ 109  0133  1483        INC [03H]
+ 109  0134  1382        ADCM A,[02H]
+ 109  0135  0F00     R  MOV A,BANK _i
+ 109  0136  0084        MOV [04H],A
+ 109  0137  0F00     R  MOV A,OFFSET _i
+ 109  0138  0083        MOV [03H],A
+ 109  0139  0702        MOV A,[02H]
+ 109  013A  0080     R  MOV b0_1,A
+ 109  013B  1483        INC [03H]
+ 109  013C  0702        MOV A,[02H]
+ 109  013D  0080     R  MOV b0_1[1],A
+ 109  013E  0F80        MOV A,80h
+ 109  013F  0400     R  XOR A,b0_1[1]
+ 109  0140  0A80        SUB A,080h
+ 109  0141  380A        SNZ [0AH].0
+ 109  0142  2800     R  JMP L19
+ 109  0143  390A        SNZ [0AH].2
+ 109  0144  2800     R  JMP L27
+ 109  0145  0700     R  MOV A,b0_1
+ 109  0146  0A0A        SUB A,0ah
+ 109  0147  380A        SNZ [0AH].0
+ 109  0148  2800     R  JMP L19
+ 109  0149              L27:
+ 109  0149              L10:
+
+;  80: 	while(1){
+  80  0149  2800     R  JMP L9
+  80  014A              L1:
+
+; 152: }
+ 152  014A  2800     R  JMP $
+ 152  0000  0004[       LOCAL b0_1 DB 4 DUP(?)
+            00
+            ]
+"File: ir-66.c       Holtek Cross-Assembler  Version 3.00      Page 9 
+
+ 152  0004  0004[       LOCAL b1_1 DB 4 DUP(?)
+            00
+            ]
+ 152  014B              _main ENDP
+
+;  13: int f , i;
+  13  014B              PUBLIC _i
+  13  0000              @i .SECTION 'DATA'
+  13  0000  0002[       _i DB 2 DUP (?) ;i
+            00
+            ]
+  13  0002              PUBLIC _f
+  13  0000              @f .SECTION 'DATA'
+  13  0000  0002[       _f DB 2 DUP (?) ;f
+            00
+            ]
+
+;  10: ulong fingerCounter ;
+  10  0002              PUBLIC _fingerCounter
+  10  0000              @fingerCounter .SECTION 'DATA'
+  10  0000  0004[       _fingerCounter DB 4 DUP (?) ;fingerCounter
+            00
+            ]
+
+;   9: ulong  ValueThreshold;
+   9  0004              PUBLIC _ValueThreshold
+   9  0000              @ValueThreshold .SECTION 'DATA'
+   9  0000  0004[       _ValueThreshold DB 4 DUP (?) ;ValueThreshold
+            00
+            ]
+
+;   8: ulong  Value;
+   8  0004              PUBLIC _Value
+   8  0000              @Value .SECTION 'DATA'
+   8  0000  0004[       _Value DB 4 DUP (?) ;Value
+            00
+            ]
+
+;  16: void main()
+  16  0000              STARTSEC .SECTION  COM_L 'CODE'
+  16  0000              STARTUP:
+  16  0000              STARTSEC .SECTION  COM_E 'CODE'
+  16  0000  0003        RET
+  16  0001              EXTERN RH:BYTE
+  16  0001              EXTERN RM:BYTE
+  16  0001              EXTERN RU:BYTE
+  16  0001              EXTERN T2:BYTE
+  16  0001              EXTERN T3:BYTE
+  16  0001              EXTERN T4:BYTE
+  16  0001              EXTERN T5:BYTE
+  16  0001              EXTERN T6:BYTE
+  16  0001              EXTERN T7:BYTE
+  16  0001              EXTERN T8:BYTE
+  16  0001              EXTERN T9:BYTE
+  16  0001              EXTERN T10:BYTE
+  16  0001              EXTERN T11:BYTE
+  16  0001              EXTERN DIVUL4:NEAR
+  16  0001              EXTERN __DELAYX0:NEAR
+  16  0001              EXTERN __DELAYX1:NEAR
+  16  0001              EXTERN __DELAYX2:NEAR
+"File: ir-66.c       Holtek Cross-Assembler  Version 3.00      Page 10 
+
+  16  0001              EXTERN __DELAYX3:NEAR
+  16  0001              EXTERN __DELAYX4:NEAR
+  16  0001              EXTERN __DELAYX5:NEAR
+  16  0001              EXTERN __DELAYX6:NEAR
+  16  0001              EXTERN __DELAYY0:NEAR
+  16  0001              EXTERN __DELAYY1:NEAR
+  16  0001              EXTERN __DELAYY2:NEAR
+  16  0001              EXTERN __DELAYY3:NEAR
+  16  0001              EXTERN __DELAYY4:NEAR
+  16  0001              EXTERN __DELAYY5:NEAR
+  16  0000              @CODE .SECTION AT 0 'CODE'
+  16  0000  2000     R  CALL STARTUP
+  16  0001  2800     R  JMP begin
+  16  0002              @DUMMY PROC
+  16  0002  2000     R  CALL _main
+  16  0003              @DUMMY ENDP
+
+
+        0 Errors

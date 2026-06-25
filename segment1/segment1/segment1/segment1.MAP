@@ -1,0 +1,231 @@
+
+Linker Version 8.7.7.220718
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_lmrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0001h     0021h    0021h      CODE               @start (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0024h     0027h    0004h      CODE               @TB0_ISR_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0028h     002bh    0004h      CODE               @TB1_ISR_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     002ch     00c3h    0098h      CODE               @crom (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00c4h     00f7h    0034h      CODE               _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00f8h     0112h    001bh      CODE               _initMatrix (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0113h     012bh    0019h      CODE               _cleardisplay (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     012ch     0135h    000ah      CODE               _TB0_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0136h     013fh    000ah      CODE               _TB1_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0140h     01a5h    0066h      CODE               _TB0_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     01a6h     03b6h    0211h      CODE               _TB1_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     03b7h     03d4h    001eh      CODE               _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     03d5h     03e2h    000eh      CODE               @ROMDATA_BASE (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\STARTUP1_L.OBJ)
+     00h     03e3h     03ech    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     03edh     040bh    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     040ch     041bh    0010h      CODE               _CROM2PROM (CROM2PROM)
+     00h     0080h     0080h    0001h      DATA     9         @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0081h     0081h    0001h      DATA     9         @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0082h     0082h    0001h      DATA     9         @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0083h     0083h    0001h      DATA     9         @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0084h     0084h    0001h      DATA     2         @data_r124 (isr:ra~rh)
+     00h     0085h     0085h    0001h      DATA     2         @data_r224 (isr:ra~rh)
+     00h     0086h     0086h    0001h      DATA     3         @data_rb24 (isr:ra~rh)
+     00h     0087h     0087h    0001h      DATA     3         @data_rc24 (isr:ra~rh)
+     00h     0088h     0088h    0001h      DATA     2         @data_r128 (isr:ra~rh)
+     00h     0089h     0089h    0001h      DATA     2         @data_r228 (isr:ra~rh)
+     00h     008ah     008ah    0001h      DATA     86        @data_rb28 (isr:ra~rh)
+     00h     008bh     008bh    0001h      DATA     68        @data_rc28 (isr:ra~rh)
+     00h     008ch     008ch    0001h      DATA     14        @data_ra28 (isr:ra~rh)
+     00h     008dh     008dh    0001h      DATA     6         @data_rd28 (isr:ra~rh)
+     00h     008eh     008eh    0001h      DATA     2         @data_re28 (isr:ra~rh)
+     00h     008fh     008fh    0001h      DATA     4         @data_rf28 (isr:ra~rh)
+     00h     0090h     0090h    0001h      DATA     2         @data_rg28 (isr:ra~rh)
+     00h     00a7h     00a8h    0002h      DATA     15        @HCCINIT_R (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00a9h     00aah    0002h      DATA     9         @HCCINIT_newnaumber (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00abh     00ach    0002h      DATA     7         @HCCINIT_UP (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00adh     00aeh    0002h      DATA     7         @HCCINIT_oldnaumber (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00afh     00b0h    0002h      DATA     5         @HCCINIT_conter8 (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00b1h     00b2h    0002h      DATA     4         @HCCINIT_DN (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00b3h     00b6h    0004h      DATA     3         @HCCINIT_ni (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00b7h     00b8h    0002h      DATA     3         @HCCINIT_nj (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00b9h     00bah    0002h      DATA     3         @HCCINIT_n (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00bbh     00bch    0002h      DATA     0         @HCCINIT_rizesh (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00bdh     00bdh    0001h      DATA     2         @data_r328 (isr:ra~rh)
+     00h     00beh     00beh    0001h      DATA     2         @data_r428 (isr:ra~rh)
+     00h     00bfh     00bfh    0001h      DATA     2         @data_r528 (isr:ra~rh)
+     00h     00c0h     00c0h    0001h      DATA     2         @data_r628 (isr:ra~rh)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0093h     0093h    0000h      LOCAL    0         @dummy36 (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0093h     0093h    0000h      LOCAL    0         _TB0_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0093h     0093h    0000h      LOCAL    0         @dummy40 (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0091h     0092h    0002h      LOCAL    17        _TB1_ISR (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0091h     0091h    0000h      LOCAL    0         _cleardisplay (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0091h     0091h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     00a7h     00a7h    0000h      LOCAL    0         @dummy (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     00a7h     00a7h    0000h      LOCAL    0         _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     009fh     00a6h    0008h      LOCAL    3.5       _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0093h     009eh    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0093h     0093h    0000h      LOCAL    0         _initMatrix (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0093h     0093h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0093h     0093h    0000h      LOCAL    0         _TB0_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+     00h     0093h     0093h    0000h      LOCAL    0         _TB1_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     040dh              _Crom2Prom
+     040ch              _Crom2PromNext
+     00b1h              _DN
+     00a7h              _R
+     012ch              _TB0_INIT
+     0140h              _TB0_ISR
+     0136h              _TB1_INIT
+     01a6h              _TB1_ISR
+     00abh              _UP
+     03e6h              __DELAYX0
+     03e5h              __DELAYX1
+     03e5h              __DELAYX2
+     03e4h              __DELAYX3
+     03e4h              __DELAYX4
+     03e3h              __DELAYX5
+     03e3h              __DELAYX6
+     03edh              _builtin_holtek_mulsi3_isr00
+     0093h              _builtin_holtek_mulsi3_isr00_2
+     0113h              _cleardisplay
+     00afh              _conter8
+     00c4h              _delay_ms
+     009fh              _delay_ms_2
+     00f8h              _initMatrix
+     004ch              _jahatDN
+     002ch              _jahatDOOR
+     006ch              _jahatUP
+     03b7h              _main
+     00b9h              _n
+     00a9h              _newnaumber
+     00b3h              _ni
+     00b7h              _nj
+     008ch              _numbers
+     00adh              _oldnaumber
+     00bbh              _rizesh
+     0084h              r124
+     0088h              r128
+     0085h              r224
+     0089h              r228
+     00bdh              r328
+     00beh              r428
+     00bfh              r528
+     00c0h              r628
+     008ch              ra28
+     0086h              rb24
+     008ah              rb28
+     0087h              rc24
+     008bh              rc28
+     0080h              rd
+     008dh              rd28
+     0081h              re
+     008eh              re28
+     0082h              rf
+     008fh              rf28
+     0083h              rg
+     0090h              rg28
+     03d5h              startup_value_1
+
+     Address            Public by Value
+     002ch              _jahatDOOR
+     004ch              _jahatDN
+     006ch              _jahatUP
+     0080h              rd
+     0081h              re
+     0082h              rf
+     0083h              rg
+     0084h              r124
+     0085h              r224
+     0086h              rb24
+     0087h              rc24
+     0088h              r128
+     0089h              r228
+     008ah              rb28
+     008bh              rc28
+     008ch              _numbers
+     008ch              ra28
+     008dh              rd28
+     008eh              re28
+     008fh              rf28
+     0090h              rg28
+     0093h              _builtin_holtek_mulsi3_isr00_2
+     009fh              _delay_ms_2
+     00a7h              _R
+     00a9h              _newnaumber
+     00abh              _UP
+     00adh              _oldnaumber
+     00afh              _conter8
+     00b1h              _DN
+     00b3h              _ni
+     00b7h              _nj
+     00b9h              _n
+     00bbh              _rizesh
+     00bdh              r328
+     00beh              r428
+     00bfh              r528
+     00c0h              r628
+     00c4h              _delay_ms
+     00f8h              _initMatrix
+     0113h              _cleardisplay
+     012ch              _TB0_INIT
+     0136h              _TB1_INIT
+     0140h              _TB0_ISR
+     01a6h              _TB1_ISR
+     03b7h              _main
+     03d5h              startup_value_1
+     03e3h              __DELAYX6
+     03e3h              __DELAYX5
+     03e4h              __DELAYX4
+     03e4h              __DELAYX3
+     03e5h              __DELAYX2
+     03e5h              __DELAYX1
+     03e6h              __DELAYX0
+     03edh              _builtin_holtek_mulsi3_isr00
+     040ch              _Crom2PromNext
+     040dh              _Crom2Prom
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     1000h     041ah    25%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0041h    50%
+     01h       0080h     0000h    0%
+     02h       0080h     0000h    0%
+     03h       0080h     0000h    0%
+     Total     0200h     0041h    12%
+
+Use Stack Count
+_TB0_ISR: 0
+_TB1_ISR: 1
+_main: 2
+
+Call Tree
+    @dummy36
+        _TB0_ISR (0)
+    @dummy40
+        _TB1_ISR (0)
+            _cleardisplay (1)
+            _Crom2Prom (1)
+    @dummy
+        _main (0)
+            _delay_ms (1)
+                _builtin_holtek_mulsi3_isr00 (2)
+            _initMatrix (1)
+                __DELAYX (2)
+            _TB0_INIT (1)
+            _TB1_INIT (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\OneDrive\Documents\HTK_Project\segment1\segment1\segment1\SEGMENT1.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

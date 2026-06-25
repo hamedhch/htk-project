@@ -1,0 +1,162 @@
+
+Linker Version 8.7.7.220718
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\time_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\ctype_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\math_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\stdlib_mrsc.lib
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\string_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0002h    0003h      CODE               @CODE (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0003h     0003h    0001h      CODE               STARTSEC (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0004h     0004h    0001h      CODE               @@ISR_EXINT (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0008h     0008h    0001h      CODE               @@ISR_TB0 (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     000ch     000ch    0001h      CODE               @@ISR_TB1 (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     000dh     0021h    0015h      CODE               @Delay_10us (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0022h     002ah    0009h      CODE               @Delay_Chek (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     002bh     0037h    000dh      CODE               @Delay_1ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0038h     004bh    0014h      CODE               @Delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ch     0052h    0007h      CODE               @IO_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0053h     005bh    0009h      CODE               @TB0Init (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     005ch     0063h    0008h      CODE               @TB1Init (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0064h     006fh    000ch      CODE               @TBINIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0070h     00c7h    0058h      CODE               @ISR_TB0 (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     00c8h     00d1h    000ah      CODE               @EXININIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     00d2h     0122h    0051h      CODE               @ISR_EXINT (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0123h     026eh    014ch      CODE               @MAIN (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0040h     0040h    0001h      DATA     8         @ISR_TB0 (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0041h     0041h    0001h      DATA     2         @ISR_EXINT (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0042h     0049h    0008h      DATA     2         CTMPDATA (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\MATH6.LIB)
+     00h     0055h     0055h    0001h      DATA     0         @Pq (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0056h     0056h    0001h      DATA     0         @Lock (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0057h     0057h    0001h      DATA     0         @Puls_Count (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0058h     0058h    0001h      DATA     0         @Detect (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0059h     005ch    0004h      DATA     0         @Puls_off (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     005dh     0060h    0004h      DATA     0         @Puls_on (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0061h     0064h    0004h      DATA     0         @Timer (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0065h     0068h    0004h      DATA     0         @m (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     0069h     0069h    0001h      DATA     0         @Set (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     006ah     006ah    0001h      DATA     0         @Counter_Off (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     006bh     006bh    0001h      DATA     0         @Counter_On (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     006ch     006ch    0001h      DATA     0         @Counter (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     006dh     006dh    0001h      DATA     0         @Backup (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0055h     0055h    0000h      LOCAL    0         @DUMMY (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004fh     0054h    0006h      LOCAL    4         _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ah     004ah    0000h      LOCAL    0         _IO_INIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004bh     004eh    0004h      LOCAL    2.5       _Delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ah     004ah    0001h      LOCAL    3         _Delay_1ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ah     004ah    0000h      LOCAL    0         _TB0Init (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ah     004ah    0000h      LOCAL    0         _EXININIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ch     004ch    0001h      LOCAL    3         _Delay_Chek (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ah     004bh    0002h      LOCAL    6         _Delay_10us (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+
+     Indepentent Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     004ah     004ah    0000h      ILOCAL   0         _TB1Init (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ah     004ah    0000h      ILOCAL   0         _TBINIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ah     004ah    0000h      ILOCAL   0         _ISR_TB0 (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+     00h     004ah     004ah    0000h      ILOCAL   0         _ISR_EXINT (C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     004dh              Delay_ms0
+     0042h              V1A
+     0045h              V1BP
+     0044h              V1MP1
+     0043h              V1S
+     0046h              V2A
+     0049h              V2BP
+     0048h              V2MP1
+     0047h              V2S
+     006dh              _Backup
+     006ch              _Counter
+     006ah              _Counter_Off
+     006bh              _Counter_On
+     000dh              _Delay_10us
+     002bh              _Delay_1ms
+     0022h              _Delay_Chek
+     0038h              _Delay_ms
+     0058h              _Detect
+     00c8h              _EXININIT
+     004ch              _IO_INIT
+     0056h              _Lock
+     0055h              _Pq
+     0057h              _Puls_Count
+     0059h              _Puls_off
+     005dh              _Puls_on
+     0069h              _Set
+     0053h              _TB0Init
+     005ch              _TB1Init
+     0064h              _TBINIT
+     0061h              _Timer
+     0065h              _m
+
+     Address            Public by Value
+     000dh              _Delay_10us
+     0022h              _Delay_Chek
+     002bh              _Delay_1ms
+     0038h              _Delay_ms
+     0042h              V1A
+     0043h              V1S
+     0044h              V1MP1
+     0045h              V1BP
+     0046h              V2A
+     0047h              V2S
+     0048h              V2MP1
+     0049h              V2BP
+     004ch              _IO_INIT
+     004dh              Delay_ms0
+     0053h              _TB0Init
+     0055h              _Pq
+     0056h              _Lock
+     0057h              _Puls_Count
+     0058h              _Detect
+     0059h              _Puls_off
+     005ch              _TB1Init
+     005dh              _Puls_on
+     0061h              _Timer
+     0064h              _TBINIT
+     0065h              _m
+     0069h              _Set
+     006ah              _Counter_Off
+     006bh              _Counter_On
+     006ch              _Counter
+     006dh              _Backup
+     00c8h              _EXININIT
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0400h     0269h    60%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0040h     002eh    71%
+     Total     0040h     002eh    71%
+
+Use Stack Count
+_main: 2
+
+Call Tree
+    @DUMMY
+        _main (0)
+            _IO_INIT (1)
+            _Delay_ms (1)
+                _Delay_1ms (2)
+            _TB0Init (1)
+            _EXININIT (1)
+            _Delay_Chek (1)
+                _Delay_10us (2)
+
+HLINK: Program entry point at section '@CODE' (address 0) of file 'C:\Users\hamed\OneDrive\Documents\HTK_Project\IR-Detector-HR66F002-V2\IR-Detector-HR66F002-V2\IR-Detector-HR66F002\IR-DETECTOR-HR66F002.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

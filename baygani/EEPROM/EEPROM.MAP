@@ -1,0 +1,79 @@
+
+Linker Version 8.8.1.250507
+Input Object File: C:\Users\DATA\Documents\HTK_Project\EEPROM\EEPROM.OBJ
+Input Object File: C:\Users\DATA\Documents\HTK_Project\EEPROM\STARTUP1_L.OBJ
+
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\DATA\Documents\HTK_Project\EEPROM\EEPROM.OBJ)
+     00h     0001h     0001h    0001h      CODE               @start (C:\Users\DATA\Documents\HTK_Project\EEPROM\EEPROM.OBJ)
+     00h     0002h     0012h    0011h      CODE               _eeprom_read (C:\Users\DATA\Documents\HTK_Project\EEPROM\EEPROM.OBJ)
+     00h     0013h     0024h    0012h      CODE               _eeprom_write (C:\Users\DATA\Documents\HTK_Project\EEPROM\EEPROM.OBJ)
+     00h     0025h     0030h    000ch      CODE               _main (C:\Users\DATA\Documents\HTK_Project\EEPROM\EEPROM.OBJ)
+     00h     0031h     003ah    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     0060h    0001h      DATA     4         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0063h     0063h    0000h      LOCAL    0         @dummy (C:\Users\DATA\Documents\HTK_Project\EEPROM\EEPROM.OBJ)
+     00h     0063h     0063h    0000h      LOCAL    0         _main (C:\Users\DATA\Documents\HTK_Project\EEPROM\EEPROM.OBJ)
+     00h     0061h     0062h    0002h      LOCAL    2         _eeprom_write (C:\Users\DATA\Documents\HTK_Project\EEPROM\EEPROM.OBJ)
+     00h     0061h     0061h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0061h     0061h    0001h      LOCAL    1         _eeprom_read (C:\Users\DATA\Documents\HTK_Project\EEPROM\EEPROM.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0037h              __DELAYX0
+     0036h              __DELAYX1
+     0035h              __DELAYX2
+     0034h              __DELAYX3
+     0033h              __DELAYX4
+     0032h              __DELAYX5
+     0031h              __DELAYX6
+     0002h              _eeprom_read
+     0013h              _eeprom_write
+     0062h              _eeprom_write_2
+     0025h              _main
+     0060h              ra
+
+     Address            Public by Value
+     0002h              _eeprom_read
+     0013h              _eeprom_write
+     0025h              _main
+     0031h              __DELAYX6
+     0032h              __DELAYX5
+     0033h              __DELAYX4
+     0034h              __DELAYX3
+     0035h              __DELAYX2
+     0036h              __DELAYX1
+     0037h              __DELAYX0
+     0060h              ra
+     0062h              _eeprom_write_2
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     0800h     003bh    2%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0003h    2%
+     Total     0080h     0003h    2%
+
+Use Stack Count
+_main: 1
+
+Call Tree
+    @dummy
+        _main (0)
+            _eeprom_write (1)
+            __DELAYX (1)
+            _eeprom_read (1)
+
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\DATA\Documents\HTK_Project\EEPROM\EEPROM.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tkproject>
+    <tkwsinfo>
+        <version>3.5.3.0</version>
+    </tkwsinfo>
+    <project>
+        <mcu>BS83B04A-4</mcu>
+        <package>8SOP-A</package>
+        <path>C:\Users\hamed\OneDrive\Documents\HTK_Project\toch-mcu</path>
+        <name>toch-mcu</name>
+        <library name="BS83B04A_LIBV413" version="BS83B04A_LIBV413" />
+    </project>
+    <global />
+    <mcuconfig list_mode="0" list_simple="0">
+        <key index="4">
+            <match_pin>3</match_pin>
+        </key>
+    </mcuconfig>
+    <usrwnd>
+        <download flag="0" />
+        <ocds_mode>0</ocds_mode>
+    </usrwnd>
+</tkproject>

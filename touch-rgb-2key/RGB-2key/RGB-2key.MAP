@@ -1,13 +1,19 @@
 
 Linker Version 8.7.7.220718
+<<<<<<< HEAD
 Input Object File: E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ
 Input Object File: E:\hamed\touch2\touch-rgb-2key\RGB-2key\STARTUP1_L.OBJ
+=======
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ
+Input Object File: C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\STARTUP1_L.OBJ
+>>>>>>> 63842fd (car-light)
 
 Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
 Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\v3_tabrd_mrsc.lib
 
 
      Bank    Start     End      Length     Class    AvgIns    Name
+<<<<<<< HEAD
      00h     0000h     0000h    0001h      CODE               @code (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
      00h     0004h     0007h    0004h      CODE               @int0_code (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
      00h     000ch     000fh    0004h      CODE               @timer_code (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
@@ -28,6 +34,28 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00h     0652h     0688h    0037h      CODE               _builtin_holtek_divmodhi4_isr04 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0060h     00a1h    0042h      DATA     7.6212    @HCCINIT (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
      00h     00a2h     00a2h    0001h      DATA     0         @BITDATASEC (E:\hamed\touch2\touch-rgb-2key\RGB-2key\STARTUP1_L.OBJ)
+=======
+     00h     0000h     0000h    0001h      CODE               @code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0004h     0007h    0004h      CODE               @int0_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     000ch     000fh    0004h      CODE               @timer_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0010h     0027h    0018h      CODE               _TuochKeyInit (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0028h     0028h    0001h      CODE               @TOUCH_ISR_code (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0029h     0049h    0021h      CODE               @start (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     004ah     0067h    001eh      CODE               _delay_10us (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0068h     009eh    0037h      CODE               _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     009fh     0188h    00eah      CODE               _Key_Touch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0189h     021ah    0092h      CODE               _CalibrTuoch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     021bh     02a4h    008ah      CODE               _Key_Select (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     02a5h     0507h    0263h      CODE               _int0 (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0508h     0598h    0091h      CODE               _timer (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     0599h     05c3h    002bh      CODE               _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     05c4h     05e7h    0024h      CODE               @ROMDATA_BASE (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\STARTUP1_L.OBJ)
+     00h     05e8h     0606h    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0607h     0649h    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     064ah     0680h    0037h      CODE               _builtin_holtek_divmodhi4_isr04 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     00a1h    0042h      DATA     7.5303    @HCCINIT (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00a2h     00a2h    0001h      DATA     0         @BITDATASEC (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\STARTUP1_L.OBJ)
+>>>>>>> 63842fd (car-light)
      00h     00a3h     00a3h    0001h      DATA     4         @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     00a4h     00a4h    0001h      DATA     4         @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     00a5h     00a5h    0001h      DATA     4         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
@@ -37,14 +65,20 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00h     00a9h     00a9h    0001h      DATA     17        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     00aah     00aah    0001h      DATA     2         @data_r104 (isr:ra~rh)
      00h     00abh     00abh    0001h      DATA     2         @data_r204 (isr:ra~rh)
+<<<<<<< HEAD
      00h     00ach     00ach    0001h      DATA     12        @data_rb04 (isr:ra~rh)
      00h     00adh     00adh    0001h      DATA     12        @data_rc04 (isr:ra~rh)
+=======
+     00h     00ach     00ach    0001h      DATA     17        @data_rb04 (isr:ra~rh)
+     00h     00adh     00adh    0001h      DATA     18        @data_rc04 (isr:ra~rh)
+>>>>>>> 63842fd (car-light)
      00h     00aeh     00aeh    0001h      DATA     2         @data_r10c (isr:ra~rh)
      00h     00afh     00afh    0001h      DATA     2         @data_r20c (isr:ra~rh)
 
      Local Sections
 
      Bank    Start     End      Length     Class    AvgIns    Name
+<<<<<<< HEAD
      00h     00b8h     00b8h    0000h      LOCAL    0         @dummy4 (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
      00h     00b8h     00b8h    0000h      LOCAL    0         _int0 (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
      00h     00b0h     00b7h    0008h      LOCAL    9.625     _builtin_holtek_divmodhi4_isr04 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
@@ -60,6 +94,23 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00h     00b8h     00c5h    000eh      LOCAL    7.5       _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     00c6h     00c6h    0001h      LOCAL    2         _Key_Select (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
      00h     00b8h     00b8h    0000h      LOCAL    0         _Key_Touch (E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+=======
+     00h     00b8h     00b8h    0000h      LOCAL    0         @dummy4 (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b8h     00b8h    0000h      LOCAL    0         _int0 (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b0h     00b7h    0008h      LOCAL    8.125     _builtin_holtek_divmodhi4_isr04 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00b0h     00b0h    0000h      LOCAL    0         @dummy12 (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b0h     00b0h    0000h      LOCAL    0         _timer (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00d0h     00d0h    0000h      LOCAL    0         @dummy (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00d0h     00d0h    0000h      LOCAL    0         _main (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00c4h     00cbh    0008h      LOCAL    3.5       _delay_ms (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b8h     00c3h    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00b8h     00b8h    0000h      LOCAL    0         _TuochKeyInit (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00cch     00cfh    0004h      LOCAL    2         _CalibrTuoch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b8h     00bbh    0004h      LOCAL    3         _delay_10us (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b8h     00c5h    000eh      LOCAL    7.5       _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00c6h     00c6h    0001h      LOCAL    2         _Key_Select (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+     00h     00b8h     00b8h    0000h      LOCAL    0         _Key_Touch (C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ)
+>>>>>>> 63842fd (car-light)
 
      Public Symbols Information
      Address            Public by Name
@@ -84,12 +135,21 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      007ah              _RGB
      0028h              _TOUCH_ISR
      0010h              _TuochKeyInit
+<<<<<<< HEAD
      0652h              _builtin_holtek_divmodhi4_isr04
      05f0h              _builtin_holtek_mulsi3_isr00
      00bch              _builtin_holtek_mulsi3_isr00_2
      0664h              _builtin_holtek_udivmodhi4_isr04
      00b0h              _builtin_holtek_udivmodhi4_isr04_2
      060fh              _builtin_holtek_udivmodsi4_isr00
+=======
+     064ah              _builtin_holtek_divmodhi4_isr04
+     05e8h              _builtin_holtek_mulsi3_isr00
+     00bch              _builtin_holtek_mulsi3_isr00_2
+     065ch              _builtin_holtek_udivmodhi4_isr04
+     00b0h              _builtin_holtek_udivmodhi4_isr04_2
+     0607h              _builtin_holtek_udivmodsi4_isr00
+>>>>>>> 63842fd (car-light)
      0094h              _counter
      006ah              _counter1
      0068h              _counter12
@@ -103,8 +163,13 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0068h              _delay_ms
      00c4h              _delay_ms_2
      0095h              _i
+<<<<<<< HEAD
      02adh              _int0
      05a1h              _main
+=======
+     02a5h              _int0
+     0599h              _main
+>>>>>>> 63842fd (car-light)
      006ch              _ncount
      0082h              _nsicl
      00a2h[0]           _q
@@ -113,7 +178,11 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0076h              _rgbauto
      0078h              _rgbchange
      0070h              _rgbpals
+<<<<<<< HEAD
      0510h              _timer
+=======
+     0508h              _timer
+>>>>>>> 63842fd (car-light)
      00aah              r104
      00aeh              r10c
      00abh              r204
@@ -127,7 +196,11 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00a7h              re
      00a8h              rf
      00a9h              rg
+<<<<<<< HEAD
      05cbh              startup_value_1
+=======
+     05c3h              startup_value_1
+>>>>>>> 63842fd (car-light)
 
      Address            Public by Value
      0010h              _TuochKeyInit
@@ -186,6 +259,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00c4h              _delay_ms_2
      0189h              _CalibrTuoch
      021bh              _Key_Select
+<<<<<<< HEAD
      02adh              _int0
      0510h              _timer
      00a2h[0]           _q
@@ -195,11 +269,26 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      060fh              _builtin_holtek_udivmodsi4_isr00
      0652h              _builtin_holtek_divmodhi4_isr04
      0664h              _builtin_holtek_udivmodhi4_isr04
+=======
+     02a5h              _int0
+     0508h              _timer
+     00a2h[0]           _q
+     0599h              _main
+     05c3h              startup_value_1
+     05e8h              _builtin_holtek_mulsi3_isr00
+     0607h              _builtin_holtek_udivmodsi4_isr00
+     064ah              _builtin_holtek_divmodhi4_isr04
+     065ch              _builtin_holtek_udivmodhi4_isr04
+>>>>>>> 63842fd (car-light)
 
 
 ROM Usage Statistics
      Size      Used     Percentage
+<<<<<<< HEAD
      0800h     0682h    81%
+=======
+     0800h     067ah    80%
+>>>>>>> 63842fd (car-light)
 
 RAM Usage Statistics
     Bank      Size      Used     Percentage
@@ -231,6 +320,10 @@ Call Tree
                 _builtin_holtek_divmodsi4_isr00 (2)
             _Key_Touch (1)
 
+<<<<<<< HEAD
 HLINK: Program entry point at section '@code' (address 0) of file 'E:\hamed\touch2\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ'
+=======
+HLINK: Program entry point at section '@code' (address 0) of file 'C:\Users\hamed\OneDrive\Documents\HTK_Project\touch-rgb-2key\RGB-2key\RGB-2KEY.OBJ'
+>>>>>>> 63842fd (car-light)
 
 Total 0 error(s), Total 0 Warning(s)

@@ -111,7 +111,7 @@ void TuochKeyInit()
 void Key_Touch()
 {
 	
-	if(Count_S1 < Count_C1 - 50)
+	if(Count_S1 < Count_C1 - 40)
 	{
 		Count_T1++;
 		
@@ -244,7 +244,7 @@ void __attribute((interrupt(0x04))) int0(void)
 	
 	counterint++;
 	if(counterint>=1000)counterint=1000;
-	if(counterint>=200)rgbpals=0;
+	if(counterint>=400)rgbpals=0;
 	
 	
 	if(rgbpals>2 && rgbauto==0 && Set==1){

@@ -141,7 +141,11 @@ void Key_Touch()
 	
 	
 	
+<<<<<<< HEAD
 	if(Count_S2 < Count_C2 - 55)
+=======
+	if(Count_S2 < Count_C2 - 50)
+>>>>>>> 63842fd (car-light)
 	{
 		Count_T2++;
 		
@@ -174,7 +178,11 @@ void Key_Touch()
 	else if(Count_S2 > Count_C2 -10  && q==1)
 	{
 		
+<<<<<<< HEAD
 		if(Count_T2 >= (FINGER_FOCUS_ON+10)  && Count_T2 <= FINGER_FOCUS_ON+300 && rgbchange==0)
+=======
+		if(Count_T2 >= FINGER_FOCUS_ON  && Count_T2 <= FINGER_FOCUS_ON+300 && rgbchange==0)
+>>>>>>> 63842fd (car-light)
  		{
  			B=0  , R=80 , G=80;
 			RGB=0;
@@ -260,8 +268,13 @@ void Key_Select(char sel)
 		
 		while(!_tkrcov ){GCC_NOP();} ;
 		Count_S1 = (unsigned int)((_tkm016dh <<8) | _tkm016dl);
+<<<<<<< HEAD
 		if(rgbchange==0)CalibrCount1++;
 		if(CalibrCount1>50)
+=======
+		CalibrCount1++;
+		if(CalibrCount1>100)
+>>>>>>> 63842fd (car-light)
 		{
 			CalibrCount1=0;	
 			Count_C1_Backup += Count_S1;
@@ -283,8 +296,13 @@ void Key_Select(char sel)
 		
 		while(!_tkrcov ){GCC_NOP();} ;
 		Count_S2 = (unsigned int)((_tkm016dh <<8) | _tkm016dl);
+<<<<<<< HEAD
 		if(rgbchange==0)CalibrCount2++;
 		if(CalibrCount2>50)
+=======
+		CalibrCount2++;
+		if(CalibrCount2>100)
+>>>>>>> 63842fd (car-light)
 		{
 			CalibrCount2=0;	
 			Count_C2_Backup += Count_S2;
@@ -326,9 +344,14 @@ void __attribute((interrupt(0x04))) int0(void)
 	
 	if((rgbpals==1||rgbpals==2||rgbchange==1) && q==1 && counterrgb>=0){
 		
+<<<<<<< HEAD
 		if(rgbpals==1)  rgb1=1;
 		if(rgbchange==1)  rgb1=3;
 		if(rgbpals==2)  rgb1=10;
+=======
+		if(rgbpals==1||rgbchange==1)  rgb1=1;
+		if(rgbpals==2)  rgb1=7;
+>>>>>>> 63842fd (car-light)
 		
 		if(counterrgb%rgb1==0){
 			
@@ -410,13 +433,21 @@ void __attribute((interrupt(0x04))) int0(void)
 		
 		if(counterrgb%100<50){
 			
+<<<<<<< HEAD
 			if(counterrgb%6==0){
+=======
+			if(counterrgb%4==0){
+>>>>>>> 63842fd (car-light)
 				R=0 , G=0, B=0 ;
 				LED1=1;
 				LED2=1;
 				LED3=1;
 			}
+<<<<<<< HEAD
 			if(counterrgb%6==3){
+=======
+			if(counterrgb%4==2){
+>>>>>>> 63842fd (car-light)
 				R=80 , G=80, B=80 ;
 				LED1=0;
 				LED2=0;
