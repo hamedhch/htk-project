@@ -4,7 +4,7 @@ volatile unsigned int Count_T1=0; //Time
 volatile unsigned char CalibrCount=0,CalibrSample=0;
 
 
-volatile bit TouchState = 0;       // 0 = ¬“«œ° 1 = ·„” ‘œÂ
+volatile bit TouchState = 0;       // 0 = √Ç√í√á√è¬° 1 = √°√£√ì √î√è√•
 volatile unsigned char TouchOnCnt = 0;
 volatile unsigned char TouchOffCnt = 0;
 
@@ -49,8 +49,8 @@ volatile unsigned char RF_Mode = 0;
 #define SYNC_MAX    230
 
 
-#define EE_COUNT_ADDR 0     // ¬œ—” –ŒÌ—Â  ⁄œ«œ —Ì„Ê ùÂ«
-#define EE_START_ADDR 1     // ‘—Ê⁄ òœÂ«Ì —Ì„Ê 
+#define EE_COUNT_ADDR 0     // √Ç√è√ë√ì √ê√é√≠√ë√• √ä√ö√è√á√è √ë√≠√£√¶√ä¬ù√•√á
+#define EE_START_ADDR 1     // √î√ë√¶√ö Àú√è√•√á√≠ √ë√≠√£√¶√ä
 #define REMOTE_SIZE   3
 #define MAX_REMOTES   40
 
@@ -67,6 +67,9 @@ unsigned char remote_count;
 
 #define BASELINE_STEP        1
 
+
+volatile bit TouchReCalRequest = 0;
+#define TOUCH_RECAL_TIME  3000
 
 
 //I/O Pin or Touch Key 1..4 Function Select
@@ -87,7 +90,7 @@ unsigned char remote_count;
 //#define FsTouch()	_tkfs1 = 1; _tkfs0 = 0 //1.5MHz
 #define FsTouch()	_tkfs1 = 1; _tkfs0 = 1 //2MHz
 
-//Reference Oscillator internal capacitor selection TKM0RO[9:0] ◊ 50pF / 1024
+//Reference Oscillator internal capacitor selection TKM0RO[9:0] √ó 50pF / 1024
 #define RefTouch()	_tkm0rol = 200; _tkm0roh = 0
 
 
@@ -140,6 +143,25 @@ unsigned char remote_count;
 #define	Flag_Int_Touch _tkmf //touch interrupt Flag Read
 
 
+void Piezo_Beep(unsigned int duration_ms)
+{
+    unsigned int i;
+
+    // ÿß€åŸÜ Ÿæÿß€åŸá ÿ±ÿß ŸÖÿ™ŸÜÿßÿ≥ÿ® ÿ®ÿß ÿ≥ÿÆÿ™‚ÄåÿßŸÅÿ≤ÿßÿ± ÿÆŸàÿØÿ™ ÿßŸÜÿ™ÿÆÿßÿ® ⁄©ŸÜ
+    _pac3 = 0;       // PA0 ÿ®Ÿá‚ÄåÿµŸàÿ±ÿ™ ÿÆÿ±Ÿàÿ¨€å
+    _pa3 = 0;
+
+    for(i = 0; i < duration_ms * 6; i++)
+    {
+        _pa3 = 1;
+        delay_us(9);
+
+        _pa3 = 0;
+        delay_us(8);
+    }
+
+    _pa3 = 0;
+}
 
 
 unsigned char eeprom_read(unsigned char addr)
@@ -237,14 +259,14 @@ void remove_remote()
     }
 }
 
-//  «»⁄ Å«ò ò—œ‰ ò· Õ«›ŸÂ
+// √ä√á√à√ö ¬Å√áÀú Àú√ë√è√§ Àú√° √ç√á√ù√ô√•
 void format_memory() {
-    // ›ﬁÿ ò«›Ì”   ⁄œ«œ —Ì„Ê ùÂ« —« ’›— ò‰Ì„ (Å«ò ò—œ‰ „‰ÿﬁÌ)
+    // √ù√û√ò Àú√á√ù√≠√ì√ä √ä√ö√è√á√è √ë√≠√£√¶√ä¬ù√•√á √ë√á √ï√ù√ë Àú√§√≠√£ (¬Å√áÀú Àú√ë√è√§ √£√§√ò√û√≠)
     remote_count = 0;
     eeprom_write(0, EE_COUNT_ADDR);
     
-    // «Œ Ì«—Ì: «ê— »ŒÊ«ÂÌ Ê«ﬁ⁄« Â„Â ”·Ê·ùÂ« FF ‘Ê‰œ (Å«ò ò—œ‰ ›Ì“ÌòÌ)
-    // «Ì‰ ò«— “„«‰ù»— «”  Ê »—«Ì «„‰Ì  »Ì‘ — «‰Ã«„ „Ìù‘Êœ
+    // √á√é√ä√≠√á√ë√≠: √á¬ê√ë √à√é√¶√á√•√≠ √¶√á√û√ö√á √•√£√• √ì√°√¶√°¬ù√•√á FF √î√¶√§√è (¬Å√áÀú Àú√ë√è√§ √ù√≠√í√≠Àú√≠)
+    // √á√≠√§ Àú√á√ë √í√£√á√§¬ù√à√ë √á√ì√ä √¶ √à√ë√á√≠ √á√£√§√≠√ä √à√≠√î√ä√ë √á√§√å√á√£ √£√≠¬ù√î√¶√è
 }
 
 
@@ -255,7 +277,7 @@ void check_remote() {
     for(i = 0; i < MAX_REMOTES; i++) {
         addr = EE_START_ADDR + (i * REMOTE_SIZE);
 
-        // ŒÊ«‰œ‰ òœ —Ì„Ê  ‘„«—Â i
+        // √é√¶√á√§√è√§ Àú√è √ë√≠√£√¶√ä √î√£√á√ë√• i
         if(eeprom_read(addr) == DataM[0]) {
             if(eeprom_read(addr+1) == DataM[1]) {
                 if(eeprom_read(addr+2) == DataM[2]) {
@@ -348,7 +370,7 @@ void Key_Touch()
     if(fast_touch_timer < 1000)
         fast_touch_timer++;
 
-    /* Õ›«Ÿ  «“ ò„ ‘œ‰ unsigned */
+    /* √ç√ù√á√ô√ä √á√í Àú√£ √î√è√§ unsigned */
     if(Count_C1 > TOUCH_ON_DELTA)
         touch_on_level = (unsigned int)(Count_C1 - TOUCH_ON_DELTA);
     else
@@ -360,7 +382,7 @@ void Key_Touch()
         touch_off_level = 0;
 
 
-    /* ·„” ﬁÿ⁄Ì */
+    /* √°√£√ì √û√ò√ö√≠ */
     if(Count_S1 <= touch_on_level)
     {
         TouchOffCnt = 0;
@@ -372,7 +394,7 @@ void Key_Touch()
             TouchState = 1;
     }
 
-    /* —Â« ‘œ‰ ò·Ìœ */
+    /* √ë√•√á √î√è√§ Àú√°√≠√è */
     else if(Count_S1 >= touch_off_level)
     {
         TouchOnCnt = 0;
@@ -384,12 +406,13 @@ void Key_Touch()
         {
             TouchState = 0;
             Count_T1 = 0;
+            TouchReCalRequest = 0;
             out = 1;
             bizer = 0;
         }
     }
 
-    /* »Ì‰ œÊ ¬” «‰Â: Ê÷⁄Ì  ﬁ»·Ì Õ›Ÿ ‘Êœ */
+    /* √à√≠√§ √è√¶ √Ç√ì√ä√á√§√•: √¶√ñ√ö√≠√ä √û√à√°√≠ √ç√ù√ô √î√¶√è */
     else
     {
         TouchOnCnt = 0;
@@ -398,14 +421,19 @@ void Key_Touch()
 
 
     /*
-       Count_T1 ›ﬁÿ Êﬁ Ì Ê«ﬁ⁄« œ— Ê÷⁄Ì  Touch Â” Ì„ “Ì«œ ‘Êœ.
-       ·„” ÿÊ·«‰Ì Ê „‰ÊÌ RF „À· ﬁ»· ò«— „Ìùò‰œ.
+       Count_T1 √ù√û√ò √¶√û√ä√≠ √¶√á√û√ö√á √è√ë √¶√ñ√ö√≠√ä Touch √•√ì√ä√≠√£ √í√≠√á√è √î√¶√è.
+       √°√£√ì √ò√¶√°√á√§√≠ √¶ √£√§√¶√≠ RF √£√ã√° √û√à√° Àú√á√ë √£√≠¬ùÀú√§√è.
     */
     if(TouchState == 1)
-    {
-        if(Count_T1 < 2000)
-            Count_T1++;
-    }
+	{
+	    if(Count_T1 < TOUCH_RECAL_TIME)
+	        Count_T1++;
+	
+	    if(Count_T1 >= TOUCH_RECAL_TIME)
+	    {
+	        TouchReCalRequest = 1;
+	    }
+	}
 	
 	
 	if(Count_T1 == FINGER_FOCUS_ON)
@@ -419,6 +447,8 @@ void Key_Touch()
 			BIZ=0;
 			bizer=1;
 		}
+		
+		Piezo_Beep(100);
 		
 		
 		if (RF_Mode >= 1) {
@@ -492,7 +522,7 @@ void Key_Touch()
 	    }
 	    else
 	    {
-	        RF_Mode=1; // »—ê‘  »Â Learn
+	        RF_Mode=1; // √à√ë¬ê√î√ä √à√• Learn
 	
 	        BIZ=1;
 	        delay_ms(200);
@@ -550,6 +580,7 @@ void Key_Touch()
 
 void CalibrTuoch()
 {
+	Count_C1 = 0;
 	
 	TouchStart(0);
 	KeyTouch4();delay_10us(250);delay_10us(250);
@@ -586,28 +617,59 @@ void Key_Select()
 	Count_S1 = (unsigned int)((_tkm016dh <<8) | _tkm016dl);
 	
 	/*
-   ò«·Ì»—«”ÌÊ‰ ”—Ì⁄ »Ì”ù·«Ì‰:
+   Àú√á√°√≠√à√ë√á√ì√≠√¶√§ √ì√ë√≠√ö √à√≠√ì¬ù√°√á√≠√§:
 
-   ›ﬁÿ Êﬁ Ì „ﬁœ«— ”‰”Ê— œ— „ÕœÊœÂ Touch ﬁÿ⁄Ì ‰Ì” °
-   „ﬁœ«— Count_C1 »Â ¬—«„Ì »Â ”„  Count_S1 Õ—ò  „Ìùò‰œ.
+   √ù√û√ò √¶√û√ä√≠ √£√û√è√á√ë √ì√§√ì√¶√ë √è√ë √£√ç√è√¶√è√• Touch √û√ò√ö√≠ √§√≠√ì√ä¬°
+   √£√û√è√á√ë Count_C1 √à√• √Ç√ë√á√£√≠ √à√• √ì√£√ä Count_S1 √ç√ëÀú√ä √£√≠¬ùÀú√§√è.
 
-   «Ì‰ »Œ‘ Â‰ê«„ »—œ«‘ ‰ œ” ° «À— ›«’·Â ÂÊ« Ê  €ÌÌ—«  ‘Ì‘Â
-   —« ”—Ì⁄ù — Ã»—«‰ „Ìùò‰œ Ê Ã·ÊÌ êÌ— ò—œ‰ TouchState —« „ÌùêÌ—œ.
+   √á√≠√§ √à√é√î √•√§¬ê√á√£ √à√ë√è√á√î√ä√§ √è√ì√ä¬° √á√ã√ë √ù√á√ï√°√• √•√¶√á √¶ √ä√õ√≠√≠√ë√á√ä √î√≠√î√•
+   √ë√á √ì√ë√≠√ö¬ù√ä√ë √å√à√ë√á√§ √£√≠¬ùÀú√§√è √¶ √å√°√¶√≠ ¬ê√≠√ë Àú√ë√è√§ TouchState √ë√á √£√≠¬ù¬ê√≠√ë√è.
 	*/
-	if(Count_C1 > TOUCH_ON_DELTA &&
-	   Count_S1 > (unsigned int)(Count_C1 - TOUCH_ON_DELTA))
+	
+	/*
+	   ⁄©ÿßŸÑŸäÿ®ÿ±ÿßÿ≥ŸäŸàŸÜ ÿßÿ¨ÿ®ÿßÿ±Ÿä Ÿæÿ≥ ÿßÿ≤ ŸÑŸÖÿ≥ ŸÖÿØÿßŸàŸÖ 4 ÿ´ÿßŸÜŸäŸá
+	*/
+	if(TouchReCalRequest == 1)
 	{
-	    if(Count_S1 > Count_C1)
+	    /*
+	       ŸÖŸÇÿØÿßÿ± ÿ≥ŸÜÿ≥Ÿàÿ± ÿØÿ± ÿ≠ÿßŸÑŸä ⁄©Ÿá ŸÖŸäÿÆ ÿ±ŸàŸä ŸæÿØ ÿßÿ≥ÿ™ÿå
+	       ÿ®Ÿá ÿπŸÜŸàÿßŸÜ ÿ≠ÿßŸÑÿ™ ÿπÿßÿØŸä ÿ¨ÿØŸäÿØ ÿ∞ÿÆŸäÿ±Ÿá ŸÖŸä‚Äåÿ¥ŸàÿØ.
+	    */
+	    Count_C1 = Count_S1;
+	
+	    /*
+	       ÿ¢ÿ≤ÿßÿØ ⁄©ÿ±ÿØŸÜ ÿ™ÿß⁄Ü ÿ®ÿ±ÿßŸä ÿ¢ŸÖÿßÿØŸá ÿ¥ÿØŸÜ ŸÑŸÖÿ≥ ÿ®ÿπÿØŸä
+	    */
+	    TouchReCalRequest = 0;
+	    TouchState = 0;
+	
+	    Count_T1 = 0;
+	    TouchOnCnt = 0;
+	    TouchOffCnt = 0;
+	
+	    out = 1;
+	    bizer = 0;
+	}
+	else if(TouchState == 0)
+	{
+	    /*
+	       ⁄©ÿßŸÑŸäÿ®ÿ±ÿßÿ≥ŸäŸàŸÜ ÿ¢ÿ±ÿßŸÖ ŸÅŸÇÿ∑ ÿØÿ± ÿ≠ÿßŸÑÿ™ ÿ®ÿØŸàŸÜ ŸÑŸÖÿ≥
+	    */
+	    if(Count_C1 > TOUCH_ON_DELTA &&
+	       Count_S1 > (unsigned int)(Count_C1 - TOUCH_ON_DELTA))
 	    {
-	        Count_C1 += BASELINE_STEP;
-	    }
-	    else if(Count_C1 > (Count_S1 + BASELINE_STEP))
-	    {
-	        Count_C1 -= BASELINE_STEP;
-	    }
-	    else
-	    {
-	        Count_C1 = Count_S1;
+	        if(Count_S1 > Count_C1)
+	        {
+	            Count_C1 += BASELINE_STEP;
+	        }
+	        else if(Count_C1 > (Count_S1 + BASELINE_STEP))
+	        {
+	            Count_C1 -= BASELINE_STEP;
+	        }
+	        else
+	        {
+	            Count_C1 = Count_S1;
+	        }
 	    }
 	}
 
@@ -657,7 +719,7 @@ void __attribute__((interrupt(0x0C))) timer(void)
     Frist = 0;
 
     /* --- Anti-Noise Rule 1 --- */
-    /* «ê— Å«·” ŒÌ·Ì òÊçò Ì« ŒÌ·Ì »“—ê »Êœ° «“ ‰ÊÌ“Â */
+    /* √á¬ê√ë ¬Å√á√°√ì √é√≠√°√≠ Àú√¶¬çÀú √≠√á √é√≠√°√≠ √à√í√ë¬ê √à√¶√è¬° √á√í √§√¶√≠√í√• */
     if (t < 5 || t > 200) {
         rf_sync = 0;
         return;
@@ -668,7 +730,7 @@ void __attribute__((interrupt(0x0C))) timer(void)
     if (t >= SYNC_MIN && t <= SYNC_MAX) {
 
         /* --- Anti-Noise Rule 2 --- */
-        /* Å«·” Sync ŒÌ·Ì òÊ «Â = ‰ÊÌ“ */
+        /* ¬Å√á√°√ì Sync √é√≠√°√≠ Àú√¶√ä√á√• = √§√¶√≠√í */
         if(t < (SYNC_MIN + 5)) 
             return;
 
@@ -703,7 +765,7 @@ void __attribute__((interrupt(0x0C))) timer(void)
         noise_count++;
 
         /* --- Anti-Noise Rule 3 --- */
-        if (noise_count > 2)    /* ﬁ»·« 4 »Êœ */
+        if (noise_count > 2)    /* √û√à√°√á√∞ 4 √à√¶√è */
             rf_sync = 0;
 
         return;
@@ -755,414 +817,3 @@ void __attribute__((interrupt(0x0C))) timer(void)
 }
 
 
-
-
-
-
-//
-//
-//void __attribute__((interrupt(0x0C))) timer(void)
-//{
-//
-//    if (RF_Mode>=1 && learn_timeout < 100000)
-//        learn_timeout++;
-//
-//    if (data_rf == 0 && Timedown < 250) {
-//        Timedown++;
-//        Frist = 1;
-//        return;
-//    }
-//
-//    if (!Frist) {
-//        Timedown = 0;
-//        return;
-//    }
-//
-//    unsigned char t = Timedown;
-//
-//    Timedown = 0;
-//    Frist = 0;
-//
-//    /* SYNC detect */
-//
-//    if (t >= SYNC_MIN && t <= SYNC_MAX) {
-//
-//        rf_sync = 1;
-//        rf_bit_index = 8;
-//        rf_byte_index = 0;
-//        rf_buffer = 0;
-//        noise_count = 0;
-//
-//        return;
-//    }
-//
-//    if (!rf_sync)
-//        return;
-//
-//    /* decode bit */
-//
-//    if (t >= SHORT_MIN && t <= SHORT_MAX) {
-//
-//        rf_buffer = (rf_buffer << 1) | 1;
-//        rf_bit_index--;
-//
-//    }
-//    else if (t >= LONG_MIN && t <= LONG_MAX) {
-//
-//        rf_buffer <<= 1;
-//        rf_bit_index--;
-//
-//    }
-//    else {
-//
-//        noise_count++;
-//
-//        if (noise_count > 4)
-//            rf_sync = 0;
-//
-//        return;
-//    }
-//
-//    if (rf_bit_index != 0)
-//        return;
-//
-//    RFData[rf_byte_index++] = rf_buffer;
-//
-//    rf_buffer = 0;
-//    rf_bit_index = 8;
-//
-//    if (rf_byte_index < 3)
-//        return;
-//
-//    rf_sync = 0;
-//    rf_byte_index = 0;
-//
-//    /* frame validation */
-//
-//    if (RFData[0] == last_frame[0] &&
-//        RFData[1] == last_frame[1] &&
-//        RFData[2] == last_frame[2]) {
-//
-//        frame_ok_count++;
-//
-//        if (frame_ok_count >= 2) {
-//
-//            DataM[0] = RFData[0];
-//            DataM[1] = RFData[1];
-//            DataM[2] = RFData[2];
-//
-//            Lock = 1;
-//            Finish = 1;
-//
-//            frame_ok_count = 0;
-//        }
-//
-//    }
-//    else {
-//
-//        last_frame[0] = RFData[0];
-//        last_frame[1] = RFData[1];
-//        last_frame[2] = RFData[2];
-//
-//        frame_ok_count = 1;
-//    }
-//
-//}
-//
-//
-//
-
-
-//**************************************************
-
-
-
-
-
-//
-//void __attribute__((interrupt(0x0C))) timer(void)
-//{
-//    if (LearnRF == 1 && learn_timeout < 100000) learn_timeout++;
-//
-//    if (data_rf == 0 && Timedown < 250) {
-//        Timedown++;
-//        Frist = 1;
-//    }
-//    else {
-//        if (Frist == 1) {
-//
-//            unsigned char t = Timedown;
-//
-//            if (t >= SYNC_MIN && t <= SYNC_MAX) {
-//                rf_bit_index = 8;
-//                rf_byte_index = 0;
-//                rf_buffer = 0;
-//                rf_sync = 1;
-//            }
-//            else if (rf_sync == 1) {
-//
-//                if (t >= SHORT_MIN && t <= SHORT_MAX) {
-//                    rf_buffer <<= 1;
-//                    rf_buffer |= 1;
-//                    rf_bit_index--;
-//                }
-//                else if (t >= LONG_MIN && t <= LONG_MAX) {
-//                    rf_buffer <<= 1;
-//                    rf_bit_index--;
-//                }
-//                else {
-//                    rf_sync = 0;
-//                    rf_bit_index = 8;
-//                }
-//
-//                if (rf_bit_index == 0) {
-//                    RFData[rf_byte_index] = rf_buffer;
-//                    rf_byte_index++;
-//                    rf_bit_index = 8;
-//                    rf_buffer = 0;
-//
-//                    if (rf_byte_index >= 3) {
-//                        rf_sync = 0;
-//                        rf_byte_index = 0;
-//
-//                        if (RFData[0] == Data[0] &&
-//                            RFData[1] == Data[1] &&
-//                            RFData[2] == Data[2]) {
-//
-//                            DataM[0] = RFData[0];
-//                            DataM[1] = RFData[1];
-//                            DataM[2] = RFData[2];
-//
-//                            Lock = 1;
-//                            Finish = 1;
-//                        }
-//
-//                        Data[0] = RFData[0];
-//                        Data[1] = RFData[1];
-//                        Data[2] = RFData[2];
-//                    }
-//                }
-//            }
-//
-//            Frist = 0;
-//        }
-//
-//        Timedown = 0;
-//    }
-//
-//}
-//
-
-
-
-//******************************************************
-
-
-
-
-//void __attribute((interrupt(0x0C))) timer(void)
-//{
-//	/*Counter++;
-//		
-//	if(Counter>=Counter_On && counterrgb>=50)
-//	{
-//		LED1=1;
-//	}*/
-//	
-//	//data_rf=!data_rf;
-//	
-//	if (LearnRF == 1 && learn_timeout < 100000) learn_timeout++;
-//
-//	if(data_rf==0 && Timedown<200){
-//		Timedown++;Frist=1;
-//        //test_rf=!test_rf;
-//	 }
-//	 else
-//	 {
-//		
-//        
-//		if(Timedown>=190){
-//			Finish=0;
-//			Timedown=0;
-//			
-//        }
-//        
-//		if(Frist==1 && Finish==0)
-//        {
-//			
-//			if(Start==1)
-//			{
-//				
-//				
-//				Bit--;
-//				if(Timedown>=11 && Timedown<= 22){
-//					Buffer = Buffer << 1;  
-//					
-//				}
-//				else if(Timedown>=3 && Timedown<= 9){
-//					Buffer = Buffer << 1;
-//					Buffer = Buffer + 1;
-//					
-//				}
-//                else{
-//					Count=0;
-//                    Bit=8;
-//                    Buffer=0;
-//                    Start=0;
-//                    
-//                }
-//                
-//				if(Bit == 0){
-//					Bit=8;
-//					Data[Count]=RFData[Count];
-//					RFData[Count]=Buffer;
-//					Count++;
-//					
-//					if(Count>=3)
-//					{
-//						
-//						Count=0;
-//						Start=0;
-//						if(Data[0]==RFData[0] && Data[1]==RFData[1] &&Data[2]==RFData[2]) 
-//						{
-//							DataM[0]=RFData[0];
-//							DataM[1]=RFData[1];
-//							DataM[2]=RFData[2];
-//							
-//							Finish=1;
-//							Lock=1;
-//							
-//							
-//							
-//						}else
-//						{
-//                         
-//                        }
-//					} 
-//					Buffer=0;
-//				}
-//			}
-//            
-//			if(Timedown>=150 && Timedown<=185){ 
-//				Start=1;Bit=8;
-//				
-//            }
-//            
-//			Frist=0;
-//			
-//		}
-//        Timedown=0;
-//	 }
-//
-//
-//
-//
-//}
-
-
-
-
-
-
-//*********************************************************
-
-
-//void __attribute((interrupt(0x0C))) timer(void)
-//{
-//	/*Counter++;
-//		
-//	if(Counter>=Counter_On && counterrgb>=50)
-//	{
-//		LED1=1;
-//	}*/
-//	
-//	//data_rf=!data_rf;
-//	
-//	if (LearnRF == 1 && learn_timeout < 100000) learn_timeout++;
-//	
-//	
-//	if(data_rf==0 && Timedown<200){
-//		Timedown++;Frist=1;
-//        //test_rf=!test_rf;
-//	 }
-//	 else
-//	 {
-//		
-//        
-//		if(Timedown>=190){
-//			Finish=0;
-//			Timedown=0;
-//			
-//        }
-//        
-//		if(Frist==1 && Finish==0)
-//        {
-//			
-//			if(Start==1)
-//			{
-//				
-//				
-//				Bit--;
-//				if(Timedown>=11 && Timedown<= 22){
-//					Buffer = Buffer << 1;  
-//					
-//				}
-//				else if(Timedown>=3 && Timedown<= 9){
-//					Buffer = Buffer << 1;
-//					Buffer = Buffer + 1;
-//					
-//				}
-//                else{
-//					Count=0;
-//                    Bit=8;
-//                    Buffer=0;
-//                    Start=0;
-//                    
-//                }
-//                
-//				if(Bit == 0){
-//					Bit=8;
-//					Data[Count]=RFData[Count];
-//					RFData[Count]=Buffer;
-//					Count++;
-//					
-//					if(Count>=3)
-//					{
-//						
-//						Count=0;
-//						Start=0;
-//						if(Data[0]==RFData[0] && Data[1]==RFData[1] &&Data[2]==RFData[2]) 
-//						{
-//							DataM[0]=RFData[0];
-//							DataM[1]=RFData[1];
-//							DataM[2]=RFData[2];
-//							
-//							Finish=1;
-//							Lock=1;
-//							
-//							
-//							
-//						}else
-//						{
-//                         
-//                        }
-//					} 
-//					Buffer=0;
-//				}
-//			}
-//            
-//			if(Timedown>=150 && Timedown<=185){ 
-//				Start=1;Bit=8;
-//				
-//            }
-//            
-//			Frist=0;
-//			
-//		}
-//        Timedown=0;
-//	 }
-//
-//
-//
-//
-//}

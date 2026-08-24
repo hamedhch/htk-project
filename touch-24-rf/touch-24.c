@@ -68,7 +68,7 @@ void main()
  
  remote_count = eeprom_read(EE_COUNT_ADDR);
     
-    // ÇÑ ÍÇÝÙå ÎÇã ÈÇÔÏ (0xFF) íÇ ÚÏÏ ÛíÑãäØÞí ÈÇÔÏ¡ ÕÝÑÔ ãí˜äíã
+    // Ø§Ú¯Ø± Ø­Ø§ÙØ¸Ù‡ Ø®Ø§Ù… Ø¨Ø§Ø´Ø¯ (0xFF) ÙŠØ§ Ø¹Ø¯Ø¯ ØºÙŠØ±Ù…Ù†Ø·Ù‚ÙŠ Ø¨Ø§Ø´Ø¯ØŒ ØµÙØ±Ø´ Ù…ÙŠâ€ŒÚ©Ù†ÙŠÙ…
     if(remote_count > MAX_REMOTES) {
         remote_count = 0;
         eeprom_write(0, EE_COUNT_ADDR);
@@ -76,14 +76,21 @@ void main()
  
  GCC_DELAY(1000);
  
- 
+ _pac3 = 0;       // PA0 Ø¨Ù‡â€ŒØµÙˆØ±Øª Ø®Ø±ÙˆØ¬ÛŒ
+    _pa3 = 0;
+    
+    
  while(1)
  {
  	GCC_CLRWDT();
- 	Key_Select();
- 	Key_Touch();
+ 	//Key_Select();
+ 	//Key_Touch();
  	
- 	
+ 	_pa3 = 1;
+        delay_us(9);
+
+        _pa3 = 0;
+        delay_us(8);
  	
  }
 }
