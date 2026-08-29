@@ -53,7 +53,7 @@ unsigned char Touch3_Active;
 unsigned char Touch4_Active;
 unsigned char Touch_Count;
 
-#define FINGER_FOCUS_ON	80
+#define FINGER_FOCUS_ON	50
 
 //I/O Pin or Touch Key 1..4 Function Select
 #define IO_Touch() _m0k4io = 1; _m0k3io = 1;_m0k2io = 1;_m0k1io = 1;
@@ -147,6 +147,71 @@ void TuochKeyInit()
 }
 
 
+void Piezo_Tone(unsigned int duration_ms, unsigned char tone_delay)
+{
+    unsigned int i;
+
+    for(i = 0; i < duration_ms * 6; i++)
+    {
+        BUZ = 1;
+        delay_us(tone_delay);
+
+        BUZ = 0;
+        delay_us(tone_delay);
+    }
+
+    BUZ = 0;
+}
+
+void Sound_Key(void)
+{
+    Piezo_Tone(25, 5);    // شروع زیر
+    Piezo_Tone(25, 7);
+    Piezo_Tone(25, 9);    // پایان با صدای پایه/بم‌تر
+}
+void Sound_Learn(void)
+{
+    Piezo_Tone(45, 14);   // بم
+    delay_ms(25);
+
+    Piezo_Tone(45, 10);   // متوسط
+    delay_ms(25);
+
+    Piezo_Tone(120, 6);    // زیر
+}
+void Sound_Remove(void)
+{
+    Piezo_Tone(40, 6);    // زیر
+    delay_ms(25);
+
+    Piezo_Tone(30, 10);   // متوسط
+    delay_ms(25);
+
+    Piezo_Tone(55, 14);   // بم
+}
+/*
+ * افکت روشن شدن / خوش‌آمدگویی:
+ * دو صدای کوتاه بم به زیر، سپس یک صدای نهایی زیرتر
+ */
+void Sound_Startup(void)
+{
+    Piezo_Tone(35, 10);
+    delay_ms(55);
+
+    Piezo_Tone(35, 9);
+    delay_ms(55);
+
+    Piezo_Tone(35, 8);
+    delay_ms(70);
+
+    /* نت نهایی زیرتر و بلندتر */
+    Piezo_Tone(180, 6);
+
+    BUZ = 0;
+}
+
+
+
 void Send_Command(unsigned char key)
 {
 	unsigned char pulse_time;
@@ -182,41 +247,41 @@ void Key_Touch(void)
 	* مرحله 1: شمارش مدت لمس هر کلید
 	*/
 	
-	if(Count_S1 < (Count_C1 - 30))
+	if(Count_S1 < (Count_C1 - 55))
 	{
 		if(Count_T1 < 5000)Count_T1++;
 	}
-	else if(Count_S1 > (Count_C1 - 20))
+	else if(Count_S1 > (Count_C1 - 8))
 	{
 		Count_T1 = 0;
 	}
 	
 	
-	if(Count_S2 < (Count_C2 - 30))
+	if(Count_S2 < (Count_C2 - 55))
 	{
 		if(Count_T2 < 5000)	Count_T2++;
 	}
-	else if(Count_S2 > (Count_C2 - 20))
+	else if(Count_S2 > (Count_C2 - 8))
 	{
 		Count_T2 = 0;
 	}
 	
 	
-	if(Count_S3 < (Count_C3 - 30))
+	if(Count_S3 < (Count_C3 - 55))
 	{
 		if(Count_T3 < 5000)	Count_T3++;
 	}
-	else if(Count_S3 > (Count_C3 - 20))
+	else if(Count_S3 > (Count_C3 - 8))
 	{
 		Count_T3 = 0;
 	}
 	
 	
-	if(Count_S4 < (Count_C4 - 30))
+	if(Count_S4 < (Count_C4 - 55))
 	{
 		if(Count_T4 < 5000)	Count_T4++;
 	}
-	else if(Count_S4 > (Count_C4 - 20))
+	else if(Count_S4 > (Count_C4 - 8))
 	{
 		Count_T4 = 0;
 	}
@@ -285,6 +350,8 @@ void Key_Touch(void)
 			
 			Send_Command(Tx_Key);
 			
+			Sound_Key();
+				
 			if(Tx_Key == 1)
 			{
 				CalibrCount1 = 0;
@@ -329,6 +396,8 @@ void Key_Touch(void)
 	{
 		Learn_Sent = 1;
 		
+		Sound_Learn();
+
 		DATA = 0;
 		delay_ms(10);
 		

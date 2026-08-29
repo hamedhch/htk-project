@@ -10,25 +10,30 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      Bank    Start     End      Length     Class    AvgIns    Name
      00h     0000h     0000h    0001h      CODE               @code (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     000ch     000ch    0001h      CODE               @timer_code (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
-     00h     000dh     0024h    0018h      CODE               _TuochKeyInit (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     000dh     0027h    001bh      CODE               _delay_us (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     0028h     0028h    0001h      CODE               @TOUCH_ISR_code (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     0029h     0049h    0021h      CODE               @start (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     004ah     0067h    001eh      CODE               _delay_10us (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     0068h     009eh    0037h      CODE               _delay_ms (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
-     00h     009fh     00d7h    0039h      CODE               _Send_Command (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
-     00h     00d8h     030ch    0235h      CODE               _Key_Touch (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
-     00h     030dh     042eh    0122h      CODE               _CalibrTuoch (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
-     00h     042fh     054ah    011ch      CODE               _Key_Select (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
-     00h     054bh     0574h    002ah      CODE               _main (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
-     00h     0575h     0596h    0022h      CODE               @ROMDATA_BASE (D:\hamed\project\htk-project\touch-4key\touch-4key\STARTUP1_L.OBJ)
-     00h     0597h     05b5h    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     05b6h     05f8h    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009fh     00b6h    0018h      CODE               _TuochKeyInit (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     00b7h     00ech    0036h      CODE               _Piezo_Tone (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     00edh     00ffh    0013h      CODE               _Sound_Key (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     0100h     011eh    001fh      CODE               _Sound_Learn (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     011fh     014ah    002ch      CODE               _Sound_Startup (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     014bh     0183h    0039h      CODE               _Send_Command (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     0184h     03bah    0237h      CODE               _Key_Touch (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     03bbh     04dch    0122h      CODE               _CalibrTuoch (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     04ddh     05f8h    011ch      CODE               _Key_Select (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     05f9h     0623h    002bh      CODE               _main (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     0624h     0645h    0022h      CODE               @ROMDATA_BASE (D:\hamed\project\htk-project\touch-4key\touch-4key\STARTUP1_L.OBJ)
+     00h     0646h     0664h    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0665h     06a7h    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     0060h     009dh    003eh      DATA     5.4839    @HCCINIT (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     009eh     00a2h    0005h      DATA     1.8       @HCCINIT0 (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     00a3h     00a3h    0001h      DATA     0         @BITDATASEC (D:\hamed\project\htk-project\touch-4key\touch-4key\STARTUP1_L.OBJ)
      00h     00a4h     00a4h    0001h      DATA     15        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     00a5h     00a5h    0001h      DATA     13        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     00a6h     00a6h    0001h      DATA     13        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a5h     00a5h    0001h      DATA     16        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a6h     00a6h    0001h      DATA     16        @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     00a7h     00a7h    0001h      DATA     37        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     00a8h     00a8h    0001h      DATA     35        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     00a9h     00a9h    0001h      DATA     33        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
@@ -40,15 +45,20 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      Bank    Start     End      Length     Class    AvgIns    Name
      00h     00c8h     00c8h    0000h      LOCAL    0         @dummy (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     00c8h     00c8h    0000h      LOCAL    0         _main (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
-     00h     00b8h     00bfh    0008h      LOCAL    8.5       _delay_ms (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     00b8h     00bfh    0008h      LOCAL    12        _delay_ms (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     00ach     00b7h    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
      00h     00ach     00ach    0000h      LOCAL    0         _TuochKeyInit (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     00c0h     00c7h    0008h      LOCAL    2         _CalibrTuoch (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     00ach     00afh    0004h      LOCAL    5         _delay_10us (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     00ach     00b9h    000eh      LOCAL    11.214    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00c0h     00c0h    0000h      LOCAL    0         _Sound_Startup (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     00b0h     00bah    000bh      LOCAL    6         _Piezo_Tone (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     00ach     00afh    0004h      LOCAL    3         _delay_us (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     00bah     00bah    0001h      LOCAL    4         _Key_Select (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     00c2h     00c2h    0001h      LOCAL    17        _Key_Touch (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
      00h     00c0h     00c1h    0002h      LOCAL    3         _Send_Command (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     00bbh     00bbh    0000h      LOCAL    0         _Sound_Key (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
+     00h     00c0h     00c0h    0000h      LOCAL    0         _Sound_Learn (D:\hamed\project\htk-project\touch-4key\touch-4key\TOUCH-4KEY.OBJ)
 
      Public Symbols Information
      Address            Public by Name
@@ -60,7 +70,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0080h              _CalibrSample2
      0072h              _CalibrSample3
      0064h              _CalibrSample4
-     030dh              _CalibrTuoch
+     03bbh              _CalibrTuoch
      009ah              _Count_C1
      0096h              _Count_C1_Backup
      008ah              _Count_C2
@@ -77,31 +87,36 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0082h              _Count_T2
      0074h              _Count_T3
      0066h              _Count_T4
-     042fh              _Key_Select
+     04ddh              _Key_Select
      0061h              _Key_Sent
-     00d8h              _Key_Touch
+     0184h              _Key_Touch
      0060h              _Learn_Sent
-     009fh              _Send_Command
+     00b7h              _Piezo_Tone
+     00b0h              _Piezo_Tone_2
+     014bh              _Send_Command
+     00edh              _Sound_Key
+     0100h              _Sound_Learn
+     011fh              _Sound_Startup
      0028h              _TOUCH_ISR
      00a2h              _Touch1_Active
      00a1h              _Touch2_Active
      00a0h              _Touch3_Active
      009fh              _Touch4_Active
      009eh              _Touch_Count
-     000dh              _TuochKeyInit
+     009fh              _TuochKeyInit
      0062h              _Tx_Busy
      0063h              _Tx_Key
-     0597h              _builtin_holtek_mulsi3_isr00
-     00b0h              _builtin_holtek_mulsi3_isr00_2
-     05b6h              _builtin_holtek_udivmodsi4_isr00
+     0646h              _builtin_holtek_mulsi3_isr00
+     0665h              _builtin_holtek_udivmodsi4_isr00
      0090h              _counter
      004ah              _delay_10us
      00ach              _delay_10us_2
      0068h              _delay_ms
      00b8h              _delay_ms_2
+     000dh              _delay_us
      0091h              _i
      00a3h[0]           _lock
-     054bh              _main
+     05f9h              _main
      00a3h[4]           _q1
      00a3h[3]           _q2
      00a3h[2]           _q3
@@ -115,11 +130,11 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00a9h              rf
      00aah              rg
      00abh              rh
-     0574h              startup_value_1
+     0623h              startup_value_1
 
      Address            Public by Value
      000ch              _timer
-     000dh              _TuochKeyInit
+     000dh              _delay_us
      0028h              _TOUCH_ISR
      004ah              _delay_10us
      0060h              _Learn_Sent
@@ -129,8 +144,8 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0064h              _CalibrSample4
      0065h              _CalibrCount4
      0066h              _Count_T4
-     0068h              _delay_ms
      0068h              _Count_S4
+     0068h              _delay_ms
      006ah              _Count_C4_Backup
      006eh              _Count_C4
      0072h              _CalibrSample3
@@ -155,7 +170,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      009ah              _Count_C1
      009eh              _Touch_Count
      009fh              _Touch4_Active
-     009fh              _Send_Command
+     009fh              _TuochKeyInit
      00a0h              _Touch3_Active
      00a1h              _Touch2_Active
      00a2h              _Touch1_Active
@@ -168,25 +183,30 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      00aah              rg
      00abh              rh
      00ach              _delay_10us_2
-     00b0h              _builtin_holtek_mulsi3_isr00_2
+     00b0h              _Piezo_Tone_2
+     00b7h              _Piezo_Tone
      00b8h              _delay_ms_2
-     00d8h              _Key_Touch
-     030dh              _CalibrTuoch
-     042fh              _Key_Select
+     00edh              _Sound_Key
+     0100h              _Sound_Learn
+     011fh              _Sound_Startup
+     014bh              _Send_Command
+     0184h              _Key_Touch
+     03bbh              _CalibrTuoch
+     04ddh              _Key_Select
      00a3h[0]           _lock
      00a3h[1]           _q4
      00a3h[2]           _q3
      00a3h[3]           _q2
      00a3h[4]           _q1
-     054bh              _main
-     0574h              startup_value_1
-     0597h              _builtin_holtek_mulsi3_isr00
-     05b6h              _builtin_holtek_udivmodsi4_isr00
+     05f9h              _main
+     0623h              startup_value_1
+     0646h              _builtin_holtek_mulsi3_isr00
+     0665h              _builtin_holtek_udivmodsi4_isr00
 
 
 ROM Usage Statistics
      Size      Used     Percentage
-     0800h     05ebh    73%
+     0800h     069dh    82%
 
 RAM Usage Statistics
     Bank      Size      Used     Percentage
@@ -194,9 +214,15 @@ RAM Usage Statistics
      Total     0080h     0068h    81%
 
 Use Stack Count
+_Sound_Remove: 2
 _main: 4
 
 Call Tree
+    _Sound_Remove
+        _Piezo_Tone (0)
+            _delay_us (1)
+        _delay_ms (0)
+            _builtin_holtek_mulsi3_isr00 (1)
     @dummy
         _main (0)
             _delay_ms (1)
@@ -207,10 +233,23 @@ Call Tree
                 _delay_ms (2)
                     _builtin_holtek_mulsi3_isr00 (3)
                 _builtin_holtek_divmodsi4_isr00 (2)
+            _Sound_Startup (1)
+                _Piezo_Tone (2)
+                    _delay_us (3)
+                _delay_ms (2)
+                    _builtin_holtek_mulsi3_isr00 (3)
             _Key_Select (1)
                 _builtin_holtek_divmodsi4_isr00 (2)
             _Key_Touch (1)
                 _Send_Command (2)
+                    _delay_ms (3)
+                        _builtin_holtek_mulsi3_isr00 (4)
+                _Sound_Key (2)
+                    _Piezo_Tone (3)
+                        _delay_us (4)
+                _Sound_Learn (2)
+                    _Piezo_Tone (3)
+                        _delay_us (4)
                     _delay_ms (3)
                         _builtin_holtek_mulsi3_isr00 (4)
                 _delay_ms (2)

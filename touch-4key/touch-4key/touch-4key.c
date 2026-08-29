@@ -58,6 +58,9 @@ void main()
  
  BUZ=0;
  
+  Sound_Startup();
+  
+  
  while(1)
  {
  	GCC_CLRWDT();

@@ -441,12 +441,6 @@ void Key_Touch()
 		out=0;
 		
 		
-		if(bizer==0){
-			BIZ=1;
-			delay_ms(100);
-			BIZ=0;
-			bizer=1;
-		}
 		
 		Piezo_Beep(100);
 		
