@@ -10,57 +10,77 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      Bank    Start     End      Length     Class    AvgIns    Name
      00h     0000h     0000h    0001h      CODE               @code (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
      00h     0004h     0004h    0001h      CODE               @int0_code (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     0005h     0009h    0005h      CODE               _format_memory (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
      00h     000ch     000fh    0004h      CODE               @timer_code (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     0010h     0020h    0011h      CODE               _eeprom_read (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     0010h     0020h    0011h      CODE               _RF_Reset_State (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
      00h     0028h     0028h    0001h      CODE               @TOUCH_ISR_code (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
      00h     0029h     0049h    0021h      CODE               @start (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
      00h     004ah     0067h    001eh      CODE               _delay_10us (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     0068h     0082h    001bh      CODE               _delay_us (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     0083h     00b9h    0037h      CODE               _delay_ms (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00bah     00cbh    0012h      CODE               _eeprom_write (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00cch     00e3h    0018h      CODE               _TuochKeyInit (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00e4h     0136h    0053h      CODE               _CalibrTuoch (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     0137h     01e7h    00b1h      CODE               _timer (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     01e8h     022bh    0044h      CODE               _main (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     022ch     0242h    0017h      CODE               @ROMDATA_BASE (D:\hamed\project\htk-project\touch-24-rf\STARTUP1_L.OBJ)
-     00h     0243h     024ch    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     024dh     026bh    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     026ch     02aeh    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0060h     0086h    0027h      DATA     5.1795    @HCCINIT (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     0068h     009eh    0037h      CODE               _delay_ms (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     009fh     00c6h    0028h      CODE               _Detect_RF_Module (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00c7h     00d7h    0011h      CODE               _eeprom_read (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00d8h     00e9h    0012h      CODE               _eeprom_write (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00eah     011bh    0032h      CODE               _find_remote_index (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     011ch     0147h    002ch      CODE               _find_empty_slot (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     0148h     0168h    0021h      CODE               _remove_remote (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     0169h     01aah    0042h      CODE               _check_remote (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     01abh     01f2h    0048h      CODE               _learn_remote (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     01f3h     020ah    0018h      CODE               _TuochKeyInit (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     020bh     0342h    0138h      CODE               _Key_Touch (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     0343h     0395h    0053h      CODE               _CalibrTuoch (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     0396h     0405h    0070h      CODE               _Key_Select (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     0406h     04b8h    00b3h      CODE               _timer (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     04b9h     04efh    0037h      CODE               _main (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     04f0h     0506h    0017h      CODE               @ROMDATA_BASE (D:\hamed\project\htk-project\touch-24-rf\STARTUP1_L.OBJ)
+     00h     0507h     0510h    000ah      CODE               __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0511h     052fh    001fh      CODE               _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0530h     0572h    0043h      CODE               _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0060h     0086h    0027h      DATA     5.4872    @HCCINIT (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
      00h     0087h     0093h    000dh      DATA     2.3077    @HCCINIT0 (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
      00h     0094h     0094h    0001h      DATA     0         @BITDATASEC1 (D:\hamed\project\htk-project\touch-24-rf\STARTUP1_L.OBJ)
-     00h     0095h     0095h    0001h      DATA     0         @BITDATASEC (D:\hamed\project\htk-project\touch-24-rf\STARTUP1_L.OBJ)
-     00h     0096h     0096h    0001h      DATA     79        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0097h     0097h    0001h      DATA     18        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0098h     0098h    0001h      DATA     18        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     0099h     0099h    0001h      DATA     12        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     009ah     009ah    0001h      DATA     12        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     009bh     009bh    0001h      DATA     2         @data_r10c (isr:ra~rh)
-     00h     009ch     009ch    0001h      DATA     2         @data_r20c (isr:ra~rh)
-     00h     009dh     009dh    0001h      DATA     2         @data_r30c (isr:ra~rh)
-     00h     009eh     009eh    0001h      DATA     2         @data_r40c (isr:ra~rh)
-     00h     009fh     009fh    0001h      DATA     2         @data_r50c (isr:ra~rh)
-     00h     00a0h     00a0h    0001h      DATA     13        @data_ra0c (isr:ra~rh)
-     00h     00a1h     00a1h    0001h      DATA     9         @data_rb0c (isr:ra~rh)
-     00h     00a2h     00a2h    0001h      DATA     2         @data_rc0c (isr:ra~rh)
+     00h     0095h     0096h    0002h      DATA     0         @BITDATASEC (D:\hamed\project\htk-project\touch-24-rf\STARTUP1_L.OBJ)
+     00h     0097h     0097h    0001h      DATA     79        @data_ra (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0098h     0098h    0001h      DATA     17        @data_rb (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0099h     0099h    0001h      DATA     7         @data_rc (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009ah     009ah    0001h      DATA     18        @data_rd (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009bh     009bh    0001h      DATA     18        @data_re (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009ch     009ch    0001h      DATA     12        @data_rf (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009dh     009dh    0001h      DATA     12        @data_rg (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     009eh     009eh    0001h      DATA     2         @data_r10c (isr:ra~rh)
+     00h     009fh     009fh    0001h      DATA     2         @data_r20c (isr:ra~rh)
+     00h     00a0h     00a0h    0001h      DATA     2         @data_r30c (isr:ra~rh)
+     00h     00a1h     00a1h    0001h      DATA     2         @data_r40c (isr:ra~rh)
+     00h     00a2h     00a2h    0001h      DATA     2         @data_r50c (isr:ra~rh)
+     00h     00a3h     00a3h    0001h      DATA     13        @data_ra0c (isr:ra~rh)
+     00h     00a4h     00a4h    0001h      DATA     9         @data_rb0c (isr:ra~rh)
+     00h     00a5h     00a5h    0001h      DATA     2         @data_rc0c (isr:ra~rh)
 
      Local Sections
 
      Bank    Start     End      Length     Class    AvgIns    Name
-     00h     00a3h     00a3h    0000h      LOCAL    0         @dummy12 (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00a3h     00a3h    0000h      LOCAL    0         _timer (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00b9h     00b9h    0000h      LOCAL    0         @dummy (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00b9h     00b9h    0000h      LOCAL    0         _main (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00afh     00b6h    0008h      LOCAL    13.5      _delay_ms (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00a3h     00aeh    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     00a3h     00a3h    0000h      LOCAL    0         _TuochKeyInit (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00b7h     00b8h    0002h      LOCAL    2         _CalibrTuoch (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00a3h     00a6h    0004h      LOCAL    3         _delay_10us (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00a3h     00b0h    000eh      LOCAL    4.7143    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     00a3h     00a3h    0001h      LOCAL    1         _eeprom_read (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00a3h     00a4h    0002h      LOCAL    5.5       _eeprom_write (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
-     00h     00a3h     00a3h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
-     00h     00a3h     00a6h    0004h      LOCAL    5         _delay_us (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a6h     00a6h    0000h      LOCAL    0         @dummy12 (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a6h     00a6h    0000h      LOCAL    0         _timer (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00bdh     00bdh    0000h      LOCAL    0         @dummy (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00bdh     00bdh    0000h      LOCAL    0         _main (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00b2h     00b9h    0008h      LOCAL    14        _delay_ms (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a6h     00b1h    000ch      LOCAL    3.0833    _builtin_holtek_mulsi3_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a6h     00a6h    0000h      LOCAL    0         _TuochKeyInit (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00bah     00bbh    0002h      LOCAL    2         _CalibrTuoch (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a6h     00a9h    0004h      LOCAL    4         _delay_10us (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a6h     00b3h    000eh      LOCAL    4.7143    _builtin_holtek_divmodsi4_isr00 (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00a6h     00a6h    0001h      LOCAL    1         _eeprom_read (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a6h     00a7h    0002h      LOCAL    5.5       _eeprom_write (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a6h     00a6h    0000h      LOCAL    0         __DELAYX (C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00bah     00bch    0003h      LOCAL    3.3333    _Detect_RF_Module (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a6h     00a6h    0000h      LOCAL    0         _RF_Reset_State (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a6h     00a6h    0000h      LOCAL    0         _Key_Select (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00bbh     00bbh    0000h      LOCAL    0         _Key_Touch (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a8h     00a8h    0000h      LOCAL    0         _format_memory (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00bah     00bah    0001h      LOCAL    4         _learn_remote (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a7h     00a7h    0001h      LOCAL    4         _find_remote_index (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00a7h     00a7h    0001h      LOCAL    4         _find_empty_slot (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00bah     00bah    0001h      LOCAL    4         _remove_remote (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
+     00h     00bah     00bah    0001h      LOCAL    4         _check_remote (D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ)
 
      Public Symbols Information
      Address            Public by Name
@@ -68,7 +88,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0072h              _Buffer
      007ah              _CalibrCount
      0079h              _CalibrSample
-     00e4h              _CalibrTuoch
+     0343h              _CalibrTuoch
      0074h              _Count
      0083h              _Count_C1
      007fh              _Count_C1_Backup
@@ -77,75 +97,88 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0073h              _Count_format
      0091h              _Data
      008eh              _DataM
-     0095h[3]           _Finish
-     0095h[4]           _Frist
-     0095h[1]           _LearnRF
-     0095h[5]           _Lock
+     009fh              _Detect_RF_Module
+     0095h[4]           _Finish
+     0095h[5]           _Frist
+     0396h              _Key_Select
+     020bh              _Key_Touch
+     0095h[2]           _LearnRF
+     0095h[6]           _Lock
      008bh              _RFData
      0060h              _RF_Mode
-     0095h[6]           _Start
+     0095h[1]           _RF_ModulePresent
+     0010h              _RF_Reset_State
+     0095h[7]           _Start
      0028h              _TOUCH_ISR
      0076h              _Timedown
      0077h              _TouchOffCnt
      0078h              _TouchOnCnt
      0095h[0]           _TouchReCalRequest
-     0095h[7]           _TouchState
-     00cch              _TuochKeyInit
-     0249h              __DELAYX0
-     0248h              __DELAYX1
-     0247h              __DELAYX2
-     0246h              __DELAYX3
-     0245h              __DELAYX4
-     0244h              __DELAYX5
-     0243h              __DELAYX6
+     0096h[0]           _TouchState
+     01f3h              _TuochKeyInit
+     050dh              __DELAYX0
+     050ch              __DELAYX1
+     050bh              __DELAYX2
+     050ah              __DELAYX3
+     0509h              __DELAYX4
+     0508h              __DELAYX5
+     0507h              __DELAYX6
      0094h[0]           _bizer
-     0095h[2]           _bizer_rf
-     024dh              _builtin_holtek_mulsi3_isr00
-     00a7h              _builtin_holtek_mulsi3_isr00_2
-     026ch              _builtin_holtek_udivmodsi4_isr00
+     0095h[3]           _bizer_rf
+     0511h              _builtin_holtek_mulsi3_isr00
+     00aah              _builtin_holtek_mulsi3_isr00_2
+     0530h              _builtin_holtek_udivmodsi4_isr00
+     0169h              _check_remote
      0070h              _count_RF_seve
      004ah              _delay_10us
-     00a3h              _delay_10us_2
-     0083h              _delay_ms
-     00afh              _delay_ms_2
-     0068h              _delay_us
-     0010h              _eeprom_read
-     00bah              _eeprom_write
+     00a6h              _delay_10us_2
+     0068h              _delay_ms
+     00b2h              _delay_ms_2
+     00c7h              _eeprom_read
+     00d8h              _eeprom_write
      0075h              _eerom
      0063h              _fast_touch_count
      0061h              _fast_touch_timer
+     011ch              _find_empty_slot
+     00eah              _find_remote_index
+     0005h              _format_memory
      0065h              _frame_ok_count
      006fh              _i
      0004h              _int0
      0088h              _last_frame
+     01abh              _learn_remote
      0066h              _learn_timeout
-     01e8h              _main
+     04b9h              _main
      0064h              _noise_count
      0087h              _remote_count
+     0148h              _remove_remote
      006eh              _rf_bit_index
      006ch              _rf_buffer
      006dh              _rf_byte_index
      006ah              _rf_sync
      006bh              _rf_valid
-     0137h              _timer
-     009bh              r10c
-     009ch              r20c
-     009dh              r30c
-     009eh              r40c
-     009fh              r50c
-     0096h              ra
-     00a0h              ra0c
-     00a1h              rb0c
-     00a2h              rc0c
-     0097h              rd
-     0098h              re
-     0099h              rf
-     009ah              rg
-     022bh              startup_value_1
+     0406h              _timer
+     009eh              r10c
+     009fh              r20c
+     00a0h              r30c
+     00a1h              r40c
+     00a2h              r50c
+     0097h              ra
+     00a3h              ra0c
+     0098h              rb
+     00a4h              rb0c
+     0099h              rc
+     00a5h              rc0c
+     009ah              rd
+     009bh              re
+     009ch              rf
+     009dh              rg
+     04efh              startup_value_1
 
      Address            Public by Value
      0004h              _int0
-     0010h              _eeprom_read
+     0005h              _format_memory
+     0010h              _RF_Reset_State
      0028h              _TOUCH_ISR
      004ah              _delay_10us
      0060h              _RF_Mode
@@ -154,7 +187,7 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      0064h              _noise_count
      0065h              _frame_ok_count
      0066h              _learn_timeout
-     0068h              _delay_us
+     0068h              _delay_ms
      006ah              _rf_sync
      006bh              _rf_valid
      006ch              _rf_buffer
@@ -175,95 +208,80 @@ Input Library File: C:\Program Files\Holtek MCU Development Tools\HT-IDE3000V8.x
      007bh              _Count_T1
      007dh              _Count_S1
      007fh              _Count_C1_Backup
-     0083h              _delay_ms
      0083h              _Count_C1
      0087h              _remote_count
      0088h              _last_frame
      008bh              _RFData
      008eh              _DataM
      0091h              _Data
-     0096h              ra
-     0097h              rd
-     0098h              re
-     0099h              rf
-     009ah              rg
-     009bh              r10c
-     009ch              r20c
-     009dh              r30c
-     009eh              r40c
-     009fh              r50c
-     00a0h              ra0c
-     00a1h              rb0c
-     00a2h              rc0c
-     00a3h              _delay_10us_2
-     00a7h              _builtin_holtek_mulsi3_isr00_2
-     00afh              _delay_ms_2
-     00bah              _eeprom_write
-     00cch              _TuochKeyInit
-     00e4h              _CalibrTuoch
-     0137h              _timer
-     01e8h              _main
-     022bh              startup_value_1
-     0243h              __DELAYX6
-     0244h              __DELAYX5
-     0245h              __DELAYX4
-     0246h              __DELAYX3
-     0247h              __DELAYX2
-     0248h              __DELAYX1
-     0249h              __DELAYX0
-     024dh              _builtin_holtek_mulsi3_isr00
-     026ch              _builtin_holtek_udivmodsi4_isr00
+     0097h              ra
+     0098h              rb
+     0099h              rc
+     009ah              rd
+     009bh              re
+     009ch              rf
+     009dh              rg
+     009eh              r10c
+     009fh              r20c
+     009fh              _Detect_RF_Module
+     00a0h              r30c
+     00a1h              r40c
+     00a2h              r50c
+     00a3h              ra0c
+     00a4h              rb0c
+     00a5h              rc0c
+     00a6h              _delay_10us_2
+     00aah              _builtin_holtek_mulsi3_isr00_2
+     00b2h              _delay_ms_2
+     00c7h              _eeprom_read
+     00d8h              _eeprom_write
+     00eah              _find_remote_index
+     011ch              _find_empty_slot
+     0148h              _remove_remote
+     0169h              _check_remote
+     01abh              _learn_remote
+     01f3h              _TuochKeyInit
+     020bh              _Key_Touch
+     0343h              _CalibrTuoch
+     0396h              _Key_Select
+     0406h              _timer
      0094h[0]           _bizer
      0095h[0]           _TouchReCalRequest
-     0095h[1]           _LearnRF
-     0095h[2]           _bizer_rf
-     0095h[3]           _Finish
-     0095h[4]           _Frist
-     0095h[5]           _Lock
-     0095h[6]           _Start
-     0095h[7]           _TouchState
+     0095h[1]           _RF_ModulePresent
+     0095h[2]           _LearnRF
+     0095h[3]           _bizer_rf
+     0095h[4]           _Finish
+     0095h[5]           _Frist
+     0095h[6]           _Lock
+     0095h[7]           _Start
+     0096h[0]           _TouchState
+     04b9h              _main
+     04efh              startup_value_1
+     0507h              __DELAYX6
+     0508h              __DELAYX5
+     0509h              __DELAYX4
+     050ah              __DELAYX3
+     050bh              __DELAYX2
+     050ch              __DELAYX1
+     050dh              __DELAYX0
+     0511h              _builtin_holtek_mulsi3_isr00
+     0530h              _builtin_holtek_udivmodsi4_isr00
 
 
 ROM Usage Statistics
      Size      Used     Percentage
-     0800h     029eh    32%
+     0800h     0567h    67%
 
 RAM Usage Statistics
     Bank      Size      Used     Percentage
-     00h       0080h     0059h    69%
-     Total     0080h     0059h    69%
+     00h       0080h     005dh    72%
+     Total     0080h     005dh    72%
 
 Use Stack Count
-_Key_Touch: 3
 _timer: 0
-_main: 3
+_main: 4
 
 Call Tree
-    _Key_Touch
-        _delay_ms (0)
-            _builtin_holtek_mulsi3_isr00 (1)
-        _Piezo_Beep (0)
-            _delay_us (1)
-        _format_memory (0)
-            _eeprom_write (1)
-        _learn_remote (0)
-            _find_remote_index (1)
-                _eeprom_read (2)
-            _delay_ms (1)
-                _builtin_holtek_mulsi3_isr00 (2)
-            _find_empty_slot (1)
-                _eeprom_read (2)
-            _eeprom_write (1)
-        _remove_remote (0)
-            _find_remote_index (1)
-                _eeprom_read (2)
-            _eeprom_write (1)
-            _delay_ms (1)
-                _builtin_holtek_mulsi3_isr00 (2)
-        _check_remote (0)
-            _eeprom_read (1)
-            _delay_ms (1)
-                _builtin_holtek_mulsi3_isr00 (2)
     @dummy12
         _timer (0)
     @dummy
@@ -279,7 +297,35 @@ Call Tree
             _eeprom_read (1)
             _eeprom_write (1)
             __DELAYX (1)
-            _delay_us (1)
+            _Detect_RF_Module (1)
+                _delay_ms (2)
+                    _builtin_holtek_mulsi3_isr00 (3)
+                _delay_10us (2)
+                _RF_Reset_State (2)
+            _Key_Select (1)
+            _Key_Touch (1)
+                _delay_ms (2)
+                    _builtin_holtek_mulsi3_isr00 (3)
+                _format_memory (2)
+                    _eeprom_write (3)
+                _learn_remote (2)
+                    _find_remote_index (3)
+                        _eeprom_read (4)
+                    _delay_ms (3)
+                        _builtin_holtek_mulsi3_isr00 (4)
+                    _find_empty_slot (3)
+                        _eeprom_read (4)
+                    _eeprom_write (3)
+                _remove_remote (2)
+                    _find_remote_index (3)
+                        _eeprom_read (4)
+                    _eeprom_write (3)
+                    _delay_ms (3)
+                        _builtin_holtek_mulsi3_isr00 (4)
+                _check_remote (2)
+                    _eeprom_read (3)
+                    _delay_ms (3)
+                        _builtin_holtek_mulsi3_isr00 (4)
 
 HLINK: Program entry point at section '@code' (address 0) of file 'D:\hamed\project\htk-project\touch-24-rf\TOUCH-24.OBJ'
 

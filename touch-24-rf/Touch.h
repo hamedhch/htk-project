@@ -40,6 +40,13 @@ volatile unsigned char RF_Mode = 0;
 2 = REMOVE
 */
 
+volatile bit RF_ModulePresent = 0;
+
+#define RF_DETECT_SAMPLES       2000
+#define RF_DETECT_HIGH_COUNT    3
+#define RF_DATA_PIN             data_rf
+
+
 
 #define SHORT_MIN   2
 #define SHORT_MAX   10
@@ -143,25 +150,67 @@ volatile bit TouchReCalRequest = 0;
 #define	Flag_Int_Touch _tkmf //touch interrupt Flag Read
 
 
-void Piezo_Beep(unsigned int duration_ms)
+void RF_Reset_State(void)
 {
-    unsigned int i;
+    RF_Mode = 0;
+    LearnRF = 0;
+    Lock = 0;
+    Finish = 0;
 
-    // این پایه را متناسب با سخت‌افزار خودت انتخاب کن
-    _pac3 = 0;       // PA0 به‌صورت خروجی
-    _pa3 = 0;
+    Timedown = 0;
+    Frist = 0;
 
-    for(i = 0; i < duration_ms * 6; i++)
+    rf_bit_index = 0;
+    rf_byte_index = 0;
+    rf_buffer = 0;
+    rf_sync = 0;
+
+    frame_ok_count = 0;
+    noise_count = 0;
+    learn_timeout = 0;
+}
+
+
+void Detect_RF_Module(void)
+{
+    unsigned int sample;
+    unsigned char high_count = 0;
+
+    RF_ModulePresent = 0;
+
+    // مهلت اولیه برای بالا آمدن تغذیه و خروجی ماژول
+    delay_ms(50);
+
+    /*
+       اگر ماژول نباشد: پایه زمین است و همیشه 0 می‌ماند.
+       اگر ماژول باشد: پایه در وضعیت Idle برابر 1 است و شمارنده پر می‌شود.
+    */
+    for(sample = 0; sample < RF_DETECT_SAMPLES; sample++)
     {
-        _pa3 = 1;
-        delay_us(9);
+        if(RF_DATA_PIN != 0)
+        {
+            high_count++;
+            if(high_count >= RF_DETECT_HIGH_COUNT)
+            {
+                RF_ModulePresent = 1;
+                break;
+            }
+        }
+        else
+        {
+            high_count = 0;
+        }
 
-        _pa3 = 0;
-        delay_us(8);
+        delay_10us(5); // تاخیر 50 میکروثانیه
     }
 
-    _pa3 = 0;
+    if(!RF_ModulePresent)
+    {
+        RF_Reset_State();
+    }
 }
+
+
 
 
 unsigned char eeprom_read(unsigned char addr)
@@ -440,10 +489,13 @@ void Key_Touch()
 	{
 		out=0;
 		
-		
-		
-		Piezo_Beep(100);
-		
+		// --- صدای بیزر برای تاچ معمولی ---
+		if(bizer==0){
+			BIZ=1;
+			delay_ms(100);
+			BIZ=0;
+			bizer=1;
+		}
 		
 		if (RF_Mode >= 1) {
 	        fast_touch_count++;
@@ -476,7 +528,7 @@ void Key_Touch()
 	
 	
 	
-	if(Count_T1==1000  ){
+	if(RF_ModulePresent && Count_T1==1000  ){
 		
     	Count_T1++;
 	
@@ -693,6 +745,14 @@ void __attribute((interrupt(0x04))) int0(void)
 
 void __attribute__((interrupt(0x0C))) timer(void)
 {
+	 // اگر ماژول RF نصب نیست، تایمر هیچ پردازشی روی دیتای RF انجام ندهد
+    if(!RF_ModulePresent)
+    {
+        return;
+    }
+    
+    
+    
     if (RF_Mode>=1 && learn_timeout < 100000)
         learn_timeout++;
 

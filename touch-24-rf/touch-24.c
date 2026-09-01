@@ -75,22 +75,17 @@ void main()
     }
  
  GCC_DELAY(1000);
- 
- _pac3 = 0;       // PA0 به‌صورت خروجی
-    _pa3 = 0;
+   
+    
+ Detect_RF_Module();
     
     
  while(1)
  {
  	GCC_CLRWDT();
- 	//Key_Select();
- 	//Key_Touch();
+ 	Key_Select();
+ 	Key_Touch();
  	
- 	_pa3 = 1;
-        delay_us(9);
-
-        _pa3 = 0;
-        delay_us(8);
  	
  }
 }

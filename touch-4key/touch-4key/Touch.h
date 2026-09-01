@@ -217,11 +217,11 @@ void Send_Command(unsigned char key)
 	unsigned char pulse_time;
 	
 	if(key == 1)
-	pulse_time = 5;
-	else if(key == 2)
-	pulse_time = 15;
-	else if(key == 3)
 	pulse_time = 25;
+	else if(key == 2)
+	pulse_time = 5;
+	else if(key == 3)
+	pulse_time = 15;
 	else if(key == 4)
 	pulse_time = 35;
 	else
